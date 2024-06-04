@@ -1,0 +1,84 @@
+<div class="flex flex-col md:flex-row gap-xs lg:gap-lg xl:gap-xl 2xl:gap-2xl text-white rs-mb-2">
+  <div class="w-full md:w-1/2 bg-palo-verde-light rs-p-2">
+    <h3>6 of 12 columns</h3>
+    <p class="card-paragraph">This column stacks vertically for XS-SM breakpoints and spans 6 of 12
+      columns for MD and up; responsive grid gaps.</p>
+  </div>
+  <div class="w-full md:w-1/2 bg-palo-verde-dark rs-p-2">
+    <h3>6 of 12 columns</h3>
+    <p class="card-paragraph">This column stacks vertically for XS-SM breakpoints and spans 6 of 12
+      columns for MD and up; responsive grid gaps.</p>
+  </div>
+</div>
+<div class="flex flex-col sm:flex-row grid-gap rs-mb-2 text-white">
+  <div class="w-full sm:w-1/2 lg:w-3/4 bg-spirited rs-p-2">
+    <h3>8 of 12 columns</h3>
+    <p class="card-paragraph">This column stacks vertically for XS breakpoint; spans 6 of 12 columns for
+      SM-MD; spans 8 of 12 columns for LG and up; responsive column gaps using .grid-gap class.</p>
+  </div>
+  <div class="w-full sm:w-1/2 lg:w-1/4 bg-spirited-dark rs-p-2">
+    <h3>4 of 12 columns</h3>
+    <p class="card-paragraph">This column stacks vertically for XS breakpoint; spans 6 of 12 columns for
+      SM-MD; spans 4 of 12 columns for LG and up; responsive column gaps using .grid-gap class.</p>
+  </div>
+</div>
+
+<div class="overflow-hidden">
+  <div class="grid grid-cols-3 grid-gap">
+    <div class="bg-sky-light flex justify-center items-center rs-p-3 type-3 font-bold">
+      1
+    </div>
+    <div class="bg-sky-light flex justify-center items-center rs-p-3 type-3 font-bold">
+      2
+    </div>
+    <div class="bg-sky-light flex justify-center items-center rs-p-3 type-3 font-bold">
+      3
+    </div>
+    <div class="col-span-2 bg-sky-dark text-white flex justify-center items-center rs-p-3 type-3 font-bold">
+      4
+    </div>
+    <div class="bg-sky-light flex justify-center items-center rs-p-3 type-3 font-bold">
+      5
+    </div>
+    <div class="bg-sky-light flex justify-center items-center rs-p-3 type-3 font-bold">
+      6
+    </div>
+    <div class="col-span-2 bg-sky-dark text-white flex justify-center items-center rs-p-3 type-3 font-bold">
+      7
+    </div>
+    <div class="col-span-3 bg-sky text-white flex justify-center items-center rs-p-3 type-3 font-bold">
+      8
+    </div>
+  </div>
+</div>
+
+<div class="hero basefont-23 relative h-full max-h-500">
+  <div class="h-full w-full overflow-hidden absolute">
+    <img class="h-full w-full object-cover object-center" src="https://placekitten.com/1000/750" alt="" />
+  </div>
+  <div class="absolute block w-full h-full top-0" aria-hidden="true"
+    style="background: 'linear-gradient(rgba(0, 0, 0, 0), rgb(24, 29, 28))">
+  </div>
+  <div class="cc relative w-full rs-pt-9 rs-pb-4 top-0">
+    <div class="flex flex-col">
+      <div class="text-center text-white">
+        <p class="max-w-prose font-semibold leading-display text-m1 text-shadow-md md:text-4 mx-auto mb-01em">
+          Superheading</p>
+        <h2
+          class="leading-display font-serif font-bold leading-tight tracking-normal text-shadow-lg mb-02em sm:text-m6">
+          Headline</h2>
+        <p class="max-w-prose text-20 leading-display text-shadow mx-auto mb-0">Subheadline Donec sodales sagittis
+          magna. Cras non dolor. Vestibulum suscipit nulla quis orci. Fusce vulputate eleifend sapien. Nulla porta
+          dolor.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div className="grid md:grid-cols-4 grid-gap">
+  <header className="md:col-span-4">Header</header>
+  <aside>Sidebar</aside>
+  <main className="md:col-span-3">Main Content</main>
+  <footer className="md:col-span-4">Footer</footer>
+</div>
