@@ -1,33 +1,18 @@
 <?php
 /**
  * @file
- * MyTheme preprocess functions and theme function overrides.
+ * stanford_decanter preprocess functions and theme function overrides.
  */
 
 /**
- * Prepares variables for node templates.
+ * Prepares variables for block templates.
  *
- * @see node.tpl.php
+ * @see block.tpl.php
  */
-function mytheme_preprocess_node(&$variables) {
-  $variables['classes'][] = 'content';
-}
-
-/**
- * Overrides theme_breadcrumb().
- */
-function mytheme_breadcrumb($variables) {
-  $breadcrumb = $variables['breadcrumb'];
-  $output = '';
-
-  if (!empty($breadcrumb)) {
-    // Add useful aria-label for screen-readers.
-    $output .= '<nav role="navigation" class="breadcrumb" aria-label="Website Orientation">';
-
-    // Remove core's confusing you-are-here heading for screen-readers.
-    $output .= '<ol><li>' . implode(' » </li><li>', $breadcrumb) . '</li></ol>';
-    $output .= '</nav>';
+function stanford_decanter_preprocess_block(&$variables)
+{
+  if ($variables['theme_hook_original'] == 'block__system__main_menu') {
+    $variables['classes'] = array_merge($variables['classes'], ['su-main-nav']);
   }
-
-  return $output;
 }
+

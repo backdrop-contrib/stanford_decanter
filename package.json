@@ -1,0 +1,26 @@
+{
+    "name": "stanford_decanter",
+    "version": "1.0.0",
+    "repository": "https://github.com/backdrop-contrib/stanford_decanter",
+    "config": {
+    },
+    "scripts": {
+        "build": "yarn tailwindcss -i css/main.css -o dist/main.css",
+        "watch": "yarn tailwindcss -i css/main.css -o dist/main.css --watch"
+    },
+    "devDependencies": {
+        "decanter": "^7"
+    },
+    "description": "Stanford Decaner v7 Backdrop Base Theme",
+    "author": "Fibonnaci Studios and fluidity.digital for Stanford Web Services",
+    "license": "MIT",
+    "keywords": [
+        "css",
+        "scss",
+        "Backdrop",
+        "Stanford"
+    ],
+    "dependencies": {
+        "tailwind": "^4.0.0"
+    }
+}

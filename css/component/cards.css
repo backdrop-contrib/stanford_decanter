@@ -1,0 +1,33 @@
+/**
+ * @file
+ * Card listing view on the default home page.
+ */
+
+
+.block-views-promoted-cards-block .views-view-grid-cols-3 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.view-promoted-cards .views-grid-box {
+  padding: 0;
+}
+
+.view-promoted-cards h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.view-promoted-cards .views-field {
+  padding: 0 1rem;
+}
+
+.view-promoted-cards .views-field-field-image {
+  padding: 0;
+}
+
+@media (min-width: 48em) {
+  .block-views-promoted-cards-block .views-view-grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
