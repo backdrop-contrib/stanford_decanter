@@ -1,7 +1,7 @@
 Decanter v7 for Backdrop CMS
 =======
 
-A base theme for Stanford sites using Decanter 7 and tailwind.
+A base theme for Stanford sites using Decanter 7 and tailwind. Decanter is a web design and development system for Stanford University. It includes a responsive layout system and a browsable collection of design patterns that can be used in any Stanford project.  https://decanter.stanford.edu/
 
 Installation
 ------------
