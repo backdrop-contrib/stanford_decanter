@@ -116,7 +116,10 @@
   }
 }
 .header-menu {
-  @apply flex;
+  ul {
+    @apply flex;
+    
+  }
 }
 .block-system-main-menu {
   @apply text-digital-red;
