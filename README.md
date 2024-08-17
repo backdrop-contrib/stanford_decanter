@@ -6,9 +6,15 @@ A base theme for Stanford sites using Decanter 7 and tailwind. Decanter is a web
 Installation
 ------------
 
-This theme requires Yarn package manager for first install.
+- Install this theme using the official Backdrop CMS instructions at
+  https://docs.backdropcms.org/documentation/skin-with-themes.
 
-- Download this theme to your Backdrop CMS themes directory.
+Developing
+----------
+
+This theme requires Yarn package manager for development. Every time a css or template file changes
+the css file in dist/ must be recompiled using tailwind. If you have yarn or npm installed you can
+use it to trigger the compile step:
 
 - From within the theme directory run:
 
@@ -16,9 +22,11 @@ This theme requires Yarn package manager for first install.
   yarn install && yarn build;
   ```
 
-- Install this theme using the official Backdrop CMS instructions at
-  https://docs.backdropcms.org/documentation/skin-with-themes.
+- You can recompile automatically while developing by running:
 
+  ```sh
+  yarn watch
+  ```
 
 Issues
 ------
