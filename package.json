@@ -2,13 +2,13 @@
     "name": "stanford_decanter",
     "version": "1.0.0",
     "repository": "https://github.com/backdrop-contrib/stanford_decanter",
-    "config": {
-    },
+    "config": {},
     "scripts": {
-        "build": "yarn tailwindcss -i css/main.css -o dist/main.css",
-        "watch": "yarn tailwindcss -i css/main.css -o dist/main.css --watch"
+        "build": "yarn tailwindcss -i css/main.css -o dist/main.css --postcss",
+        "watch": "yarn tailwindcss -i css/main.css -o dist/main.css  --postcss --watch"
     },
     "devDependencies": {
+        "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
         "decanter": "^7"
     },
     "description": "Stanford Decaner v7 Backdrop Base Theme",

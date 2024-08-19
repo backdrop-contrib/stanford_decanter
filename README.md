@@ -9,6 +9,8 @@ Installation
 - Install this theme using the official Backdrop CMS instructions at
   https://docs.backdropcms.org/documentation/skin-with-themes.
 
+- **Optional** Install the [Theme Hooks module](https://github.com/ronan/theme_hooks) to allow the theme to expose some global identity blocks that can be added to the site's header and footer.
+
 Developing
 ----------
 

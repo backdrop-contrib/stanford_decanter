@@ -57,3 +57,36 @@ function stanford_decanter_preprocess_date_display_combination(&$variables) {
     // }
   }
 }
+
+/**
+ * Implements hook_block_info().
+ */
+function stanford_decanter_block_info() {
+  $blocks = array();
+  $blocks['stanford_decanter_identity_bar'] = array(
+    'info' => t('Stanford Global Identity Header'),
+    'admin' => FALSE
+  );
+  $blocks['stanford_decanter_global_footer'] = array(
+    'info' => t('Stanford Global Footer'),
+    'admin' => FALSE
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function stanford_decanter_theme()
+{
+  return [
+    'stanford_decanter_identity_bar' => [
+      'path' => backdrop_get_path('theme', 'stanford_decanter') . '/templates',
+      'template' => 'stanford-identity-bar'
+    ],
+    'stanford_decanter_global_footer' => [
+      'path' => backdrop_get_path('theme', 'stanford_decanter') . '/templates',
+      'template' => 'stanford-global-footer'
+    ]
+  ];
+}
