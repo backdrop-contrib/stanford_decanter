@@ -14,15 +14,16 @@
 @tailwind components;
 @tailwind utilities;
 
-.admin-bar body .layout {
-  padding-top: 50px;
-}
-
 .container-fluid {
   @apply p-0 m-0 max-w-1500 w-full mx-auto relative px-10;
 }
 
-.icon {
+#admin-bar-wrapper svg {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.mask-icon {
   @apply m-0 p-10 mr-10 w-10 h-20 relative top-10 inline-block bg-black align-baseline;
   content: 'x';
 
@@ -73,11 +74,10 @@ html .layout {
 }
 
 .block-theme-hooks-stanford-decanter-identity-bar {
-  @apply hidden md:block;
-  height: 3rem;
+  @apply h-30;
 
   .block-content {
-    @apply bg-cardinal-red cc;
+    @apply px-10 md:cc;
 
     & a {
       @apply logo text-white hocus:text-white text-20;
@@ -96,7 +96,7 @@ html .layout {
 }
 
 .search-action {
-  @apply absolute w-25 h-25 m-0 p-0 right-10 mt-8 overflow-hidden bg-white md:bg-cardinal-red icon magnifying-glass;
+  @apply absolute w-25 h-25 m-0 p-0 right-10 mt-8 overflow-hidden bg-white md:bg-cardinal-red mask-icon magnifying-glass;
 }
 
 .l-header {
@@ -104,20 +104,20 @@ html .layout {
   box-shadow: 0 3px 6px rgba(0, 0, 0, .13), 0 3px 6px rgba(0, 0, 0, .1);
 
   .l-header-inner {
-    @apply p-0 md:cc relative min-h-80;
+    @apply p-0 md:cc relative;
     max-width: 100%;
 
     .block-search-form {
-      @apply float-right relative right-10 top-10 z-10;
+      @apply float-right absolute md:relative right-10 top-30 md:top-0 z-10 md:block;
       @apply focus-within:absolute focus-within:right-10 focus-within:left-10 focus-within:z-40;
       @apply md:relative md:focus-within:relative md:focus-within:right-auto md:focus-within:left-auto;
       @apply md:right-auto md:max-w-200 md:w-auto;
 
       .form-item {
-        @apply mb-0;
+        @apply mb-0 mt-0;
 
         & label {
-          @apply bg-fog text-fog md:hidden right-0 w-50 h-50 top-20;
+          @apply bg-fog text-fog md:hidden right-0 w-50 h-50 top-15;
           position: absolute !important;
           clip: auto;
           overflow: visible;
@@ -135,34 +135,34 @@ html .layout {
       }
 
       .form-actions {
-        @apply hidden absolute md:block right-10 top-5 bottom-0 z-40;
+        @apply hidden absolute md:block right-10 top-0 bottom-0 z-40 m-0;
 
         .form-submit {
-          @apply w-25 h-25 m-0 p-0 overflow-hidden bg-white md:bg-cardinal-red text-cardinal-red h-40 magnifying-glass;
+          @apply w-25 h-25 m-0 p-0 overflow-hidden bg-white md:bg-cardinal-red text-cardinal-red h-35 magnifying-glass;
         }
       }
     }
 
     .block-system-main-menu {
-      @apply bg-white col-span-3 -mt-80 md:mt-0;
+      @apply col-span-3 absolute top-40 right-0 left-0;
 
       .menu-toggle-button {
-        @apply absolute top-25 right-60 text-white h-30 w-30 z-30;
+        @apply absolute top-0 right-60 md:right-10 h-30 w-30 z-30;
         .menu-toggle-button-text {
           @apply hidden;
         }
       }
 
       .block-content {
-        @apply ml-0 mr-0;
+        @apply ml-0 mr-0 mt-40 md:mt-0 z-10;
         & ul.menu {
-          @apply md:flex md:flex-row bg-white z-10;
+          @apply md:flex md:flex-row z-10;
 
           >li {
             @apply md:mx-10 lg:mx-20 md:border-b-0;
 
             >a {
-              @apply md:px-0;
+              @apply md:px-0 font-semibold;
             }
 
             &.first {
@@ -197,10 +197,11 @@ html .layout {
   }
 
   .block-system-header {
-    @apply py-20 px-20 md:px-0 bg-cardinal-red md:bg-transparent;
+    @apply py-10 px-10;
+    @apply md:min-h-10 md:px-0 md:py-20;
 
     >.block-content {
-      @apply md:flex md:justify-between;
+      @apply flex justify-between;
     }
   }
 }
@@ -210,20 +211,20 @@ html .layout {
   @apply flex-col relative basis-1/2 md:basis-2/3;
 
   &::before {
-    @apply logo md:text-7xl md:absolute text-white md:text-cardinal-red hocus:text-white md:hocus:text-black;
+    @apply logo text-7xl absolute hidden md:block;
     content: 'Stanford';
   }
 
   .header-site-name-wrapper,
   .header-site-slogan {
-    @apply md:border-l border-black md:pl-6 md:ml-170 text-white md:text-black;
+    @apply md:border-l border-black md:pl-6 md:ml-170;
   }
 
   .header-site-name-wrapper {
     @apply flex order-2;
 
     .header-site-name-link {
-      @apply  text-white md:text-black no-underline font-normal md:type-2;
+      @apply no-underline text-30 font-normal md:type-2;
 
       & strong {
         @apply font-normal;
@@ -276,6 +277,7 @@ a:hover span.ext,
 
 
 .header-menu {
+  @apply hidden md:block;
   & ul {
     @apply flex flex-row;
   }
@@ -284,7 +286,7 @@ a:hover span.ext,
     @apply flex flex-row;
 
     & a {
-      @apply text-black pr-15 ml-20 md:ml-40;
+      @apply pr-15 ml-20 md:ml-40 text-nowrap;
 
       &::after {
         content: '↗';
@@ -319,7 +321,6 @@ a:hover span.ext,
 }
 .l-sidebar .block-menu,
 .l-header .block-menu {
-  @apply text-digital-red;
   & ul {
     @apply pl-0 text-18;
     & ul {
@@ -333,7 +334,7 @@ a:hover span.ext,
     }
     & a {
       @apply block p-16 relative;
-      @apply text-black no-underline hocus:underline hocus:text-cardinal-red;
+      @apply no-underline;
     }
     & a::before {
       content: '';
@@ -361,7 +362,7 @@ a:hover span.ext,
         @apply scale-100 bg-fog;
       }
       >a {
-        @apply text-black no-underline hocus:underline hocus:text-cardinal-red;
+        @apply no-underline;
         @apply p-16 border-b-0;
 
         & span.sub-arrow {
@@ -393,10 +394,11 @@ a:hover span.ext,
 }
 
 .breadcrumb {
+  @apply hidden md:block py-40;
   & li {
-    @apply relative leading-8 pl-0 pr-35;
+    @apply relative leading-8 pl-0 pr-35 mt-20;
     & a {
-      @apply p-24 text-black no-underline hocus:underline hocus:text-cardinal-red;
+      @apply no-underline hocus:underline;
     }
     &:after {
       background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMy40ODkgNS40MTZjLjY0Ny41ODQuNjg1IDEuNTY4LjA4NCAyLjE5OGwtMTAuNCAxMC44ODlBMS42MjIgMS42MjIgMCAwIDEgMTIgMTljLS40NDUgMC0uODctLjE4LTEuMTcyLS40OTdMLjQyOCA3LjYxNEExLjUyNSAxLjUyNSAwIDAgMSAuNTEgNS40MTZhMS42MzIgMS42MzIgMCAwIDEgMi4yNjEuMDgxTDEyIDE1LjE1OGw5LjIyNy05LjY2YTEuNjMyIDEuNjMyIDAgMCAxIDIuMjYyLS4wODJaIiBmaWxsPSIjMmUyZDI5Ii8+PC9zdmc+) no-repeat center center;
@@ -408,15 +410,12 @@ a:hover span.ext,
 
 
 .l-footer {
-  @apply relative bg-black-10;
+  @apply relative;
   @apply py-40 px-0;
 
   .l-footer-inner {
     @apply grid grid-cols-1 gap-10 md:gap-10 lg:gap-40 md:grid-cols-2 lg:grid-cols-4  md:cc;
     position: static;
-    & a {
-      @apply text-digital-blue;
-    }
     .block-theme-hooks-stanford-decanter-global-footer, .block-system-header {
       @apply col-span-4;
     }
@@ -438,25 +437,20 @@ a:hover span.ext,
   }
 }
 
-.l-stanfordfooter {
+.global-footer {
+  a.logo {
+    @apply no-underline hocus:no-underline;
+  }
   & span.ext {
     @apply hidden;
   }
 }
 
-a {
-  @apply text-cardinal-red;
-}
 
-h3 a {
-  @apply text-black;
-  &:hover {
-    @apply text-cardinal-red;
+layout {
+  [type='text'],input:where(:not([type])),[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select {
+    @apply input;
   }
-}
-
-[type='text'],input:where(:not([type])),[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select {
-  @apply input;
 }
 
 
@@ -526,15 +520,16 @@ nav.tabs {
 ul.primary {
   @apply p-0;
   & a {
-    @apply text-cardinal-red border-r-0 border-l-0;
+    @apply  border-r-0 border-l-0;
   }
   & li.active {
-    @apply border-b-3 border-cardinal-red;
+    @apply border-b-3;
     & a {
-      @apply text-black font-bold;
+      @apply font-bold;
     }
   }
 }
+
 ul.primary li a, ul.primary li a:visited, ul.primary li a:hover, ul.primary li.active a, .expand-dropdown-tabs-control, .responsive-tabs-mobile .expand-dropdown-tabs-control:before, .responsive-tabs-mobile .expand-dropdown-tabs-label {
   @apply border-0;
 }
@@ -695,7 +690,8 @@ ul.primary li a, ul.primary li a:visited, ul.primary li a:hover, ul.primary li.a
 }
 
 .story-card {
-  @apply flex flex-col relative overflow-hidden break-words basefont-23 w-full sm:max-w-[42rem] md:max-w-500 border border-solid bg-clip-padding shadow-sm focus-within:shadow-md hover:shadow-md backface-hidden border-black-20 text-black;
+  @apply flex flex-col relative overflow-hidden break-words basefont-23 w-full sm:max-w-[42rem] md:max-w-500 border border-solid bg-clip-padding shadow-sm;
+  @apply focus-within:shadow-md hover:shadow-md backface-hidden border-black-20 text-black;
   .lead-image {
     @apply relative aspect-w-3 aspect-h-2;
   }
@@ -718,10 +714,10 @@ ul.primary li a, ul.primary li a:visited, ul.primary li a:hover, ul.primary li.a
 }
 .postcard-left, .views-grid-box {
   @apply flex flex-col relative overflow-hidden w-full mb-30 p-0;
-  @apply border border-solid shadow-sm hover:shadow-md backface-hidden border-black-20 text-black;
+  @apply border border-solid shadow-sm hover:shadow-md backface-hidden border-black-20;
   & h3, & h2 {
-    @apply stretched-link font-serif font-bold text-black hocus:text-black text-27;
-    @apply no-underline hocus:underline underline-offset-[3px] decoration-[0.12em] decoration-cardinal-red-light focus:outline-none;
+    @apply stretched-link font-serif font-bold text-27;
+    @apply no-underline hocus:underline underline-offset-[3px] decoration-[0.12em] focus:outline-none;
     @apply rs-mt-2 mb-02em;
     cursor: pointer;
   }
@@ -827,7 +823,7 @@ ul.primary li a, ul.primary li a:visited, ul.primary li a:hover, ul.primary li.a
       @apply text-22
     }
     & a {
-      @apply text-digital-red no-underline hocus:text-black hocus:underline;
+      @apply no-underline hocus:text-black hocus:underline;
     }
   }
   .event-type {
@@ -844,13 +840,13 @@ ul.primary li a, ul.primary li a:visited, ul.primary li a:hover, ul.primary li.a
 .event-location {
   @apply leading-10;
   &::before {
-    @apply icon location-pin;
+    @apply mask-icon location-pin;
   }
 }
 .event-date-long {
   @apply leading-10;
   &::before {
-    @apply icon calendar;
+    @apply mask-icon calendar;
   }
 }
 
@@ -893,8 +889,8 @@ ul.primary li a, ul.primary li a:visited, ul.primary li a:hover, ul.primary li.a
       @apply flex-col ml-30;
     }
     .links a {
-      @apply mt-10 font-bold text-digital-red;
-      @apply text-digital-red no-underline hocus:text-black hocus:underline;
+      @apply mt-10 font-bold;
+      @apply no-underline hocus:text-black hocus:underline;
       &:after {
         @apply int-link;
       }
@@ -915,7 +911,7 @@ ul.primary li a, ul.primary li a:visited, ul.primary li a:hover, ul.primary li.a
 
 .l-footer a,
 .field-name-body a {
-  @apply text-digital-blue no-underline hocus:underline hocus:text-black;
+  @apply no-underline hocus:underline hocus:text-black;
   .ext {
     @apply bg-black;
   }

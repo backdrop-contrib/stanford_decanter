@@ -2,14 +2,31 @@ name = Stanford Decanter (v7)
 description = A base theme for Stanford sites using Decanter 7 and tailwind.
 backdrop = 1.x
 type = theme
-base theme = basis
+# base theme = basis
 
 stylesheets[all][] = dist/main.css
 stylesheets[all][] = css/skin.css
-stylesheets[all][] = css/component/menu-dropdown.css
-stylesheets[all][] = css/component/small-text-components.css
-stylesheets[all][] = css/component/header.css
-stylesheets[all][] = css/component/hero.css
+
+# Disable basis defaults
+
+stylesheets[all][] = css/component/admin-tabs.css
+stylesheets[all][] = css/component/backdrop-form.css
+stylesheets[all][] = css/component/breadcrumb.css
+stylesheets[all][] = css/component/caption.css
 stylesheets[all][] = css/component/cards.css
+stylesheets[all][] = css/component/comment.css
+stylesheets[all][] = css/component/dialog.css
 stylesheets[all][] = css/component/fieldset.css
 stylesheets[all][] = css/component/footer.css
+stylesheets[all][] = css/component/header.css
+stylesheets[all][] = css/component/hero.css
+stylesheets[all][] = css/component/maintenance.css
+stylesheets[all][] = css/component/menu-dropdown.breakpoint-queries.css
+stylesheets[all][] = css/component/menu-dropdown.breakpoint.css
+stylesheets[all][] = css/component/menu-dropdown.css
+stylesheets[all][] = css/component/menu-toggle.css
+stylesheets[all][] = css/component/pager.css
+stylesheets[all][] = css/component/progress.css
+stylesheets[all][] = css/component/small-text-components.css
+stylesheets[all][] = css/component/tabledrag.css
+stylesheets[all][] = css/component/teasers.css web/core/themes/basis/css/component/vertical-tabs.css

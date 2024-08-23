@@ -1,4 +1,4 @@
-  <div class='global-footer basefont-21 bg-cardinal-red rs-py-1 text-white link-white'>
+  <div class='global-footer basefont-21 rs-py-1'>
     <div class='cc flex flex-col lg:flex-row' title='Common Stanford resources'>
       <div class='text-center mt-5 mb-9'>
         <a class='logo type-3 hocus:text-white' href='https://www.stanford.edu'>Stanford<br />University</a>

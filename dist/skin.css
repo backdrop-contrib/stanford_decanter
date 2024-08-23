@@ -18,71 +18,55 @@
   color: #FFFFFC;
 }
 
-.header-menu .links a,
-.l-header .block-menu ul.menu > li > a {
-  color: #2E2D26;
-}
-body .header-menu .links a:after {
-  background-color: #2E2D26;
-}
-
-.l-sidebar .block-menu ul.menu > li > a:hover,
-.l-header .block-menu ul.menu  > li > a:hover {
+.l-sidebar .block-menu ul.menu >li >a:hover,
+.l-header .block-menu ul.menu >li >a:hover {
   color: #8C1518;
 }
 .l-header .l-header-inner .block-system-main-menu .block-content ul.menu > li > a::before {
   background-color: #8C1518;
 }
-.l-header .l-header-inner .block-system-main-menu .menu {
-  background-color: #FFFFFC;
+.l-header .l-header-inner .block-system-main-menu {
+  background-color: transparent;
 }
-
 
 .hero .card-paragraph {
   color: #2E2D28;
 }
 
-
-html body {
+body {
   background-color: #FFFFFE;
   color: #2E2D28;
-}
-
-
-.breadcrumb li a {
-  color: #2E2D28;
-}
-.breadcrumb li a:hover {
-  color: #000;
 }
 
 .l-footer {
   background-color: #F4F4F4;
   border-top: 1px solid #F4F4F3;
-  color: #2E2D25;
+  color: #2E2D26;
+}
+.l-footer a {
+  color: #2E2D26;
 }
 
-html body .l-footer a {
-  color: #2E2D25;
-}
 
+a {
+  @apply text-cardinal-red;
+}
 
 h3 a {
-  color: #2E2D28;
+  color: #2E2D26;
 }
 h3 a:hover {
   color: #B1040F;
 }
-html body .header-identity-wrapper::before {
+.header-identity-wrapper::before {
   color: #8C1516;
 }
 
-.l-footer a, .field-name-body a, body a {
+
+.l-footer a, .field-name-body a {
   color: #006CB8;
 }
 
-
-.node-stanford-person .links a,
 .node-stanford-event.view-mode-teaser h2 a,
 .node-stanford-event.view-mode-teaser h3 a,
 .node-stanford-event.view-mode-teaser h4 a,
@@ -96,10 +80,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
 {
   color: #8C1519;
   text-decoration-color: #8C1519;
-}
-
-.node-stanford-person .field-name-field-s-person-profile-picture {
-  border-color: #8C1519;
 }
 
 
