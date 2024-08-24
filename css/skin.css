@@ -33,8 +33,10 @@ body .header-menu .links a:after {
 .l-header .l-header-inner .block-system-main-menu .block-content ul.menu > li > a::before {
   background-color: #8C1518;
 }
-.l-header .l-header-inner .block-system-main-menu .menu {
-  background-color: #FFFFFC;
+
+.l-header .l-header-inner .block-system-main-menu ul
+{
+  background-color: #FFFFFB;
 }
 
 

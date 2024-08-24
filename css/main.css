@@ -100,18 +100,18 @@ html .layout {
 }
 
 .l-header {
-  @apply relative;
+  @apply relative z-10;
   box-shadow: 0 3px 6px rgba(0, 0, 0, .13), 0 3px 6px rgba(0, 0, 0, .1);
 
   .l-header-inner {
-    @apply p-0 md:cc relative;
+    @apply p-0 sm:cc relative;
     max-width: 100%;
 
     .block-search-form {
-      @apply float-right absolute md:relative right-10 top-30 md:top-0 z-10 md:block;
+      @apply float-right absolute right-10 z-10 top-30;
       @apply focus-within:absolute focus-within:right-10 focus-within:left-10 focus-within:z-40;
       @apply md:relative md:focus-within:relative md:focus-within:right-auto md:focus-within:left-auto;
-      @apply md:right-auto md:max-w-200 md:w-auto;
+      @apply md:right-auto md:max-w-200 md:w-auto md:top-0 md:block;
 
       .form-item {
         @apply mb-0 mt-0;
@@ -144,7 +144,7 @@ html .layout {
     }
 
     .block-system-main-menu {
-      @apply col-span-3 absolute top-40 right-0 left-0;
+      @apply col-span-3 absolute md:relative top-40 md:top-0 right-0 left-0;
 
       .menu-toggle-button {
         @apply absolute top-0 right-60 md:right-10 h-30 w-30 z-30;

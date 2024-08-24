@@ -3164,6 +3164,7 @@ html .layout .l-content{
 
 .l-header{
   position: relative;
+  z-index: 10;
   box-shadow: 0 3px 6px rgba(0, 0, 0, .13), 0 3px 6px rgba(0, 0, 0, .1);
 }
 
@@ -3172,7 +3173,7 @@ html .layout .l-content{
   padding: 0;
 }
 
-@media (min-width: 768px){
+@media (min-width: 576px){
   .l-header .l-header-inner{
     padding-left: 20px;
     padding-right: 20px;
@@ -3222,7 +3223,7 @@ html .layout .l-content{
     }
   }
 
-   .centered-container .l-header .l-header-inner,.l-header .l-header-inner .centered-container,.l-header .l-header-inner .md\:cc{
+   .centered-container .l-header .l-header-inner,.l-header .l-header-inner .centered-container,.l-header .l-header-inner .sm\:cc{
     padding-left: 0;
     padding-right: 0;
   }
@@ -3238,14 +3239,6 @@ html .layout .l-content{
   top: 3rem;
   z-index: 10;
   float: right;
-}
-
-@media (min-width: 768px){
-  .l-header .l-header-inner .block-search-form{
-    position: relative;
-    top: 0;
-    display: block;
-  }
 }
 
 .l-header .l-header-inner .block-search-form:focus-within{
@@ -3268,6 +3261,8 @@ html .layout .l-content{
 
   .l-header .l-header-inner .block-search-form{
     right: auto;
+    top: 0;
+    display: block;
     width: auto;
     max-width: 20rem;
   }
@@ -3423,6 +3418,13 @@ html .layout .l-content{
   right: 0;
   left: 0;
   grid-column: span 3 / span 3;
+}
+
+@media (min-width: 768px){
+  .l-header .l-header-inner .block-system-main-menu{
+    position: relative;
+    top: 0;
+  }
 }
 
 .l-header .l-header-inner .block-system-main-menu .menu-toggle-button{
