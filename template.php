@@ -23,20 +23,38 @@ function stanford_decanter_preprocess_paragraphs_item(&$variables) {
 }
 
 function stanford_decanter_preprocess_node(&$variables) {
+  if ($variables['view_mode'] !== 'full') {
+
+    $type = node_type_get_type($variables['type']);
+    if (!($type->settings['hidden_path'] && !user_access('view hidden paths'))) {
+      $variables['content']['links']['node'] = array(
+        '#theme' => 'links__node__node',
+        '#links' => ['node-readmore' => [
+          'title' => t('Read more<span class="element-invisible"> about @title</span>', array('@title' => strip_tags($variables['title']))),
+          'href' => 'node/' . $variables['node']->nid,
+          'html' => TRUE,
+          'attributes' => array('rel' => 'tag', 'title' => strip_tags($variables['title'])),
+        ]],
+        '#attributes' => array('class' => array('links', 'inline')),
+      );
+    }
+
+    if (!empty($variables['content']['field_image'])) {
+      $variables['pre_content'] = [
+        '#type' => 'container',
+          '#attributes' => array('class' => 'lead-image'),
+          'image' =>  $variables['content']['field_image']
+        ];
+        hide($variables['content']['field_image']);
+      }
+      $variables['classes'][] = 'group';
+  }
   if ($variables['status'] == NODE_NOT_PUBLISHED) {
     $name = node_type_get_name($variables['type']);
     $variables['title_suffix']['unpublished_indicator'] = array(
       '#type' => 'markup',
       '#markup' => '<div class="unpublished-indicator">' . t('This @type is unpublished.', array('@type' => $name)) . '</div>',
     );
-  }
-  if ($variables['type'] == 'stanford_person') {
-    // $variables['content'] = [
-    //   '#type' => 'markup',
-    //   '#markup' => '<h3>' . $variables['title'] . '</h3>',
-    // ] + (array)$variables['content'];
-    // // var_dump($variables['teaser']);
-    // unset($variables['title']);
   }
 }
 
@@ -115,6 +133,15 @@ function stanford_decanter_css_alter(&$css) {
     $path = backdrop_get_path('theme', 'basis');
     unset($css[$path . '/css/component/menu-dropdown.css']);
   }
+}
+
+/**
+ * Implements hook_entity_view_mode_info().
+ */
+function stanford_decanter_entity_view_mode_info() {
+  return [
+    'node' => ['card' => t('Card')]
+  ];
 }
 
 /**

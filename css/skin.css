@@ -80,10 +80,15 @@ html body .header-identity-wrapper::before {
 
 
 /* Title links */
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
+h3 a, h4 a, h5 a, h6 a, body .node-readmore a
 {
   color: #B1040D;
   text-decoration-color: #B1040D;
+}
+.view-mode-card {
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: #2E2D28;
+  }
 }
 
 .node-stanford-person .field-name-field-s-person-profile-picture {
