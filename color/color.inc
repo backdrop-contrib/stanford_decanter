@@ -13,6 +13,7 @@ $su_colors = [
   'header_bg'             => '#FFFFFD',
 
   'logo'                  => '#8C1516',
+  'border'                => '#F0F0F0',
 
   'menu_text'             => '#2E2D26',
   'menu_bg'               => '#FFFFFB',
@@ -25,7 +26,7 @@ $su_colors = [
   'action'                => '#B1040F',
   'digital'               => '#B1040E',
 
-  'title'                 => '#8C1519',
+  'title'                 => '#B1040D',
   'link'                  => '#006CB8',
 
   'identity'              => '#8C1517',

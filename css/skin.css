@@ -68,45 +68,29 @@ html body .l-footer a {
   color: #2E2D25;
 }
 
-
-h3 a {
-  color: #2E2D28;
-}
-h3 a:hover {
-  color: #B1040F;
-}
+/* Logo */
 html body .header-identity-wrapper::before {
   color: #8C1516;
 }
 
+/* Body links */
 .l-footer a, .field-name-body a, body a {
   color: #006CB8;
 }
 
 
-.node-stanford-person .links a,
-.node-stanford-event.view-mode-teaser h2 a,
-.node-stanford-event.view-mode-teaser h3 a,
-.node-stanford-event.view-mode-teaser h4 a,
-.su-event h2 a,
-.su-event h3 a,
-.su-event h4 a,
-.su-event-compact h2 a,
-.su-event-compact h3 a,
-.su-event-compact h4 a,
+/* Title links */
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
 {
-  color: #8C1519;
-  text-decoration-color: #8C1519;
+  color: #B1040D;
+  text-decoration-color: #B1040D;
 }
 
 .node-stanford-person .field-name-field-s-person-profile-picture {
-  border-color: #8C1519;
+  border-color: #B1040D;
 }
 
-
 .cta-btn,
-.cta-button,
-.cta-btn:hover, .cta-button:hover {
-  background-color: #B1040F;
+.cta-button {
+  background-color: #B1040D;
 }

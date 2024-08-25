@@ -104,7 +104,7 @@ html .layout {
   box-shadow: 0 3px 6px rgba(0, 0, 0, .13), 0 3px 6px rgba(0, 0, 0, .1);
 
   .l-header-inner {
-    @apply p-0 sm:cc relative;
+    @apply p-0 md:cc relative;
     max-width: 100%;
 
     .block-search-form {
@@ -449,7 +449,7 @@ a:hover span.ext,
 
 layout {
   [type='text'],input:where(:not([type])),[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select {
-    @apply input;
+    @apply input text-14;
   }
 }
 
@@ -516,6 +516,9 @@ input.form-submit, button.form-submit {
 nav.tabs {
   @apply p-0;
 }
+ul.tabs {
+  @apply mb-10;
+}
 
 ul.primary {
   @apply p-0;
@@ -538,8 +541,6 @@ ul.primary li a, ul.primary li a:visited, ul.primary li a:hover, ul.primary li.a
 .block-views-promoted-cards-block .views-view-grid-cols-3 {
   grid-template-columns: repeat(1, 1fr);
 }
-
-
 @media (min-width: 48em) {
   .block-views-promoted-cards-block .views-view-grid-cols-3 {
     grid-template-columns: repeat(3, 1fr);
@@ -709,16 +710,51 @@ ul.primary li a, ul.primary li a:visited, ul.primary li a:hover, ul.primary li.a
     }
   }
 }
-.views-view-grid .views-row, .views-view-grid .views-grid-box {
-  @apply p-0;
-}
-.postcard-left, .views-grid-box {
-  @apply flex flex-col relative overflow-hidden w-full mb-30 p-0;
-  @apply border border-solid shadow-sm hover:shadow-md backface-hidden border-black-20;
+
+.views-row {
+  @apply border-b rs-mb-1 rs-pb-2;
   & h3, & h2 {
     @apply stretched-link font-serif font-bold text-27;
     @apply no-underline hocus:underline underline-offset-[3px] decoration-[0.12em] focus:outline-none;
     @apply rs-mt-2 mb-02em;
+    cursor: pointer;
+    a {
+      @apply hover:text-black;
+    }
+  }
+}
+.views-view-grid {
+  @apply gap-10 md:gap-20 lg:gap-40;
+}
+.views-view-grid-cols-2 {
+  @apply grid-cols-1 sm:grid-cols-2;
+}
+.views-view-grid-cols-3 {
+  @apply grid-cols-1 sm:grid-cols-2 md:grid-cols-3;
+}
+.views-view-grid-cols-4 {
+  @apply grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4;
+}
+.views-view-grid-cols-5 {
+  @apply grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5;
+}
+.views-view-grid-cols-6 {
+  @apply grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6;
+  @apply
+}
+
+
+.views-view-grid .views-row, .views-view-grid .views-grid-box {
+  @apply p-0 border-b-0;
+}
+.postcard-left, .views-view-grid .views-grid-box {
+  @apply flex flex-col relative overflow-hidden w-full mb-10 p-0;
+  @apply border border-solid border-black-20 shadow-sm hover:shadow-md backface-hidden ;
+
+  & h3, & h2 {
+    @apply stretched-link font-serif font-bold text-27;
+    @apply no-underline hocus:underline underline-offset-[3px] decoration-[0.12em] focus:outline-none;
+    @apply md:rs-mt-2 mb-02em;
     cursor: pointer;
   }
   .postcard-image {
@@ -730,9 +766,13 @@ ul.primary li a, ul.primary li a:visited, ul.primary li a:hover, ul.primary li.a
   .views-field {
     @apply rs-px-2;
   }
+  .view-mode-teaser {
+    @apply p-10 md:rs-px-2 md:rs-mb-2;
+  }
   .views-field-field-image {
     padding: 0;
   }
+
   .postcard-content {
     @apply flex-1 bg-white rs-pt-2 rs-px-2 rs-pb-3;
     .descriptor {
@@ -743,7 +783,6 @@ ul.primary li a, ul.primary li a:visited, ul.primary li a:hover, ul.primary li.a
     }
   }
 }
-
 
 .source {
   @apply font-serif;
