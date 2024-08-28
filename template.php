@@ -58,35 +58,6 @@ function stanford_decanter_preprocess_node(&$variables) {
   }
 }
 
-function stanford_decanter_form_alter(&$form, &$form_state, $form_id) {
-  if ($form_id == 'views_ui_edit_display_form') {
-    $row_class = $form['options']['style_options']['row_class']['#default_value'];
-    if (!in_array($row_class, ['', 'background', 'bordered'])) {
-      $row_class = 'custom';
-    }
-    $form['options']['style_options']['row_class_select'] = [
-      '#type' => 'select',
-      '#title' => t('Card Style'),
-      '#options' => [
-        ''            => t('Plain'),
-        'bordered'    => t('Bordered'),
-        'background'  => t('Dark Background'),
-        'custom'      => t('Custom'),
-      ],
-      '#default_value' => $row_class,
-      '#weight' => -1
-    ];
-    $form['options']['style_options']['row_class']['#value_callback'] = 'stanford_decanter_row_style_value';
-  }
-}
-
-function stanford_decanter_row_style_value($element, $input = FALSE, $form_state = array()) {
-  if ($form_state['input']['style_options']['row_class_select'] == 'custom') {
-    return $input;
-  }
-  return $form_state['input']['style_options']['row_class_select'];
-}
-
 /**
  * Returns HTML for a date element formatted as a single date.
  */
@@ -166,12 +137,14 @@ function stanford_decanter_css_alter(&$css) {
 
 /**
  * Implements hook_entity_view_mode_info().
+ *
+ * NB: This causes problems sometimes.
  */
-function stanford_decanter_entity_view_mode_info() {
-  return [
-    'node' => ['card' => t('Card')]
-  ];
-}
+// function stanford_decanter_entity_view_mode_info() {
+//   return [
+//     'node' => ['card' => t('Card')]
+//   ];
+// }
 
 /**
  * Prepares variables for page templates.
@@ -245,17 +218,11 @@ function stanford_decanter_preprocess_layout(&$variables) {
  */
 function stanford_decanter_preprocess_header(&$variables) {
   $logo = $variables['logo'];
-  $logo_attributes = $variables['logo_attributes'];
-
-  // Add classes and height/width to logo.
-  if ($logo) {
-    $logo_wrapper_classes = array();
-    $logo_wrapper_classes[] = 'header-logo-wrapper';
-    if ($logo_attributes['width'] <= $logo_attributes['height']) {
-      $logo_wrapper_classes[] = 'header-logo-tall';
-    }
-
-    $variables['logo_wrapper_classes'] = $logo_wrapper_classes;
+  if ($variables['logo']) {
+    $variables['logo'] = '<img src="'. $logo .'" alt="Stanford" class="header-logo" />';
+  }
+  else {
+    $variables['logo'] = 'Stanford';
   }
 }
 

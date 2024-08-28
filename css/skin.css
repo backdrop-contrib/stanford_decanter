@@ -26,8 +26,13 @@ body .header-menu .links a:after {
   background-color: #2E2D26;
 }
 
-.l-sidebar .block-menu ul.menu > li > a:hover,
-.l-header .block-menu ul.menu  > li > a:hover {
+.l-sidebar .block-menu ul.menu a,
+.l-header .block-menu ul.menu a {
+  color: #2E2D26;
+}
+
+.l-sidebar .block-menu ul.menu a:hover,
+.l-header .block-menu ul.menu a:hover {
   color: #8C1518;
 }
 .l-header .l-header-inner .block-system-main-menu .block-content ul.menu > li > a::before {
@@ -64,19 +69,18 @@ html body {
   color: #2E2D25;
 }
 
-html body .l-footer a {
-  color: #2E2D25;
-}
-
 /* Logo */
 html body .header-identity-wrapper::before {
   color: #8C1516;
 }
 
 /* Body links */
-.l-footer a, .field-name-body a, body a {
+.l-footer a,
+.field-name-body a,
+body a {
   color: #006CB8;
 }
+
 
 
 /* Title links */

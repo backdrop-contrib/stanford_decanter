@@ -14,7 +14,7 @@
   font-display: swap;
 }
 
-/*! tailwindcss v3.4.7 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v3.4.10 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -3514,59 +3514,26 @@ html .layout .l-content{
   }
 }
 
-.l-header .header-identity-wrapper::before{
-  display: inline-block;
-  font-family: Stanford, "Source Serif Pro", Georgia, Times, "Times New Roman", serif;
-  font-weight: 400;
-  line-height: 0.75;
-  text-decoration: none;
-  text-transform: none;
-  transform: translateZ(0);
-  font-style: normal;
-  font-variant: normal;
-  letter-spacing: 0;
-  color: #8C1515;
-  font-feature-settings: "liga" 1;
-  font-variant-ligatures: discretionary-ligatures;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/* &::before {
+    @apply text-7xl absolute hidden md:block;
+    content: 'Stanford';
+  } */
 
-.l-header .header-identity-wrapper:focus::before{
-  color: #8C1515;
-}
-
-.l-header .header-identity-wrapper:hover::before{
-  color: #8C1515;
-}
-
-.l-header .header-identity-wrapper::before{
+.l-header .header-identity-wrapper .logo{
   position: absolute;
   display: none;
   font-size: 4.5rem;
   line-height: 1;
 }
 
-.global-footer a.l-header .header-identity-wrapper::before{
-  text-decoration-line: none;
-}
-
-.global-footer a.l-header .header-identity-wrapper:hover::before{
-  text-decoration-line: none;
-}
-
-.global-footer a.l-header .header-identity-wrapper:focus::before{
-  text-decoration-line: none;
-}
-
 @media (min-width: 768px){
-  .l-header .header-identity-wrapper::before{
+  .l-header .header-identity-wrapper .logo{
     display: block;
   }
 }
 
-.l-header .header-identity-wrapper::before {
-  content: 'Stanford';
+.l-header .header-identity-wrapper .logo img{
+  max-width: 16rem;
 }
 
 .l-header .header-identity-wrapper .header-site-name-wrapper,
@@ -3727,6 +3694,23 @@ html .layout .l-content{
   font-size: 2rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.l-header .header-identity-wrapper .block-theme-hooks-stanford-decanter-identity-bar .block-content a{
+  position: absolute;
+  display: none;
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+@media (min-width: 768px){
+  .l-header .header-identity-wrapper .block-theme-hooks-stanford-decanter-identity-bar .block-content a{
+    display: block;
+  }
+}
+
+.l-header .header-identity-wrapper .block-theme-hooks-stanford-decanter-identity-bar .block-content a img{
+  max-width: 16rem;
 }
 
 .global-footer a.block-theme-hooks-stanford-decanter-identity-bar .block-content a{
@@ -3938,31 +3922,43 @@ html .layout .l-content{
 
 /* Title/Breadcrumbs/Tabs */
 
-.block-system-title-combo h1.page-title{
-  margin: 2rem;
+.block-system-title{
+  flex-grow: 1;
+}
+
+h1.page-title{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 768px){
-  .block-system-title-combo h1.page-title{
-    margin: 2.6rem;
+  h1.page-title{
+    margin-top: 2.6rem;
+    margin-bottom: 2.6rem;
   }
 }
 
 @media (min-width: 1500px){
-  .block-system-title-combo h1.page-title{
-    margin: 2.7rem;
+  h1.page-title{
+    margin-top: 2.7rem;
+    margin-bottom: 2.7rem;
   }
 }
 
-.block-system-title-combo h1.page-title{
+h1.page-title{
+  flex-grow: 1;
   text-align: center;
   font-weight: 900;
 }
 
 @media (min-width: 576px){
-  .block-system-title-combo h1.page-title{
+  h1.page-title{
     font-size: 3.05em;
   }
+}
+
+.l-content h1.page-title{
+  text-align: left;
 }
 
 .breadcrumb{
@@ -4195,7 +4191,13 @@ ul.primary li.active a,
 
 .l-footer .l-footer-inner .menu-tree{
   list-style-type: none;
+  list-style-image: none;
   padding: 0;
+}
+
+.l-footer .l-footer-inner .menu-tree li.leaf{
+  list-style-type: none;
+  list-style-image: none;
 }
 
 .global-footer a.logo{
@@ -6269,7 +6271,7 @@ fieldset .fieldset-wrapper{
   align-items: flex-start;
 }
 
-.block-hero .hero-image img, .hero-gradient .hero-image img{
+.block-hero-no-image .hero-image img, .block-hero .hero-image img, .hero-gradient .hero-image img{
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
@@ -6278,39 +6280,39 @@ fieldset .fieldset-wrapper{
      object-position: center;
 }
 
-.block-hero .card-body, .hero-gradient .card-body{
+.block-hero-no-image .card-body, .block-hero .card-body, .hero-gradient .card-body{
   padding-bottom: 3.4rem;
 }
 
 @media (min-width: 768px){
-  .block-hero .card-body, .hero-gradient .card-body{
+  .block-hero-no-image .card-body, .block-hero .card-body, .hero-gradient .card-body{
     padding-bottom: 5.8rem;
   }
 }
 
 @media (min-width: 1500px){
-  .block-hero .card-body, .hero-gradient .card-body{
+  .block-hero-no-image .card-body, .block-hero .card-body, .hero-gradient .card-body{
     padding-bottom: 6.1rem;
   }
 }
 
-.block-hero .card-body, .hero-gradient .card-body{
+.block-hero-no-image .card-body, .block-hero .card-body, .hero-gradient .card-body{
   padding-top: 7rem;
 }
 
 @media (min-width: 768px){
-  .block-hero .card-body, .hero-gradient .card-body{
+  .block-hero-no-image .card-body, .block-hero .card-body, .hero-gradient .card-body{
     padding-top: 16.2rem;
   }
 }
 
 @media (min-width: 1500px){
-  .block-hero .card-body, .hero-gradient .card-body{
+  .block-hero-no-image .card-body, .block-hero .card-body, .hero-gradient .card-body{
     padding-top: 17.1rem;
   }
 }
 
-.block-hero .card-body, .hero-gradient .card-body{
+.block-hero-no-image .card-body, .block-hero .card-body, .hero-gradient .card-body{
   position: relative;
   top: 0;
   width: 100%;
@@ -6320,7 +6322,7 @@ fieldset .fieldset-wrapper{
   background: linear-gradient(rgba(0, 0, 0, 0), rgb(24, 29, 28));
 }
 
-.block-hero .super-title, .hero-gradient .super-title{
+.block-hero-no-image .super-title, .block-hero .super-title, .hero-gradient .super-title{
   font-size: 1em;
   text-shadow: rgba(0, 0, 0, 40%) 0 0 8px, rgba(0, 0, 0, 60%) 0 0 3px;
   margin-left: auto;
@@ -6331,7 +6333,7 @@ fieldset .fieldset-wrapper{
   line-height: 1.2;
 }
 
-.block-hero .sub-title, .hero-gradient .sub-title{
+.block-hero-no-image .sub-title, .block-hero .sub-title, .hero-gradient .sub-title{
   text-shadow: rgba(0, 0, 0, 40%) 0 0 6px, rgba(0, 0, 0, 60%) 0 0 2px;
   margin-left: auto;
   margin-right: auto;
@@ -6341,7 +6343,7 @@ fieldset .fieldset-wrapper{
   line-height: 1.2;
 }
 
-.block-hero h3, .hero-gradient h3{
+.block-hero-no-image h3, .block-hero h3, .hero-gradient h3{
   text-shadow: rgba(0, 0, 0, 30%) 0 0 12px;
   margin-bottom: 0.2em;
   font-family: "Source Serif 4", "Source Serif Pro", Georgia, Times, "Times New Roman", serif;
@@ -6351,9 +6353,18 @@ fieldset .fieldset-wrapper{
 }
 
 @media (min-width: 576px){
-  .block-hero h3, .hero-gradient h3{
+  .block-hero-no-image h3, .block-hero h3, .hero-gradient h3{
     font-size: 3.81em;
   }
+}
+
+.block-hero-no-image {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgb(24, 29, 28));
+}
+
+.no-background-blend-mode .block-hero-no-image * {
+  position: relative;
+  z-index: 1;
 }
 
 .block-hero{
@@ -6401,6 +6412,58 @@ fieldset .fieldset-wrapper{
   max-width: 65ch;
   font-size: 2rem;
   line-height: 1.2;
+}
+
+.block-hero {
+  /* Positioning, width and transform is to make hero full width on smaller screens */
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  min-height: 30vh;
+  padding: 1.5rem 2rem 2rem;
+  margin: 0 0 2rem;
+  transform: translate(-50%, 0);
+  transition: min-height 0.25s;
+  will-change: min-height;
+  background-size: cover;
+}
+
+.block-hero .block-title,
+.block-hero .block-content {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+.l-top .block-hero {
+  margin-top: -2rem;
+  /* Negative top margin collapses spacing under header */
+}
+
+.container .block-hero {
+  margin-top: 0;
+  /* If hero is in a container don't collapse top spacing */
+}
+
+@media (min-width: 25em) {
+  .block-hero {
+    padding: 2rem 3rem 3rem;
+    font-size: 1.3em;
+  }
+}
+
+@media (min-width: 34em) {
+  .block-hero {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 62em) {
+  .block-hero {
+    /* Remove full width styles on larger screens */
+    left: auto;
+    width: 100%;
+    transform: none;
+  }
 }
 
 /* Events */
