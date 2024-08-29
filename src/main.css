@@ -229,17 +229,11 @@ html .layout {
 .header-identity-wrapper {
   @apply flex-col relative basis-1/2 md:basis-2/3;
 
-  /* &::before {
-    @apply text-7xl absolute hidden md:block;
+  &::before {
+    @apply logo text-7xl absolute hidden md:block;
     content: 'Stanford';
-  } */
-
-  .logo {
-    @apply text-7xl absolute hidden md:block;
-    img {
-      @apply max-w-160;
-    }
   }
+
   .header-site-name-wrapper,
   .header-site-slogan {
     @apply md:border-l border-black md:pl-6 md:ml-170;
@@ -389,14 +383,8 @@ html .layout {
 
 /* Title/Breadcrumbs/Tabs */
 
-.block-system-title {
-  @apply flex-grow;
-}
-h1.page-title {
-  @apply flex-grow rs-my-1 sm:text-m5 text-center font-black;
-}
-.l-content h1.page-title {
-  @apply text-left;
+.block-system-title-combo h1.page-title {
+  @apply text-center rs-m-1 sm:text-m5 font-black;
 }
 
 .breadcrumb {
@@ -497,10 +485,7 @@ ul.primary li.active a,
       @apply text-18 text-black;
     }
     .menu-tree {
-      @apply list-none list-image-none p-0;
-      li.leaf {
-        @apply list-none list-image-none;
-      }
+      @apply list-none p-0;
     }
   }
 }
@@ -901,7 +886,6 @@ fieldset {
   }
 }
 
-.block-hero-no-image,
 .block-hero,
 .hero-gradient {
   .hero-image {
@@ -923,14 +907,6 @@ fieldset {
     @apply font-serif font-bold leading-tight tracking-normal text-shadow-lg mb-02em sm:text-m6;
   }
 }
-.block-hero-no-image {
-  background: linear-gradient(rgba(0, 0, 0, 0), rgb(24, 29, 28));
-}
-.no-background-blend-mode .block-hero-no-image * {
-  position: relative;
-  z-index: 1;
-}
-
 
 .block-hero {
   @apply rs-pt-9 text-center text-white;
@@ -939,56 +915,6 @@ fieldset {
   }
   .block-content {
     @apply max-w-prose text-20 leading-display text-shadow mx-auto mb-0;
-  }
-}
-
-.block-hero {
-  /* Positioning, width and transform is to make hero full width on smaller screens */
-  position: relative;
-  left: 50%;
-  width: 100vw;
-  min-height: 30vh;
-  padding: 1.5rem 2rem 2rem;
-  margin: 0 0 2rem;
-  transform: translate(-50%, 0);
-  transition: min-height 0.25s;
-  will-change: min-height;
-  background-size: cover;
-}
-
-.block-hero .block-title,
-.block-hero .block-content {
-  max-width: 100%;
-  overflow-wrap: break-word;
-}
-
-.l-top .block-hero {
-  margin-top: -2rem;/* Negative top margin collapses spacing under header */
-}
-
-.container .block-hero {
-  margin-top: 0; /* If hero is in a container don't collapse top spacing */
-}
-
-@media (min-width: 25em) {
-  .block-hero {
-    padding: 2rem 3rem 3rem;
-    font-size: 1.3em;
-  }
-}
-
-@media (min-width: 34em) {
-  .block-hero {
-    font-size: 1.5em;
-  }
-}
-
-@media (min-width: 62em) {
-  .block-hero {
-    /* Remove full width styles on larger screens */
-    left: auto;
-    width: 100%;
-    transform: none;
   }
 }
 

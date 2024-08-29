@@ -7,7 +7,31 @@ type = theme
 stylesheets[all][] = css/main.css
 stylesheets[all][] = css/skin.css
 
-; Remove unwanted core CSS
-stylesheets[all][] = menu-dropdown.theme.css
-stylesheets[all][] = menu-dropdown.theme.breakpoint.css
-stylesheets[all][] = menu-dropdown.theme.breakpoint-queries.css
+# Disable basis defaults
+
+stylesheets[all][] = css/component/admin-tabs.css
+stylesheets[all][] = css/component/backdrop-form.css
+stylesheets[all][] = css/component/breadcrumb.css
+stylesheets[all][] = css/component/caption.css
+stylesheets[all][] = css/component/cards.css
+stylesheets[all][] = css/component/comment.css
+stylesheets[all][] = css/component/dialog.css
+stylesheets[all][] = css/component/fieldset.css
+stylesheets[all][] = css/component/footer.css
+stylesheets[all][] = css/component/header.css
+stylesheets[all][] = css/component/hero.css
+stylesheets[all][] = css/component/maintenance.css
+stylesheets[all][] = css/component/menu-dropdown.breakpoint-queries.css
+stylesheets[all][] = css/component/menu-dropdown.breakpoint.css
+stylesheets[all][] = css/component/menu-dropdown.css
+stylesheets[all][] = css/component/menu-toggle.css
+stylesheets[all][] = css/component/pager.css
+stylesheets[all][] = css/component/progress.css
+stylesheets[all][] = css/component/small-text-components.css
+stylesheets[all][] = css/component/tabledrag.css
+stylesheets[all][] = css/component/teasers.css web/core/themes/basis/css/component/vertical-tabs.css
+
+; Added by Backdrop CMS packaging script on 2024-08-28
+project = stanford_decanter
+version = 1.x-0.3.0-alpha
+timestamp = 1724863556
