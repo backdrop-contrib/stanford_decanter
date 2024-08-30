@@ -137,12 +137,14 @@ function stanford_decanter_css_alter(&$css) {
 
 /**
  * Implements hook_entity_view_mode_info().
+ *
+ * NB: This causes problems sometimes.
  */
-function stanford_decanter_entity_view_mode_info() {
-  return [
-    'node' => ['card' => t('Card')]
-  ];
-}
+// function stanford_decanter_entity_view_mode_info() {
+//   return [
+//     'node' => ['card' => t('Card')]
+//   ];
+// }
 
 /**
  * Prepares variables for page templates.
@@ -216,17 +218,11 @@ function stanford_decanter_preprocess_layout(&$variables) {
  */
 function stanford_decanter_preprocess_header(&$variables) {
   $logo = $variables['logo'];
-  $logo_attributes = $variables['logo_attributes'];
-
-  // Add classes and height/width to logo.
-  if ($logo) {
-    $logo_wrapper_classes = array();
-    $logo_wrapper_classes[] = 'header-logo-wrapper';
-    if ($logo_attributes['width'] <= $logo_attributes['height']) {
-      $logo_wrapper_classes[] = 'header-logo-tall';
-    }
-
-    $variables['logo_wrapper_classes'] = $logo_wrapper_classes;
+  if ($variables['logo']) {
+    $variables['logo'] = '<img src="'. $logo .'" alt="Stanford" class="header-logo" />';
+  }
+  else {
+    $variables['logo'] = 'Stanford';
   }
 }
 
