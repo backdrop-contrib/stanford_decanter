@@ -23,22 +23,16 @@
 
 <?php if ($site_name || $site_slogan || $logo): ?>
   <div class="header-identity-wrapper">
-    <div class="<?php print implode(' ', $logo_wrapper_classes); ?>">
       <div class="logo"><?php print $logo ?></div>
-    </div>
-
-      <?php if ($site_name || $logo): ?>
+      <?php if ($site_name || $site_slogan): ?>
         <div class="header-site-name-wrapper">
-          <?php // Strong class only added for semantic value ?>
           <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="header-site-name-link" rel="home">
-            <?php if ($site_name): ?>
-              <strong><?php print $site_name; ?></strong>
-            <?php endif; ?>
+            <?php print $site_name; ?>
           </a>
+          <?php if ($site_slogan): ?>
+            <div class="header-site-slogan"><?php print $site_slogan; ?></div>
+          <?php endif; ?>
         </div>
-      <?php endif; ?>
-      <?php if ($site_slogan): ?>
-        <div class="header-site-slogan"><?php print $site_slogan; ?></div>
       <?php endif; ?>
   </div>
 <?php endif; ?>

@@ -6,8 +6,3 @@ type = theme
 
 stylesheets[all][] = css/main.css
 stylesheets[all][] = css/skin.css
-
-; Remove unwanted core CSS
-stylesheets[all][] = menu-dropdown.theme.css
-stylesheets[all][] = menu-dropdown.theme.breakpoint.css
-stylesheets[all][] = menu-dropdown.theme.breakpoint-queries.css
