@@ -30,6 +30,7 @@
 }
 
 .location-pin {
+  @apply mask-icon;
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3C!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath d='M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z'/%3E%3C/svg%3E");
 }
 
@@ -40,7 +41,7 @@
 .magnifying-glass {
   mask-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjUiIHZpZXdCb3g9IjAgMCAyNCAyNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMS40NzM3IDEwLjIwMTZDMjEuNDczNyAxNC4wMzg1IDE4LjM2MzIgMTcuMTQ5IDE0LjUyNjMgMTcuMTQ5QzEwLjY4OTQgMTcuMTQ5IDcuNTc4OTUgMTQuMDM4NSA3LjU3ODk1IDEwLjIwMTZDNy41Nzg5NSA2LjM2NDY2IDEwLjY4OTQgMy4yNTQyMiAxNC41MjYzIDMuMjU0MjJDMTguMzYzMiAzLjI1NDIyIDIxLjQ3MzcgNi4zNjQ2NiAyMS40NzM3IDEwLjIwMTZaTTI0IDEwLjIwMTZDMjQgMTUuNDMzOCAxOS43NTg1IDE5LjY3NTMgMTQuNTI2MyAxOS42NzUzQzEyLjUwMjkgMTkuNjc1MyAxMC42Mjc3IDE5LjA0MDkgOS4wODg2MiAxNy45NjAzTDIuMTE5OTQgMjQuMzkyOUMxLjYwNzMyIDI0Ljg2NjEgMC44MDgxNzUgMjQuODM0MSAwLjMzNDk5MSAyNC4zMjE1Qy0wLjEzODE5MiAyMy44MDg5IC0wLjEwNjIyNiAyMy4wMDk4IDAuNDA2Mzg5IDIyLjUzNjZMNy4yMjY3OSAxNi4yNDA4QzUuODY4ODIgMTQuNjAxMyA1LjA1MjY0IDEyLjQ5NjggNS4wNTI2NCAxMC4yMDE2QzUuMDUyNjQgNC45Njk0MiA5LjI5NDE1IDAuNzI3OTA1IDE0LjUyNjMgMC43Mjc5MDVDMTkuNzU4NSAwLjcyNzkwNSAyNCA0Ljk2OTQyIDI0IDEwLjIwMTZaIiBmaWxsPSIjQjEwNDBFIi8+Cjwvc3ZnPgo=");
   mask-size: contain;
-  mask-position: bottom center;
+  mask-position: center center;
   mask-repeat: no-repeat;
 }
 
@@ -89,6 +90,11 @@ a:hover span.ext,
   @apply translate-x-02em;
 }
 
+.burger-menu {
+  @apply mask-icon bg-black;
+  mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNi4wIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0-PHBhdGggZD0iTTAgOTZDMCA3OC4zIDE0LjMgNjQgMzIgNjRsMzg0IDBjMTcuNyAwIDMyIDE0LjMgMzIgMzJzLTE0LjMgMzItMzIgMzJMMzIgMTI4QzE0LjMgMTI4IDAgMTEzLjcgMCA5NnpNMCAyNTZjMC0xNy43IDE0LjMtMzIgMzItMzJsMzg0IDBjMTcuNyAwIDMyIDE0LjMgMzIgMzJzLTE0LjMgMzItMzIgMzJMMzIgMjg4Yy0xNy43IDAtMzItMTQuMy0zMi0zMnpNNDQ4IDQxNmMwIDE3LjctMTQuMyAzMi0zMiAzMkwzMiA0NDhjLTE3LjcgMC0zMi0xNC4zLTMyLTMyczE0LjMtMzIgMzItMzJsMzg0IDBjMTcuNyAwIDMyIDE0LjMgMzIgMzJ6Ii8-PC9zdmc-");
+}
+
 /* Layouts */
 
 html .layout {
@@ -106,7 +112,7 @@ html .layout {
     @apply p-0 md:cc relative;
   }
   .l-content {
-    @apply mb-30;
+    @apply m-10 md:m-0 mb-30;
   }
 }
 
@@ -120,41 +126,39 @@ html .layout {
     @apply p-0 md:cc relative max-w-full;
 
     .block-search-form {
-      @apply float-right absolute right-10 z-10 top-30;
+      @apply float-right absolute right-50 z-10 top-0 bottom-0 bg-white;
       @apply focus-within:absolute focus-within:right-10 focus-within:left-10 focus-within:z-40;
       @apply md:relative md:focus-within:relative md:focus-within:right-auto md:focus-within:left-auto;
-      @apply md:right-auto md:max-w-200 md:w-auto md:top-0 md:block;
+      @apply md:right-auto md:max-w-200 md:w-auto md:top-10 md:block;
 
       .search-action {
-        @apply absolute w-25 h-25 m-0 p-0 right-10 mt-8 overflow-hidden bg-white md:bg-cardinal-red mask-icon magnifying-glass;
+        @apply absolute w-30 h-30 md:w-25 md:h-25 m-0 p-0 right-10 mt-8 overflow-hidden bg-white md:bg-cardinal-red mask-icon magnifying-glass;
       }
 
       .form-item {
         @apply mb-0 mt-0;
 
-        & label {
-          @apply bg-fog text-fog md:hidden right-0 w-50 h-50 top-15;
-          position: absolute !important;
-          clip: auto;
-          overflow: visible;
-          height: auto;
-          mask: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjUiIHZpZXdCb3g9IjAgMCAyNCAyNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMS40NzM3IDEwLjIwMTZDMjEuNDczNyAxNC4wMzg1IDE4LjM2MzIgMTcuMTQ5IDE0LjUyNjMgMTcuMTQ5QzEwLjY4OTQgMTcuMTQ5IDcuNTc4OTUgMTQuMDM4NSA3LjU3ODk1IDEwLjIwMTZDNy41Nzg5NSA2LjM2NDY2IDEwLjY4OTQgMy4yNTQyMiAxNC41MjYzIDMuMjU0MjJDMTguMzYzMiAzLjI1NDIyIDIxLjQ3MzcgNi4zNjQ2NiAyMS40NzM3IDEwLjIwMTZaTTI0IDEwLjIwMTZDMjQgMTUuNDMzOCAxOS43NTg1IDE5LjY3NTMgMTQuNTI2MyAxOS42NzUzQzEyLjUwMjkgMTkuNjc1MyAxMC42Mjc3IDE5LjA0MDkgOS4wODg2MiAxNy45NjAzTDIuMTE5OTQgMjQuMzkyOUMxLjYwNzMyIDI0Ljg2NjEgMC44MDgxNzUgMjQuODM0MSAwLjMzNDk5MSAyNC4zMjE1Qy0wLjEzODE5MiAyMy44MDg5IC0wLjEwNjIyNiAyMy4wMDk4IDAuNDA2Mzg5IDIyLjUzNjZMNy4yMjY3OSAxNi4yNDA4QzUuODY4ODIgMTQuNjAxMyA1LjA1MjY0IDEyLjQ5NjggNS4wNTI2NCAxMC4yMDE2QzUuMDUyNjQgNC45Njk0MiA5LjI5NDE1IDAuNzI3OTA1IDE0LjUyNjMgMC43Mjc5MDVDMTkuNzU4NSAwLjcyNzkwNSAyNCA0Ljk2OTQyIDI0IDEwLjIwMTZaIiBmaWxsPSIjQjEwNDBFIi8+Cjwvc3ZnPgo=) no-repeat center center;
-          mask-size: contain;
+        label {
+          @apply text-11 text-center absolute top-50 right-5 z-50 md:hidden;
         }
       }
 
       .form-search {
         @apply text-16 focus:text-20 md:focus:text-16 text-cardinal-red focus:text-black md:text-black;
-        @apply right-0 mt-5 bg-transparent border-0 border-black-70 md:border md:rounded-full;
-        @apply focus:rounded-full focus:w-full focus:bg-white;
-        @apply md:relative w-0 md:w-200 md:focus:w-200 md:pl-10 md:pr-50 md:bg-white md:focus:top-auto md:bg-inherit z-30;
+        @apply right-0 border-black-70 border;
+        @apply md:rounded-full focus:rounded-full focus:w-auto;
+        @apply w-30 md:w-200 md:focus:w-200 pl-12 md:pl-10 md:pr-50 md:bg-white md:bg-inherit;
+        @apply z-30 focus:z-0 bg-transparent focus:bg-white border-0 md:border;
+        @apply absolute md:relative bottom-24 md:bottom-auto md:focus:top-auto focus:bottom-20 md:focus:bottom-auto focus:left-2 focus:right-2 indent-20 focus:indent-0 md:indent-0;
       }
 
       .form-actions {
-        @apply hidden absolute md:block right-10 top-0 bottom-0 z-40 m-0;
+        @apply md:block;
 
         .form-submit {
-          @apply w-25 h-25 m-0 p-0 overflow-hidden bg-white md:bg-cardinal-red text-cardinal-red h-35 magnifying-glass;
+          @apply absolute right-10 top-15 md:top-0 w-24 h-24 m-0 p-0 overflow-hidden;
+          @apply bg-black-30 text-black-30 md:bg-cardinal-red h-35 md:text-cardinal-red magnifying-glass;
+          @apply leading-10;
         }
       }
     }
@@ -163,10 +167,15 @@ html .layout {
       @apply col-span-3 right-0 left-0;
 
       .menu-toggle-button {
-        @apply absolute top-40 right-60 md:right-10 h-30 w-30 z-30;
+        @apply absolute top-15 right-10 w-30 z-30 flex flex-col md:hidden;
 
         .menu-toggle-button-text {
-          @apply hidden;
+          @apply text-11 flex indent-0 p-0 m-0 order-3 mt-35;
+        }
+        .menu-toggle-button-icon {
+          @apply top-20;
+        }
+        .menu-toggle-button-icon, .menu-toggle-button-icon:before, .menu-toggle-button-icon:after  {
         }
       }
 
@@ -193,24 +202,22 @@ html .layout {
   @apply flex flex-row relative sm:basis-1/2 md:basis-2/3;
 
   .logo {
-    @apply text-7xl hidden lg:flex max-w-160 max-h-100;
-  }
-  .header-site-name-link,
-  .header-site-slogan {
-    @apply md:border-l border-black md:pl-10 md:ml-20 max-w-300;
-
+    @apply text-7xl hidden lg:flex max-w-160 max-h-100 mt-auto align-baseline;
+    line-height: 0.6;
   }
 
   .header-site-name-wrapper {
-    @apply flex order-2 flex-col flex-auto justify-end;
+    @apply flex flex-col mt-auto align-baseline;
+
+    .header-site-name-link,
+    .header-site-slogan {
+      @apply flex md:border-l border-black md:ml-10 md:pl-10 align-baseline;
+    }
 
     .header-site-name-link {
-      @apply no-underline text-30 font-normal md:type-2;
-
-      & strong {
-        @apply font-normal;
-      }
+      @apply no-underline font-normal text-30 md:type-2 mt-auto;
     }
+
   }
 
   .header-site-slogan {
@@ -279,7 +286,7 @@ html .layout {
       }
 
       > a {
-        @apply md:p-8 lg:p-16 border-b-0 leading-normal flex-nowrap;
+        @apply p-8 lg:p-16 border-b-0 leading-normal flex-nowrap;
         @apply text-14 lg:text-18 xl:text-21 font-semibold;
 
         &.has-submenu {
@@ -306,15 +313,13 @@ html .layout {
         @apply md:scale-100;
       }
       ul {
-        @apply border-t-0;
+        @apply border-t-black-10;
       }
       li {
-        @apply border-t md:border-t-0;
-        &.last {
-          @apply border-b-0;
-        }
+        @apply border;
+
         a {
-          @apply text-12 md:text-17 font-semibold block p-10 lg:p-16 pl-32 md:pl-16 relative;
+          @apply text-13 md:text-17 font-semibold block p-10 lg:p-16 pl-16 md:pl-32 md:pl-16 relative;
           @apply no-underline;
         }
         a::before {
@@ -621,7 +626,10 @@ fieldset {
 
 .view-content {
   .views-row {
-    @apply border-b rs-mb-2 rs-pb-2;
+    @apply border-t rs-mt-2 rs-pt-2 clear-both;
+    &:first-child {
+      @apply border-t-0;
+    }
     & h3, & h2 {
       @apply font-serif font-bold text-27;
       @apply rs-mb-1;
@@ -660,11 +668,12 @@ fieldset {
     @apply grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 2xl:grid-cols-6;
   }
   .views-view-grid .views-row, .views-view-grid .views-grid-box {
-    @apply p-0 border-b-0;
+    @apply p-0 border-t-0;
   }
   .views-view-grid .views-row, .views-view-grid .views-grid-box {
     @apply border-0;
   }
+
 }
 
 .paragraphs-item.col-md-12 {

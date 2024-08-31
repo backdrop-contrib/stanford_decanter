@@ -137,14 +137,38 @@ function stanford_decanter_css_alter(&$css) {
 
 /**
  * Implements hook_entity_view_mode_info().
- *
- * NB: This causes problems sometimes.
  */
 // function stanford_decanter_entity_view_mode_info() {
 //   return [
 //     'node' => ['card' => t('Card')]
 //   ];
 // }
+
+function stanford_decanter_layout_info() {
+  $layouts['stanford_flexible'] = array(
+    'title' => t('A flexible, responsive layout for use with Decanter 7'),
+    'path' => 'layouts/stanford_flexible',
+    'regions' => array(
+      'identitybar'        => t('Identity bar'),
+      'header'             => t('Header'),
+      'top'                => t('Hero'),
+      'content'            => t('Content'),
+      'sidebar'            => t('First Sidebar'),
+      'sidebar2'           => t('Second Sidebar'),
+      'bottom'             => t('Page Bottom'),
+      'footer'             => t('Local Footer'),
+      'stanfordfooter'     => t('Stanford Footer'),
+    ),
+    // 'template'             => 'layout--stanford-flexible.tpl.php',
+    // 'preview'              => 'stanford-flexible.png',
+    // Optional information that populates using defaults.
+    // 'stylesheets' => array('all' => array('one-column.css')),
+
+    // Specify a file containing preprocess functions if needed.
+    // 'file' => 'my_layout.php',
+  );
+  return $layouts;
+}
 
 /**
  * Prepares variables for page templates.
@@ -218,8 +242,10 @@ function stanford_decanter_preprocess_layout(&$variables) {
  */
 function stanford_decanter_preprocess_header(&$variables) {
   $logo = $variables['logo'];
-  if ($variables['logo']) {
-    $variables['logo'] = '<img src="'. $logo .'" alt="Stanford" class="header-logo" />';
+  $logo_attributes = $variables['logo_attributes'];
+
+  if ($logo) {
+    $variables['logo'] = '<img src="'. $logo .'" alt="'. t('Home') .'" class="header-logo logo" '. backdrop_attributes($logo_attributes) . '/>';
   }
   else {
     $variables['logo'] = 'Stanford';

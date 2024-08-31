@@ -1,0 +1,27 @@
+type = layout
+name = Stanford Decanter
+version = BACKDROP_VERSION
+backdrop = 1.x
+
+; Specify regions for this layout.
+regions[identitybar]        = Identity bar
+regions[header]             = Header
+regions[top]                = Top
+regions[content]            = Content
+regions[sidebar]            = First Sidebar
+regions[sidebar2]           = Second Sidebar
+regions[bottom]             = Bottom
+regions[footer]             = Footer
+regions[stanfordfooter]     = Stanford Footer
+
+; The default region automatically receives the "Main Content" block if needed.
+default region = content
+
+; Include a file for special preprocessing of this layout's variables.
+; file = stanford.php
+
+; Default stylesheets for this layout
+; stylesheets[all][] = stanford.css
+
+; Preview
+preview = stanford.png
