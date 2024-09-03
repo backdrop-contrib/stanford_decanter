@@ -18,16 +18,20 @@
   color: #FFFFFC;
 }
 
+
+
 .header-menu .links a,
-.l-header .block-menu ul.menu > li > a {
+.l-header .block-menu ul.menu li a,
+.l-sidebar .block-menu ul.menu li a
+{
   color: #2E2D26;
 }
 body .header-menu .links a:after {
   background-color: #2E2D26;
 }
 
-.l-sidebar .block-menu ul.menu > li > a:hover,
-.l-header .block-menu ul.menu  > li > a:hover {
+.l-sidebar .block-menu ul.menu li a:hover,
+.l-header .block-menu ul.menu li a:hover {
   color: #8C1518;
 }
 .l-header .l-header-inner .block-system-main-menu .block-content ul.menu > li > a::before {
@@ -49,7 +53,6 @@ html body {
   background-color: #FFFFFE;
   color: #2E2D28;
 }
-
 
 .breadcrumb li a {
   color: #2E2D28;

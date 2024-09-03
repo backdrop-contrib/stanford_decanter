@@ -95,7 +95,7 @@ function stanford_decanter_block_info() {
   );
   $blocks['stanford_decanter_global_footer'] = array(
     'info' => t('Stanford Global Footer'),
-    'description' => t(''),
+    'description' => t('A global footer with links to Stanford resources'),
     'admin' => FALSE
   );
   return $blocks;
@@ -143,32 +143,6 @@ function stanford_decanter_css_alter(&$css) {
 //     'node' => ['card' => t('Card')]
 //   ];
 // }
-
-function stanford_decanter_layout_info() {
-  $layouts['stanford_flexible'] = array(
-    'title' => t('A flexible, responsive layout for use with Decanter 7'),
-    'path' => 'layouts/stanford_flexible',
-    'regions' => array(
-      'identitybar'        => t('Identity bar'),
-      'header'             => t('Header'),
-      'top'                => t('Hero'),
-      'content'            => t('Content'),
-      'sidebar'            => t('First Sidebar'),
-      'sidebar2'           => t('Second Sidebar'),
-      'bottom'             => t('Page Bottom'),
-      'footer'             => t('Local Footer'),
-      'stanfordfooter'     => t('Stanford Footer'),
-    ),
-    // 'template'             => 'layout--stanford-flexible.tpl.php',
-    // 'preview'              => 'stanford-flexible.png',
-    // Optional information that populates using defaults.
-    // 'stylesheets' => array('all' => array('one-column.css')),
-
-    // Specify a file containing preprocess functions if needed.
-    // 'file' => 'my_layout.php',
-  );
-  return $layouts;
-}
 
 /**
  * Prepares variables for page templates.
