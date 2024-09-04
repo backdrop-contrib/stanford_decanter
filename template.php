@@ -144,6 +144,26 @@ function stanford_decanter_css_alter(&$css) {
 //   ];
 // }
 
+function stanford_decanter_layout_info() {
+  $layouts['decanter'] = array(
+    'title' => t('Decanter'),
+    'path' => 'layouts/decanter',
+    'regions' => array(
+      'identitybar'        => t('Identity bar'),
+      'header'             => t('Header'),
+      'top'                => t('Hero'),
+      'content'            => t('Content'),
+      'sidebar'            => t('First Sidebar'),
+      'sidebar2'           => t('Second Sidebar'),
+      'bottom'             => t('Page Bottom'),
+      'footer'             => t('Local Footer'),
+      'stanfordfooter'     => t('Stanford Footer'),
+    ),
+    'preview'              => 'decanter.png',
+  );
+  return $layouts;
+}
+
 /**
  * Prepares variables for page templates.
  *
@@ -205,6 +225,7 @@ function stanford_decanter_preprocess_layout(&$variables) {
     $variables['theme_hook_suggestions'][] = $original . '__front';
     $variables['theme_hook_suggestion'] = $original . '__front';
   }
+
 }
 
 

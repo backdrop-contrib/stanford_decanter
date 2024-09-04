@@ -3094,6 +3094,10 @@ html .layout .l-middle{
   padding-right: 0;
 }
 
+html .layout .l-middle{
+  margin-top: 4rem;
+}
+
 /* Header */
 
 .l-header{
@@ -3261,10 +3265,6 @@ html .layout .l-middle{
   font-size: 1.1rem;
 }
 
-.l-header .l-header-inner .block-search-form .form-item label:focus{
-  display: none;
-}
-
 @media (min-width: 768px){
   .l-header .l-header-inner .block-search-form .form-item label{
     display: none;
@@ -3354,7 +3354,6 @@ html .layout .l-middle{
 .l-header .l-header-inner .block-search-form .form-search{
   position: absolute;
   top: 1.6rem;
-  border-width: 1px;
   text-indent: 2rem;
 }
 
@@ -3876,7 +3875,7 @@ html .layout .l-middle{
 
 @media (min-width: 1200px){
   .l-header .block-menu ul.menu > li, .l-header .block-menu ul.menu-dropdown > li{
-    margin-right: 3rem;
+    margin-right: 2rem;
   }
 }
 

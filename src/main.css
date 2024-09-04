@@ -112,7 +112,7 @@ html .layout {
     @apply m-10 md:m-0 mb-30;
   }
   .l-middle {
-    @apply cc;
+    @apply cc mt-40;
   }
 }
 
@@ -140,7 +140,7 @@ html .layout {
         @apply mb-0 mt-0;
 
         label {
-          @apply text-11 text-center absolute top-50 right-5 z-50 md:hidden focus:;
+          @apply text-11 text-center absolute top-50 right-5 z-50 md:hidden;
         }
       }
 
@@ -295,7 +295,7 @@ html .layout {
   ul.menu-dropdown {
     @apply md:flex-row;
     > li {
-      @apply text-nowrap mx-5 lg:mr-10 xl:mr-30 border-b md:border-b-0;
+      @apply text-nowrap mx-5 lg:mr-10 xl:mr-20 border-b md:border-b-0;
 
       ul {
         @apply md:pl-0 md:bg-white md:shadow-md md:absolute;
