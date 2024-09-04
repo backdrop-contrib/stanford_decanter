@@ -43,10 +43,12 @@
   <?php endif; ?>
 
   <?php if ($content['header']): ?>
-    <header class="l-header" role="banner" aria-label="<?php print t('Site header'); ?>">
-      <div class="l-header-inner container container-fluid">
-        <?php print $content['header']; ?>
-      </div>
+    <header class="l-header cc" role="banner" aria-label="<?php print t('Site header'); ?>">
+      <div class="l-header-inner grid grid-cols-4">
+        <div class="l-header-l col-span-3"><?php print $content['header_l']; ?></div>
+        <div class="l-header-r"><?php print $content['header_r']; ?></div>
+        <div class="l-header-span col-span-4"><?php print $content['header']; ?></div>
+    </div>
     </header>
   <?php endif; ?>
 
@@ -125,7 +127,7 @@
 
   <?php if ($content['footer']): ?>
     <footer class="l-footer">
-      <div class="l-footer-inner container container-fluid">
+      <div class="l-footer-inner grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         <?php print $content['footer']; ?>
       </div>
     </footer>

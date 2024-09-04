@@ -5,7 +5,10 @@ backdrop = 1.x
 
 ; Specify regions for this layout.
 regions[identitybar]        = Identity bar
-regions[header]             = Header
+regions[header_tl]          = Header Top Left
+regions[header_tr]          = Header Top Right
+regions[header_bl]          = Header Bottom Left
+regions[header_br]          = Header Bottom Right
 regions[top]                = Top
 regions[content]            = Content
 regions[sidebar]            = First Sidebar
