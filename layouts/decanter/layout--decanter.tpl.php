@@ -47,8 +47,8 @@
       <div class="l-header-inner grid grid-cols-4">
         <div class="l-header-l col-span-3"><?php print $content['header_l']; ?></div>
         <div class="l-header-r"><?php print $content['header_r']; ?></div>
-        <div class="l-header-span col-span-4"><?php print $content['header']; ?></div>
-    </div>
+      </div>
+      <div class="l-header-nav"><?php print $content['header']; ?></div>
     </header>
   <?php endif; ?>
 
@@ -78,18 +78,25 @@
 
       <?php print $action_links; ?>
 
+      <?php if (!empty($content['hero'])): ?>
+        <div class="hero">
+          <?php print $content['hero']; ?>
+        </div>
+      <?php endif; ?>
+
       <?php if (!empty($content['top'])): ?>
-        <div class="l-top hero">
+        <div class="l-top">
           <?php print $content['top']; ?>
         </div>
       <?php endif; ?>
+
 
       <div class="l-middle row flex flex-col md:flex-row gap-xs lg:gap-lg ">
       <?php if (!empty($content['sidebar']) && !empty($content['sidebar2'])): ?>
           <main class="l-content col-md-6 col-md-push-3 w-full md:w-1/2 order-2" role="main" aria-label="<?php print t('Main content'); ?>">
             <?php print $content['content']; ?>
           </main>
-          <div class="l-sidebar l-sidebar-first col-md-3 col-md-pull-6 md:w-1/4 order-1">
+          <div class="l-sidebar l-sidebar-first col-md-3 col-md-pull-6 lg:w-1/4 order-1">
             <?php print $content['sidebar']; ?>
           </div>
           <div class="l-sidebar l-sidebar-second col-md-3 md:w-1/4 order-3">
@@ -117,7 +124,7 @@
       </div>
 
       <?php if (!empty($content['bottom'])): ?>
-        <div class="l-bottom">
+        <div class="l-bottom grid-region">
           <?php print $content['bottom']; ?>
         </div>
       <?php endif; ?>
@@ -127,7 +134,7 @@
 
   <?php if ($content['footer']): ?>
     <footer class="l-footer">
-      <div class="l-footer-inner grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+      <div class="l-footer-inner grid-region">
         <?php print $content['footer']; ?>
       </div>
     </footer>

@@ -23,7 +23,11 @@
 
 <?php if ($site_name || $site_slogan || $logo): ?>
   <div class="header-identity-wrapper">
-      <div class="logo"><?php print $logo ?></div>
+    <div class="logo">
+      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="header-logo-link" rel="home">
+        <?php print $logo ?>
+        </a>
+      </div>
       <?php if ($site_name || $site_slogan): ?>
         <div class="header-site-name-wrapper">
           <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="header-site-name-link" rel="home">

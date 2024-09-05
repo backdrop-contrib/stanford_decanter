@@ -115,26 +115,70 @@ html .layout {
   .l-content {
     @apply m-0 mb-30;
   }
+
 }
+.grid-region .row,
+.gridded
+{
+  @apply grid grid-cols-1 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12;
+  @apply gap-4 md:gap-6;
+
+  > div {
+    @apply col-span-12;
+  }
+  &.grid-12 > div,
+  .span1 {
+    @apply col-span-1;
+  }
+  &.grid-6 > div,
+  .span2 {
+    @apply col-span-2;
+  }
+  &.grid-4 > div,
+  .span3, .quarter-width {
+    @apply col-span-3;
+  }
+  &.grid-3 > div,
+  .span4, .third-width {
+    @apply col-span-4;
+  }
+  .span5 {
+    @apply col-span-5;
+  }
+  &.grid-2 > div,
+  .span6, .half-width {
+    @apply col-span-6;
+  }
+  .span7 {
+    @apply col-span-7;
+  }
+  .span8, .twothird-width {
+    @apply col-span-8;
+  }
+  .span9, .threequarter-width {
+    @apply col-span-9;
+  }
+  .span10 {
+    @apply col-span-10;
+  }
+  .span11 {
+    @apply col-span-11;
+  }
+  .span12, .full-width {
+    @apply col-span-12;
+  }
+}
+
 
 /* Header */
 
 .l-header {
-  @apply relative z-10;
+  @apply relative z-10 w-full;
   box-shadow: 0 3px 6px rgba(0, 0, 0, .13), 0 3px 6px rgba(0, 0, 0, .1);
 
   .l-header-inner {
     @apply py-10 md:p-0 md:cc relative max-w-full grid grid-cols-4;
 
-    .header-l {
-      @apply col-span-3;
-    }
-    .header-r {
-      @apply col-span-1;
-    }
-    .header-span {
-      @apply col-span-3
-    }
     .block-search-form {
       @apply flex-shrink md:px-0 md:my-20 hidden md:block;
 
@@ -170,16 +214,13 @@ html .layout {
         }
       }
     }
+  }
 
+  .l-header-nav {
+    @apply absolute right-0 left-0 md:relative;
     .block-system-main-menu {
-      @apply col-span-3 right-0 left-0 absolute md:relative top-20 md:top-0;
-
-      ul.menu-dropdown {
-        @apply top-60 md:top-0;
-      }
-
       .menu-toggle-button {
-        @apply absolute top-0 right-10 w-30 z-30 flex flex-col md:hidden;
+        @apply md:hidden absolute right-20 -top-60;
 
         .menu-toggle-button-text {
           @apply text-11 flex indent-0 p-0 m-0 order-3 mt-35;
@@ -192,10 +233,15 @@ html .layout {
       }
 
       .block-content {
-        @apply ml-0 mr-0 md:mt-0 z-10;
+        @apply px-10 md:p-0 md:ml-0 md:mr-0 md:mt-0 z-10 w-full shadow-lg md:shadow-none bg-white;
+
+        .menu-dropdown {
+          @apply pb-20 md:pb-0;
+        }
       }
     }
   }
+
 
   .block-system-header {
     @apply col-span-2;
@@ -212,6 +258,10 @@ html .layout {
 
 .header-identity-wrapper {
   @apply flex flex-row relative col-span-2;
+
+  a {
+    @apply no-underline
+  }
 
   .logo {
     @apply text-7xl hidden lg:flex max-w-160 max-h-100 mt-auto align-baseline;
@@ -321,44 +371,56 @@ html .layout {
       }
 
       > a {
-        @apply p-8 lg:p-16 lg:pl-0 mr-8 border-b-0 leading-normal flex-nowrap;
-        @apply text-14 lg:text-18 xl:text-21 font-semibold;
+        @apply p-8 px-16 md:p-16 md:pl-0 mr-8 border-b-0 leading-normal flex-nowrap;
+        @apply text-14 md:text-18 xl:text-21 font-semibold;
         @apply no-underline;
 
-        &.has-submenu {
-          @apply pr-20;
-        }
+      }
+      a.has-submenu {
+        @apply pr-20;
+      }
 
-        .sub-arrow {
-          @apply border-none caret right-0 inline-block align-baseline;
-          margin-top: -6px;
-          .has-submenu.highlighted & {
-            @apply rotate-180;
-          }
+      span.sub-arrow {
+        @apply border-none caret right-0 inline-block align-baseline;
+        margin-top: -6px;
+        .has-submenu.highlighted & {
+          @apply rotate-180;
         }
       }
-      > a::before {
+      a::before {
         content: '';
         @apply absolute h-full w-2 md:w-6 scale-y-0 bg-black bottom-0 left-0 visible;
         transition: transform .3s ease-in, background-color .3s ease-in;
       }
-      >a::before {
+      a::before {
         content: ' ';
         @apply md:w-full md:h-6 md:scale-x-0 bg-cardinal-red;
       }
-      > a:hover::before,
-      > a.active::before {
+      a:hover::before,
+      a.active::before {
         @apply md:scale-100;
       }
-      > a.active-trail::before {
+      a.active-trail::before {
         @apply bg-fog md:scale-100;
+      }
+      li {
+        a {
+          @apply pl-20;
+          span.sub-arrow {
+            @apply right-10 -rotate-90;
+          }
+        }
+        a::before {
+          @apply h-full w-6;
+        }
+
       }
     }
   }
 }
 
 .l-sidebar .block-menu {
-  @apply md:w-200 lg:w-300;
+  @apply md:min-w-200 lg:min-w-250 xl:min-w-300;
   .block-title {
     @apply text-24 mt-39;
   }
@@ -452,10 +514,14 @@ ul.tabs {
   }
 }
 
+.l-hero,
 .l-top {
   .block-system-title-combo,
-  .l-top h1.page-title {
+  h1.page-title {
     @apply text-center flex-grow w-full absolute;
+  }
+  .block-title {
+    @apply rs-m-2;
   }
   ul.tabs {
     @apply justify-center;
@@ -682,6 +748,7 @@ fieldset {
         @apply w-full sm:w-1/2 lg:w-3/4;
       }
     }
+
   }
   .views-view-grid {
     @apply gap-20 md:gap-30 rs-pb-2;
@@ -834,7 +901,7 @@ fieldset {
 .plain > article,
 .views-grid-box,
 .aplenty-card-plain .aplenty-card > .content {
-  @apply shadow-md;
+  @apply shadow-md rs-pb-1;
   & h3, & h2 {
     @apply font-sans leading-tight font-bold type-2 mb-03em;
   }
@@ -996,12 +1063,12 @@ fieldset {
 
 
 .block-hero {
-  @apply rs-pt-9 text-center text-white w-full;
+  @apply text-center text-white w-full;
   .block-title {
     @apply font-serif font-bold leading-loose tracking-normal text-shadow-lg mb-02em sm:text-m4;
   }
   .block-content {
-    @apply max-w-prose text-20 leading-display text-shadow mx-auto mb-0;
+    @apply max-w-prose text-30 leading-display text-shadow mx-auto mb-0;
   }
 }
 
@@ -1024,12 +1091,14 @@ fieldset {
   overflow-wrap: break-word;
 }
 
-.l-top .block-hero {
-  margin-top: -2rem;/* Negative top margin collapses spacing under header */
+.l-hero .block-hero {
+  margin-top: -2rem;
+  /* Negative top margin collapses spacing under header */
 }
 
 .container .block-hero {
-  margin-top: 0; /* If hero is in a container don't collapse top spacing */
+  margin-top: 0;
+  /* If hero is in a container don't collapse top spacing */
 }
 
 
