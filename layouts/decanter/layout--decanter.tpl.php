@@ -92,7 +92,7 @@
 
 
       <div class="l-middle row flex flex-col md:flex-row gap-xs lg:gap-lg ">
-      <?php if (!empty($content['sidebar']) && !empty($content['sidebar2'])): ?>
+        <?php if (!empty($content['sidebar']) && !empty($content['sidebar2'])): ?>
           <main class="l-content col-md-6 col-md-push-3 w-full md:w-1/2 order-2" role="main" aria-label="<?php print t('Main content'); ?>">
             <?php print $content['content']; ?>
           </main>
@@ -124,29 +124,28 @@
       </div>
 
       <?php if (!empty($content['bottom'])): ?>
-        <div class="l-bottom grid-region">
+        <div class="l-bottom grid grid-cols-1 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12">
           <?php print $content['bottom']; ?>
         </div>
       <?php endif; ?>
-
     </div><!-- /.l-wrapper-inner -->
   </div><!-- /.l-wrapper -->
 
-  <?php if ($content['footer']): ?>
-    <footer class="l-footer">
-      <div class="l-footer-inner grid-region">
-        <?php print $content['footer']; ?>
-      </div>
-    </footer>
-  <?php endif; ?>
+    <?php if ($content['footer']): ?>
+      <footer class="l-footer">
+        <div class="l-footer-inner grid grid-cols-1 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-4">
+          <?php print $content['footer']; ?>
+        </div>
+      </footer>
+    <?php endif; ?>
 
-<?php if ($content['stanfordfooter']): ?>
-    <footer class="l-stanfordfooter">
-      <div class="l-stanfordfooter-inner">
-        <?php print $content['stanfordfooter']; ?>
-      </div>
-    </footer>
-<?php endif; ?>
+    <?php if ($content['stanfordfooter']): ?>
+      <footer class="l-stanfordfooter">
+        <div class="l-stanfordfooter-inner">
+          <?php print $content['stanfordfooter']; ?>
+        </div>
+      </footer>
+    <?php endif; ?>
   </div>
 </div>
 <!-- /.layout--stanford -->

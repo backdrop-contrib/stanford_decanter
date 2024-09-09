@@ -9,6 +9,12 @@
   color: #2E2D27;
 }
 
+.l-header .l-header-inner .block-search-form .form-actions .form-submit,
+.menu-toggle-button-icon, .menu-toggle-button-icon:before, .menu-toggle-button-icon:after
+{
+  background-color: #2E2D27;
+}
+
 .block-theme-hooks-stanford-decanter-identity-bar .block-content,
 .block-theme-hooks-stanford-decanter-identity-bar .block-content a,
 .block-theme-hooks-stanford-decanter-identity-bar .block-content a:hover,

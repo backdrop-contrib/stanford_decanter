@@ -44,6 +44,12 @@
   mask-position: center center;
   mask-repeat: no-repeat;
 }
+.close {
+  mask-size: contain;
+  mask-position: center center;
+  mask-repeat: no-repeat;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3C!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath d='M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z'/%3E%3C/svg%3E");
+}
 
 .caret {
   @apply h-12 w-12 m-0 p-0;
@@ -95,6 +101,7 @@ a:hover span.ext,
   mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNi4wIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0-PHBhdGggZD0iTTAgOTZDMCA3OC4zIDE0LjMgNjQgMzIgNjRsMzg0IDBjMTcuNyAwIDMyIDE0LjMgMzIgMzJzLTE0LjMgMzItMzIgMzJMMzIgMTI4QzE0LjMgMTI4IDAgMTEzLjcgMCA5NnpNMCAyNTZjMC0xNy43IDE0LjMtMzIgMzItMzJsMzg0IDBjMTcuNyAwIDMyIDE0LjMgMzIgMzJzLTE0LjMgMzItMzIgMzJMMzIgMjg4Yy0xNy43IDAtMzItMTQuMy0zMi0zMnpNNDQ4IDQxNmMwIDE3LjctMTQuMyAzMi0zMiAzMkwzMiA0NDhjLTE3LjcgMC0zMi0xNC4zLTMyLTMyczE0LjMtMzIgMzItMzJsMzg0IDBjMTcuNyAwIDMyIDE0LjMgMzIgMzJ6Ii8-PC9zdmc-");
 }
 
+
 /* Layouts */
 
 html .layout {
@@ -117,7 +124,7 @@ html .layout {
   }
 
 }
-.grid-region .row,
+.grid-region,
 .gridded
 {
   @apply grid grid-cols-1 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12;
@@ -180,38 +187,72 @@ html .layout {
     @apply py-10 md:p-0 md:cc relative max-w-full grid grid-cols-4;
 
     .block-search-form {
-      @apply flex-shrink md:px-0 md:my-20 hidden md:block;
+      @apply flex-shrink absolute md:static right-30 left-0 bottom-0 top-0;
+      @apply md:px-0 md:my-20 md:mr-0 md:bottom-auto md:right-auto md:h-auto;
 
-
+      &:focus-within {
+        @apply z-30;
+        @apply bg-white;
+      }
       .search-action {
         @apply w-30 h-30 md:w-25 md:h-25 m-0 p-0 overflow-hidden bg-white md:bg-cardinal-red mask-icon magnifying-glass;
       }
 
       .form-item {
-        @apply mb-0 mt-0;
+        @apply z-50 mb-0 mt-0 absolute bottom-20 right-0 md:w-auto md:relative md:bottom-auto;
+
 
         label {
-          @apply text-11 text-center absolute top-50 right-5 z-50 md:hidden;
+          @apply text-11 text-center absolute -top-5 right-5 md:hidden;
         }
-      }
 
-      input.form-search {
-        @apply text-16 focus:text-20 md:focus:text-16 text-cardinal-red focus:text-black md:text-black md:bg-white;
-        @apply border focus:border-black focus:shadow-md rounded-full;
+        &:focus-within {
+          @apply absolute z-0 left-0 right-0 top-0 bottom-0;
+          .form-submit {
+            @apply: right-40 z-50;
+          }
+          input.form-search {
+            @apply: z-10;
+          }
+          label {
+            @apply hidden;
+          }
+        }
 
-        @apply h-40 w-full max-w-280 pl-12 md:pl-10 ml-auto mr-0;
-        @apply z-30 focus:z-0 bg-transparent focus:bg-white border-0 md:border;
-        @apply top-16 md:top-auto md:focus:top-auto focus:bottom-20 md:focus:bottom-auto focus:left-2 focus:right-2 indent-20 focus:indent-0 md:indent-0;
+
+        input.form-search {
+          @apply text-16 md:focus:text-16 text-cardinal-red md:text-black;
+          @apply bg-transparent;
+
+
+          @apply absolute z-20;
+          @apply indent-30 md:indent-0;
+          @apply bottom-0 right-0;
+          @apply md:top-16 md:h-40 w-40 md:w-full md:pl-10 md:mx-5;
+          @apply md:top-auto md:focus:top-auto focus:bottom-20 md:focus:bottom-auto;
+
+
+          @apply rounded-full border-0 md:border;
+          &:focus {
+            @apply text-20 text-black border shadow-md indent-0;
+            @apply z-0 left-0 top-10 bottom-10 right-0 w-auto px-20;
+          }
+        }
       }
 
       .form-actions {
-        @apply md:block;
+        @apply md:block m-0;
 
         .form-submit {
-          @apply absolute right-10 top-0 w-24 h-24 m-0 p-0 overflow-hidden;
+          @apply absolute indent-30 right-10 top-20 w-24 h-24 m-0 p-0 overflow-hidden;
           @apply bg-black-30 text-black-30 md:bg-cardinal-red h-35 md:text-cardinal-red magnifying-glass;
-          @apply leading-10;
+          @apply leading-10 md:block;
         }
+      }
+    }
+    &:focus-within {
+      .form-actions  .form-submit {
+        @apply close;
       }
     }
   }
@@ -257,7 +298,7 @@ html .layout {
 }
 
 .header-identity-wrapper {
-  @apply flex flex-row relative col-span-2;
+  @apply flex flex-row relative col-span-2 z-20;
 
   a {
     @apply no-underline
