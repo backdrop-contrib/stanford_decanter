@@ -191,7 +191,7 @@ html .layout {
       @apply md:px-0 md:my-20 md:mr-0 md:bottom-auto md:right-auto md:h-auto;
 
       &:focus-within {
-        @apply z-30;
+        @apply z-30 md:z-0;
         @apply bg-white;
       }
       .search-action {
@@ -208,8 +208,10 @@ html .layout {
 
         &:focus-within {
           @apply absolute z-0 left-0 right-0 top-0 bottom-0;
+          @apply md:relative md:left-auto md:bottom-auto md:right-0 md:top-auto;
+
           .form-submit {
-            @apply: right-40 z-50;
+            @apply: right-40 z-50 md:right-10 md:z-0;
           }
           input.form-search {
             @apply: z-10;
@@ -228,14 +230,15 @@ html .layout {
           @apply absolute z-20;
           @apply indent-30 md:indent-0;
           @apply bottom-0 right-0;
-          @apply md:top-16 md:h-40 w-40 md:w-full md:pl-10 md:mx-5;
-          @apply md:top-auto md:focus:top-auto focus:bottom-20 md:focus:bottom-auto;
+          @apply md:h-40 w-40 md:w-full md:pl-10 md:mx-5;
+          @apply md:top-0 md:focus:top-0 focus:bottom-20 md:focus:bottom-auto;
 
 
           @apply rounded-full border-0 md:border;
           &:focus {
-            @apply text-20 text-black border shadow-md indent-0;
+            @apply text-20 md:text-16 text-black border shadow-md indent-0;
             @apply z-0 left-0 top-10 bottom-10 right-0 w-auto px-20;
+            @apply md:left-auto md:top-0 md:bottom-20 md:w-full md:px-10;
           }
         }
       }
@@ -246,13 +249,13 @@ html .layout {
         .form-submit {
           @apply absolute indent-30 right-10 top-20 w-24 h-24 m-0 p-0 overflow-hidden;
           @apply bg-black-30 text-black-30 md:bg-cardinal-red h-35 md:text-cardinal-red magnifying-glass;
-          @apply leading-10 md:block;
+          @apply leading-10 md:block md:z-50 md:right-15 md:top-22;
         }
       }
     }
     &:focus-within {
       .form-actions  .form-submit {
-        @apply close;
+        /* @apply close; */
       }
     }
   }
