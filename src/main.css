@@ -313,15 +313,15 @@ html .layout {
   }
 
   .header-site-name-wrapper {
-    @apply flex flex-col mt-auto align-baseline;
+    @apply flex flex-col lg:mt-auto lg:align-baseline;
 
     .header-site-name-link,
     .header-site-slogan {
-      @apply flex md:border-l border-black md:ml-10 md:pl-10 align-baseline;
+      @apply flex lg:border-l lg:ml-10 lg:pl-10 align-baseline border-black;
     }
 
     .header-site-name-link {
-      @apply no-underline font-normal text-30 md:type-2 mt-auto;
+      @apply no-underline font-normal text-30 md:type-2 lg:mt-auto;
     }
   }
 
@@ -449,7 +449,7 @@ html .layout {
       }
       li {
         a {
-          @apply pl-20;
+          @apply text-17 pl-20;
           span.sub-arrow {
             @apply right-10 -rotate-90;
           }
@@ -457,7 +457,6 @@ html .layout {
         a::before {
           @apply h-full w-6;
         }
-
       }
     }
   }
@@ -501,7 +500,7 @@ html .layout {
   @apply hidden md:block mr-20;
 
   ul.links {
-    @apply flex flex-row;
+    @apply flex flex-col xl:flex-row;
 
     li {
       @apply my-5;
