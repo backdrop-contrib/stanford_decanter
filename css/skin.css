@@ -9,6 +9,7 @@
   color: #2E2D27;
 }
 
+
 .l-header .l-header-inner .block-search-form .form-actions .form-submit,
 .menu-toggle-button-icon, .menu-toggle-button-icon:before, .menu-toggle-button-icon:after
 {
@@ -78,12 +79,13 @@ html body .l-footer a {
 }
 
 /* Logo */
-html body .header-identity-wrapper::before {
+
+html body .header-identity-wrapper .logo a {
   color: #8C1516;
 }
 
 /* Body links */
-.l-footer a, .field-name-body a, .l-content a {
+.l-footer a, .field-name-body a, .l-coulintent a {
   color: #006CB8;
 }
 

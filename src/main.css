@@ -115,6 +115,9 @@ html .layout {
     }
   }
 
+  .l-top {
+    @apply cc mt-20;
+  }
   .l-bottom,
   .l-middle {
     @apply cc mt-40;
@@ -536,9 +539,10 @@ html .layout {
 }
 
 h1.page-title {
-  @apply flex-grow rs-mb-1 sm:text-m5 text-center font-black;
+  @apply flex-grow rs-mb-1 sm:text-m5 font-black;
 }
 
+.l-top h1.page-title,
 .l-content h1.page-title {
   @apply text-left;
 }
@@ -557,8 +561,7 @@ ul.tabs {
   }
 }
 
-.l-hero,
-.l-top {
+.l-hero {
   .block-system-title-combo,
   h1.page-title {
     @apply text-center flex-grow w-full absolute;
@@ -670,7 +673,7 @@ ul.primary li.active a,
 /* Form elements */
 
 .btn, input.form-submit, button.form-submit {
-  @apply button;
+  @apply button text-white;
 }
 
 .cta-btn,

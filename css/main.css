@@ -3040,6 +3040,64 @@ html .layout .global-footer a{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+html .layout .l-top{
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 576px){
+  html .layout .l-top{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: 768px){
+  html .layout .l-top{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (min-width: 992px){
+  html .layout .l-top{
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media (min-width: 1200px){
+  html .layout .l-top{
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media (min-width: 1500px){
+  html .layout .l-top{
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media only screen and (min-width: 1700px){
+  html .layout .l-top{
+    padding-left: calc((100% - 1500px)/2);
+    padding-right: calc((100% - 1500px)/2);
+  }
+}
+
+ .centered-container html .layout .l-top,html .layout .l-top .centered-container,html .layout .l-top .cc{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+html .layout .l-top{
+  margin-top: 2rem;
+}
+
 html .layout .l-bottom,
   html .layout .l-middle{
   padding-left: 20px;
@@ -4412,7 +4470,6 @@ h1.page-title{
 
 h1.page-title{
   flex-grow: 1;
-  text-align: center;
   font-weight: 900;
 }
 
@@ -4422,6 +4479,7 @@ h1.page-title{
   }
 }
 
+.l-top h1.page-title,
 .l-content h1.page-title{
   text-align: left;
 }
@@ -4454,32 +4512,30 @@ ul.tabs li.active a{
 }
 
 .l-hero .block-system-title-combo,
-  .l-hero h1.page-title,
-  .l-top .block-system-title-combo,
-  .l-top h1.page-title{
+  .l-hero h1.page-title{
   position: absolute;
   width: 100%;
   flex-grow: 1;
   text-align: center;
 }
 
-.l-hero .block-title, .l-top .block-title{
+.l-hero .block-title{
   margin: 3rem;
 }
 
 @media (min-width: 768px){
-  .l-hero .block-title, .l-top .block-title{
+  .l-hero .block-title{
     margin: 3.6rem;
   }
 }
 
 @media (min-width: 1500px){
-  .l-hero .block-title, .l-top .block-title{
+  .l-hero .block-title{
     margin: 3.8rem;
   }
 }
 
-.l-hero ul.tabs, .l-top ul.tabs{
+.l-hero ul.tabs{
   justify-content: center;
 }
 
@@ -4740,6 +4796,11 @@ ul.primary li.active a,
 
 .btn:focus, input.form-submit:focus, button.form-submit:focus{
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.btn, input.form-submit, button.form-submit{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .cta-btn,
