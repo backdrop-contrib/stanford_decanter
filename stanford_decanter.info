@@ -5,3 +5,5 @@ type = theme
 
 stylesheets[all][] = css/main.css
 stylesheets[all][] = css/skin.css
+
+settings[color] = true

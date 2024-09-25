@@ -85,8 +85,11 @@ html body .header-identity-wrapper .logo a {
 }
 
 /* Body links */
-.l-footer a, .field-name-body a, .l-coulintent a {
+.l-footer a, .field-name-body a, .l-content a {
   color: #006CB8;
+}
+.l-content a.btn {
+  color: #fff;
 }
 
 

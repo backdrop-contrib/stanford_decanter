@@ -120,14 +120,15 @@ html .layout {
   }
   .l-bottom,
   .l-middle {
-    @apply cc mt-40;
+    @apply cc my-40;
   }
   .l-content {
     @apply m-0 mb-30;
   }
 
 }
-.grid-region,
+
+.gridded-region,
 .gridded
 {
   @apply grid grid-cols-1 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12;
@@ -635,7 +636,7 @@ ul.primary li.active a,
 
 .l-footer {
   @apply relative cc;
-  @apply py-40;
+  @apply py-40 mt-30;
 
   .l-footer-inner {
     @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4;
@@ -676,9 +677,17 @@ ul.primary li.active a,
   @apply button text-white;
 }
 
+.l-footer a.cta-btn,
+.field-name-body a.cta-btn,
+.l-footer a.btn,
+.field-name-body a.btn,
+a.cta-btn,
 .cta-btn,
 .cta-button {
-  @apply text-center rounded-full font-semibold leading-display block w-fit no-underline hocus:underline transition-colors px-26 pt-10 pb-11 text-16 md:text-20 bg-digital-red hover:bg-cardinal-red-dark focus:bg-black-true active:bg-black-true text-white hocus:text-white;
+  @apply text-center rounded-full block w-fit  px-26 pt-10 pb-11 text-16 ;
+  @apply font-semibold leading-display no-underline hocus:underline md:text-20;
+  @apply transition-colors bg-digital-red hover:bg-cardinal-red-dark focus:bg-black-true active:bg-black-true text-white hocus:text-white;
+
   & svg {
     @apply transition h-09em w-09em ml-5 -mt-2 inline-block transition-transform;
   }
@@ -1377,3 +1386,7 @@ fieldset {
  .links.inline .node-readmore:after {
    content: '';
  }
+
+.more-link {
+  @apply my-10
+}
