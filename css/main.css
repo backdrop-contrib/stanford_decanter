@@ -1957,12 +1957,52 @@ table thead + tbody{
   order: 3;
 }
 
+.col-span-1{
+  grid-column: span 1 / span 1;
+}
+
+.col-span-10{
+  grid-column: span 10 / span 10;
+}
+
+.col-span-11{
+  grid-column: span 11 / span 11;
+}
+
+.col-span-12{
+  grid-column: span 12 / span 12;
+}
+
 .col-span-2{
   grid-column: span 2 / span 2;
 }
 
 .col-span-3{
   grid-column: span 3 / span 3;
+}
+
+.col-span-4{
+  grid-column: span 4 / span 4;
+}
+
+.col-span-5{
+  grid-column: span 5 / span 5;
+}
+
+.col-span-6{
+  grid-column: span 6 / span 6;
+}
+
+.col-span-7{
+  grid-column: span 7 / span 7;
+}
+
+.col-span-8{
+  grid-column: span 8 / span 8;
+}
+
+.col-span-9{
+  grid-column: span 9 / span 9;
 }
 
 .mx-10{
@@ -3282,6 +3322,54 @@ html .layout .l-content{
 }
 
 .gridded-region .span12, .gridded-region .full-width, .gridded .span12, .gridded .full-width{
+  grid-column: span 12 / span 12;
+}
+
+.col-md-1{
+  grid-column: span 1 / span 1;
+}
+
+.col-md-2{
+  grid-column: span 2 / span 2;
+}
+
+.col-md-3{
+  grid-column: span 3 / span 3;
+}
+
+.col-md-4{
+  grid-column: span 4 / span 4;
+}
+
+.col-md-5{
+  grid-column: span 5 / span 5;
+}
+
+.col-md-6{
+  grid-column: span 6 / span 6;
+}
+
+.col-md-7{
+  grid-column: span 7 / span 7;
+}
+
+.col-md-8{
+  grid-column: span 8 / span 8;
+}
+
+.col-md-9{
+  grid-column: span 9 / span 9;
+}
+
+.col-md-10{
+  grid-column: span 10 / span 10;
+}
+
+.col-md-11{
+  grid-column: span 11 / span 11;
+}
+
+.col-md-12{
   grid-column: span 12 / span 12;
 }
 
@@ -6565,6 +6653,32 @@ a .postcard-left .btn-primary:focus, .postcard-left .btn-primary:focus{
   font-size: 1.56em;
   font-weight: 700;
   line-height: 0.75;
+}
+
+.aplenty-cards{
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 0.4rem;
+}
+
+@media (min-width: 576px){
+  .aplenty-cards{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px){
+  .aplenty-cards{
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 1.2rem;
+  }
+}
+
+@media (min-width: 992px){
+  .aplenty-cards{
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1.6rem;
+  }
 }
 
 .aplenty-cards .aplenty-card{
