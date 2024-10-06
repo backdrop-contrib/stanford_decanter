@@ -60,6 +60,12 @@
   transition: transform 0.25s ease-out;
 }
 
+.caret-closed {
+  @apply caret pl-10;
+  background-position: left center;
+  background-size: 12px;
+}
+
 span.ext {
   background: none;
 }
@@ -277,7 +283,7 @@ html .layout {
           @apply rounded-full border-0 md:border;
           &:focus {
             @apply text-20 md:text-16 text-black border shadow-md indent-0;
-            @apply z-0 left-0 top-10 bottom-10 right-0 w-auto px-20;
+            @apply z-0 left-0 top-auto bottom-18 right-0 w-auto px-20;
             @apply md:left-auto md:top-0 md:bottom-20 md:w-full md:px-10;
           }
         }
@@ -287,7 +293,7 @@ html .layout {
         @apply md:block m-0;
 
         .form-submit {
-          @apply absolute indent-30 right-10 top-20 w-24 h-24 m-0 p-0 overflow-hidden;
+          @apply absolute indent-30 right-10 bottom-20 w-24 h-24 m-0 p-0 overflow-hidden;
           @apply bg-black-30 text-black-30 md:bg-cardinal-red h-35 md:text-cardinal-red magnifying-glass;
           @apply leading-10 md:block md:z-50 md:right-15 md:top-22;
         }
@@ -341,14 +347,14 @@ html .layout {
 }
 
 .header-identity-wrapper {
-  @apply flex flex-row relative col-span-2 z-20;
+  @apply flex flex-col lg:flex-row relative col-span-2 z-20 mt-10 lg:mt-auto;
 
   a {
-    @apply no-underline
+    @apply no-underline font-normal;
   }
 
   .logo {
-    @apply text-7xl hidden lg:flex max-w-160 max-h-100 mt-auto align-baseline;
+    @apply text-6xl lg:text-7xl flex max-w-160 max-h-100 mt-auto align-baseline;
     line-height: 0.6;
   }
 
@@ -374,7 +380,7 @@ html .layout {
   @apply h-30;
 
   .block-content {
-    @apply px-10 md:cc;
+    @apply cc;
 
     & a {
       @apply logo text-white hocus:text-white text-20;
@@ -756,6 +762,10 @@ body {
   }
 }
 
+.l-wrapper .form-search {
+  @apply max-w-full my-5;
+}
+
 /* Accordions */
 
 .paragraphs-item-aplenty-accordion-item {
@@ -768,38 +778,33 @@ body {
 }
 
 fieldset {
-  @apply my-20 px-20 py-30;
-  .fieldset-legend {
-    @apply p-10;
-  }
+  @apply my-20 border-2 border-black-30;
   .fieldset-description {
     @apply mb-10 px-10 text-09em;
   }
   .fieldset-wrapper {
-    @apply p-10;
+    @apply p-20;
   }
 
   .js &.collapsible {
     @apply relative backface-hidden;
 
     .fieldset-legend {
-      @apply pl-20 pr-10;
+      @apply leading-5;
       & a.fieldset-title {
-        @apply text-black-true;
+        @apply text-black-true bg-none pl-20;
       }
       & a::before {
-        @apply caret absolute top-05em;
-        left: -1em;
+        @apply caret left-02em;
         content: "";
         position: absolute;
         transition: transform 0.25s ease-out;
-        /* transform: translate(0, 0.125em); */
       }
     }
   }
 
   .js &.collapsed {
-    @apply px-20 py-0;
+    @apply border-b-transparent border-l-transparent border-r-transparent;
     .fieldset-legend {
       & a {
         &:before {
