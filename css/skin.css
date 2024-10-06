@@ -3,12 +3,10 @@
   color: #2E2D27;
 }
 
-
 .header-identity-wrapper a,
 .l-header .header-identity-wrapper .header-site-name-link {
   color: #2E2D27;
 }
-
 
 .l-header .l-header-inner .block-search-form .form-actions .form-submit,
 .menu-toggle-button-icon, .menu-toggle-button-icon:before, .menu-toggle-button-icon:after
@@ -26,8 +24,6 @@
   background-color: #8C1517;
   color: #FFFFFC;
 }
-
-
 
 .header-menu .links a,
 .l-header .block-menu ul.menu li a,
@@ -88,7 +84,7 @@ html body .header-identity-wrapper .logo a {
 .l-footer a, .field-name-body a, .l-content a {
   color: #006CB8;
 }
-.l-content a.btn {
+.l-content a.btn, .l-content a.button {
   color: #fff;
 }
 
@@ -109,7 +105,10 @@ h3 a, h4 a, h5 a, h6 a, body .node-readmore a
   border-color: #B1040D;
 }
 
+.btn,
+.button,
 .cta-btn,
 .cta-button {
   background-color: #B1040D;
+  color: #fff
 }

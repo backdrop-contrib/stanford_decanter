@@ -715,18 +715,13 @@ ul.primary li.active a,
 
 /* Form elements */
 
-.btn, input.form-submit, button.form-submit {
-  @apply button text-white;
-}
 
-.l-footer a.cta-btn,
-.field-name-body a.cta-btn,
-.l-footer a.btn,
-.field-name-body a.btn,
-a.cta-btn,
-.cta-btn,
-.cta-button {
-  @apply text-center rounded-full block w-fit  px-26 pt-10 pb-11 text-16 ;
+.button, a.button, .field-name-body a.button,
+.cta, a.cta, .cta-btn, a.cta-btn, .field-name-body a.cta-btn,
+.cta-button, a.cta-button, .field-name-body a.cta-button,
+.btn, a.btn, .l-footer a.btn, .field-name-body a.btn
+{
+  @apply text-center block w-fit px-26 pt-10 pb-11 text-16 mb-10;
   @apply font-semibold leading-display no-underline hocus:underline md:text-20;
   @apply transition-colors bg-digital-red hover:bg-cardinal-red-dark focus:bg-black-true active:bg-black-true text-white hocus:text-white;
 
@@ -734,6 +729,13 @@ a.cta-btn,
     @apply transition h-09em w-09em ml-5 -mt-2 inline-block transition-transform;
   }
 }
+
+.cta, a.cta, .cta-btn, a.cta-btn, .field-name-body a.cta-btn,
+.cta-button, a.cta-button, .field-name-body a.cta-button
+{
+  @apply rounded-full;
+}
+
 
 body {
   [type='text'],input:where(:not([type])),[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select {

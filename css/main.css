@@ -4878,51 +4878,14 @@ ul.primary li.active a,
 
 /* Form elements */
 
-.btn, input.form-submit, button.form-submit{
-  font-family: "Source Sans 3", "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  cursor: pointer;
-  display: inline-block;
-  border: none;
-  font-weight: 400;
-  line-height: 1;
-  text-align: center;
-  text-decoration: none;
-  width: auto;
-  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
-  padding: 1rem 2rem;
-  background-color: #B1040E;
-  color: #fff;
-}
-
-.btn:active,.btn:hover,.btn:focus, input.form-submit:active, input.form-submit:hover, input.form-submit:focus, button.form-submit:active, button.form-submit:hover, button.form-submit:focus{
-  text-decoration: underline;
-}
-
-.btn:hover,.btn:focus, input.form-submit:hover, input.form-submit:focus, button.form-submit:hover, button.form-submit:focus{
-  background-color: #2E2D29;
-  color: #fff;
-}
-
-.btn:focus, input.form-submit:focus, button.form-submit:focus{
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-}
-
-.btn, input.form-submit, button.form-submit{
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.l-footer a.cta-btn,
-.field-name-body a.cta-btn,
-.l-footer a.btn,
-.field-name-body a.btn,
-a.cta-btn,
-.cta-btn,
-.cta-button{
+.button, a.button, .field-name-body a.button,
+.cta, a.cta, .cta-btn, a.cta-btn, .field-name-body a.cta-btn,
+.cta-button, a.cta-button, .field-name-body a.cta-button,
+.btn, a.btn, .l-footer a.btn, .field-name-body a.btn{
+  margin-bottom: 1rem;
   display: block;
   width: -moz-fit-content;
   width: fit-content;
-  border-radius: 9999px;
   padding-left: 2.6rem;
   padding-right: 2.6rem;
   padding-top: 1rem;
@@ -4934,45 +4897,33 @@ a.cta-btn,
   text-decoration-line: none;
 }
 
-.l-footer a.cta-btn:hover,
-.field-name-body a.cta-btn:hover,
-.l-footer a.btn:hover,
-.field-name-body a.btn:hover,
-a.cta-btn:hover,
-.cta-btn:hover,
-.cta-button:hover{
+.button:hover, a.button:hover, .field-name-body a.button:hover,
+.cta:hover, a.cta:hover, .cta-btn:hover, a.cta-btn:hover, .field-name-body a.cta-btn:hover,
+.cta-button:hover, a.cta-button:hover, .field-name-body a.cta-button:hover,
+.btn:hover, a.btn:hover, .l-footer a.btn:hover, .field-name-body a.btn:hover{
   text-decoration-line: underline;
 }
 
-.l-footer a.cta-btn:focus,
-.field-name-body a.cta-btn:focus,
-.l-footer a.btn:focus,
-.field-name-body a.btn:focus,
-a.cta-btn:focus,
-.cta-btn:focus,
-.cta-button:focus{
+.button:focus, a.button:focus, .field-name-body a.button:focus,
+.cta:focus, a.cta:focus, .cta-btn:focus, a.cta-btn:focus, .field-name-body a.cta-btn:focus,
+.cta-button:focus, a.cta-button:focus, .field-name-body a.cta-button:focus,
+.btn:focus, a.btn:focus, .l-footer a.btn:focus, .field-name-body a.btn:focus{
   text-decoration-line: underline;
 }
 
 @media (min-width: 768px){
-  .l-footer a.cta-btn,
-.field-name-body a.cta-btn,
-.l-footer a.btn,
-.field-name-body a.btn,
-a.cta-btn,
-.cta-btn,
-.cta-button{
+  .button, a.button, .field-name-body a.button,
+.cta, a.cta, .cta-btn, a.cta-btn, .field-name-body a.cta-btn,
+.cta-button, a.cta-button, .field-name-body a.cta-button,
+.btn, a.btn, .l-footer a.btn, .field-name-body a.btn{
     font-size: 2rem;
   }
 }
 
-.l-footer a.cta-btn,
-.field-name-body a.cta-btn,
-.l-footer a.btn,
-.field-name-body a.btn,
-a.cta-btn,
-.cta-btn,
-.cta-button{
+.button, a.button, .field-name-body a.button,
+.cta, a.cta, .cta-btn, a.cta-btn, .field-name-body a.cta-btn,
+.cta-button, a.cta-button, .field-name-body a.cta-button,
+.btn, a.btn, .l-footer a.btn, .field-name-body a.btn{
   --tw-bg-opacity: 1;
   background-color: rgb(177 4 14 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -4982,62 +4933,47 @@ a.cta-btn,
   transition-duration: 250ms;
 }
 
-.l-footer a.cta-btn:hover,
-.field-name-body a.cta-btn:hover,
-.l-footer a.btn:hover,
-.field-name-body a.btn:hover,
-a.cta-btn:hover,
-.cta-btn:hover,
-.cta-button:hover{
+.button:hover, a.button:hover, .field-name-body a.button:hover,
+.cta:hover, a.cta:hover, .cta-btn:hover, a.cta-btn:hover, .field-name-body a.cta-btn:hover,
+.cta-button:hover, a.cta-button:hover, .field-name-body a.cta-button:hover,
+.btn:hover, a.btn:hover, .l-footer a.btn:hover, .field-name-body a.btn:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(130 0 0 / var(--tw-bg-opacity));
 }
 
-.l-footer a.cta-btn:focus,
-.field-name-body a.cta-btn:focus,
-.l-footer a.btn:focus,
-.field-name-body a.btn:focus,
-a.cta-btn:focus,
-.cta-btn:focus,
-.cta-button:focus{
+.button:focus, a.button:focus, .field-name-body a.button:focus,
+.cta:focus, a.cta:focus, .cta-btn:focus, a.cta-btn:focus, .field-name-body a.cta-btn:focus,
+.cta-button:focus, a.cta-button:focus, .field-name-body a.cta-button:focus,
+.btn:focus, a.btn:focus, .l-footer a.btn:focus, .field-name-body a.btn:focus{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.l-footer a.cta-btn:active,
-.field-name-body a.cta-btn:active,
-.l-footer a.btn:active,
-.field-name-body a.btn:active,
-a.cta-btn:active,
-.cta-btn:active,
-.cta-button:active{
+.button:active, a.button:active, .field-name-body a.button:active,
+.cta:active, a.cta:active, .cta-btn:active, a.cta-btn:active, .field-name-body a.cta-btn:active,
+.cta-button:active, a.cta-button:active, .field-name-body a.cta-button:active,
+.btn:active, a.btn:active, .l-footer a.btn:active, .field-name-body a.btn:active{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.l-footer a.cta-btn:hover,
-.field-name-body a.cta-btn:hover,
-.l-footer a.btn:hover,
-.field-name-body a.btn:hover,
-a.cta-btn:hover,
-.cta-btn:hover,
-.cta-button:hover{
+.button:hover, a.button:hover, .field-name-body a.button:hover,
+.cta:hover, a.cta:hover, .cta-btn:hover, a.cta-btn:hover, .field-name-body a.cta-btn:hover,
+.cta-button:hover, a.cta-button:hover, .field-name-body a.cta-button:hover,
+.btn:hover, a.btn:hover, .l-footer a.btn:hover, .field-name-body a.btn:hover{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.l-footer a.cta-btn:focus,
-.field-name-body a.cta-btn:focus,
-.l-footer a.btn:focus,
-.field-name-body a.btn:focus,
-a.cta-btn:focus,
-.cta-btn:focus,
-.cta-button:focus{
+.button:focus, a.button:focus, .field-name-body a.button:focus,
+.cta:focus, a.cta:focus, .cta-btn:focus, a.cta-btn:focus, .field-name-body a.cta-btn:focus,
+.cta-button:focus, a.cta-button:focus, .field-name-body a.cta-button:focus,
+.btn:focus, a.btn:focus, .l-footer a.btn:focus, .field-name-body a.btn:focus{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.l-footer a.cta-btn svg, .field-name-body a.cta-btn svg, .l-footer a.btn svg, .field-name-body a.btn svg, a.cta-btn svg, .cta-btn svg, .cta-button svg{
+.button svg, a.button svg, .field-name-body a.button svg, .cta svg, a.cta svg, .cta-btn svg, a.cta-btn svg, .field-name-body a.cta-btn svg, .cta-button svg, a.cta-button svg, .field-name-body a.cta-button svg, .btn svg, a.btn svg, .l-footer a.btn svg, .field-name-body a.btn svg{
   margin-left: 0.5rem;
   margin-top: -0.2rem;
   display: inline-block;
@@ -5049,6 +4985,11 @@ a.cta-btn:focus,
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
+}
+
+.cta, a.cta, .cta-btn, a.cta-btn, .field-name-body a.cta-btn,
+.cta-button, a.cta-button, .field-name-body a.cta-button{
+  border-radius: 9999px;
 }
 
 body [type='text'],body input:where(:not([type])),body [type='email'],body [type='url'],body [type='password'],body [type='number'],body [type='date'],body [type='datetime-local'],body [type='month'],body [type='search'],body [type='tel'],body [type='time'],body [type='week'],body [multiple],body textarea,body select{
@@ -6039,17 +5980,11 @@ fieldset .fieldset-wrapper{
   font-style: italic;
 }
 
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary,
-a.paragraphs-item-aplenty-card .content .btn-primary,.paragraphs-item-aplenty-card .content .btn-primary,.l-footer a .view-mode-card .btn-primary,
-.field-name-body a .view-mode-card .btn-primary,
-a .view-mode-card .btn-primary, .view-mode-card .btn-primary,.l-footer a .postcard-left .btn-primary,
-.field-name-body a .postcard-left .btn-primary,
-a .postcard-left .btn-primary, .postcard-left .btn-primary{
+.paragraphs-item-aplenty-card .content .btn-primary, a.paragraphs-item-aplenty-card .content .btn-primary, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary, .view-mode-card .btn-primary, a .view-mode-card .btn-primary, .field-name-body a .view-mode-card .btn-primary, .postcard-left .btn-primary, a .postcard-left .btn-primary, .field-name-body a .postcard-left .btn-primary{
+  margin-bottom: 1rem;
   display: block;
   width: -moz-fit-content;
   width: fit-content;
-  border-radius: 9999px;
   padding-left: 2.6rem;
   padding-right: 2.6rem;
   padding-top: 1rem;
@@ -6061,177 +5996,61 @@ a .postcard-left .btn-primary, .postcard-left .btn-primary{
   text-decoration-line: none;
 }
 
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary:hover,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:hover,
-a.paragraphs-item-aplenty-card .content .btn-primary:hover,.paragraphs-item-aplenty-card .content .btn-primary:hover,.l-footer a .view-mode-card .btn-primary:hover,
-.field-name-body a .view-mode-card .btn-primary:hover,
-a .view-mode-card .btn-primary:hover, .view-mode-card .btn-primary:hover,.l-footer a .postcard-left .btn-primary:hover,
-.field-name-body a .postcard-left .btn-primary:hover,
-a .postcard-left .btn-primary:hover, .postcard-left .btn-primary:hover{
+.paragraphs-item-aplenty-card .content .btn-primary:hover, a.paragraphs-item-aplenty-card .content .btn-primary:hover, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:hover, .view-mode-card .btn-primary:hover, a .view-mode-card .btn-primary:hover, .field-name-body a .view-mode-card .btn-primary:hover, .postcard-left .btn-primary:hover, a .postcard-left .btn-primary:hover, .field-name-body a .postcard-left .btn-primary:hover{
   text-decoration-line: underline;
 }
 
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary:focus,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:focus,
-a.paragraphs-item-aplenty-card .content .btn-primary:focus,.paragraphs-item-aplenty-card .content .btn-primary:focus,.l-footer a .view-mode-card .btn-primary:focus,
-.field-name-body a .view-mode-card .btn-primary:focus,
-a .view-mode-card .btn-primary:focus, .view-mode-card .btn-primary:focus,.l-footer a .postcard-left .btn-primary:focus,
-.field-name-body a .postcard-left .btn-primary:focus,
-a .postcard-left .btn-primary:focus, .postcard-left .btn-primary:focus{
+.paragraphs-item-aplenty-card .content .btn-primary:focus, a.paragraphs-item-aplenty-card .content .btn-primary:focus, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:focus, .view-mode-card .btn-primary:focus, a .view-mode-card .btn-primary:focus, .field-name-body a .view-mode-card .btn-primary:focus, .postcard-left .btn-primary:focus, a .postcard-left .btn-primary:focus, .field-name-body a .postcard-left .btn-primary:focus{
   text-decoration-line: underline;
 }
 
 @media (min-width: 768px){
-  .l-footer a.paragraphs-item-aplenty-card .content .btn-primary,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary,
-a.paragraphs-item-aplenty-card .content .btn-primary,.paragraphs-item-aplenty-card .content .btn-primary,.l-footer a .view-mode-card .btn-primary,
-.field-name-body a .view-mode-card .btn-primary,
-a .view-mode-card .btn-primary, .view-mode-card .btn-primary,.l-footer a .postcard-left .btn-primary,
-.field-name-body a .postcard-left .btn-primary,
-a .postcard-left .btn-primary, .postcard-left .btn-primary{
+  .paragraphs-item-aplenty-card .content .btn-primary, a.paragraphs-item-aplenty-card .content .btn-primary, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary, .view-mode-card .btn-primary, a .view-mode-card .btn-primary, .field-name-body a .view-mode-card .btn-primary, .postcard-left .btn-primary, a .postcard-left .btn-primary, .field-name-body a .postcard-left .btn-primary{
     font-size: 2rem;
   }
 }
 
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary,
-a.paragraphs-item-aplenty-card .content .btn-primary,.paragraphs-item-aplenty-card .content .btn-primary,.l-footer a .view-mode-card .btn-primary,
-.field-name-body a .view-mode-card .btn-primary,
-a .view-mode-card .btn-primary, .view-mode-card .btn-primary,.l-footer a .postcard-left .btn-primary,
-.field-name-body a .postcard-left .btn-primary,
-a .postcard-left .btn-primary, .postcard-left .btn-primary{
+.paragraphs-item-aplenty-card .content .btn-primary, a.paragraphs-item-aplenty-card .content .btn-primary, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary, .view-mode-card .btn-primary, a .view-mode-card .btn-primary, .field-name-body a .view-mode-card .btn-primary, .postcard-left .btn-primary, a .postcard-left .btn-primary, .field-name-body a .postcard-left .btn-primary{
   font-weight: 600;
   line-height: 1.2;
   text-decoration-line: none;
 }
 
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary:hover,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:hover,
-a.paragraphs-item-aplenty-card .content .btn-primary:hover,.paragraphs-item-aplenty-card .content .btn-primary:hover,.l-footer a .view-mode-card .btn-primary:hover,
-.field-name-body a .view-mode-card .btn-primary:hover,
-a .view-mode-card .btn-primary:hover, .view-mode-card .btn-primary:hover,.l-footer a .postcard-left .btn-primary:hover,
-.field-name-body a .postcard-left .btn-primary:hover,
-a .postcard-left .btn-primary:hover, .postcard-left .btn-primary:hover{
+.paragraphs-item-aplenty-card .content .btn-primary:hover, a.paragraphs-item-aplenty-card .content .btn-primary:hover, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:hover, .view-mode-card .btn-primary:hover, a .view-mode-card .btn-primary:hover, .field-name-body a .view-mode-card .btn-primary:hover, .postcard-left .btn-primary:hover, a .postcard-left .btn-primary:hover, .field-name-body a .postcard-left .btn-primary:hover{
   text-decoration-line: underline;
 }
 
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary:focus,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:focus,
-a.paragraphs-item-aplenty-card .content .btn-primary:focus,.paragraphs-item-aplenty-card .content .btn-primary:focus,.l-footer a .view-mode-card .btn-primary:focus,
-.field-name-body a .view-mode-card .btn-primary:focus,
-a .view-mode-card .btn-primary:focus, .view-mode-card .btn-primary:focus,.l-footer a .postcard-left .btn-primary:focus,
-.field-name-body a .postcard-left .btn-primary:focus,
-a .postcard-left .btn-primary:focus, .postcard-left .btn-primary:focus{
+.paragraphs-item-aplenty-card .content .btn-primary:focus, a.paragraphs-item-aplenty-card .content .btn-primary:focus, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:focus, .view-mode-card .btn-primary:focus, a .view-mode-card .btn-primary:focus, .field-name-body a .view-mode-card .btn-primary:focus, .postcard-left .btn-primary:focus, a .postcard-left .btn-primary:focus, .field-name-body a .postcard-left .btn-primary:focus{
   text-decoration-line: underline;
 }
 
 @media (min-width: 768px){
-  .l-footer a.paragraphs-item-aplenty-card .content .btn-primary,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary,
-a.paragraphs-item-aplenty-card .content .btn-primary,.paragraphs-item-aplenty-card .content .btn-primary,.l-footer a .view-mode-card .btn-primary,
-.field-name-body a .view-mode-card .btn-primary,
-a .view-mode-card .btn-primary, .view-mode-card .btn-primary,.l-footer a .postcard-left .btn-primary,
-.field-name-body a .postcard-left .btn-primary,
-a .postcard-left .btn-primary, .postcard-left .btn-primary{
+  .paragraphs-item-aplenty-card .content .btn-primary, a.paragraphs-item-aplenty-card .content .btn-primary, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary, .view-mode-card .btn-primary, a .view-mode-card .btn-primary, .field-name-body a .view-mode-card .btn-primary, .postcard-left .btn-primary, a .postcard-left .btn-primary, .field-name-body a .postcard-left .btn-primary{
     font-size: 2rem;
   }
 }
 
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary,
-a.paragraphs-item-aplenty-card .content .btn-primary,.paragraphs-item-aplenty-card .content .btn-primary,.l-footer a .view-mode-card .btn-primary,
-.field-name-body a .view-mode-card .btn-primary,
-a .view-mode-card .btn-primary, .view-mode-card .btn-primary,.l-footer a .postcard-left .btn-primary,
-.field-name-body a .postcard-left .btn-primary,
-a .postcard-left .btn-primary, .postcard-left .btn-primary{
+.paragraphs-item-aplenty-card .content .btn-primary, a.paragraphs-item-aplenty-card .content .btn-primary, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary, .view-mode-card .btn-primary, a .view-mode-card .btn-primary, .field-name-body a .view-mode-card .btn-primary, .postcard-left .btn-primary, a .postcard-left .btn-primary, .field-name-body a .postcard-left .btn-primary{
   font-weight: 600;
   line-height: 1.2;
   text-decoration-line: none;
 }
 
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary:hover,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:hover,
-a.paragraphs-item-aplenty-card .content .btn-primary:hover,.paragraphs-item-aplenty-card .content .btn-primary:hover,.l-footer a .view-mode-card .btn-primary:hover,
-.field-name-body a .view-mode-card .btn-primary:hover,
-a .view-mode-card .btn-primary:hover, .view-mode-card .btn-primary:hover,.l-footer a .postcard-left .btn-primary:hover,
-.field-name-body a .postcard-left .btn-primary:hover,
-a .postcard-left .btn-primary:hover, .postcard-left .btn-primary:hover{
+.paragraphs-item-aplenty-card .content .btn-primary:hover, a.paragraphs-item-aplenty-card .content .btn-primary:hover, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:hover, .view-mode-card .btn-primary:hover, a .view-mode-card .btn-primary:hover, .field-name-body a .view-mode-card .btn-primary:hover, .postcard-left .btn-primary:hover, a .postcard-left .btn-primary:hover, .field-name-body a .postcard-left .btn-primary:hover{
   text-decoration-line: underline;
 }
 
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary:focus,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:focus,
-a.paragraphs-item-aplenty-card .content .btn-primary:focus,.paragraphs-item-aplenty-card .content .btn-primary:focus,.l-footer a .view-mode-card .btn-primary:focus,
-.field-name-body a .view-mode-card .btn-primary:focus,
-a .view-mode-card .btn-primary:focus, .view-mode-card .btn-primary:focus,.l-footer a .postcard-left .btn-primary:focus,
-.field-name-body a .postcard-left .btn-primary:focus,
-a .postcard-left .btn-primary:focus, .postcard-left .btn-primary:focus{
+.paragraphs-item-aplenty-card .content .btn-primary:focus, a.paragraphs-item-aplenty-card .content .btn-primary:focus, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:focus, .view-mode-card .btn-primary:focus, a .view-mode-card .btn-primary:focus, .field-name-body a .view-mode-card .btn-primary:focus, .postcard-left .btn-primary:focus, a .postcard-left .btn-primary:focus, .field-name-body a .postcard-left .btn-primary:focus{
   text-decoration-line: underline;
 }
 
 @media (min-width: 768px){
-  .l-footer a.paragraphs-item-aplenty-card .content .btn-primary,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary,
-a.paragraphs-item-aplenty-card .content .btn-primary,.paragraphs-item-aplenty-card .content .btn-primary,.l-footer a .view-mode-card .btn-primary,
-.field-name-body a .view-mode-card .btn-primary,
-a .view-mode-card .btn-primary, .view-mode-card .btn-primary,.l-footer a .postcard-left .btn-primary,
-.field-name-body a .postcard-left .btn-primary,
-a .postcard-left .btn-primary, .postcard-left .btn-primary{
+  .paragraphs-item-aplenty-card .content .btn-primary, a.paragraphs-item-aplenty-card .content .btn-primary, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary, .view-mode-card .btn-primary, a .view-mode-card .btn-primary, .field-name-body a .view-mode-card .btn-primary, .postcard-left .btn-primary, a .postcard-left .btn-primary, .field-name-body a .postcard-left .btn-primary{
     font-size: 2rem;
   }
 }
 
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary,
-a.paragraphs-item-aplenty-card .content .btn-primary,.paragraphs-item-aplenty-card .content .btn-primary,.l-footer a .view-mode-card .btn-primary,
-.field-name-body a .view-mode-card .btn-primary,
-a .view-mode-card .btn-primary, .view-mode-card .btn-primary,.l-footer a .postcard-left .btn-primary,
-.field-name-body a .postcard-left .btn-primary,
-a .postcard-left .btn-primary, .postcard-left .btn-primary{
-  font-weight: 600;
-  line-height: 1.2;
-  text-decoration-line: none;
-}
-
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary:hover,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:hover,
-a.paragraphs-item-aplenty-card .content .btn-primary:hover,.paragraphs-item-aplenty-card .content .btn-primary:hover,.l-footer a .view-mode-card .btn-primary:hover,
-.field-name-body a .view-mode-card .btn-primary:hover,
-a .view-mode-card .btn-primary:hover, .view-mode-card .btn-primary:hover,.l-footer a .postcard-left .btn-primary:hover,
-.field-name-body a .postcard-left .btn-primary:hover,
-a .postcard-left .btn-primary:hover, .postcard-left .btn-primary:hover{
-  text-decoration-line: underline;
-}
-
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary:focus,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:focus,
-a.paragraphs-item-aplenty-card .content .btn-primary:focus,.paragraphs-item-aplenty-card .content .btn-primary:focus,.l-footer a .view-mode-card .btn-primary:focus,
-.field-name-body a .view-mode-card .btn-primary:focus,
-a .view-mode-card .btn-primary:focus, .view-mode-card .btn-primary:focus,.l-footer a .postcard-left .btn-primary:focus,
-.field-name-body a .postcard-left .btn-primary:focus,
-a .postcard-left .btn-primary:focus, .postcard-left .btn-primary:focus{
-  text-decoration-line: underline;
-}
-
-@media (min-width: 768px){
-  .l-footer a.paragraphs-item-aplenty-card .content .btn-primary,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary,
-a.paragraphs-item-aplenty-card .content .btn-primary,.paragraphs-item-aplenty-card .content .btn-primary,.l-footer a .view-mode-card .btn-primary,
-.field-name-body a .view-mode-card .btn-primary,
-a .view-mode-card .btn-primary, .view-mode-card .btn-primary,.l-footer a .postcard-left .btn-primary,
-.field-name-body a .postcard-left .btn-primary,
-a .postcard-left .btn-primary, .postcard-left .btn-primary{
-    font-size: 2rem;
-  }
-}
-
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary,
-a.paragraphs-item-aplenty-card .content .btn-primary,.paragraphs-item-aplenty-card .content .btn-primary,.l-footer a .view-mode-card .btn-primary,
-.field-name-body a .view-mode-card .btn-primary,
-a .view-mode-card .btn-primary, .view-mode-card .btn-primary,.l-footer a .postcard-left .btn-primary,
-.field-name-body a .postcard-left .btn-primary,
-a .postcard-left .btn-primary, .postcard-left .btn-primary{
+.paragraphs-item-aplenty-card .content .btn-primary, a.paragraphs-item-aplenty-card .content .btn-primary, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary, .view-mode-card .btn-primary, a .view-mode-card .btn-primary, .field-name-body a .view-mode-card .btn-primary, .postcard-left .btn-primary, a .postcard-left .btn-primary, .field-name-body a .postcard-left .btn-primary{
   --tw-bg-opacity: 1;
   background-color: rgb(177 4 14 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -6241,68 +6060,32 @@ a .postcard-left .btn-primary, .postcard-left .btn-primary{
   transition-duration: 250ms;
 }
 
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary:hover,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:hover,
-a.paragraphs-item-aplenty-card .content .btn-primary:hover,.paragraphs-item-aplenty-card .content .btn-primary:hover,.l-footer a .view-mode-card .btn-primary:hover,
-.field-name-body a .view-mode-card .btn-primary:hover,
-a .view-mode-card .btn-primary:hover, .view-mode-card .btn-primary:hover,.l-footer a .postcard-left .btn-primary:hover,
-.field-name-body a .postcard-left .btn-primary:hover,
-a .postcard-left .btn-primary:hover, .postcard-left .btn-primary:hover{
+.paragraphs-item-aplenty-card .content .btn-primary:hover, a.paragraphs-item-aplenty-card .content .btn-primary:hover, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:hover, .view-mode-card .btn-primary:hover, a .view-mode-card .btn-primary:hover, .field-name-body a .view-mode-card .btn-primary:hover, .postcard-left .btn-primary:hover, a .postcard-left .btn-primary:hover, .field-name-body a .postcard-left .btn-primary:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(130 0 0 / var(--tw-bg-opacity));
 }
 
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary:focus,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:focus,
-a.paragraphs-item-aplenty-card .content .btn-primary:focus,.paragraphs-item-aplenty-card .content .btn-primary:focus,.l-footer a .view-mode-card .btn-primary:focus,
-.field-name-body a .view-mode-card .btn-primary:focus,
-a .view-mode-card .btn-primary:focus, .view-mode-card .btn-primary:focus,.l-footer a .postcard-left .btn-primary:focus,
-.field-name-body a .postcard-left .btn-primary:focus,
-a .postcard-left .btn-primary:focus, .postcard-left .btn-primary:focus{
+.paragraphs-item-aplenty-card .content .btn-primary:focus, a.paragraphs-item-aplenty-card .content .btn-primary:focus, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:focus, .view-mode-card .btn-primary:focus, a .view-mode-card .btn-primary:focus, .field-name-body a .view-mode-card .btn-primary:focus, .postcard-left .btn-primary:focus, a .postcard-left .btn-primary:focus, .field-name-body a .postcard-left .btn-primary:focus{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary:active,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:active,
-a.paragraphs-item-aplenty-card .content .btn-primary:active,.paragraphs-item-aplenty-card .content .btn-primary:active,.l-footer a .view-mode-card .btn-primary:active,
-.field-name-body a .view-mode-card .btn-primary:active,
-a .view-mode-card .btn-primary:active, .view-mode-card .btn-primary:active,.l-footer a .postcard-left .btn-primary:active,
-.field-name-body a .postcard-left .btn-primary:active,
-a .postcard-left .btn-primary:active, .postcard-left .btn-primary:active{
+.paragraphs-item-aplenty-card .content .btn-primary:active, a.paragraphs-item-aplenty-card .content .btn-primary:active, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:active, .view-mode-card .btn-primary:active, a .view-mode-card .btn-primary:active, .field-name-body a .view-mode-card .btn-primary:active, .postcard-left .btn-primary:active, a .postcard-left .btn-primary:active, .field-name-body a .postcard-left .btn-primary:active{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary:hover,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:hover,
-a.paragraphs-item-aplenty-card .content .btn-primary:hover,.paragraphs-item-aplenty-card .content .btn-primary:hover,.l-footer a .view-mode-card .btn-primary:hover,
-.field-name-body a .view-mode-card .btn-primary:hover,
-a .view-mode-card .btn-primary:hover, .view-mode-card .btn-primary:hover,.l-footer a .postcard-left .btn-primary:hover,
-.field-name-body a .postcard-left .btn-primary:hover,
-a .postcard-left .btn-primary:hover, .postcard-left .btn-primary:hover{
+.paragraphs-item-aplenty-card .content .btn-primary:hover, a.paragraphs-item-aplenty-card .content .btn-primary:hover, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:hover, .view-mode-card .btn-primary:hover, a .view-mode-card .btn-primary:hover, .field-name-body a .view-mode-card .btn-primary:hover, .postcard-left .btn-primary:hover, a .postcard-left .btn-primary:hover, .field-name-body a .postcard-left .btn-primary:hover{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary:focus,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:focus,
-a.paragraphs-item-aplenty-card .content .btn-primary:focus,.paragraphs-item-aplenty-card .content .btn-primary:focus,.l-footer a .view-mode-card .btn-primary:focus,
-.field-name-body a .view-mode-card .btn-primary:focus,
-a .view-mode-card .btn-primary:focus, .view-mode-card .btn-primary:focus,.l-footer a .postcard-left .btn-primary:focus,
-.field-name-body a .postcard-left .btn-primary:focus,
-a .postcard-left .btn-primary:focus, .postcard-left .btn-primary:focus{
+.paragraphs-item-aplenty-card .content .btn-primary:focus, a.paragraphs-item-aplenty-card .content .btn-primary:focus, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:focus, .view-mode-card .btn-primary:focus, a .view-mode-card .btn-primary:focus, .field-name-body a .view-mode-card .btn-primary:focus, .postcard-left .btn-primary:focus, a .postcard-left .btn-primary:focus, .field-name-body a .postcard-left .btn-primary:focus{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary,
-a.paragraphs-item-aplenty-card .content .btn-primary,.paragraphs-item-aplenty-card .content .btn-primary,.l-footer a .view-mode-card .btn-primary,
-.field-name-body a .view-mode-card .btn-primary,
-a .view-mode-card .btn-primary, .view-mode-card .btn-primary,.l-footer a .postcard-left .btn-primary,
-.field-name-body a .postcard-left .btn-primary,
-a .postcard-left .btn-primary, .postcard-left .btn-primary{
+.paragraphs-item-aplenty-card .content .btn-primary, a.paragraphs-item-aplenty-card .content .btn-primary, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary, .view-mode-card .btn-primary, a .view-mode-card .btn-primary, .field-name-body a .view-mode-card .btn-primary, .postcard-left .btn-primary, a .postcard-left .btn-primary, .field-name-body a .postcard-left .btn-primary{
   --tw-bg-opacity: 1;
   background-color: rgb(177 4 14 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -6312,68 +6095,32 @@ a .postcard-left .btn-primary, .postcard-left .btn-primary{
   transition-duration: 250ms;
 }
 
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary:hover,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:hover,
-a.paragraphs-item-aplenty-card .content .btn-primary:hover,.paragraphs-item-aplenty-card .content .btn-primary:hover,.l-footer a .view-mode-card .btn-primary:hover,
-.field-name-body a .view-mode-card .btn-primary:hover,
-a .view-mode-card .btn-primary:hover, .view-mode-card .btn-primary:hover,.l-footer a .postcard-left .btn-primary:hover,
-.field-name-body a .postcard-left .btn-primary:hover,
-a .postcard-left .btn-primary:hover, .postcard-left .btn-primary:hover{
+.paragraphs-item-aplenty-card .content .btn-primary:hover, a.paragraphs-item-aplenty-card .content .btn-primary:hover, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:hover, .view-mode-card .btn-primary:hover, a .view-mode-card .btn-primary:hover, .field-name-body a .view-mode-card .btn-primary:hover, .postcard-left .btn-primary:hover, a .postcard-left .btn-primary:hover, .field-name-body a .postcard-left .btn-primary:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(130 0 0 / var(--tw-bg-opacity));
 }
 
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary:focus,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:focus,
-a.paragraphs-item-aplenty-card .content .btn-primary:focus,.paragraphs-item-aplenty-card .content .btn-primary:focus,.l-footer a .view-mode-card .btn-primary:focus,
-.field-name-body a .view-mode-card .btn-primary:focus,
-a .view-mode-card .btn-primary:focus, .view-mode-card .btn-primary:focus,.l-footer a .postcard-left .btn-primary:focus,
-.field-name-body a .postcard-left .btn-primary:focus,
-a .postcard-left .btn-primary:focus, .postcard-left .btn-primary:focus{
+.paragraphs-item-aplenty-card .content .btn-primary:focus, a.paragraphs-item-aplenty-card .content .btn-primary:focus, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:focus, .view-mode-card .btn-primary:focus, a .view-mode-card .btn-primary:focus, .field-name-body a .view-mode-card .btn-primary:focus, .postcard-left .btn-primary:focus, a .postcard-left .btn-primary:focus, .field-name-body a .postcard-left .btn-primary:focus{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary:active,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:active,
-a.paragraphs-item-aplenty-card .content .btn-primary:active,.paragraphs-item-aplenty-card .content .btn-primary:active,.l-footer a .view-mode-card .btn-primary:active,
-.field-name-body a .view-mode-card .btn-primary:active,
-a .view-mode-card .btn-primary:active, .view-mode-card .btn-primary:active,.l-footer a .postcard-left .btn-primary:active,
-.field-name-body a .postcard-left .btn-primary:active,
-a .postcard-left .btn-primary:active, .postcard-left .btn-primary:active{
+.paragraphs-item-aplenty-card .content .btn-primary:active, a.paragraphs-item-aplenty-card .content .btn-primary:active, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:active, .view-mode-card .btn-primary:active, a .view-mode-card .btn-primary:active, .field-name-body a .view-mode-card .btn-primary:active, .postcard-left .btn-primary:active, a .postcard-left .btn-primary:active, .field-name-body a .postcard-left .btn-primary:active{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary:hover,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:hover,
-a.paragraphs-item-aplenty-card .content .btn-primary:hover,.paragraphs-item-aplenty-card .content .btn-primary:hover,.l-footer a .view-mode-card .btn-primary:hover,
-.field-name-body a .view-mode-card .btn-primary:hover,
-a .view-mode-card .btn-primary:hover, .view-mode-card .btn-primary:hover,.l-footer a .postcard-left .btn-primary:hover,
-.field-name-body a .postcard-left .btn-primary:hover,
-a .postcard-left .btn-primary:hover, .postcard-left .btn-primary:hover{
+.paragraphs-item-aplenty-card .content .btn-primary:hover, a.paragraphs-item-aplenty-card .content .btn-primary:hover, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:hover, .view-mode-card .btn-primary:hover, a .view-mode-card .btn-primary:hover, .field-name-body a .view-mode-card .btn-primary:hover, .postcard-left .btn-primary:hover, a .postcard-left .btn-primary:hover, .field-name-body a .postcard-left .btn-primary:hover{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary:focus,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:focus,
-a.paragraphs-item-aplenty-card .content .btn-primary:focus,.paragraphs-item-aplenty-card .content .btn-primary:focus,.l-footer a .view-mode-card .btn-primary:focus,
-.field-name-body a .view-mode-card .btn-primary:focus,
-a .view-mode-card .btn-primary:focus, .view-mode-card .btn-primary:focus,.l-footer a .postcard-left .btn-primary:focus,
-.field-name-body a .postcard-left .btn-primary:focus,
-a .postcard-left .btn-primary:focus, .postcard-left .btn-primary:focus{
+.paragraphs-item-aplenty-card .content .btn-primary:focus, a.paragraphs-item-aplenty-card .content .btn-primary:focus, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:focus, .view-mode-card .btn-primary:focus, a .view-mode-card .btn-primary:focus, .field-name-body a .view-mode-card .btn-primary:focus, .postcard-left .btn-primary:focus, a .postcard-left .btn-primary:focus, .field-name-body a .postcard-left .btn-primary:focus{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary,
-a.paragraphs-item-aplenty-card .content .btn-primary,.paragraphs-item-aplenty-card .content .btn-primary,.l-footer a .view-mode-card .btn-primary,
-.field-name-body a .view-mode-card .btn-primary,
-a .view-mode-card .btn-primary, .view-mode-card .btn-primary,.l-footer a .postcard-left .btn-primary,
-.field-name-body a .postcard-left .btn-primary,
-a .postcard-left .btn-primary, .postcard-left .btn-primary{
+.paragraphs-item-aplenty-card .content .btn-primary, a.paragraphs-item-aplenty-card .content .btn-primary, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary, .view-mode-card .btn-primary, a .view-mode-card .btn-primary, .field-name-body a .view-mode-card .btn-primary, .postcard-left .btn-primary, a .postcard-left .btn-primary, .field-name-body a .postcard-left .btn-primary{
   --tw-bg-opacity: 1;
   background-color: rgb(177 4 14 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -6383,138 +6130,35 @@ a .postcard-left .btn-primary, .postcard-left .btn-primary{
   transition-duration: 250ms;
 }
 
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary:hover,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:hover,
-a.paragraphs-item-aplenty-card .content .btn-primary:hover,.paragraphs-item-aplenty-card .content .btn-primary:hover,.l-footer a .view-mode-card .btn-primary:hover,
-.field-name-body a .view-mode-card .btn-primary:hover,
-a .view-mode-card .btn-primary:hover, .view-mode-card .btn-primary:hover,.l-footer a .postcard-left .btn-primary:hover,
-.field-name-body a .postcard-left .btn-primary:hover,
-a .postcard-left .btn-primary:hover, .postcard-left .btn-primary:hover{
+.paragraphs-item-aplenty-card .content .btn-primary:hover, a.paragraphs-item-aplenty-card .content .btn-primary:hover, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:hover, .view-mode-card .btn-primary:hover, a .view-mode-card .btn-primary:hover, .field-name-body a .view-mode-card .btn-primary:hover, .postcard-left .btn-primary:hover, a .postcard-left .btn-primary:hover, .field-name-body a .postcard-left .btn-primary:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(130 0 0 / var(--tw-bg-opacity));
 }
 
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary:focus,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:focus,
-a.paragraphs-item-aplenty-card .content .btn-primary:focus,.paragraphs-item-aplenty-card .content .btn-primary:focus,.l-footer a .view-mode-card .btn-primary:focus,
-.field-name-body a .view-mode-card .btn-primary:focus,
-a .view-mode-card .btn-primary:focus, .view-mode-card .btn-primary:focus,.l-footer a .postcard-left .btn-primary:focus,
-.field-name-body a .postcard-left .btn-primary:focus,
-a .postcard-left .btn-primary:focus, .postcard-left .btn-primary:focus{
+.paragraphs-item-aplenty-card .content .btn-primary:focus, a.paragraphs-item-aplenty-card .content .btn-primary:focus, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:focus, .view-mode-card .btn-primary:focus, a .view-mode-card .btn-primary:focus, .field-name-body a .view-mode-card .btn-primary:focus, .postcard-left .btn-primary:focus, a .postcard-left .btn-primary:focus, .field-name-body a .postcard-left .btn-primary:focus{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary:active,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:active,
-a.paragraphs-item-aplenty-card .content .btn-primary:active,.paragraphs-item-aplenty-card .content .btn-primary:active,.l-footer a .view-mode-card .btn-primary:active,
-.field-name-body a .view-mode-card .btn-primary:active,
-a .view-mode-card .btn-primary:active, .view-mode-card .btn-primary:active,.l-footer a .postcard-left .btn-primary:active,
-.field-name-body a .postcard-left .btn-primary:active,
-a .postcard-left .btn-primary:active, .postcard-left .btn-primary:active{
+.paragraphs-item-aplenty-card .content .btn-primary:active, a.paragraphs-item-aplenty-card .content .btn-primary:active, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:active, .view-mode-card .btn-primary:active, a .view-mode-card .btn-primary:active, .field-name-body a .view-mode-card .btn-primary:active, .postcard-left .btn-primary:active, a .postcard-left .btn-primary:active, .field-name-body a .postcard-left .btn-primary:active{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary:hover,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:hover,
-a.paragraphs-item-aplenty-card .content .btn-primary:hover,.paragraphs-item-aplenty-card .content .btn-primary:hover,.l-footer a .view-mode-card .btn-primary:hover,
-.field-name-body a .view-mode-card .btn-primary:hover,
-a .view-mode-card .btn-primary:hover, .view-mode-card .btn-primary:hover,.l-footer a .postcard-left .btn-primary:hover,
-.field-name-body a .postcard-left .btn-primary:hover,
-a .postcard-left .btn-primary:hover, .postcard-left .btn-primary:hover{
+.paragraphs-item-aplenty-card .content .btn-primary:hover, a.paragraphs-item-aplenty-card .content .btn-primary:hover, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:hover, .view-mode-card .btn-primary:hover, a .view-mode-card .btn-primary:hover, .field-name-body a .view-mode-card .btn-primary:hover, .postcard-left .btn-primary:hover, a .postcard-left .btn-primary:hover, .field-name-body a .postcard-left .btn-primary:hover{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary:focus,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:focus,
-a.paragraphs-item-aplenty-card .content .btn-primary:focus,.paragraphs-item-aplenty-card .content .btn-primary:focus,.l-footer a .view-mode-card .btn-primary:focus,
-.field-name-body a .view-mode-card .btn-primary:focus,
-a .view-mode-card .btn-primary:focus, .view-mode-card .btn-primary:focus,.l-footer a .postcard-left .btn-primary:focus,
-.field-name-body a .postcard-left .btn-primary:focus,
-a .postcard-left .btn-primary:focus, .postcard-left .btn-primary:focus{
+.paragraphs-item-aplenty-card .content .btn-primary:focus, a.paragraphs-item-aplenty-card .content .btn-primary:focus, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:focus, .view-mode-card .btn-primary:focus, a .view-mode-card .btn-primary:focus, .field-name-body a .view-mode-card .btn-primary:focus, .postcard-left .btn-primary:focus, a .postcard-left .btn-primary:focus, .field-name-body a .postcard-left .btn-primary:focus{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary,
-a.paragraphs-item-aplenty-card .content .btn-primary,.paragraphs-item-aplenty-card .content .btn-primary,.l-footer a .view-mode-card .btn-primary,
-.field-name-body a .view-mode-card .btn-primary,
-a .view-mode-card .btn-primary, .view-mode-card .btn-primary,.l-footer a .postcard-left .btn-primary,
-.field-name-body a .postcard-left .btn-primary,
-a .postcard-left .btn-primary, .postcard-left .btn-primary{
-  --tw-bg-opacity: 1;
-  background-color: rgb(177 4 14 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 250ms;
-}
-
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary:hover,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:hover,
-a.paragraphs-item-aplenty-card .content .btn-primary:hover,.paragraphs-item-aplenty-card .content .btn-primary:hover,.l-footer a .view-mode-card .btn-primary:hover,
-.field-name-body a .view-mode-card .btn-primary:hover,
-a .view-mode-card .btn-primary:hover, .view-mode-card .btn-primary:hover,.l-footer a .postcard-left .btn-primary:hover,
-.field-name-body a .postcard-left .btn-primary:hover,
-a .postcard-left .btn-primary:hover, .postcard-left .btn-primary:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(130 0 0 / var(--tw-bg-opacity));
-}
-
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary:focus,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:focus,
-a.paragraphs-item-aplenty-card .content .btn-primary:focus,.paragraphs-item-aplenty-card .content .btn-primary:focus,.l-footer a .view-mode-card .btn-primary:focus,
-.field-name-body a .view-mode-card .btn-primary:focus,
-a .view-mode-card .btn-primary:focus, .view-mode-card .btn-primary:focus,.l-footer a .postcard-left .btn-primary:focus,
-.field-name-body a .postcard-left .btn-primary:focus,
-a .postcard-left .btn-primary:focus, .postcard-left .btn-primary:focus{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary:active,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:active,
-a.paragraphs-item-aplenty-card .content .btn-primary:active,.paragraphs-item-aplenty-card .content .btn-primary:active,.l-footer a .view-mode-card .btn-primary:active,
-.field-name-body a .view-mode-card .btn-primary:active,
-a .view-mode-card .btn-primary:active, .view-mode-card .btn-primary:active,.l-footer a .postcard-left .btn-primary:active,
-.field-name-body a .postcard-left .btn-primary:active,
-a .postcard-left .btn-primary:active, .postcard-left .btn-primary:active{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary:hover,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:hover,
-a.paragraphs-item-aplenty-card .content .btn-primary:hover,.paragraphs-item-aplenty-card .content .btn-primary:hover,.l-footer a .view-mode-card .btn-primary:hover,
-.field-name-body a .view-mode-card .btn-primary:hover,
-a .view-mode-card .btn-primary:hover, .view-mode-card .btn-primary:hover,.l-footer a .postcard-left .btn-primary:hover,
-.field-name-body a .postcard-left .btn-primary:hover,
-a .postcard-left .btn-primary:hover, .postcard-left .btn-primary:hover{
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary:focus,
-.field-name-body a.paragraphs-item-aplenty-card .content .btn-primary:focus,
-a.paragraphs-item-aplenty-card .content .btn-primary:focus,.paragraphs-item-aplenty-card .content .btn-primary:focus,.l-footer a .view-mode-card .btn-primary:focus,
-.field-name-body a .view-mode-card .btn-primary:focus,
-a .view-mode-card .btn-primary:focus, .view-mode-card .btn-primary:focus,.l-footer a .postcard-left .btn-primary:focus,
-.field-name-body a .postcard-left .btn-primary:focus,
-a .postcard-left .btn-primary:focus, .postcard-left .btn-primary:focus{
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.l-footer a.paragraphs-item-aplenty-card .content .btn-primary svg, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary svg, a.paragraphs-item-aplenty-card .content .btn-primary svg,.paragraphs-item-aplenty-card .content .btn-primary svg,.l-footer a .view-mode-card .btn-primary svg, .field-name-body a .view-mode-card .btn-primary svg, a .view-mode-card .btn-primary svg, .view-mode-card .btn-primary svg,.l-footer a .postcard-left .btn-primary svg, .field-name-body a .postcard-left .btn-primary svg, a .postcard-left .btn-primary svg, .postcard-left .btn-primary svg{
+.paragraphs-item-aplenty-card .content .btn-primary svg, a.paragraphs-item-aplenty-card .content .btn-primary svg, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary svg, .view-mode-card .btn-primary svg, a .view-mode-card .btn-primary svg, .field-name-body a .view-mode-card .btn-primary svg, .postcard-left .btn-primary svg, a .postcard-left .btn-primary svg, .field-name-body a .postcard-left .btn-primary svg{
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-property: transform;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: transform;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: transform;
@@ -6527,6 +6171,10 @@ a .postcard-left .btn-primary:focus, .postcard-left .btn-primary:focus{
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
+}
+
+.paragraphs-item-aplenty-card .content .btn-primary, a.paragraphs-item-aplenty-card .content .btn-primary, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary, .view-mode-card .btn-primary, a .view-mode-card .btn-primary, .field-name-body a .view-mode-card .btn-primary, .postcard-left .btn-primary, a .postcard-left .btn-primary, .field-name-body a .postcard-left .btn-primary{
+  border-radius: 9999px;
 }
 
 .node-type-event.view-mode-card,
