@@ -81,11 +81,21 @@ html body .header-identity-wrapper .logo a {
 }
 
 /* Body links */
-.l-footer a, .field-name-body a, .l-content a {
+.l-footer a,
+.field-name-body a,
+.l-content a
+{
   color: #006CB8;
 }
 .l-content a.btn, .l-content a.button {
   color: #fff;
+}
+a.cta::after,
+a.primary::after,
+.field-name-body .link--cta-primary::after,
+.field-name-body .cta-link::after
+{
+   background-color: #006CB8;
 }
 
 

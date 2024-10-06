@@ -66,6 +66,12 @@
   background-size: 12px;
 }
 
+
+.double-chevron {
+  @apply mask-icon;
+  mask-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTkiIHZpZXdCb3g9IjAgMCAxOCAxOSIgZmlsbD0ibm9uZSIKICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNOS4yNjM2MSAxNC42MzY0QzguOTEyMTQgMTQuMjg0OSA4LjkxMjE0IDEzLjcxNTEgOS4yNjM2MSAxMy4zNjM2TDEzLjEyNzIgOS41MDAwMUw5LjI2MzYxIDUuNjM2NEM4LjkxMjE0IDUuMjg0OTMgOC45MTIxNCA0LjcxNTA4IDkuMjYzNjEgNC4zNjM2MUM5LjYxNTA4IDQuMDEyMTQgMTAuMTg0OSA0LjAxMjE0IDEwLjUzNjQgNC4zNjM2MUwxNS4wMzY0IDguODYzNjFDMTUuMzg3OSA5LjIxNTA4IDE1LjM4NzkgOS43ODQ5MyAxNS4wMzY0IDEwLjEzNjRMMTAuNTM2NCAxNC42MzY0QzEwLjE4NDkgMTQuOTg3OSA5LjYxNTA4IDE0Ljk4NzkgOS4yNjM2MSAxNC42MzY0WiIgZmlsbD0iY3VycmVudENvbG9yIi8+CiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0zLjg2MzYxIDE0LjYzNjRDMy41MTIxNCAxNC4yODQ5IDMuNTEyMTQgMTMuNzE1MSAzLjg2MzYxIDEzLjM2MzZMNy43MjcyMSA5LjUwMDAxTDMuODYzNjEgNS42MzY0QzMuNTEyMTQgNS4yODQ5MyAzLjUxMjE0IDQuNzE1MDggMy44NjM2MSA0LjM2MzYxQzQuMjE1MDggNC4wMTIxNCA0Ljc4NDkzIDQuMDEyMTQgNS4xMzY0IDQuMzYzNjFMOS42MzY0IDguODYzNjFDOS45ODc4NyA5LjIxNTA4IDkuOTg3ODcgOS43ODQ5MyA5LjYzNjQgMTAuMTM2NEw1LjEzNjQgMTQuNjM2NEM0Ljc4NDkzIDE0Ljk4NzkgNC4yMTUwOCAxNC45ODc5IDMuODYzNjEgMTQuNjM2NFoiIGZpbGw9ImN1cnJlbnRDb2xvciIvPgo8L3N2Zz4K");
+}
+
 span.ext {
   background: none;
 }
@@ -97,6 +103,7 @@ a:hover span.ext,
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true' class='su-transition su-w-08em su-ml-03em su--mt-02em su-transform-gpu group-hocus:su-translate-x-02em su-inline-block su-text-digital-red-light group-hocus:su-text-cardinal-red'%3E%3Cpath fill-rule='evenodd' d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z' clip-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
   mask-size: contain;
 }
+
 
 .int-link:hover {
   @apply translate-x-02em;
@@ -715,13 +722,13 @@ ul.primary li.active a,
 
 /* Form elements */
 
-
+.button-primary,
 .button, a.button, .field-name-body a.button,
 .cta, a.cta, .cta-btn, a.cta-btn, .field-name-body a.cta-btn,
 .cta-button, a.cta-button, .field-name-body a.cta-button,
 .btn, a.btn, .l-footer a.btn, .field-name-body a.btn
 {
-  @apply text-center block w-fit px-26 pt-10 pb-11 text-16 mb-10;
+  @apply text-center block w-fit px-26 pt-10 pb-11 text-16 my-10;
   @apply font-semibold leading-display no-underline hocus:underline md:text-20;
   @apply transition-colors bg-digital-red hover:bg-cardinal-red-dark focus:bg-black-true active:bg-black-true text-white hocus:text-white;
 
@@ -787,6 +794,9 @@ fieldset {
   .fieldset-wrapper {
     @apply p-20;
   }
+  .summary {
+    @apply pl-10;
+  }
 
   .js &.collapsible {
     @apply relative backface-hidden;
@@ -818,6 +828,10 @@ fieldset {
       }
     }
   }
+}
+
+.su-intro-text, .summary {
+  font-size: 2.5rem;
 }
 
 /* Grids and cards */
@@ -1326,6 +1340,12 @@ fieldset {
   @apply font-serif;
   .preposition {
     @apply italic;
+  }
+}
+
+a.cta, a.primary, .link--cta-primary, .cta-link {
+  &::after {
+    @apply double-chevron;
   }
 }
 
