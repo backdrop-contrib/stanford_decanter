@@ -11,30 +11,15 @@ Installation
 
 - **Optional** Install the [Theme Hooks module](https://github.com/ronan/theme_hooks) to allow the theme to expose some global identity blocks that can be added to the site's header and footer.
 
+See [Introduction to Stanford Decanter](docs/intro.md) for more set up and configuration help.
+
 Developing
 ----------
 
-This theme requires Yarn package manager for development. Every time a css or template file changes
-the css file in dist/ must be recompiled using tailwind. If you have yarn or npm installed you can
-use it to trigger the compile step:
-
-- From within the theme directory run:
-
-  ```sh
-  yarn install && yarn build;
-  ```
-
-- You can recompile automatically while developing by running:
-
-  ```sh
-  yarn watch
-  ```
+See [Developing the Stanford Decanter (v7) theme](docs/development.md) for developer documentation.
 
 Issues
 ------
-<!--
-Link to the repo's issue queue.
--->
 
 Bugs and Feature Requests should be reported in the Issue Queue:
 https://github.com/backdrop-contrib/stanford_decanter/issues.
