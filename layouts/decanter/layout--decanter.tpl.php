@@ -42,12 +42,10 @@
     </header>
   <?php endif; ?>
 
-  <?php if ($content['header']): ?>
+  <?php if ($content['header'] || $content['header_r'] || $content['header_l'] ): ?>
     <header class="l-header cc" role="banner" aria-label="<?php print t('Site header'); ?>">
-      <div class="l-header-inner grid grid-cols-4">
-        <div class="l-header-l col-span-3"><?php print $content['header_l']; ?></div>
-        <div class="l-header-r"><?php print $content['header_r']; ?></div>
-      </div>
+      <div class="l-header-l"><?php print $content['header_l']; ?></div>
+      <div class="l-header-r"><?php print $content['header_r']; ?></div>
       <div class="l-header-nav"><?php print $content['header']; ?></div>
     </header>
   <?php endif; ?>

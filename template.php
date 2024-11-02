@@ -14,6 +14,10 @@ function stanford_decanter_preprocess_block(&$variables)
   if ($variables['theme_hook_original'] == 'block__system__main_menu') {
     $variables['classes'] = array_merge($variables['classes'], ['su-main-nav']);
   }
+
+  if ($variables['theme_hook_original'] == 'block__search__form') {
+    backdrop_add_js(backdrop_get_path('theme', 'stanford_decanter') . '/js/search-toggle.js');
+  }
 }
 
 function stanford_decanter_preprocess_node__stanford_event__compact(&$variables) {
