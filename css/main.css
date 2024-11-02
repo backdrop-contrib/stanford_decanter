@@ -4193,6 +4193,9 @@ html .layout .l-content{
   .l-header-nav .block-menu ul.menu,
   .l-header-nav .block-menu ul.menu-dropdown{
     flex-direction: row;
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 }
 

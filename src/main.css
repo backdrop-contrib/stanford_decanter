@@ -463,7 +463,7 @@ html .layout {
   }
   ul.menu,
   ul.menu-dropdown {
-    @apply md:flex-row shadow-inner;
+    @apply md:flex-row shadow-inner md:shadow-none;
     > li {
       @apply text-nowrap mx-0 md:mx-5 lg:mr-10 xl:mr-20 border-b md:border-b-0;
 
