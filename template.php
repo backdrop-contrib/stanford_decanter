@@ -154,9 +154,7 @@ function stanford_decanter_layout_info() {
     'path' => 'layouts/decanter',
     'regions' => array(
       'identitybar'        => t('Identity bar'),
-      'header_l'           => t('Header Logo/Lockup'),
-      'header_r'           => t('Header Search/Links'),
-      'header'             => t('Header Nav'),
+      'header'             => t('Header'),
       'hero'               => t('Hero'),
       'top'                => t('Top'),
       'content'            => t('Content'),

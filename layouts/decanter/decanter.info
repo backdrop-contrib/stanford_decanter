@@ -3,19 +3,17 @@ name = Decanter
 version = BACKDROP_VERSION
 backdrop = 1.x
 
+
 ; Specify regions for this layout.
 regions[identitybar]        = Identity bar
-regions[header_tl]          = Header Top Left
-regions[header_tr]          = Header Top Right
-regions[header_bl]          = Header Bottom Left
-regions[header_br]          = Header Bottom Right
+regions[header]             = Header
 regions[hero]               = Hero
 regions[top]                = Top
 regions[content]            = Content
 regions[sidebar]            = First Sidebar
 regions[sidebar2]           = Second Sidebar
-regions[bottom]             = Bottom
-regions[footer]             = Footer
+regions[bottom]             = Page Bottom
+regions[footer]             = Local Footer
 regions[stanfordfooter]     = Stanford Footer
 
 ; The default region automatically receives the "Main Content" block if needed.
@@ -23,8 +21,3 @@ default region = content
 
 ; Preview
 preview = decanter.png
-
-; Added by Backdrop CMS packaging script on 2024-09-03
-project = stanford_decanter
-version = 1.x-0.3.5-alpha
-timestamp = 1725414087

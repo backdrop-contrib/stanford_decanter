@@ -236,31 +236,22 @@ html .layout {
   box-shadow: 0 3px 6px rgba(0, 0, 0, .13), 0 3px 6px rgba(0, 0, 0, .1);
 
   @apply relative z-10 w-full;
-  @apply flex flex-row flex-wrap md:flex-row md:items-center justify-end md:justify-start gap-x-20;
+  @apply flex flex-row flex-wrap md:flex-row md:items-center justify-end md:justify-start gap-x-20 items-end;
 
-  .l-header-nav {
-    @apply flex;
-  }
+  .block-system-header {
+    @apply flex-1 col-span-2;
+    @apply md:min-h-10 md:px-0 md:pt-20 pb-10;
 
-  .l-header-l,
-  .l-header-r {
-    @apply flex-wrap  gap-x-20;
-  }
-  .l-header-l {
-    @apply flex-row w-full md:w-auto;
-  }
-  .l-header-r {
-    @apply flex flex-row items-center  justify-end grow;
-  }
-  .menu-tree li {
-    @apply inline text-12 md:text-16 mx-10;
-    a {
-      @apply no-underline md:font-normal hocus:underline;
+    >.block-content {
+      @apply flex justify-between;
     }
+  }
+  .block-search-form {
+    @apply flex-shrink;
   }
 
   .block-system-main-menu {
-    @apply w-full flex-nowrap self-end static;
+    @apply md:w-full flex-nowrap self-end static;
     .menu-toggle-button {
       @apply md:hidden mb-0;
 
@@ -281,23 +272,22 @@ html .layout {
         @apply pb-20 md:pb-0 absolute md:static left-0 right-0;
       }
     }
-  }
 
-  .block-system-header {
-    @apply col-span-2;
-    @apply md:min-h-10 md:px-0 md:py-20;
-
-    >.block-content {
-      @apply flex justify-between;
+    .menu-tree li {
+      @apply inline text-12 md:text-16 mx-10;
+      a {
+        @apply no-underline md:font-normal hocus:underline;
+      }
     }
   }
+
   & span.ext {
     display: none;
   }
 }
 
 .header-identity-wrapper {
-  @apply flex flex-row relative col-span-2 z-20 mt-10 lg:mt-auto;
+  @apply flex flex-row relative col-span-2 z-20 my-10 lg:mt-auto;
 
   a {
     @apply no-underline font-normal;
@@ -365,7 +355,7 @@ html .layout {
   }
 
   .block-title {
-    @apply text-11 cursor-pointer flex flex-col items-center m-0 ml-auto;
+    @apply text-11 cursor-pointer flex flex-col items-center m-0 ml-auto mb-5;
     @apply md:hidden;
   }
   .block-title::before {
@@ -381,7 +371,7 @@ html .layout {
       @apply text-white;
     }
     .block-title::before {
-      @apply absolute z-50;
+      @apply z-50;
       @apply close text-white bg-white;
     }
   }
@@ -457,7 +447,7 @@ html .layout {
   }
 }
 
-.l-header-nav .block-menu {
+.l-header .block-menu {
   .block-title {
     @apply: hidden;
   }
@@ -484,7 +474,7 @@ html .layout {
       }
 
       > a {
-        @apply p-8 px-16 md:p-16 md:pl-0 mr-8 border-b-0 leading-normal flex-nowrap;
+        @apply p-8 px-16 md:p-16 md:pl-0 md:pr-0 mr-8 border-b-0 leading-normal flex-nowrap;
         @apply text-14 md:text-18 xl:text-21 font-semibold;
         @apply no-underline;
 
@@ -533,9 +523,6 @@ html .layout {
 
 .l-sidebar .block-menu {
   @apply md:min-w-200 lg:min-w-250 xl:min-w-300;
-  .block-title {
-    @apply text-24 mt-39;
-  }
   ul.menu ul {
     @apply relative border-t;
     li {
@@ -690,6 +677,9 @@ ul.primary li.active a,
   }
   .block-menu {
     @apply hidden md:block;
+  }
+  .block-title {
+    @apply text-24;
   }
 }
 
@@ -1354,11 +1344,15 @@ fieldset {
   @apply my-20 text-16;
 }
 
+.username,
 .source {
   @apply font-serif;
   .preposition {
     @apply italic;
   }
+}
+.node-title a {
+  @apply text-black no-underline hocus:underline;
 }
 
 a.cta, a.primary, .link--cta-primary, .cta-link {
@@ -1367,109 +1361,14 @@ a.cta, a.primary, .link--cta-primary, .cta-link {
   }
 }
 
-/**
- * Marker
- */
- .marker {
-  font-size: 0.875em;
-  display: inline-block;
-  margin: 0 0.4em;
-  padding: 0.3em 0.6em;
-  text-transform: uppercase;
-  line-height: 1;
-  font-style: italic;
-}
-
-/**
- * More help link
- */
-.more-help-link {
-  text-align: right;
-}
-
-.more-help-link a {
-  display: inline-block;
-  text-decoration: none;
-}
-
-.more-help-link a:before {
-  content: '?';
-  display: inline-block;
-  width: 1.3em;
-  height: 1.3em;
-  margin: 0 0.4em 0 0;
-  border-radius: 50%;
-  font-weight: 600;
-  text-align: center;
-}
-
-
-/**
- * List Components
- */
- .item-list h3 + ol,
- .item-list h3 + ul {
-   margin-top: 0;
- }
-
- .item-list ol,
- .item-list ul,
- ul.links,
- .links ul {
-   padding: 0 0 0 1.3em;
- }
-
- .links li {
-   position: relative;
-   list-style: none;
- }
-
- .links a {
-   display: block;
-   text-decoration: none;
-   font-weight: normal;
-   padding-right: 1.5em;
- }
-
- .links a:after {
- }
-
- .links.inline li:before {
-   display: none;
- }
-
- .links.inline {
-   margin: 0;
-   padding: 0;
-   overflow: hidden;
-   list-style: none;
- }
-
- .links.inline li {
-   display: inline-block;
-   padding: 0 0.6em 0 0;
- }
-
- .links.inline li:after {
-   content: ',';
-   position: static;
-   display: inline;
-   transform: none;
-   border: 0;
- }
-
- .links.inline li:last-child:after {
-   content: '';
- }
-
- .links.inline .node-readmore {
-   display: block;
- }
-
- .links.inline .node-readmore:after {
-   content: '';
- }
-
 .more-link {
   @apply my-10
 }
+
+tr.even, tr.odd {
+  @apply bg-stone-50
+}
+tr.odd {
+  @apply bg-stone-100;
+}
+

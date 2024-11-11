@@ -3,7 +3,8 @@ description = A base theme for Stanford sites using Decanter 7 and tailwind.
 backdrop = 1.x
 type = theme
 
-stylesheets[all][] = css/main.css
-stylesheets[all][] = css/skin.css
+stylesheets[all][] = dist/main.compiled.css
+stylesheets[all][] = src/colors.css
+stylesheets[all][] = src/overrides.css
 
 settings[color] = true

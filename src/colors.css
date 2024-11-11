@@ -100,7 +100,8 @@ a.primary::after,
 
 
 /* Title links */
-h3 a, h4 a, h5 a, h6 a, body .node-readmore a
+h3 a, h4 a, h5 a, h6 a, body .node-readmore a,
+.node-title a:hover
 {
   color: #B1040D;
   text-decoration-color: #B1040D;
