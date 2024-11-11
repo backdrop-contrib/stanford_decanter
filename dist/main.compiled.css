@@ -4426,6 +4426,8 @@ html .layout .l-content{
 }
 
 .header-menu{
+  margin-top: auto;
+  margin-bottom: auto;
   margin-right: 2rem;
   display: none;
 }
@@ -4464,29 +4466,16 @@ html .layout .l-content{
   }
 }
 
-.header-menu ul.links a::after {
-  content: '↗';
-  position: absolute;
-  right: 0;
-  top: 1rem;
-  display: block;
-  height: 1rem;
-  width: 1rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(46 45 41 / var(--tw-bg-opacity));
-  -webkit-mask: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMy41OTcgMS40NTNjLjI4OS4zMDUuNDM0LjcyLjM5NyAxLjE0TDIyLjU0IDE5LjQ2YTEuNDU4IDEuNDU4IDAgMCAxLTEuNTc1IDEuMzM0IDEuNDYzIDEuNDYzIDAgMCAxLTEuMzIzLTEuNTg4bDEuMTM2LTEzLjE3MS0xOC4zNTIgMTYuNTljLS41OTkuNTQxLTEuNTE4LjQ5LTIuMDU0LS4xMTNhMS40NzUgMS40NzUgMCAwIDEgLjExMi0yLjA3bDE4LjA3My0xNi4zNC0xMy40MDYuNTYzYTEuNDYgMS40NiAwIDAgMS0xLjUxMy0xLjQwNEExLjQ2MiAxLjQ2MiAwIDAgMSA1LjAzIDEuNzM1TDIyLjQ4NSAxYy40MTgtLjAxNy44MjMuMTQ3IDEuMTEyLjQ1MloiIGZpbGw9IiMyRTJEMjkiLz48L3N2Zz4=) no-repeat 0 0;
-          mask: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMy41OTcgMS40NTNjLjI4OS4zMDUuNDM0LjcyLjM5NyAxLjE0TDIyLjU0IDE5LjQ2YTEuNDU4IDEuNDU4IDAgMCAxLTEuNTc1IDEuMzM0IDEuNDYzIDEuNDYzIDAgMCAxLTEuMzIzLTEuNTg4bDEuMTM2LTEzLjE3MS0xOC4zNTIgMTYuNTljLS41OTkuNTQxLTEuNTE4LjQ5LTIuMDU0LS4xMTNhMS40NzUgMS40NzUgMCAwIDEgLjExMi0yLjA3bDE4LjA3My0xNi4zNC0xMy40MDYuNTYzYTEuNDYgMS40NiAwIDAgMS0xLjUxMy0xLjQwNEExLjQ2MiAxLjQ2MiAwIDAgMSA1LjAzIDEuNzM1TDIyLjQ4NSAxYy40MTgtLjAxNy44MjMuMTQ3IDEuMTEyLjQ1MloiIGZpbGw9IiMyRTJEMjkiLz48L3N2Zz4=) no-repeat 0 0;
-  -webkit-mask-size: contain;
-          mask-size: contain;
-}
-
 .header-menu ul.links a:hover{
-  --tw-text-opacity: 1;
-  color: rgb(140 21 21 / var(--tw-text-opacity));
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
 }
 
-.header-menu ul.links a:hover::after {
-  @apply: bg-cardinal-red;
+.header-menu ul.links a:focus{
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
 }
 
 /* Title/Breadcrumbs/Tabs */

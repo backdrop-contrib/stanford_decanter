@@ -111,6 +111,9 @@ h3 a, h4 a, h5 a, h6 a, body .node-readmore a,
     color: #2E2D28;
   }
 }
+.header-menu ul li a:hover {
+  text-decoration-color: #B1040D;
+}
 
 .node-stanford-person .field-name-field-s-person-profile-picture {
   border-color: #B1040D;
