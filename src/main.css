@@ -128,17 +128,18 @@ html .layout {
     }
   }
 
-  .l-top {
-    @apply cc mt-20;
-  }
+  .l-top,
   .l-bottom,
   .l-middle {
-    @apply cc my-40;
+    @apply cc;
+
+    .block {
+      @apply mb-40;
+    }
   }
   .l-content {
     @apply m-0 mb-30;
   }
-
 }
 
 .gridded-region,
@@ -498,7 +499,7 @@ html .layout {
       }
       a::before {
         content: ' ';
-        @apply md:w-full md:h-6 md:scale-x-0 bg-cardinal-red;
+        @apply md:w-full md:h-6 md:scale-x-0;
       }
       a:hover::before,
       a.active::before {
@@ -739,9 +740,6 @@ ul.primary li.active a,
 
 
 body {
-  [type='text'],input:where(:not([type])),[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select {
-    @apply input;
-  }
   input {
     @apply text-18;
   }
@@ -1024,6 +1022,9 @@ fieldset {
   .field-type-text-long {
     @apply block pt-0 text-09em;
   }
+  .views-field-field-image {
+    @apply p-0 mt-0;
+  }
 }
 
 .bordered > article,
@@ -1140,7 +1141,7 @@ fieldset {
   }
   .container,
   .card-body {
-    @apply relative w-full rs-pt-9 rs-pb-4 m-0 top-0 text-center text-white;
+    @apply relative max-w-full w-full rs-pt-9 rs-pb-4 m-0 top-0 text-center text-white;
     background: linear-gradient(rgba(0, 0, 0, 0), rgb(24, 29, 28));
   }
   .super-title {

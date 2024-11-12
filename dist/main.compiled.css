@@ -3030,6 +3030,17 @@ span.ext,
   width: 1.4rem;
   --tw-bg-opacity: 1;
   background-color: rgb(177 4 14 / var(--tw-bg-opacity));
+}
+
+html .layout .l-top span.ext, html .layout .l-bottom span.ext, html .layout .l-middle span.ext,html .layout .l-top 
+.ext-link, html .layout .l-bottom 
+.ext-link, html .layout .l-middle 
+.ext-link{
+  margin-bottom: 4rem;
+}
+
+span.ext,
+.ext-link {
   -webkit-mask: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMy41OTcgMS40NTNjLjI4OS4zMDUuNDM0LjcyLjM5NyAxLjE0TDIyLjU0IDE5LjQ2YTEuNDU4IDEuNDU4IDAgMCAxLTEuNTc1IDEuMzM0IDEuNDYzIDEuNDYzIDAgMCAxLTEuMzIzLTEuNTg4bDEuMTM2LTEzLjE3MS0xOC4zNTIgMTYuNTljLS41OTkuNTQxLTEuNTE4LjQ5LTIuMDU0LS4xMTNhMS40NzUgMS40NzUgMCAwIDEgLjExMi0yLjA3bDE4LjA3My0xNi4zNC0xMy40MDYuNTYzYTEuNDYgMS40NiAwIDAgMS0xLjUxMy0xLjQwNEExLjQ2MiAxLjQ2MiAwIDAgMSA1LjAzIDEuNzM1TDIyLjQ4NSAxYy40MTgtLjAxNy44MjMuMTQ3IDEuMTEyLjQ1MloiIGZpbGw9IiMyRTJEMjkiLz48L3N2Zz4=) no-repeat 0 0;
           mask: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMy41OTcgMS40NTNjLjI4OS4zMDUuNDM0LjcyLjM5NyAxLjE0TDIyLjU0IDE5LjQ2YTEuNDU4IDEuNDU4IDAgMCAxLTEuNTc1IDEuMzM0IDEuNDYzIDEuNDYzIDAgMCAxLTEuMzIzLTEuNTg4bDEuMTM2LTEzLjE3MS0xOC4zNTIgMTYuNTljLS41OTkuNTQxLTEuNTE4LjQ5LTIuMDU0LS4xMTNhMS40NzUgMS40NzUgMCAwIDEgLjExMi0yLjA3bDE4LjA3My0xNi4zNC0xMy40MDYuNTYzYTEuNDYgMS40NiAwIDAgMS0xLjUxMy0xLjQwNEExLjQ2MiAxLjQ2MiAwIDAgMSA1LjAzIDEuNzM1TDIyLjQ4NSAxYy40MTgtLjAxNy44MjMuMTQ3IDEuMTEyLjQ1MloiIGZpbGw9IiMyRTJEMjkiLz48L3N2Zz4=) no-repeat 0 0;
   -webkit-mask-size: contain;
@@ -3118,65 +3129,8 @@ html .layout .global-footer a{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-html .layout .l-top{
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (min-width: 576px){
-  html .layout .l-top{
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-}
-
-@media (min-width: 768px){
-  html .layout .l-top{
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-}
-
-@media (min-width: 992px){
-  html .layout .l-top{
-    padding-left: 80px;
-    padding-right: 80px;
-  }
-}
-
-@media (min-width: 1200px){
-  html .layout .l-top{
-    padding-left: 100px;
-    padding-right: 100px;
-  }
-}
-
-@media (min-width: 1500px){
-  html .layout .l-top{
-    padding-left: 100px;
-    padding-right: 100px;
-  }
-}
-
-@media only screen and (min-width: 1700px){
-  html .layout .l-top{
-    padding-left: calc((100% - 1500px)/2);
-    padding-right: calc((100% - 1500px)/2);
-  }
-}
-
- .centered-container html .layout .l-top,html .layout .l-top .centered-container,html .layout .l-top .cc{
-  padding-left: 0;
-  padding-right: 0;
-}
-
-html .layout .l-top{
-  margin-top: 2rem;
-}
-
-html .layout .l-bottom,
+html .layout .l-top,
+  html .layout .l-bottom,
   html .layout .l-middle{
   padding-left: 20px;
   padding-right: 20px;
@@ -3185,6 +3139,7 @@ html .layout .l-bottom,
 }
 
 @media (min-width: 576px){
+  html .layout .l-top,
   html .layout .l-bottom,
   html .layout .l-middle{
     padding-left: 30px;
@@ -3193,6 +3148,7 @@ html .layout .l-bottom,
 }
 
 @media (min-width: 768px){
+  html .layout .l-top,
   html .layout .l-bottom,
   html .layout .l-middle{
     padding-left: 50px;
@@ -3201,6 +3157,7 @@ html .layout .l-bottom,
 }
 
 @media (min-width: 992px){
+  html .layout .l-top,
   html .layout .l-bottom,
   html .layout .l-middle{
     padding-left: 80px;
@@ -3209,6 +3166,7 @@ html .layout .l-bottom,
 }
 
 @media (min-width: 1200px){
+  html .layout .l-top,
   html .layout .l-bottom,
   html .layout .l-middle{
     padding-left: 100px;
@@ -3217,6 +3175,7 @@ html .layout .l-bottom,
 }
 
 @media (min-width: 1500px){
+  html .layout .l-top,
   html .layout .l-bottom,
   html .layout .l-middle{
     padding-left: 100px;
@@ -3225,6 +3184,7 @@ html .layout .l-bottom,
 }
 
 @media only screen and (min-width: 1700px){
+  html .layout .l-top,
   html .layout .l-bottom,
   html .layout .l-middle{
     padding-left: calc((100% - 1500px)/2);
@@ -3232,7 +3192,10 @@ html .layout .l-bottom,
   }
 }
 
- .centered-container html .layout .l-bottom,html .layout .l-bottom .centered-container,html .layout .l-bottom .cc, .centered-container 
+ .centered-container html .layout .l-top,html .layout .l-top .centered-container,html .layout .l-top .cc, .centered-container 
+  html .layout .l-bottom,
+  html .layout .l-bottom .centered-container,
+  html .layout .l-bottom .cc, .centered-container 
   html .layout .l-middle,
   html .layout .l-middle .centered-container,
   html .layout .l-middle .cc{
@@ -3240,9 +3203,7 @@ html .layout .l-bottom,
   padding-right: 0;
 }
 
-html .layout .l-bottom,
-  html .layout .l-middle{
-  margin-top: 4rem;
+html .layout .l-top .block, html .layout .l-bottom .block, html .layout .l-middle .block{
   margin-bottom: 4rem;
 }
 
@@ -4092,6 +4053,10 @@ html .layout .l-content{
   padding-left: 1.6rem;
 }
 
+html .layout .l-top .block-system-main-menu ul.menu li a, html .layout .l-bottom .block-system-main-menu ul.menu li a, html .layout .l-middle .block-system-main-menu ul.menu li a,html .layout .l-top  .block-system-main-menu ul.menu-dropdown li a, html .layout .l-bottom  .block-system-main-menu ul.menu-dropdown li a, html .layout .l-middle  .block-system-main-menu ul.menu-dropdown li a,html .layout .l-top  .l-sidebar .block-menu ul.menu li a, html .layout .l-bottom  .l-sidebar .block-menu ul.menu li a, html .layout .l-middle  .l-sidebar .block-menu ul.menu li a,html .layout .l-top  .l-sidebar .block-menu ul.menu-dropdown li a, html .layout .l-bottom  .l-sidebar .block-menu ul.menu-dropdown li a, html .layout .l-middle  .l-sidebar .block-menu ul.menu-dropdown li a{
+  margin-bottom: 4rem;
+}
+
 @media (min-width: 768px){
   .block-system-main-menu ul.menu li a, .block-system-main-menu ul.menu-dropdown li a, .l-sidebar .block-menu ul.menu li a, .l-sidebar .block-menu ul.menu-dropdown li a{
     padding-left: 1.6rem;
@@ -4292,8 +4257,6 @@ html .layout .l-content{
 .l-header .block-menu ul.menu > li a::before, .l-header .block-menu ul.menu-dropdown > li a::before {
   transition: transform .3s ease-in, background-color .3s ease-in;
   content: ' ';
-  --tw-bg-opacity: 1;
-  background-color: rgb(140 21 21 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 768px){
@@ -4824,6 +4787,29 @@ ul.primary li.active a,
   padding-bottom: 1.1rem;
   text-align: center;
   font-size: 1.6rem;
+}
+
+html .layout .l-top .button-primary, html .layout .l-bottom .button-primary, html .layout .l-middle .button-primary,html .layout .l-top 
+.button, html .layout .l-bottom 
+.button, html .layout .l-middle 
+.button,html .layout .l-top  a.button, html .layout .l-bottom  a.button, html .layout .l-middle  a.button,html .layout .l-top  .field-name-body a.button, html .layout .l-bottom  .field-name-body a.button, html .layout .l-middle  .field-name-body a.button,html .layout .l-top 
+.cta, html .layout .l-bottom 
+.cta, html .layout .l-middle 
+.cta,html .layout .l-top  a.cta, html .layout .l-bottom  a.cta, html .layout .l-middle  a.cta,html .layout .l-top  .cta-btn, html .layout .l-bottom  .cta-btn, html .layout .l-middle  .cta-btn,html .layout .l-top  a.cta-btn, html .layout .l-bottom  a.cta-btn, html .layout .l-middle  a.cta-btn,html .layout .l-top  .field-name-body a.cta-btn, html .layout .l-bottom  .field-name-body a.cta-btn, html .layout .l-middle  .field-name-body a.cta-btn,html .layout .l-top 
+.cta-button, html .layout .l-bottom 
+.cta-button, html .layout .l-middle 
+.cta-button,html .layout .l-top  a.cta-button, html .layout .l-bottom  a.cta-button, html .layout .l-middle  a.cta-button,html .layout .l-top  .field-name-body a.cta-button, html .layout .l-bottom  .field-name-body a.cta-button, html .layout .l-middle  .field-name-body a.cta-button,html .layout .l-top 
+.btn, html .layout .l-bottom 
+.btn, html .layout .l-middle 
+.btn,html .layout .l-top  a.btn, html .layout .l-bottom  a.btn, html .layout .l-middle  a.btn,html .layout .l-top  .l-footer a.btn, html .layout .l-bottom  .l-footer a.btn, html .layout .l-middle  .l-footer a.btn,html .layout .l-top  .field-name-body a.btn, html .layout .l-bottom  .field-name-body a.btn, html .layout .l-middle  .field-name-body a.btn{
+  margin-bottom: 4rem;
+}
+
+.button-primary,
+.button, a.button, .field-name-body a.button,
+.cta, a.cta, .cta-btn, a.cta-btn, .field-name-body a.cta-btn,
+.cta-button, a.cta-button, .field-name-body a.cta-button,
+.btn, a.btn, .l-footer a.btn, .field-name-body a.btn{
   font-weight: 600;
   line-height: 1.2;
   text-decoration-line: none;
@@ -4931,14 +4917,6 @@ ul.primary li.active a,
 .cta, a.cta, .cta-btn, a.cta-btn, .field-name-body a.cta-btn,
 .cta-button, a.cta-button, .field-name-body a.cta-button{
   border-radius: 9999px;
-}
-
-body [type='text'],body input:where(:not([type])),body [type='email'],body [type='url'],body [type='password'],body [type='number'],body [type='date'],body [type='datetime-local'],body [type='month'],body [type='search'],body [type='tel'],body [type='time'],body [type='week'],body [multiple],body textarea,body select{
-  display: block;
-  border-color: #D5D5D4;
-  color: #2E2D29;
-  font-size: 1.8rem;
-  line-height: 1.3;
 }
 
 body input{
@@ -5901,6 +5879,49 @@ fieldset .summary{
   padding-bottom: 1.1rem;
   text-align: center;
   font-size: 1.6rem;
+}
+
+html .layout .l-top .paragraphs-item-aplenty-card .content .btn-primary, html .layout .l-bottom .paragraphs-item-aplenty-card .content .btn-primary, html .layout .l-middle .paragraphs-item-aplenty-card .content .btn-primary,html .layout .l-top  a.paragraphs-item-aplenty-card .content .btn-primary, html .layout .l-bottom  a.paragraphs-item-aplenty-card .content .btn-primary, html .layout .l-middle  a.paragraphs-item-aplenty-card .content .btn-primary,html .layout .l-top  .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary, html .layout .l-bottom  .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary, html .layout .l-middle  .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary,html .layout .l-top  .view-mode-card .btn-primary, html .layout .l-bottom  .view-mode-card .btn-primary, html .layout .l-middle  .view-mode-card .btn-primary,html .layout .l-top  a .view-mode-card .btn-primary, html .layout .l-bottom  a .view-mode-card .btn-primary, html .layout .l-middle  a .view-mode-card .btn-primary,html .layout .l-top  .field-name-body a .view-mode-card .btn-primary, html .layout .l-bottom  .field-name-body a .view-mode-card .btn-primary, html .layout .l-middle  .field-name-body a .view-mode-card .btn-primary,html .layout .l-top  .postcard-left .btn-primary, html .layout .l-bottom  .postcard-left .btn-primary, html .layout .l-middle  .postcard-left .btn-primary,html .layout .l-top  a .postcard-left .btn-primary, html .layout .l-bottom  a .postcard-left .btn-primary, html .layout .l-middle  a .postcard-left .btn-primary,html .layout .l-top  .field-name-body a .postcard-left .btn-primary, html .layout .l-bottom  .field-name-body a .postcard-left .btn-primary, html .layout .l-middle  .field-name-body a .postcard-left .btn-primary{
+  margin-bottom: 4rem;
+}
+
+.paragraphs-item-aplenty-card .content .btn-primary, a.paragraphs-item-aplenty-card .content .btn-primary, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary, .view-mode-card .btn-primary, a .view-mode-card .btn-primary, .field-name-body a .view-mode-card .btn-primary, .postcard-left .btn-primary, a .postcard-left .btn-primary, .field-name-body a .postcard-left .btn-primary{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 2.6rem;
+  padding-right: 2.6rem;
+  padding-top: 1rem;
+  padding-bottom: 1.1rem;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+html .layout .l-top .paragraphs-item-aplenty-card .content .btn-primary, html .layout .l-bottom .paragraphs-item-aplenty-card .content .btn-primary, html .layout .l-middle .paragraphs-item-aplenty-card .content .btn-primary,html .layout .l-top  a.paragraphs-item-aplenty-card .content .btn-primary, html .layout .l-bottom  a.paragraphs-item-aplenty-card .content .btn-primary, html .layout .l-middle  a.paragraphs-item-aplenty-card .content .btn-primary,html .layout .l-top  .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary, html .layout .l-bottom  .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary, html .layout .l-middle  .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary,html .layout .l-top  .view-mode-card .btn-primary, html .layout .l-bottom  .view-mode-card .btn-primary, html .layout .l-middle  .view-mode-card .btn-primary,html .layout .l-top  a .view-mode-card .btn-primary, html .layout .l-bottom  a .view-mode-card .btn-primary, html .layout .l-middle  a .view-mode-card .btn-primary,html .layout .l-top  .field-name-body a .view-mode-card .btn-primary, html .layout .l-bottom  .field-name-body a .view-mode-card .btn-primary, html .layout .l-middle  .field-name-body a .view-mode-card .btn-primary,html .layout .l-top  .postcard-left .btn-primary, html .layout .l-bottom  .postcard-left .btn-primary, html .layout .l-middle  .postcard-left .btn-primary,html .layout .l-top  a .postcard-left .btn-primary, html .layout .l-bottom  a .postcard-left .btn-primary, html .layout .l-middle  a .postcard-left .btn-primary,html .layout .l-top  .field-name-body a .postcard-left .btn-primary, html .layout .l-bottom  .field-name-body a .postcard-left .btn-primary, html .layout .l-middle  .field-name-body a .postcard-left .btn-primary{
+  margin-bottom: 4rem;
+}
+
+.paragraphs-item-aplenty-card .content .btn-primary, a.paragraphs-item-aplenty-card .content .btn-primary, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary, .view-mode-card .btn-primary, a .view-mode-card .btn-primary, .field-name-body a .view-mode-card .btn-primary, .postcard-left .btn-primary, a .postcard-left .btn-primary, .field-name-body a .postcard-left .btn-primary{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 2.6rem;
+  padding-right: 2.6rem;
+  padding-top: 1rem;
+  padding-bottom: 1.1rem;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+html .layout .l-top .paragraphs-item-aplenty-card .content .btn-primary, html .layout .l-bottom .paragraphs-item-aplenty-card .content .btn-primary, html .layout .l-middle .paragraphs-item-aplenty-card .content .btn-primary,html .layout .l-top  a.paragraphs-item-aplenty-card .content .btn-primary, html .layout .l-bottom  a.paragraphs-item-aplenty-card .content .btn-primary, html .layout .l-middle  a.paragraphs-item-aplenty-card .content .btn-primary,html .layout .l-top  .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary, html .layout .l-bottom  .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary, html .layout .l-middle  .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary,html .layout .l-top  .view-mode-card .btn-primary, html .layout .l-bottom  .view-mode-card .btn-primary, html .layout .l-middle  .view-mode-card .btn-primary,html .layout .l-top  a .view-mode-card .btn-primary, html .layout .l-bottom  a .view-mode-card .btn-primary, html .layout .l-middle  a .view-mode-card .btn-primary,html .layout .l-top  .field-name-body a .view-mode-card .btn-primary, html .layout .l-bottom  .field-name-body a .view-mode-card .btn-primary, html .layout .l-middle  .field-name-body a .view-mode-card .btn-primary,html .layout .l-top  .postcard-left .btn-primary, html .layout .l-bottom  .postcard-left .btn-primary, html .layout .l-middle  .postcard-left .btn-primary,html .layout .l-top  a .postcard-left .btn-primary, html .layout .l-bottom  a .postcard-left .btn-primary, html .layout .l-middle  a .postcard-left .btn-primary,html .layout .l-top  .field-name-body a .postcard-left .btn-primary, html .layout .l-bottom  .field-name-body a .postcard-left .btn-primary, html .layout .l-middle  .field-name-body a .postcard-left .btn-primary{
+  margin-bottom: 4rem;
+}
+
+.paragraphs-item-aplenty-card .content .btn-primary, a.paragraphs-item-aplenty-card .content .btn-primary, .field-name-body a.paragraphs-item-aplenty-card .content .btn-primary, .view-mode-card .btn-primary, a .view-mode-card .btn-primary, .field-name-body a .view-mode-card .btn-primary, .postcard-left .btn-primary, a .postcard-left .btn-primary, .field-name-body a .postcard-left .btn-primary{
   font-weight: 600;
   line-height: 1.2;
   text-decoration-line: none;
@@ -6425,6 +6446,43 @@ fieldset .summary{
   display: block;
 }
 
+html .layout .l-top .plain > article .views-field, html .layout .l-bottom .plain > article .views-field, html .layout .l-middle .plain > article .views-field,html .layout .l-top 
+  .plain > article .field-name-field-aplenty-title, html .layout .l-bottom 
+  .plain > article .field-name-field-aplenty-title, html .layout .l-middle 
+  .plain > article .field-name-field-aplenty-title,html .layout .l-top 
+  .plain > article .field-type-link-field, html .layout .l-bottom 
+  .plain > article .field-type-link-field, html .layout .l-middle 
+  .plain > article .field-type-link-field,html .layout .l-top 
+  .plain > article .field-type-text-long, html .layout .l-bottom 
+  .plain > article .field-type-text-long, html .layout .l-middle 
+  .plain > article .field-type-text-long,html .layout .l-top 
+  .views-grid-box .views-field, html .layout .l-bottom 
+  .views-grid-box .views-field, html .layout .l-middle 
+  .views-grid-box .views-field,html .layout .l-top 
+  .views-grid-box .field-name-field-aplenty-title, html .layout .l-bottom 
+  .views-grid-box .field-name-field-aplenty-title, html .layout .l-middle 
+  .views-grid-box .field-name-field-aplenty-title,html .layout .l-top 
+  .views-grid-box .field-type-link-field, html .layout .l-bottom 
+  .views-grid-box .field-type-link-field, html .layout .l-middle 
+  .views-grid-box .field-type-link-field,html .layout .l-top 
+  .views-grid-box .field-type-text-long, html .layout .l-bottom 
+  .views-grid-box .field-type-text-long, html .layout .l-middle 
+  .views-grid-box .field-type-text-long,html .layout .l-top 
+  .aplenty-card-plain .aplenty-card > .content .views-field, html .layout .l-bottom 
+  .aplenty-card-plain .aplenty-card > .content .views-field, html .layout .l-middle 
+  .aplenty-card-plain .aplenty-card > .content .views-field,html .layout .l-top 
+  .aplenty-card-plain .aplenty-card > .content .field-name-field-aplenty-title, html .layout .l-bottom 
+  .aplenty-card-plain .aplenty-card > .content .field-name-field-aplenty-title, html .layout .l-middle 
+  .aplenty-card-plain .aplenty-card > .content .field-name-field-aplenty-title,html .layout .l-top 
+  .aplenty-card-plain .aplenty-card > .content .field-type-link-field, html .layout .l-bottom 
+  .aplenty-card-plain .aplenty-card > .content .field-type-link-field, html .layout .l-middle 
+  .aplenty-card-plain .aplenty-card > .content .field-type-link-field,html .layout .l-top 
+  .aplenty-card-plain .aplenty-card > .content .field-type-text-long, html .layout .l-bottom 
+  .aplenty-card-plain .aplenty-card > .content .field-type-text-long, html .layout .l-middle 
+  .aplenty-card-plain .aplenty-card > .content .field-type-text-long{
+  margin-bottom: 4rem;
+}
+
 .plain > article .views-field-body,
   .plain > article .field-type-text-long,
   .views-grid-box .views-field-body,
@@ -6434,6 +6492,30 @@ fieldset .summary{
   display: block;
   padding-top: 0;
   font-size: 0.9em;
+}
+
+html .layout .l-top .plain > article .views-field-body, html .layout .l-bottom .plain > article .views-field-body, html .layout .l-middle .plain > article .views-field-body,html .layout .l-top 
+  .plain > article .field-type-text-long, html .layout .l-bottom 
+  .plain > article .field-type-text-long, html .layout .l-middle 
+  .plain > article .field-type-text-long,html .layout .l-top 
+  .views-grid-box .views-field-body, html .layout .l-bottom 
+  .views-grid-box .views-field-body, html .layout .l-middle 
+  .views-grid-box .views-field-body,html .layout .l-top 
+  .views-grid-box .field-type-text-long, html .layout .l-bottom 
+  .views-grid-box .field-type-text-long, html .layout .l-middle 
+  .views-grid-box .field-type-text-long,html .layout .l-top 
+  .aplenty-card-plain .aplenty-card > .content .views-field-body, html .layout .l-bottom 
+  .aplenty-card-plain .aplenty-card > .content .views-field-body, html .layout .l-middle 
+  .aplenty-card-plain .aplenty-card > .content .views-field-body,html .layout .l-top 
+  .aplenty-card-plain .aplenty-card > .content .field-type-text-long, html .layout .l-bottom 
+  .aplenty-card-plain .aplenty-card > .content .field-type-text-long, html .layout .l-middle 
+  .aplenty-card-plain .aplenty-card > .content .field-type-text-long{
+  margin-bottom: 4rem;
+}
+
+.plain > article .views-field-field-image, .views-grid-box .views-field-field-image, .aplenty-card-plain .aplenty-card > .content .views-field-field-image{
+  margin-top: 0;
+  padding: 0;
 }
 
 .bordered > article,
@@ -7069,6 +7151,10 @@ fieldset .summary{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+html .layout .l-top .hero .card, html .layout .l-bottom .hero .card, html .layout .l-middle .hero .card{
+  margin-bottom: 4rem;
+}
+
 @media (min-width: 768px){
   .hero .card{
     position: absolute;
@@ -7238,6 +7324,7 @@ fieldset .summary{
   top: 0;
   margin: 0;
   width: 100%;
+  max-width: 100%;
   text-align: center;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -7694,6 +7781,9 @@ tr.odd{
   background-color: rgb(245 245 244 / var(--tw-bg-opacity));
 }
 
+.messages .dismiss {
+}
+
 .last\:mb-0:last-child{
   margin-bottom: 0;
 }
@@ -8093,4 +8183,3 @@ tr.odd{
     display: none;
   }
 }
-

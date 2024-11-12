@@ -15,13 +15,14 @@ $su_colors = [
   'logo'                  => '#8C1516',
   'border'                => '#F0F0F0',
 
+  'form_focus'            => '#006CB7',
+
   'menu_text'             => '#2E2D26',
   'menu_bg'               => '#FFFFFB',
   'menu_hover'            => '#8C1518',
 
   'footer_text'           => '#2E2D25',
   'footer_bg'             => '#F4F4F4',
-  'footer_border'         => '#F4F4F3',
 
   'action'                => '#B1040F',
   'digital'               => '#B1040E',
@@ -80,9 +81,9 @@ $su_colors = [
 $info = array(
   // Available colors and color labels used in theme.
   'fields' => array(
-    'header'              => t('Header background'),
-    'titleslogan'         => t('Site name and slogan'),
-    'stanfordwordmark'    => t('Stanford wordmark'),
+    'header_bg'           => t('Header background'),
+    'header_text'         => t('Header text'),
+    'logo'                => t('Stanford Logo'),
 
     'menubg'              => t('Menu background'),
     'menutext'            => t('Menu link'),
@@ -91,20 +92,18 @@ $info = array(
     'bg'                  => t('Main background'),
     'text'                => t('Text color'),
     'link'                => t('Body link color'),
-    'title'               => t('Title link color'),
-    'borders'             => t('Borders'),
-    'formfocusborder'     => t('Form element borders when selected'),
+    'title'               => t('Title/Button color'),
 
     'footer'              => t('Local footer background'),
     'footertext'          => t('Local footer text'),
     'footerborder'        => t('Local footer border'),
 
-    'identitybg'          => t('Global head/foot background'),
+    'identitybg'          => t('Global head/foot bg'),
     'identitytext'        => t('Global head/foot text'),
 
-    'primarytabs'         => t('Primary Tabs Background'),
-    'primarytabstext'     => t('Primary Tabs Text'),
-    'buttons'             => t('Buttons and Breadcrumb'),
+    'form_borders'        => t('Form field borders'),
+    'form_focus'          => t('Form focus'),
+
   ),
 
   // Pre-defined color schemes.
@@ -112,16 +111,17 @@ $info = array(
     'default' => array(
       'title' => t('Stanford Cardinal (default)'),
       'colors' => array(
-        'header'            => $su_colors['header_bg'],
-        'titleslogan'       => $su_colors['header_text'],
-        'stanfordwordmark'  => $su_colors['logo'],
+        'header_bg'         => $su_colors['header_bg'],
+        'header_text'       => $su_colors['header_text'],
+        'logo'              => $su_colors['logo'],
 
         'bg'                => $su_colors['body_bg'],
         'text'              => $su_colors['body_text'],
         'link'              => $su_colors['link'],
         'title'             => $su_colors['title'],
-        'borders'           => $su_colors['cool_grey'],
-        'formfocusborder'   => $su_colors['digital_blue'],
+
+        'form_borders'      => $su_colors['cool_grey'],
+        'form_focus'        => $su_colors['digital_blue'],
 
         'menubg'            => $su_colors['menu_bg'],
         'menutext'          => $su_colors['menu_text'],
@@ -129,7 +129,6 @@ $info = array(
 
         'footer'            => $su_colors['footer_bg'],
         'footertext'        => $su_colors['footer_text'],
-        'footerborder'      => $su_colors['footer_border'],
 
         'identitybg'        => $su_colors['identity'],
         'identitytext'      => $su_colors['identity_text'],
@@ -140,30 +139,29 @@ $info = array(
   'blend_target' => '#ffffff',
 
   'css' => array(
-    'css/skin.css',
+    'src/colors.css',
   ),
 );
 
 $info['schemes']['digital'] = $info['schemes']['default'];
 $info['schemes']['digital']['title'] = t('Stanford Digital');
 $info['schemes']['digital']['colors'] = [
-  'stanfordwordmark'  => $su_colors['digital_red'],
+  'logo'  => $su_colors['digital_red'],
   'link'              => $su_colors['digital_blue'],
   'title'             => $su_colors['digital_red'],
   'formfocusborder'   => $su_colors['digital_blue'],
   'menuhover'         => $su_colors['digital_red'],
   'footer'            => $su_colors['cool_grey'],
   'footertext'        => $su_colors['white'],
-  'footerborder'      => $su_colors['cool_grey'],
   'identitybg'        => $su_colors['digital_red'],
 ] + $info['schemes']['digital']['colors'];
 
 $info['schemes']['dark'] = $info['schemes']['default'];
 $info['schemes']['dark']['title'] = t('Stanford Dark');
 $info['schemes']['dark']['colors'] = [
-  'header'            => $su_colors['black'],
-  'titleslogan'       => $su_colors['white'],
-  'stanfordwordmark'  => $su_colors['white'],
+  'header_bg'         => $su_colors['black'],
+  'header_text'       => $su_colors['white'],
+  'logo'              => $su_colors['white'],
   'bg'                => $su_colors['stone'],
   'text'              => $su_colors['white'],
   'link'              => $su_colors['digital_blue_lt'],
@@ -172,17 +170,18 @@ $info['schemes']['dark']['colors'] = [
   'menuhover'         => $su_colors['cardinal_red_lt'],
   'footer'            => $su_colors['stone_dk'],
   'footertext'        => $su_colors['white'],
-  'footerborder'      => $su_colors['cool_grey'],
   'identitybg'        => $su_colors['black_90'],
   'identitytext'      => $su_colors['white'],
+  'form_borders'      => $su_colors['white'],
+  'form_focus'        => $su_colors['digital_blue'],
 ] + $info['schemes']['digital']['colors'];
 
 $info['schemes']['clown'] = $info['schemes']['default'];
 $info['schemes']['clown']['title'] = t('Clownford University');
 $info['schemes']['clown']['colors'] = [
-  'header'            => $su_colors['palo_alto'],
-  'titleslogan'       => $su_colors['olive'],
-  'stanfordwordmark'  => $su_colors['bay'],
+  'header_bg'         => $su_colors['palo_alto'],
+  'header_text'       => $su_colors['olive'],
+  'logo'              => $su_colors['bay'],
   'bg'                => $su_colors['fog'],
   'text'              => $su_colors['lagunita'],
   'link'              => $su_colors['poppy'],
@@ -191,7 +190,6 @@ $info['schemes']['clown']['colors'] = [
   'menuhover'         => $su_colors['brick'],
   'footer'            => $su_colors['stone'],
   'footertext'        => $su_colors['stone_dk'],
-  'footerborder'      => $su_colors['stone_lt'],
   'identitybg'        => $su_colors['sky'],
   'identitytext'      => $su_colors['fog_dk'],
 ] + $info['schemes']['digital']['colors'];
