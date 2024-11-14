@@ -1361,3 +1361,6 @@ tr.odd {
   @apply bg-stone-100;
 }
 
+hr {
+  @apply my-20;
+}

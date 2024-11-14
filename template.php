@@ -267,3 +267,70 @@ function stanford_decanter_breadcrumb($variables) {
   }
   return $output;
 }
+
+
+/**
+ * Implements hook_menu().
+ */
+function stanford_decanter_menu() {
+  $items = array();
+
+  $items['admin/su_help/styleguide'] = array(
+    'title' => 'Stanford Style Guide',
+    'description' => 'Decater 7 Style guide.',
+    'page callback' => 'backdrop_get_form',
+    'page arguments' => array('stanford_decanter_style_guide'),
+    'access arguments' => array('access content overview'),
+    'weight' => 4,
+    'type' => MENU_NORMAL_ITEM,
+    'file path' => backdrop_get_path('theme', 'stanford_decanter'),
+    'file' => 'template.php',
+  );
+  return $items;
+}
+
+/**
+ * Implements hook_admin_paths_alter().
+ */
+function stanford_decanter_admin_paths_alter(&$paths) {
+  $paths['admin/su_help/styleguide'] = FALSE;
+}
+
+
+/*
+ * Style guide form callback. Reads html snippets from files to display.
+ */
+function stanford_decanter_style_guide() {
+  $form = [];
+
+  backdrop_set_message(t('This is a status message'), 'status');
+  backdrop_set_message(t('This is an info message'), 'info');
+  backdrop_set_message(t('This is a warning'), 'warning');
+  backdrop_set_message(t('This is an error'), 'error');
+
+  $dir = backdrop_get_path('theme', 'stanford_decanter') . '/examples/';
+  $snippets = scandir($dir);
+  foreach($snippets as $snippet) {
+    if (substr($snippet, 0, 1) !== '.') {
+      $html = file_get_contents($dir . $snippet);
+      $name = substr($snippet, 0, strlen($snippet) - strlen('.html'));
+
+      $form[$name] = [
+        "#type" => 'fieldset',
+        '#title' => ucwords(strtr($name, ['.html' => '', '-' => ' — '])),
+        '#collapsible' => true,
+        '#collapsed' => true,
+      ];
+      $form[$name]['src'] = [
+        '#type' => 'textarea',
+        '#default_value' => $html,
+        '#rows' => 5,
+      ];
+      $form[$name]['preview'] = [
+        '#type' => 'markup',
+        '#markup' => $html,
+      ];
+    }
+  }
+  return $form;
+}
