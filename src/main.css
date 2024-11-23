@@ -150,6 +150,7 @@ html .layout {
 
 }
 
+.paragraphs-item-aplenty-cards,
 .gridded-region,
 .gridded
 {
@@ -159,45 +160,58 @@ html .layout {
   > div {
     @apply col-span-12;
   }
+  .span1,
   &.grid-12 > div,
-  .span1 {
+  .g-col-md-1 {
     @apply col-span-1;
   }
+  .span2,
   &.grid-6 > div,
-  .span2 {
+  .g-col-md-2 {
     @apply col-span-2;
   }
+  .span3, .quarter-width,
   &.grid-4 > div,
-  .span3, .quarter-width {
+  .g-col-md-3 {
     @apply col-span-3;
   }
+  .span4, .third-width,
   &.grid-3 > div,
-  .span4, .third-width {
+  .g-col-md-4 {
     @apply col-span-4;
   }
-  .span5 {
+  .span5,
+  .g-col-md-5 {
     @apply col-span-5;
   }
+  .span6, .half-width,
   &.grid-2 > div,
-  .span6, .half-width {
+  .g-col-md-6
+  {
     @apply col-span-6;
   }
-  .span7 {
+  .span7,
+  .g-col-md-7 {
     @apply col-span-7;
   }
-  .span8, .twothird-width {
+  .span8, .twothird-width,
+  .g-col-md-8 {
     @apply col-span-8;
   }
-  .span9, .threequarter-width {
+  .span9, .threequarter-width,
+  .g-col-md-9 {
     @apply col-span-9;
   }
-  .span10 {
+  .span10,
+  .g-col-md-10 {
     @apply col-span-10;
   }
-  .span11 {
+  .span11,
+  .g-col-md-11 {
     @apply col-span-11;
   }
-  .span12, .full-width {
+  .span12, .full-width,
+  .g-col-md-12 {
     @apply col-span-12;
   }
 }
