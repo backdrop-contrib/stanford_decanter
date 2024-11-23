@@ -75,7 +75,7 @@
       <?php print $action_links; ?>
 
       <?php if (!empty($content['hero'])): ?>
-        <div class="hero">
+        <div class="l-hero">
           <?php print $content['hero']; ?>
         </div>
       <?php endif; ?>

@@ -603,18 +603,6 @@ ul.tabs {
   }
 }
 
-.l-hero {
-  .block-system-title-combo,
-  h1.page-title {
-    @apply text-center flex-grow w-full absolute;
-  }
-  .block-title {
-    @apply rs-m-2;
-  }
-  ul.tabs {
-    @apply justify-center;
-  }
-}
 
 .breadcrumb {
   @apply hidden md:block py-40;
@@ -723,7 +711,7 @@ ul.primary li.active a,
 .cta-button, a.cta-button, .field-name-body a.cta-button,
 .btn, a.btn, .l-footer a.btn, .field-name-body a.btn
 {
-  @apply text-center block w-fit px-26 pt-10 pb-11 text-16 my-10;
+  @apply text-center inline-block w-fit px-26 pt-10 pb-11 text-16 my-10;
   @apply font-semibold leading-display no-underline hocus:underline md:text-20;
   @apply transition-colors bg-digital-red hover:bg-cardinal-red-dark focus:bg-black-true active:bg-black-true text-white hocus:text-white;
 
@@ -1109,39 +1097,38 @@ fieldset {
 
 /* Heros */
 
-.hero {
-  @apply basefont-23 relative h-full max-h-500 overflow-hidden;
-  .hero-image {
-    @apply: h-full w-full relative max-h-500;
-    & img {
-      @apply h-full w-full object-cover object-center;
-    }
-  }
-  .card-paragraph {
-    @apply text-black mb-20;
-  }
-  .card {
-    @apply block max-w-600 basefont-23 leading-display bg-white text-black border border-solid border-black-10 shadow relative max-w-full md:max-w-600 md:absolute md:top-auto md:left-36 md:bottom-36;
-  }
-  .card-body {
-    @apply flex flex-col items-start rs-px-2 rs-pt-2 rs-pb-4;
-  }
+.hero-gradient {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgb(24, 29, 28));
 }
 
-.block-hero-no-image,
-.block-hero-no-image,
-.block-hero,
-.hero-gradient {
+.l-hero {
+  @apply basefont-23 relative h-full overflow-hidden;
+}
+
+.block-hero {
+  &::before {
+    content: '';
+    @apply w-full h-full absolute top-0 bottom-0 left-0 right-0 z-10;
+    
+  }
   @apply p-0;
+  .hero-bg {
+    @apply hero-gradient;
+  }
+  .hero-content {
+    @apply cc rs-pt-8 rs-pb-1;
+  }
+  p {
+    @apply rs-mb-0;
+  }
 
   .hero-image {
     & img {
       @apply h-full w-full object-cover object-center;
     }
   }
-  .container,
   .card-body {
-    @apply relative max-w-full w-full rs-pt-9 rs-pb-4 m-0 top-0 text-center text-white;
+    @apply relative w-full rs-pt-9 rs-pb-4 m-0 top-0 text-center text-white;
     background: linear-gradient(rgba(0, 0, 0, 0), rgb(24, 29, 28));
   }
   .super-title {
@@ -1150,7 +1137,7 @@ fieldset {
   .sub-title {
     @apply max-w-prose text-20 leading-display text-shadow mx-auto mb-0;
   }
-  & h3 {
+  .block-title {
     @apply font-serif font-bold leading-tight tracking-normal text-shadow-lg mb-02em sm:text-m6;
   }
 }
@@ -1174,42 +1161,18 @@ fieldset {
 .block-hero {
   @apply text-center text-white w-full;
   .block-title {
-    @apply font-serif font-bold leading-loose tracking-normal text-shadow-lg mb-02em sm:text-m4;
+    @apply font-serif font-bold leading-tight tracking-normal text-shadow-lg mb-02em sm:text-m6;
   }
   .block-content {
     @apply max-w-prose text-30 leading-display text-shadow mx-auto mb-0;
   }
 }
 
-/* .block-hero {
-  position: relative;
-  left: 50%;
-  width: 100vw;
-  min-height: 30vh;
-  padding: 1.5rem 2rem 2rem;
-  margin: 0 0 2rem;
-  transform: translate(-50%, 0);
-  transition: min-height 0.25s;
-  will-change: min-height;
-  background-size: cover;
-} */
-
 .block-hero .block-title,
 .block-hero .block-content {
   max-width: 100%;
   overflow-wrap: break-word;
 }
-
-.l-hero .block-hero {
-  margin-top: -2rem;
-  /* Negative top margin collapses spacing under header */
-}
-
-.container .block-hero {
-  margin-top: 0;
-  /* If hero is in a container don't collapse top spacing */
-}
-
 
 /* Events */
 
