@@ -138,7 +138,7 @@ html .layout {
   }
   .l-bottom,
   .l-middle {
-    @apply cc;
+    @apply my-40 cc;
 
     .block {
       @apply mb-40;
@@ -1166,7 +1166,7 @@ fieldset {
 
 
 .block-hero {
-  @apply text-center text-white w-full;
+  @apply text-center text-white w-full mb-0;
   .block-title {
     @apply font-serif font-bold leading-tight tracking-normal text-shadow-lg mb-02em sm:text-m6;
   }
