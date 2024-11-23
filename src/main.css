@@ -21,8 +21,8 @@
 /* Text icons/arrows */
 
 .mask-icon {
-  @apply m-0 p-10 mr-10 w-10 h-20 relative top-10 inline-block bg-black align-baseline;
-  content: 'x';
+  @apply m-0 p-10 mr-10 w-10 h-20 relative inline-block bg-black align-baseline;
+  content: '';
 
   mask-size: contain;
   mask-position: bottom center;
@@ -35,6 +35,7 @@
 }
 
 .calendar {
+  @apply mask-icon;
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M128 0c17.7 0 32 14.3 32 32l0 32 128 0 0-32c0-17.7 14.3-32 32-32s32 14.3 32 32l0 32 48 0c26.5 0 48 21.5 48 48l0 48L0 160l0-48C0 85.5 21.5 64 48 64l48 0 0-32c0-17.7 14.3-32 32-32zM0 192l448 0 0 272c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 192zm64 80l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm128 0l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM64 400l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zm112 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16z'/%3E%3C/svg%3E");
 }
 
@@ -64,6 +65,10 @@
   @apply caret pl-10;
   background-position: left center;
   background-size: 12px;
+}
+.mail {
+  @apply mask-icon;
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTQ4IDY0QzIxLjUgNjQgMCA4NS41IDAgMTEyYzAgMTUuMSA3LjEgMjkuMyAxOS4yIDM4LjRMMjM2LjggMzEzLjZjMTEuNCA4LjUgMjcgOC41IDM4LjQgMEw0OTIuOCAxNTAuNGMxMi4xLTkuMSAxOS4yLTIzLjMgMTkuMi0zOC40YzAtMjYuNS0yMS41LTQ4LTQ4LTQ4TDQ4IDY0ek0wIDE3NkwwIDM4NGMwIDM1LjMgMjguNyA2NCA2NCA2NGwzODQgMGMzNS4zIDAgNjQtMjguNyA2NC02NGwwLTIwOEwyOTQuNCAzMzkuMmMtMjIuOCAxNy4xLTU0IDE3LjEtNzYuOCAwTDAgMTc2eiIvPjwvc3ZnPg==');
 }
 
 
@@ -128,7 +133,9 @@ html .layout {
     }
   }
 
-  .l-top,
+  .l-top {
+    @apply cc mt-20;
+  }
   .l-bottom,
   .l-middle {
     @apply cc;
@@ -140,6 +147,7 @@ html .layout {
   .l-content {
     @apply m-0 mb-30;
   }
+
 }
 
 .gridded-region,
@@ -556,7 +564,6 @@ html .layout {
 
 .header-menu {
   @apply hidden md:block mr-20 my-auto;
-  ;
 
   ul.links {
     @apply flex flex-col xl:flex-row;
@@ -1178,11 +1185,15 @@ fieldset {
 
 .node-event,
 .node-stanford-event {
+  .field-name-field-stanford-event-admission,
+  .field-name-field-event-location,
+  .field-name-field-stanford-event-location,
   .field-name-field-event-datetime,
   .field-name-field-stanford-event-datetime {
-    @apply float-start;
+    @apply my-10;
   }
 }
+
 
 .node-stanford-event.view-mode-teaser,
 .su-event,
@@ -1219,19 +1230,21 @@ fieldset {
 }
 
 .icon-pin,
-.event-location {
+.event-location,
+.field-name-field-stanford-event-location
+ {
   @apply leading-10;
   &::before {
-    @apply location-pin;
+    @apply location-pin float-start;
   }
 }
 
-.icon-cal,
-.event-date-long {
-  @apply leading-10;
-  &::before {
-    @apply calendar;
-  }
+.field-name-field-stanford-event-datetime::before {
+  @apply calendar float-start;
+}
+
+.field-name-field-stanford-event-admission::before {
+  @apply mail float-start;
 }
 
 /* People */
@@ -1261,6 +1274,10 @@ fieldset {
 }
 
 /* Misc styling */
+.field-label-inline * {
+  @apply leading-tight;
+}
+
 
 .field-name-body {
   & h3, & h4, & h5, & h6 {
