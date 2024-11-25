@@ -770,7 +770,13 @@ a.btn,
 body {
   input, [type='text'], input:where(:not([type])), [type='email'], [type='url'], [type='password'], [type='number'], [type='date'], [type='datetime-local'], [type='month'], [type='search'], [type='tel'], [type='time'], [type='week'], [multiple], textarea, select
   {
-    @apply text-19 py-8 border-black-60;
+    @apply text-16 py-8 border-black-60;
+  }
+  select {
+    @apply py-11;
+  }
+  [type='submit'] {
+    @apply btn;
   }
 
   .views-exposed-form {

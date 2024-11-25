@@ -4967,7 +4967,185 @@ body input, body [type='text'], body input:where(:not([type])), body [type='emai
   border-color: rgb(118 118 116 / var(--tw-border-opacity, 1));
   padding-top: 0.8rem;
   padding-bottom: 0.8rem;
-  font-size: 1.9rem;
+  font-size: 1.6rem;
+}
+
+body select{
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
+}
+
+body [type='submit'],
+abody [type='submit'],
+.l-footer abody [type='submit'], 
+.field-name-body abody [type='submit']{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 2.6rem;
+  padding-right: 2.6rem;
+  padding-top: 1rem;
+  padding-bottom: 1.1rem;
+  text-align: center;
+  font-size: 1.6rem;
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration-line: none;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
+body [type='submit']:hover,
+abody [type='submit']:hover,
+.l-footer abody [type='submit']:hover, 
+.field-name-body abody [type='submit']:hover{
+  text-decoration-line: underline;
+}
+
+body [type='submit']:focus,
+abody [type='submit']:focus,
+.l-footer abody [type='submit']:focus, 
+.field-name-body abody [type='submit']:focus{
+  text-decoration-line: underline;
+}
+
+@media (min-width: 768px){
+  body [type='submit'],
+abody [type='submit'],
+.l-footer abody [type='submit'], 
+.field-name-body abody [type='submit']{
+    font-size: 2rem;
+  }
+}
+
+body [type='submit'],
+abody [type='submit'],
+.l-footer abody [type='submit'], 
+.field-name-body abody [type='submit']{
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration-line: none;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
+body [type='submit']:hover,
+abody [type='submit']:hover,
+.l-footer abody [type='submit']:hover, 
+.field-name-body abody [type='submit']:hover{
+  text-decoration-line: underline;
+}
+
+body [type='submit']:focus,
+abody [type='submit']:focus,
+.l-footer abody [type='submit']:focus, 
+.field-name-body abody [type='submit']:focus{
+  text-decoration-line: underline;
+}
+
+@media (min-width: 768px){
+  body [type='submit'],
+abody [type='submit'],
+.l-footer abody [type='submit'], 
+.field-name-body abody [type='submit']{
+    font-size: 2rem;
+  }
+}
+
+body [type='submit'],
+abody [type='submit'],
+.l-footer abody [type='submit'], 
+.field-name-body abody [type='submit']{
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration-line: none;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
+body [type='submit']:hover,
+abody [type='submit']:hover,
+.l-footer abody [type='submit']:hover, 
+.field-name-body abody [type='submit']:hover{
+  text-decoration-line: underline;
+}
+
+body [type='submit']:focus,
+abody [type='submit']:focus,
+.l-footer abody [type='submit']:focus, 
+.field-name-body abody [type='submit']:focus{
+  text-decoration-line: underline;
+}
+
+@media (min-width: 768px){
+  body [type='submit'],
+abody [type='submit'],
+.l-footer abody [type='submit'], 
+.field-name-body abody [type='submit']{
+    font-size: 2rem;
+  }
+}
+
+body [type='submit'],
+abody [type='submit'],
+.l-footer abody [type='submit'], 
+.field-name-body abody [type='submit']{
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration-line: none;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
+body [type='submit']:hover,
+abody [type='submit']:hover,
+.l-footer abody [type='submit']:hover, 
+.field-name-body abody [type='submit']:hover{
+  text-decoration-line: underline;
+}
+
+body [type='submit']:focus,
+abody [type='submit']:focus,
+.l-footer abody [type='submit']:focus, 
+.field-name-body abody [type='submit']:focus{
+  text-decoration-line: underline;
+}
+
+@media (min-width: 768px){
+  body [type='submit'],
+abody [type='submit'],
+.l-footer abody [type='submit'], 
+.field-name-body abody [type='submit']{
+    font-size: 2rem;
+  }
+}
+
+body [type='submit'] svg, abody [type='submit'] svg, .l-footer abody [type='submit'] svg, .field-name-body abody [type='submit'] svg{
+  margin-left: 0.5rem;
+  margin-top: -0.2rem;
+  display: inline-block;
+  height: 0.9em;
+  width: 0.9em;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
+body [type='submit']:hover, abody [type='submit']:hover, .l-footer abody [type='submit']:hover, .field-name-body abody [type='submit']:hover{
+  --tw-brightness: brightness(.5);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 body .views-exposed-form{

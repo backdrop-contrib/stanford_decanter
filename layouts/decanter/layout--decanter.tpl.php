@@ -93,7 +93,7 @@
             <?php print $content['content']; ?>
           </main>
         <?php elseif (!empty($content['sidebar']) || !empty($content['sidebar2'])): ?>
-          <main class="l-content col-three-quarter order-2" role="main" aria-label="<?php print t('Main content'); ?>">
+          <main class="l-content col-threequarter order-2" role="main" aria-label="<?php print t('Main content'); ?>">
             <?php print $content['content']; ?>
           </main>
         <?php else: ?>
@@ -115,7 +115,7 @@
       </div>
 
       <?php if (!empty($content['bottom'])): ?>
-        <div class="l-bottom rs-grid">
+        <div class="l-bottom rs-grid grid-4">
           <?php print $content['bottom']; ?>
         </div>
       <?php endif; ?>

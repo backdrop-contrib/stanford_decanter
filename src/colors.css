@@ -83,6 +83,7 @@ html body .header-identity-wrapper .logo a {
 }
 
 /* Body links */
+
 .l-footer a,
 .field-name-body a,
 .l-content a
@@ -90,6 +91,7 @@ html body .header-identity-wrapper .logo a {
   color: #006CB8;
 }
 .l-content a.btn,
+.l-content a.btn:hover,
 .l-content a.btn-green,
 .l-content a.btn-green-lt,
 .l-content a.btn-green-dk,
@@ -132,7 +134,14 @@ html body .l-footer a
   border-color: #B1040D;
 }
 
+.view-mode-card {
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: #2E2D28;
+  }
+}
+
 .btn,
+.btn:hover,
 .button,
 .cta-btn,
 .btn-cta,
@@ -147,11 +156,6 @@ button, input:where([type='button']), input:where([type='reset']), input:where([
 }
 .l-content a.btn-cta::after {
   background-color: #fff;
-}
-.view-mode-card {
-  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-    color: #2E2D28;
-  }
 }
 
 .btn-green {
