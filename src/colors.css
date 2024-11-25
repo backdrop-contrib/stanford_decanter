@@ -43,9 +43,14 @@ body .header-menu .links a:after {
   background-color: #8C1518;
 }
 
-.l-header .l-header-inner .block-system-main-menu ul
+.l-header .l-header-inner .block-system-main-menu ul,
+.menu-dropdown ul a:hover, 
+.menu-dropdown ul a:focus, 
+.menu-dropdown ul a:active, 
+.menu-dropdown ul a.highlighted,
+.menu-dropdown ul a
 {
-  background-color: #FFFFFB;
+  background-color: #FFFFFD;
 }
 
 .hero .card-paragraph {
@@ -70,9 +75,6 @@ html body {
   color: #2E2D25;
 }
 
-html body .l-footer a {
-  color: #2E2D25;
-}
 
 /* Logo */
 
@@ -87,7 +89,14 @@ html body .header-identity-wrapper .logo a {
 {
   color: #006CB8;
 }
-.l-content a.btn, .l-content a.button {
+.l-content a.btn,
+.l-content a.btn-green,
+.l-content a.btn-green-lt,
+.l-content a.btn-green-dk,
+.l-content a.btn-blue, 
+.l-content a.btn-blue-lt,
+.l-content a.btn-blue-dk 
+{
   color: #fff;
 }
 a.cta::after,
@@ -100,8 +109,17 @@ a.primary::after,
 
 
 /* Title links */
-h3 a, h4 a, h5 a, h6 a, body .node-readmore a,
-.node-title a:hover
+h3 a, 
+h4 a, 
+h5 a, 
+h6 a, 
+.l-content h3 a,
+.l-content h4 a, 
+.l-content h5 a, 
+.l-content h6 a, 
+body .node-readmore a,
+.node-title a:hover,
+html body .l-footer a
 {
   color: #B1040D;
   text-decoration-color: #B1040D;
@@ -117,15 +135,52 @@ h3 a, h4 a, h5 a, h6 a, body .node-readmore a,
 .btn,
 .button,
 .cta-btn,
-.cta-button {
+.btn-cta,
+.cta-button,
+.l-content a.cta-button,
+.l-content a.btn-cta,
+.button-primary,
+button, input:where([type='button']), input:where([type='reset']), input:where([type='submit'])
+{
   background-color: #B1040D;
   color: #fff
+}
+.l-content a.btn-cta::after {
+  background-color: #fff;
 }
 .view-mode-card {
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     color: #2E2D28;
   }
 }
+
+.btn-green {
+  background-color: #008566;
+  color: #fff;
+}
+.btn-green-lt {
+  background-color: #1AECBA;
+  color: #000;
+}
+.btn-green-dk {
+  background-color: #006F54;
+  color: #000;
+}
+
+.btn-blue {
+  background-color: #006CB8;
+  color: #fff;
+}
+.btn-blue-lt {
+  background-color: #6FC3FF;
+  color: #000;
+}
+.btn-blue-dk {
+  background-color: #00548f;
+  color: #000;
+}
+
+
 
 /* Form items */
 [type='text'],input:where(:not([type])),[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select
