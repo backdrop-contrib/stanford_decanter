@@ -87,40 +87,35 @@
       <?php endif; ?>
 
 
-      <div class="l-middle row flex flex-col md:flex-row gap-xs lg:gap-lg ">
+      <div class="l-middle rs-grid grid-4">
         <?php if (!empty($content['sidebar']) && !empty($content['sidebar2'])): ?>
-          <main class="l-content col-md-6 col-md-push-3 w-full md:w-1/2 order-2" role="main" aria-label="<?php print t('Main content'); ?>">
+          <main class="l-content col-half order-2" role="main" aria-label="<?php print t('Main content'); ?>">
             <?php print $content['content']; ?>
           </main>
-          <div class="l-sidebar l-sidebar-first col-md-3 col-md-pull-6 lg:w-1/4 order-1">
-            <?php print $content['sidebar']; ?>
-          </div>
-          <div class="l-sidebar l-sidebar-second col-md-3 md:w-1/4 order-3">
-            <?php print $content['sidebar2']; ?>
-          </div>
-        <?php elseif (!empty($content['sidebar'])): ?>
-          <main class="l-content col-md-9 col-md-push-3 md:w-3/4 order-2" role="main" aria-label="<?php print t('Main content'); ?>">
+        <?php elseif (!empty($content['sidebar']) || !empty($content['sidebar2'])): ?>
+          <main class="l-content col-three-quarter order-2" role="main" aria-label="<?php print t('Main content'); ?>">
             <?php print $content['content']; ?>
           </main>
-          <div class="l-sidebar l-sidebar-first col-md-3 col-md-pull-9 md:w-1/4 order-1">
-            <?php print $content['sidebar']; ?>
-          </div>
-        <?php elseif (!empty($content['sidebar2'])): ?>
-          <main class="l-content col-md-6 col-md-push-3 md:w-3/4 order-2" role="main" aria-label="<?php print t('Main content'); ?>">
-            <?php print $content['content']; ?>
-          </main>
-          <div class="l-sidebar l-sidebar-second col-md-3 md:w-1/4 order-3">
-            <?php print $content['sidebar2']; ?>
-          </div>
         <?php else: ?>
-          <main class="l-content col-md-12 w-full order-2" role="main" aria-label="<?php print t('Main content'); ?>">
+          <main class="l-content col-full" role="main" aria-label="<?php print t('Main content'); ?>">
             <?php print $content['content']; ?>
           </main>
         <?php endif; ?>
+
+        <?php if (!empty($content['sidebar'])): ?>
+            <div class="l-sidebar l-sidebar-first order-1">
+              <?php print $content['sidebar']; ?>
+            </div>
+          <?php endif; ?>
+          <?php if (!empty($content['sidebar2'])): ?>
+            <div class="l-sidebar l-sidebar-second order-3">
+              <?php print $content['sidebar2']; ?>
+            </div>
+          <?php endif; ?>
       </div>
 
       <?php if (!empty($content['bottom'])): ?>
-        <div class="l-bottom grid grid-cols-1 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12">
+        <div class="l-bottom rs-grid">
           <?php print $content['bottom']; ?>
         </div>
       <?php endif; ?>
@@ -129,7 +124,7 @@
 
     <?php if ($content['footer']): ?>
       <footer class="l-footer">
-        <div class="l-footer-inner grid grid-cols-1 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-4">
+        <div class="l-footer-inner rs-grid grid-4">
           <?php print $content['footer']; ?>
         </div>
       </footer>

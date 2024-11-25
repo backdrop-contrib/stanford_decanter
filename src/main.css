@@ -163,110 +163,55 @@ html .layout {
   .l-content {
     @apply m-0 mb-30;
   }
-
+  .l-sidebar + .l-content {
+    @apply col-span-6;
+  }
 }
 
 .paragraphs-item-aplenty-cards,
-.gridded-region,
-.gridded
+.rs-grid
 {
   @apply grid grid-cols-1 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12;
-  @apply gap-4 md:gap-6;
-
-  > div {
-    @apply col-span-12;
-  }
-  .span1,
-  &.grid-12 > div,
-  .g-col-md-1 {
-    @apply col-span-1;
-  }
-  .span2,
-  &.grid-6 > div,
-  .g-col-md-2 {
-    @apply col-span-2;
-  }
-  .span3, .quarter-width,
-  &.grid-4 > div,
-  .g-col-md-3 {
-    @apply col-span-3;
-  }
-  .span4, .third-width,
-  &.grid-3 > div,
-  .g-col-md-4 {
-    @apply col-span-4;
-  }
-  .span5,
-  .g-col-md-5 {
-    @apply col-span-5;
-  }
-  .span6, .half-width,
-  &.grid-2 > div,
-  .g-col-md-6
-  {
-    @apply col-span-6;
-  }
-  .span7,
-  .g-col-md-7 {
-    @apply col-span-7;
-  }
-  .span8, .twothird-width,
-  .g-col-md-8 {
-    @apply col-span-8;
-  }
-  .span9, .threequarter-width,
-  .g-col-md-9 {
-    @apply col-span-9;
-  }
-  .span10,
-  .g-col-md-10 {
-    @apply col-span-10;
-  }
-  .span11,
-  .g-col-md-11 {
-    @apply col-span-11;
-  }
-  .span12, .full-width,
-  .g-col-md-12 {
-    @apply col-span-12;
-  }
+  @apply gap-4 md:gap-6 lg:gap-10 xl:gap-16;
 }
 
-.col-md-1 {
+.rs-grid.grid-12 > *:not([class*="col-"]) {
   @apply col-span-1;
 }
-.col-md-2 {
-  @apply col-span-2;
+
+.rs-grid.grid-6 > *:not([class*="col-"]) {
+  @apply col-span-1 md:col-span-2;
 }
-.col-md-3 {
-  @apply col-span-3;
+
+.col-third,
+.rs-grid.grid-4 > *:not([class*="col-"]) {
+  @apply col-span-1 md:col-span-3;
 }
-.col-md-4 {
-  @apply col-span-4;
+
+.col-quarter,
+.rs-grid.grid-3 > *:not([class*="col-"]) {
+  @apply col-span-1 md:col-span-2 lg:col-span-4;
 }
-.col-md-5 {
-  @apply col-span-5;
+  
+.col-half,
+.rs-grid.grid-2 > *:not([class*="col-"])
+{
+  @apply col-span-1 md:col-span-2 lg:col-span-4 xl:col-span-6;
 }
-.col-md-6 {
-  @apply col-span-6;
+
+.col-full
+{
+  @apply col-span-1 md:col-span-6 lg:col-span-12;
 }
-.col-md-7 {
-  @apply col-span-7;
-}
-.col-md-8 {
+
+.col-twothird
+{
   @apply col-span-8;
 }
-.col-md-9 {
+
+.col-threequarter
+{
   @apply col-span-9;
-}
-.col-md-10 {
-  @apply col-span-10;
-}
-.col-md-11 {
-  @apply col-span-11;
-}
-.col-md-12 {
-  @apply col-span-12;
 }
 
 /* Header */
@@ -539,7 +484,7 @@ html .layout {
   ul.menu-dropdown {
     @apply md:flex-row shadow-inner md:shadow-none;
     > li {
-      @apply mx-0 md:mx-5 lg:mr-10 xl:mr-20 border-b-0;
+      @apply mx-0 md:mx-5 lg:mr-10 xl:mr-20 border-0;
 
       ul {
         @apply md:pl-0 md:shadow-md md:absolute pl-20 border-0;
@@ -741,12 +686,13 @@ ul.primary li.active a,
   @apply py-40 mt-30;
 
   .l-footer-inner {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4;
     position: static;
 
     .full,
-    .block-theme-hooks-stanford-decanter-global-footer, .block-system-header {
-      @apply col-span-1 md:col-span-2 lg:col-span-4;
+    .block-theme-hooks-stanford-decanter-global-footer, 
+    .block-system-header 
+    {
+      @apply col-full;
     }
 
     .block-theme-hooks-stanford-decanter-global-footer {

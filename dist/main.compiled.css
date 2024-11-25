@@ -3254,185 +3254,156 @@ html .layout .l-content{
   margin-bottom: 3rem;
 }
 
+html .layout .l-sidebar + .l-content{
+  grid-column: span 6 / span 6;
+}
+
 .paragraphs-item-aplenty-cards,
-.gridded-region,
-.gridded{
+.rs-grid{
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 @media (min-width: 576px){
   .paragraphs-item-aplenty-cards,
-.gridded-region,
-.gridded{
+.rs-grid{
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
 @media (min-width: 768px){
   .paragraphs-item-aplenty-cards,
-.gridded-region,
-.gridded{
+.rs-grid{
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 }
 
 @media (min-width: 992px){
   .paragraphs-item-aplenty-cards,
-.gridded-region,
-.gridded{
+.rs-grid{
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 }
 
 .paragraphs-item-aplenty-cards,
-.gridded-region,
-.gridded{
+.rs-grid{
   gap: 0.4rem;
 }
 
 @media (min-width: 768px){
   .paragraphs-item-aplenty-cards,
-.gridded-region,
-.gridded{
+.rs-grid{
     gap: 0.6rem;
   }
 }
 
-.paragraphs-item-aplenty-cards > div, .gridded-region > div, .gridded > div{
-  grid-column: span 12 / span 12;
+@media (min-width: 992px){
+  .paragraphs-item-aplenty-cards,
+.rs-grid{
+    gap: 1rem;
+  }
 }
 
-.paragraphs-item-aplenty-cards .span1,
-  .paragraphs-item-aplenty-cards.grid-12 > div,
-  .paragraphs-item-aplenty-cards .g-col-md-1,
-  .gridded-region .span1,
-  .gridded-region.grid-12 > div,
-  .gridded-region .g-col-md-1,
-  .gridded .span1,
-  .gridded.grid-12 > div,
-  .gridded .g-col-md-1{
+@media (min-width: 1200px){
+  .paragraphs-item-aplenty-cards,
+.rs-grid{
+    gap: 1.6rem;
+  }
+}
+
+.rs-grid.grid-12 > *:not([class*="col-"]){
   grid-column: span 1 / span 1;
 }
 
-.paragraphs-item-aplenty-cards .span2,
-  .paragraphs-item-aplenty-cards.grid-6 > div,
-  .paragraphs-item-aplenty-cards .g-col-md-2,
-  .gridded-region .span2,
-  .gridded-region.grid-6 > div,
-  .gridded-region .g-col-md-2,
-  .gridded .span2,
-  .gridded.grid-6 > div,
-  .gridded .g-col-md-2{
-  grid-column: span 2 / span 2;
-}
-
-.paragraphs-item-aplenty-cards .span3, .paragraphs-item-aplenty-cards .quarter-width, .paragraphs-item-aplenty-cards.grid-4 > div, .paragraphs-item-aplenty-cards .g-col-md-3, .gridded-region .span3, .gridded-region .quarter-width, .gridded-region.grid-4 > div, .gridded-region .g-col-md-3, .gridded .span3, .gridded .quarter-width, .gridded.grid-4 > div, .gridded .g-col-md-3{
-  grid-column: span 3 / span 3;
-}
-
-.paragraphs-item-aplenty-cards .span4, .paragraphs-item-aplenty-cards .third-width, .paragraphs-item-aplenty-cards.grid-3 > div, .paragraphs-item-aplenty-cards .g-col-md-4, .gridded-region .span4, .gridded-region .third-width, .gridded-region.grid-3 > div, .gridded-region .g-col-md-4, .gridded .span4, .gridded .third-width, .gridded.grid-3 > div, .gridded .g-col-md-4{
-  grid-column: span 4 / span 4;
-}
-
-.paragraphs-item-aplenty-cards .span5,
-  .paragraphs-item-aplenty-cards .g-col-md-5,
-  .gridded-region .span5,
-  .gridded-region .g-col-md-5,
-  .gridded .span5,
-  .gridded .g-col-md-5{
-  grid-column: span 5 / span 5;
-}
-
-.paragraphs-item-aplenty-cards .span6, .paragraphs-item-aplenty-cards .half-width, .paragraphs-item-aplenty-cards.grid-2 > div, .paragraphs-item-aplenty-cards .g-col-md-6, .gridded-region .span6, .gridded-region .half-width, .gridded-region.grid-2 > div, .gridded-region .g-col-md-6, .gridded .span6, .gridded .half-width, .gridded.grid-2 > div, .gridded .g-col-md-6{
-  grid-column: span 6 / span 6;
-}
-
-.paragraphs-item-aplenty-cards .span7,
-  .paragraphs-item-aplenty-cards .g-col-md-7,
-  .gridded-region .span7,
-  .gridded-region .g-col-md-7,
-  .gridded .span7,
-  .gridded .g-col-md-7{
-  grid-column: span 7 / span 7;
-}
-
-.paragraphs-item-aplenty-cards .span8, .paragraphs-item-aplenty-cards .twothird-width, .paragraphs-item-aplenty-cards .g-col-md-8, .gridded-region .span8, .gridded-region .twothird-width, .gridded-region .g-col-md-8, .gridded .span8, .gridded .twothird-width, .gridded .g-col-md-8{
-  grid-column: span 8 / span 8;
-}
-
-.paragraphs-item-aplenty-cards .span9, .paragraphs-item-aplenty-cards .threequarter-width, .paragraphs-item-aplenty-cards .g-col-md-9, .gridded-region .span9, .gridded-region .threequarter-width, .gridded-region .g-col-md-9, .gridded .span9, .gridded .threequarter-width, .gridded .g-col-md-9{
-  grid-column: span 9 / span 9;
-}
-
-.paragraphs-item-aplenty-cards .span10,
-  .paragraphs-item-aplenty-cards .g-col-md-10,
-  .gridded-region .span10,
-  .gridded-region .g-col-md-10,
-  .gridded .span10,
-  .gridded .g-col-md-10{
-  grid-column: span 10 / span 10;
-}
-
-.paragraphs-item-aplenty-cards .span11,
-  .paragraphs-item-aplenty-cards .g-col-md-11,
-  .gridded-region .span11,
-  .gridded-region .g-col-md-11,
-  .gridded .span11,
-  .gridded .g-col-md-11{
-  grid-column: span 11 / span 11;
-}
-
-.paragraphs-item-aplenty-cards .span12, .paragraphs-item-aplenty-cards .full-width, .paragraphs-item-aplenty-cards .g-col-md-12, .gridded-region .span12, .gridded-region .full-width, .gridded-region .g-col-md-12, .gridded .span12, .gridded .full-width, .gridded .g-col-md-12{
-  grid-column: span 12 / span 12;
-}
-
-.col-md-1{
+.rs-grid.grid-6 > *:not([class*="col-"]){
   grid-column: span 1 / span 1;
 }
 
-.col-md-2{
-  grid-column: span 2 / span 2;
+@media (min-width: 768px){
+  .rs-grid.grid-6 > *:not([class*="col-"]){
+    grid-column: span 2 / span 2;
+  }
 }
 
-.col-md-3{
-  grid-column: span 3 / span 3;
+.col-third,
+.rs-grid.grid-4 > *:not([class*="col-"]){
+  grid-column: span 1 / span 1;
 }
 
-.col-md-4{
-  grid-column: span 4 / span 4;
+@media (min-width: 768px){
+  .col-third,
+.rs-grid.grid-4 > *:not([class*="col-"]){
+    grid-column: span 3 / span 3;
+  }
 }
 
-.col-md-5{
-  grid-column: span 5 / span 5;
+.col-quarter,
+.rs-grid.grid-3 > *:not([class*="col-"]){
+  grid-column: span 1 / span 1;
 }
 
-.col-md-6{
-  grid-column: span 6 / span 6;
+@media (min-width: 768px){
+  .col-quarter,
+.rs-grid.grid-3 > *:not([class*="col-"]){
+    grid-column: span 2 / span 2;
+  }
 }
 
-.col-md-7{
-  grid-column: span 7 / span 7;
+@media (min-width: 992px){
+  .col-quarter,
+.rs-grid.grid-3 > *:not([class*="col-"]){
+    grid-column: span 4 / span 4;
+  }
 }
 
-.col-md-8{
+.col-half,
+.rs-grid.grid-2 > *:not([class*="col-"]){
+  grid-column: span 1 / span 1;
+}
+
+@media (min-width: 768px){
+  .col-half,
+.rs-grid.grid-2 > *:not([class*="col-"]){
+    grid-column: span 2 / span 2;
+  }
+}
+
+@media (min-width: 992px){
+  .col-half,
+.rs-grid.grid-2 > *:not([class*="col-"]){
+    grid-column: span 4 / span 4;
+  }
+}
+
+@media (min-width: 1200px){
+  .col-half,
+.rs-grid.grid-2 > *:not([class*="col-"]){
+    grid-column: span 6 / span 6;
+  }
+}
+
+.col-full{
+  grid-column: span 1 / span 1;
+}
+
+@media (min-width: 768px){
+  .col-full{
+    grid-column: span 6 / span 6;
+  }
+}
+
+@media (min-width: 992px){
+  .col-full{
+    grid-column: span 12 / span 12;
+  }
+}
+
+.col-twothird{
   grid-column: span 8 / span 8;
 }
 
-.col-md-9{
+.col-threequarter{
   grid-column: span 9 / span 9;
-}
-
-.col-md-10{
-  grid-column: span 10 / span 10;
-}
-
-.col-md-11{
-  grid-column: span 11 / span 11;
-}
-
-.col-md-12{
-  grid-column: span 12 / span 12;
 }
 
 /* Header */
@@ -4281,7 +4252,7 @@ html .layout .l-content{
 .l-header .block-menu ul.menu > li, .l-header .block-menu ul.menu-dropdown > li{
   margin-left: 0;
   margin-right: 0;
-  border-bottom-width: 0px;
+  border-width: 0px;
 }
 
 @media (min-width: 768px){
@@ -4770,23 +4741,6 @@ ul.primary li.active a,
   padding-bottom: 4rem;
 }
 
-.l-footer .l-footer-inner{
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-@media (min-width: 768px){
-  .l-footer .l-footer-inner{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 992px){
-  .l-footer .l-footer-inner{
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-}
-
 .l-footer .l-footer-inner {
   position: static;
 }
@@ -4801,7 +4755,7 @@ ul.primary li.active a,
   .l-footer .l-footer-inner .full,
     .l-footer .l-footer-inner .block-theme-hooks-stanford-decanter-global-footer,
     .l-footer .l-footer-inner .block-system-header{
-    grid-column: span 2 / span 2;
+    grid-column: span 6 / span 6;
   }
 }
 
@@ -4809,7 +4763,7 @@ ul.primary li.active a,
   .l-footer .l-footer-inner .full,
     .l-footer .l-footer-inner .block-theme-hooks-stanford-decanter-global-footer,
     .l-footer .l-footer-inner .block-system-header{
-    grid-column: span 4 / span 4;
+    grid-column: span 12 / span 12;
   }
 }
 
