@@ -251,6 +251,15 @@ html .layout {
 .g-col-md-12 {
   @apply col-span-12;
 }
+
+.grid-demo {
+  @apply bg-black-10 p-10 rounded-xl text-12;
+  div {
+    @apply  bg-black-20 border-black-50 border-2 rounded-lg p-10;
+  }
+}
+
+
 /* Header */
 
 .l-header {
@@ -758,7 +767,11 @@ ul.primary li.active a,
 
 /* Form elements */
 
-.button-primary,
+button,
+input:where([type='button']), 
+input:where([type='reset']), 
+input:where([type='submit']),
+.btn-secondary,
 .button, 
 a.button, 
 .field-name-body a.button,
@@ -785,7 +798,8 @@ a.btn,
 .l-footer a.btn, 
 .field-name-body a.btn
 {
-  @apply text-center inline-block w-fit px-26 pt-10 pb-11 text-16 my-10;
+  @apply border-3 px-26 pt-10 pb-11;
+  @apply text-center inline-block w-fit text-16 my-10;
   @apply font-semibold leading-display no-underline hocus:underline md:text-20 cursor-pointer transition-all;
 
   & svg {
@@ -805,9 +819,9 @@ a.btn,
 }
 
 body {
-  input, [type='text'], input:where(:not([type])), [type='email'], [type='url'], [type='password'], [type='number'], [type='date'], [type='datetime-local'], [type='month'], [type='search'], [type='tel'], [type='time'], [type='week'], [multiple], textarea, select
+  [type='text'], input:where(:not([type])), [type='email'], [type='url'], [type='password'], [type='number'], [type='date'], [type='datetime-local'], [type='month'], [type='search'], [type='tel'], [type='time'], [type='week'], [multiple], textarea, select
   {
-    @apply text-16 py-8 border-black-60;
+    @apply text-16 py-8 border-black-60 mb-10;
   }
   select {
     @apply py-11;

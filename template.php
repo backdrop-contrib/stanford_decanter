@@ -275,9 +275,9 @@ function stanford_decanter_breadcrumb($variables) {
 function stanford_decanter_menu() {
   $items = array();
 
-  $items['admin/su_help/styleguide'] = array(
-    'title' => 'Stanford Style Guide',
-    'description' => 'Decater 7 Style guide.',
+  $items['admin/decanter_help/styleguide'] = array(
+    'title' => 'Backdrop Decanter Style Guide',
+    'description' => 'Decanter 7 Style guide.',
     'page callback' => 'backdrop_get_form',
     'page arguments' => array('stanford_decanter_style_guide'),
     'access arguments' => array('access content overview'),
@@ -293,7 +293,7 @@ function stanford_decanter_menu() {
  * Implements hook_admin_paths_alter().
  */
 function stanford_decanter_admin_paths_alter(&$paths) {
-  $paths['admin/su_help/styleguide'] = FALSE;
+  $paths['admin/decanter_help/styleguide'] = FALSE;
 }
 
 

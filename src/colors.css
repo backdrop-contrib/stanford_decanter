@@ -84,23 +84,13 @@ html body .header-identity-wrapper .logo a {
 
 /* Body links */
 
-.l-footer a,
 .field-name-body a,
-.l-content a
+.l-content a:not([class*="btn"]),
+.l-footer a:not([class*="btn"])
 {
   color: #006CB8;
 }
-.l-content a.btn,
-.l-content a.btn:hover,
-.l-content a.btn-green,
-.l-content a.btn-green-lt,
-.l-content a.btn-green-dk,
-.l-content a.btn-blue, 
-.l-content a.btn-blue-lt,
-.l-content a.btn-blue-dk 
-{
-  color: #fff;
-}
+
 a.cta::after,
 a.primary::after,
 .field-name-body .link--cta-primary::after,
@@ -140,17 +130,22 @@ html body .l-footer a
   }
 }
 
+/* Form items */
+
 .btn,
-.btn:hover,
 .button,
 .cta-btn,
 .btn-cta,
 .cta-button,
+.button-primary,
 .l-content a.cta-button,
 .l-content a.btn-cta,
-.button-primary,
-button, input:where([type='button']), input:where([type='reset']), input:where([type='submit'])
+button, 
+input:where([type='button']), 
+input:where([type='reset']), 
+input:where([type='submit'])
 {
+  border-color: #B1040D;
   background-color: #B1040D;
   color: #fff
 }
@@ -158,35 +153,45 @@ button, input:where([type='button']), input:where([type='reset']), input:where([
   background-color: #fff;
 }
 
+.btn-secondary,
+a.btn-secondary
+{
+  background-color: #fff;
+  color: #B1040D;
+}
+
 .btn-green {
   background-color: #008566;
+  border-color: #008566;
   color: #fff;
 }
 .btn-green-lt {
   background-color: #1AECBA;
+  border-color: #1AECBA;
   color: #000;
 }
 .btn-green-dk {
   background-color: #006F54;
+  border-color: #006F54;
   color: #000;
 }
 
 .btn-blue {
   background-color: #006CB8;
+  border-color: #006CB8;
   color: #fff;
 }
 .btn-blue-lt {
   background-color: #6FC3FF;
+  border-color: #6FC3FF;
   color: #000;
 }
 .btn-blue-dk {
   background-color: #00548f;
+  border-color: #00548f;
   color: #000;
 }
 
-
-
-/* Form items */
 [type='text'],input:where(:not([type])),[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select
 {
   outline:none;
