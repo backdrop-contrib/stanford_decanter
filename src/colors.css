@@ -84,11 +84,10 @@ html body .header-identity-wrapper .logo a {
 
 /* Body links */
 
-.field-name-body a,
-.l-content a:not([class*="btn"]),
-.l-footer a:not([class*="btn"])
+a
 {
   color: #006CB8;
+  text-decoration-color: #006CB8;
 }
 
 a.cta::after,
@@ -98,7 +97,6 @@ a.primary::after,
 {
    background-color: #006CB8;
 }
-
 
 /* Title links */
 h3 a, 
@@ -133,13 +131,13 @@ html body .l-footer a
 /* Form items */
 
 .btn,
+.l-content .btn,
+.l-footer .btn,
 .button,
 .cta-btn,
 .btn-cta,
 .cta-button,
 .button-primary,
-.l-content a.cta-button,
-.l-content a.btn-cta,
 button, 
 input:where([type='button']), 
 input:where([type='reset']), 
@@ -149,12 +147,11 @@ input:where([type='submit'])
   background-color: #B1040D;
   color: #fff
 }
-.l-content a.btn-cta::after {
+a.btn-cta::after {
   background-color: #fff;
 }
 
-.btn-secondary,
-a.btn-secondary
+.btn-secondary
 {
   background-color: #fff;
   color: #B1040D;
