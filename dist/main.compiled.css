@@ -2087,6 +2087,21 @@ table thead + tbody{
   border-color: rgb(213 213 212 / var(--tw-border-opacity, 1));
 }
 
+.border-digital-red{
+  --tw-border-opacity: 1;
+  border-color: rgb(177 4 14 / var(--tw-border-opacity, 1));
+}
+
+.border-digital-red-dark{
+  --tw-border-opacity: 1;
+  border-color: rgb(130 0 0 / var(--tw-border-opacity, 1));
+}
+
+.border-digital-red-light{
+  --tw-border-opacity: 1;
+  border-color: rgb(229 8 8 / var(--tw-border-opacity, 1));
+}
+
 .bg-archway{
   --tw-bg-opacity: 1;
   background-color: rgb(93 75 60 / var(--tw-bg-opacity, 1));
@@ -2462,6 +2477,10 @@ table thead + tbody{
   padding-right: 2rem;
 }
 
+.pb-20{
+  padding-bottom: 2rem;
+}
+
 .text-left{
   text-align: left;
 }
@@ -2476,6 +2495,10 @@ table thead + tbody{
 
 .font-serif{
   font-family: "Source Serif 4", "Source Serif Pro", Georgia, Times, "Times New Roman", serif;
+}
+
+.text-11{
+  font-size: 1.1rem;
 }
 
 .text-13{
@@ -2558,6 +2581,16 @@ table thead + tbody{
 .text-black-20{
   --tw-text-opacity: 1;
   color: rgb(213 213 212 / var(--tw-text-opacity, 1));
+}
+
+.text-digital-red{
+  --tw-text-opacity: 1;
+  color: rgb(177 4 14 / var(--tw-text-opacity, 1));
+}
+
+.text-digital-red-dark{
+  --tw-text-opacity: 1;
+  color: rgb(130 0 0 / var(--tw-text-opacity, 1));
 }
 
 .text-digital-red-light{
@@ -2913,8 +2946,8 @@ span.ext,
   background-color: rgb(177 4 14 / var(--tw-bg-opacity, 1));
 }
 
-html .layout .l-bottom span.ext, html .layout .l-middle span.ext,html .layout .l-bottom 
-.ext-link, html .layout .l-middle 
+html .layout .l-bottom divspan.ext, html .layout .l-middle divspan.ext,html .layout .l-bottom div
+.ext-link, html .layout .l-middle div
 .ext-link{
   margin-bottom: 4rem;
 }
@@ -2941,7 +2974,8 @@ a:hover span.ext,
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.link-arrow,
+a.forward::after,
+.arrow-after,
 .int-link{
   position: relative;
   display: inline-block;
@@ -2952,8 +2986,9 @@ a:hover span.ext,
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
-  margin-bottom: 0.5rem;
   margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
   height: 2rem;
   width: 2rem;
   --tw-bg-opacity: 1;
@@ -2965,8 +3000,40 @@ a:hover span.ext,
           mask-size: contain;
 }
 
+a.forward:hover::after,
 .int-link:hover{
   --tw-translate-x: 0.2em;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+a.back::before{
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  position: relative;
+  display: inline-block;
+  transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  vertical-align: text-bottom;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(177 4 14 / var(--tw-bg-opacity, 1));
+  content: '';
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true' class='su-transition su-w-08em su-ml-03em su--mt-02em su-transform-gpu group-hocus:su-translate-x-02em su-inline-block su-text-digital-red-light group-hocus:su-text-cardinal-red'%3E%3Cpath fill-rule='evenodd' d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z' clip-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true' class='su-transition su-w-08em su-ml-03em su--mt-02em su-transform-gpu group-hocus:su-translate-x-02em su-inline-block su-text-digital-red-light group-hocus:su-text-cardinal-red'%3E%3Cpath fill-rule='evenodd' d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z' clip-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
+  -webkit-mask-size: contain;
+          mask-size: contain;
+}
+
+a.back:hover::before{
+  --tw-translate-x: -0.2em;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -3135,7 +3202,7 @@ html .layout .l-bottom,
   margin-bottom: 4rem;
 }
 
-html .layout .l-bottom .block, html .layout .l-middle .block{
+html .layout .l-bottom div.block, html .layout .l-middle div.block{
   margin-bottom: 4rem;
 }
 
@@ -3512,10 +3579,6 @@ html .layout .l-sidebar + .l-content{
   }
 }
 
-.l-header span.ext {
-  display: none;
-}
-
 .header-identity-wrapper{
   position: relative;
   z-index: 20;
@@ -3759,6 +3822,10 @@ html .layout .l-sidebar + .l-content{
   right: 0;
 }
 
+.block-theme-hooks-stanford-decanter-identity-bar span.ext {
+  display: none;
+}
+
 /* Search */
 
 .block-search-form{
@@ -3956,6 +4023,12 @@ html .layout .l-sidebar + .l-content{
   width: 100%;
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+@media (min-width: 992px){
+  .block-search-form .form-search{
+    min-width: 30rem;
+  }
 }
 
 .block-search-form .form-submit{
@@ -4766,8 +4839,6 @@ input:where([type='submit']),
 .button, 
 a.button, 
 .field-name-body a.button,
-.cta, 
-a.cta, 
 .cta-btn,
 a.cta-btn, 
 .field-name-body a.cta-btn,
@@ -4817,8 +4888,6 @@ input:where([type='submit']):hover,
 .button:hover, 
 a.button:hover, 
 .field-name-body a.button:hover,
-.cta:hover, 
-a.cta:hover, 
 .cta-btn:hover,
 a.cta-btn:hover, 
 .field-name-body a.cta-btn:hover,
@@ -4850,8 +4919,6 @@ input:where([type='submit']):focus,
 .button:focus, 
 a.button:focus, 
 .field-name-body a.button:focus,
-.cta:focus, 
-a.cta:focus, 
 .cta-btn:focus,
 a.cta-btn:focus, 
 .field-name-body a.cta-btn:focus,
@@ -4884,8 +4951,6 @@ input:where([type='submit']),
 .button, 
 a.button, 
 .field-name-body a.button,
-.cta, 
-a.cta, 
 .cta-btn,
 a.cta-btn, 
 .field-name-body a.cta-btn,
@@ -4910,7 +4975,7 @@ a.btn,
   }
 }
 
-button svg, input:where([type='button']) svg, input:where([type='reset']) svg, input:where([type='submit']) svg, .btn-secondary svg, .button svg, a.button svg, .field-name-body a.button svg, .cta svg, a.cta svg, .cta-btn svg, a.cta-btn svg, .field-name-body a.cta-btn svg, .btn-cta svg, a.btn-cta svg, .field-name-body a.btn-cta svg, .cta-button svg, a.cta-button svg, .field-name-body a.cta-button svg, .btn svg, .btn-cta svg, .btn-green svg, .btn-green-lt svg, .btn-green-dk svg, .btn-blue svg, .btn-blue-lt svg, .btn-blue-dk svg, a.btn svg, .l-footer a.btn svg, .field-name-body a.btn svg{
+button svg, input:where([type='button']) svg, input:where([type='reset']) svg, input:where([type='submit']) svg, .btn-secondary svg, .button svg, a.button svg, .field-name-body a.button svg, .cta-btn svg, a.cta-btn svg, .field-name-body a.cta-btn svg, .btn-cta svg, a.btn-cta svg, .field-name-body a.btn-cta svg, .cta-button svg, a.cta-button svg, .field-name-body a.cta-button svg, .btn svg, .btn-cta svg, .btn-green svg, .btn-green-lt svg, .btn-green-dk svg, .btn-blue svg, .btn-blue-lt svg, .btn-blue-dk svg, a.btn svg, .l-footer a.btn svg, .field-name-body a.btn svg{
   margin-left: 0.5rem;
   margin-top: -0.2rem;
   display: inline-block;
@@ -4923,12 +4988,12 @@ button svg, input:where([type='button']) svg, input:where([type='reset']) svg, i
   transition-duration: 250ms;
 }
 
-button:hover, input:where([type='button']):hover, input:where([type='reset']):hover, input:where([type='submit']):hover, .btn-secondary:hover, .button:hover, a.button:hover, .field-name-body a.button:hover, .cta:hover, a.cta:hover, .cta-btn:hover, a.cta-btn:hover, .field-name-body a.cta-btn:hover, .btn-cta:hover, a.btn-cta:hover, .field-name-body a.btn-cta:hover, .cta-button:hover, a.cta-button:hover, .field-name-body a.cta-button:hover, .btn:hover, .btn-cta:hover, .btn-green:hover, .btn-green-lt:hover, .btn-green-dk:hover, .btn-blue:hover, .btn-blue-lt:hover, .btn-blue-dk:hover, a.btn:hover, .l-footer a.btn:hover, .field-name-body a.btn:hover{
+button:hover, input:where([type='button']):hover, input:where([type='reset']):hover, input:where([type='submit']):hover, .btn-secondary:hover, .button:hover, a.button:hover, .field-name-body a.button:hover, .cta-btn:hover, a.cta-btn:hover, .field-name-body a.cta-btn:hover, .btn-cta:hover, a.btn-cta:hover, .field-name-body a.btn-cta:hover, .cta-button:hover, a.cta-button:hover, .field-name-body a.cta-button:hover, .btn:hover, .btn-cta:hover, .btn-green:hover, .btn-green-lt:hover, .btn-green-dk:hover, .btn-blue:hover, .btn-blue-lt:hover, .btn-blue-dk:hover, a.btn:hover, .l-footer a.btn:hover, .field-name-body a.btn:hover{
   --tw-brightness: brightness(.5);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.cta, a.cta, .cta-btn, a.cta-btn, 
+.cta-btn, a.cta-btn, 
 .field-name-body a.cta-btn,
 .field-name-body a.btn-cta,
 .cta-button, a.cta-button, .field-name-body a.cta-button{
@@ -5179,12 +5244,6 @@ body [type='checkbox']{
 
 body [type='checkbox']:checked{
   background-color: #006CB8;
-}
-
-.l-wrapper .form-search{
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  max-width: 100%;
 }
 
 /* Accordions */
@@ -5631,8 +5690,9 @@ fieldset .summary{
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
-  margin-bottom: 0.5rem;
   margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
   height: 2rem;
   width: 2rem;
   --tw-bg-opacity: 1;
@@ -6586,28 +6646,28 @@ a .postcard-left .btn-primary,
   display: block;
 }
 
-html .layout .l-bottom .plain > article .views-field, html .layout .l-middle .plain > article .views-field,html .layout .l-bottom 
-  .plain > article .field-name-field-aplenty-title, html .layout .l-middle 
-  .plain > article .field-name-field-aplenty-title,html .layout .l-bottom 
-  .plain > article .field-type-link-field, html .layout .l-middle 
-  .plain > article .field-type-link-field,html .layout .l-bottom 
-  .plain > article .field-type-text-long, html .layout .l-middle 
-  .plain > article .field-type-text-long,html .layout .l-bottom 
-  .views-grid-box .views-field, html .layout .l-middle 
-  .views-grid-box .views-field,html .layout .l-bottom 
-  .views-grid-box .field-name-field-aplenty-title, html .layout .l-middle 
-  .views-grid-box .field-name-field-aplenty-title,html .layout .l-bottom 
-  .views-grid-box .field-type-link-field, html .layout .l-middle 
-  .views-grid-box .field-type-link-field,html .layout .l-bottom 
-  .views-grid-box .field-type-text-long, html .layout .l-middle 
-  .views-grid-box .field-type-text-long,html .layout .l-bottom 
-  .aplenty-card-plain .aplenty-card > .content .views-field, html .layout .l-middle 
-  .aplenty-card-plain .aplenty-card > .content .views-field,html .layout .l-bottom 
-  .aplenty-card-plain .aplenty-card > .content .field-name-field-aplenty-title, html .layout .l-middle 
-  .aplenty-card-plain .aplenty-card > .content .field-name-field-aplenty-title,html .layout .l-bottom 
-  .aplenty-card-plain .aplenty-card > .content .field-type-link-field, html .layout .l-middle 
-  .aplenty-card-plain .aplenty-card > .content .field-type-link-field,html .layout .l-bottom 
-  .aplenty-card-plain .aplenty-card > .content .field-type-text-long, html .layout .l-middle 
+html .layout .l-bottom div.plain > article .views-field, html .layout .l-middle div.plain > article .views-field,html .layout .l-bottom div
+  .plain > article .field-name-field-aplenty-title, html .layout .l-middle div
+  .plain > article .field-name-field-aplenty-title,html .layout .l-bottom div
+  .plain > article .field-type-link-field, html .layout .l-middle div
+  .plain > article .field-type-link-field,html .layout .l-bottom div
+  .plain > article .field-type-text-long, html .layout .l-middle div
+  .plain > article .field-type-text-long,html .layout .l-bottom div
+  .views-grid-box .views-field, html .layout .l-middle div
+  .views-grid-box .views-field,html .layout .l-bottom div
+  .views-grid-box .field-name-field-aplenty-title, html .layout .l-middle div
+  .views-grid-box .field-name-field-aplenty-title,html .layout .l-bottom div
+  .views-grid-box .field-type-link-field, html .layout .l-middle div
+  .views-grid-box .field-type-link-field,html .layout .l-bottom div
+  .views-grid-box .field-type-text-long, html .layout .l-middle div
+  .views-grid-box .field-type-text-long,html .layout .l-bottom div
+  .aplenty-card-plain .aplenty-card > .content .views-field, html .layout .l-middle div
+  .aplenty-card-plain .aplenty-card > .content .views-field,html .layout .l-bottom div
+  .aplenty-card-plain .aplenty-card > .content .field-name-field-aplenty-title, html .layout .l-middle div
+  .aplenty-card-plain .aplenty-card > .content .field-name-field-aplenty-title,html .layout .l-bottom div
+  .aplenty-card-plain .aplenty-card > .content .field-type-link-field, html .layout .l-middle div
+  .aplenty-card-plain .aplenty-card > .content .field-type-link-field,html .layout .l-bottom div
+  .aplenty-card-plain .aplenty-card > .content .field-type-text-long, html .layout .l-middle div
   .aplenty-card-plain .aplenty-card > .content .field-type-text-long{
   margin-bottom: 4rem;
 }
@@ -6623,16 +6683,16 @@ html .layout .l-bottom .plain > article .views-field, html .layout .l-middle .pl
   font-size: 0.9em;
 }
 
-html .layout .l-bottom .plain > article .views-field-body, html .layout .l-middle .plain > article .views-field-body,html .layout .l-bottom 
-  .plain > article .field-type-text-long, html .layout .l-middle 
-  .plain > article .field-type-text-long,html .layout .l-bottom 
-  .views-grid-box .views-field-body, html .layout .l-middle 
-  .views-grid-box .views-field-body,html .layout .l-bottom 
-  .views-grid-box .field-type-text-long, html .layout .l-middle 
-  .views-grid-box .field-type-text-long,html .layout .l-bottom 
-  .aplenty-card-plain .aplenty-card > .content .views-field-body, html .layout .l-middle 
-  .aplenty-card-plain .aplenty-card > .content .views-field-body,html .layout .l-bottom 
-  .aplenty-card-plain .aplenty-card > .content .field-type-text-long, html .layout .l-middle 
+html .layout .l-bottom div.plain > article .views-field-body, html .layout .l-middle div.plain > article .views-field-body,html .layout .l-bottom div
+  .plain > article .field-type-text-long, html .layout .l-middle div
+  .plain > article .field-type-text-long,html .layout .l-bottom div
+  .views-grid-box .views-field-body, html .layout .l-middle div
+  .views-grid-box .views-field-body,html .layout .l-bottom div
+  .views-grid-box .field-type-text-long, html .layout .l-middle div
+  .views-grid-box .field-type-text-long,html .layout .l-bottom div
+  .aplenty-card-plain .aplenty-card > .content .views-field-body, html .layout .l-middle div
+  .aplenty-card-plain .aplenty-card > .content .views-field-body,html .layout .l-bottom div
+  .aplenty-card-plain .aplenty-card > .content .field-type-text-long, html .layout .l-middle div
   .aplenty-card-plain .aplenty-card > .content .field-type-text-long{
   margin-bottom: 4rem;
 }
@@ -7171,29 +7231,6 @@ html .layout .l-bottom .plain > article .views-field-body, html .layout .l-middl
   --tw-text-opacity: 1;
   color: rgb(46 45 41 / var(--tw-text-opacity, 1));
   text-decoration-line: underline;
-}
-
-.story-card .link-arrow{
-  position: relative;
-  margin-left: 0.2em;
-  display: inline-block;
-  width: 0.8em;
-  --tw-rotate: -45deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  --tw-text-opacity: 1;
-  color: rgb(229 8 8 / var(--tw-text-opacity, 1));
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 250ms;
-}
-
-.story-card:hover .link-arrow{
-  --tw-translate-x: 0.1em;
-  --tw-translate-y: -0.1em;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 /* Heros */
@@ -7747,8 +7784,9 @@ html .layout .l-bottom .plain > article .views-field-body, html .layout .l-middl
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
-  margin-bottom: 0.5rem;
   margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
   height: 2rem;
   width: 2rem;
   --tw-bg-opacity: 1;
@@ -7898,6 +7936,21 @@ tr.odd{
 hr{
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+a.forward,
+a.back{
+  text-decoration-line: none;
+}
+
+a.forward:hover,
+a.back:hover{
+  text-decoration-line: underline;
+}
+
+a.forward:focus,
+a.back:focus{
+  text-decoration-line: underline;
 }
 
 .last\:mb-0:last-child{

@@ -16,6 +16,9 @@ function stanford_decanter_preprocess_block(&$variables)
   }
 
   if ($variables['theme_hook_original'] == 'block__search__form') {
+    if (empty($variables['title'])) {
+      $variables['title'] = t('Search');
+    }
     backdrop_add_js(backdrop_get_path('theme', 'stanford_decanter') . '/js/search-toggle.js');
   }
 }
