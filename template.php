@@ -4,6 +4,8 @@
  * stanford_decanter preprocess functions and theme function overrides.
  */
 
+define('STYLEGUIDE_PATH', 'decanter_help/styleguide');
+
 /**
  * Prepares variables for block templates.
  *
@@ -278,7 +280,7 @@ function stanford_decanter_breadcrumb($variables) {
 function stanford_decanter_menu() {
   $items = array();
 
-  $items['admin/decanter_help/styleguide'] = array(
+  $items[STYLEGUIDE_PATH] = array(
     'title' => 'Backdrop Decanter Style Guide',
     'description' => 'Decanter 7 Style guide.',
     'page callback' => 'backdrop_get_form',
@@ -289,6 +291,23 @@ function stanford_decanter_menu() {
     'file path' => backdrop_get_path('theme', 'stanford_decanter'),
     'file' => 'template.php',
   );
+
+  $dir = backdrop_get_path('theme', 'stanford_decanter') . '/examples/';
+  foreach(scandir($dir) as $snippet) {
+    if (substr($snippet, 0, 1) !== '.') {
+      $name = substr($snippet, 0, strlen($snippet) - strlen('.html'));
+      $items[STYLEGUIDE_PATH . '/' . $name] = array(
+        'title' => ucwords(strtr($name, ['.html' => '', '-' => ' — '])),
+        'page callback' => 'backdrop_get_form',
+        'page arguments' => array('stanford_decanter_style_guide_section', $dir . $snippet),
+        'access arguments' => array('access content overview'),
+        'type' => MENU_NORMAL_ITEM,
+        'file path' => backdrop_get_path('theme', 'stanford_decanter'),
+        'file' => 'template.php',
+      );
+      }
+    }
+
   return $items;
 }
 
@@ -296,7 +315,8 @@ function stanford_decanter_menu() {
  * Implements hook_admin_paths_alter().
  */
 function stanford_decanter_admin_paths_alter(&$paths) {
-  $paths['admin/decanter_help/styleguide'] = FALSE;
+  $paths[STYLEGUIDE_PATH] = FALSE;
+  $paths[STYLEGUIDE_PATH . '/*'] = FALSE;
 }
 
 
@@ -306,34 +326,58 @@ function stanford_decanter_admin_paths_alter(&$paths) {
 function stanford_decanter_style_guide() {
   $form = [];
 
-  backdrop_set_message(t('This is a status message'), 'status');
-  backdrop_set_message(t('This is an info message'), 'info');
-  backdrop_set_message(t('This is a warning'), 'warning');
-  backdrop_set_message(t('This is an error'), 'error');
-
   $dir = backdrop_get_path('theme', 'stanford_decanter') . '/examples/';
   $snippets = scandir($dir);
   foreach($snippets as $snippet) {
     if (substr($snippet, 0, 1) !== '.') {
-      $html = file_get_contents($dir . $snippet);
       $name = substr($snippet, 0, strlen($snippet) - strlen('.html'));
 
       $form[$name] = [
-        "#type" => 'fieldset',
+        "#type" => 'link',
         '#title' => ucwords(strtr($name, ['.html' => '', '-' => ' — '])),
-        '#collapsible' => true,
-        '#collapsed' => true,
-      ];
-      $form[$name]['src'] = [
-        '#type' => 'textarea',
-        '#default_value' => $html,
-        '#rows' => 5,
-      ];
-      $form[$name]['preview'] = [
-        '#type' => 'markup',
-        '#markup' => $html,
+        '#href' => STYLEGUIDE_PATH . '/' . $name,
+        '#options' => array(
+          'attributes' => array('class' => 'forward block pb-20'),
+        ),    
       ];
     }
   }
+  return $form;
+}
+
+/*
+ * Style guide form callback. Reads html snippets from files to display.
+ */
+function stanford_decanter_style_guide_section($form, &$form_state, $snippet = '') {
+
+  $form = [];
+
+  if (stripos($snippet, 'alert') !== false) {
+    backdrop_set_message(t('This is a Backdrop status message'), 'status');
+    backdrop_set_message(t('This is a Backdrop info message'), 'info');
+    backdrop_set_message(t('This is a Backdrop warning'), 'warning');
+    backdrop_set_message(t('This is a Backdrop error'), 'error');  
+  }
+
+  $html = file_get_contents($snippet);
+  $form['back'] = [
+    "#type" => 'link',
+    '#title' => 'Back to Styleguide',
+    '#href' => STYLEGUIDE_PATH,
+    '#options' => array(
+      'attributes' => array('class' => 'back block pb-20'),
+    ),    
+  ];
+
+
+  $form['preview'] = [
+    '#type' => 'markup',
+    '#markup' => $html,
+  ];
+  $form['src'] = [
+    '#type' => 'textarea',
+    '#default_value' => $html,
+    '#rows' => 30,
+  ];
   return $form;
 }
