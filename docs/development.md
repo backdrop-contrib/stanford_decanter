@@ -26,7 +26,7 @@ This theme supports custom colors using the Color module. To keep this support p
 
 ## Pushing code changes
 
-There is currently no automated build step for creating the compiled css required for running this theme. If you make any changes to the css source files please make sure to run `yarn build` or `yarn watch` to generate the necessary artifacts for deployment.
+Github actions will build and commit the output upon push.
 
 ## Pull requests
 
