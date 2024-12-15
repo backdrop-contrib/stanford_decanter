@@ -1415,5 +1415,5 @@ hr {
 }
 
 .build-test {
-  @apply bold;
+  @apply my-10;
 }
