@@ -1,5 +1,5 @@
 name: Build Theme Artifacts
-run-name: ${{ github.actor }} is building Decanter 🛠️
+run-name: Decanter artifact build 🛠️
 on: [push]
 jobs:
   Build-Artifacts:
