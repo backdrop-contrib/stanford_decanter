@@ -6,7 +6,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Install npm
         uses: actions/setup-node@v4
       - run: npm install
       - run: npm run build
+      - name: Commit data
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Automated Artifact Build
+          branch: master
+          commit_options: '--no-verify --signoff'
+          commit_author: Author <actions@github.com>
+          status_options: '--untracked-files=no'
+          skip_dirty_check: true
