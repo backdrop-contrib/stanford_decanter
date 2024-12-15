@@ -2,11 +2,11 @@ name: Build Theme Artifacts
 run-name: ${{ github.actor }} is building Decanter 🛠️
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  Build-Artifacts:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Install npm
         uses: actions/setup-node@v4
-      - run: npm ci
+      - run: npm install
       - run: npm run build
