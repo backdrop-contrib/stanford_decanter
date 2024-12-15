@@ -1413,7 +1413,3 @@ tr.odd {
 hr {
   @apply my-20;
 }
-
-.build-test {
-  @apply my-10;
-}
