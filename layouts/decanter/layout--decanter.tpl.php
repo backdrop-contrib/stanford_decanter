@@ -87,9 +87,9 @@
       <?php endif; ?>
 
 
-      <div class="l-middle rs-grid grid-4">
+      <div class="l-middle rs-grid row">
         <?php if (!empty($content['sidebar']) && !empty($content['sidebar2'])): ?>
-          <main class="l-content col-half order-2" role="main" aria-label="<?php print t('Main content'); ?>">
+          <main class="l-content col-md-6 col-md-push-3 col-half order-2" role="main" aria-label="<?php print t('Main content'); ?>">
             <?php print $content['content']; ?>
           </main>
         <?php elseif (!empty($content['sidebar']) || !empty($content['sidebar2'])): ?>
@@ -103,12 +103,12 @@
         <?php endif; ?>
 
         <?php if (!empty($content['sidebar'])): ?>
-            <div class="l-sidebar l-sidebar-first order-1">
+            <div class="l-sidebar l-sidebar-first col-quarter col-md-3 col-md-pull-6 order-1">
               <?php print $content['sidebar']; ?>
             </div>
           <?php endif; ?>
           <?php if (!empty($content['sidebar2'])): ?>
-            <div class="l-sidebar l-sidebar-second order-3">
+            <div class="l-sidebar l-sidebar-second col-quarter col-md-3 order-3">
               <?php print $content['sidebar2']; ?>
             </div>
           <?php endif; ?>
