@@ -18,7 +18,7 @@ This theme requires [Yarn](https://yarnpkg.com) (or similar) package manager for
 
 The following files are compiled automatically and should not be directly edited:
 
-- `css/main.css` (Edit [`src/main.css`](../src/main.css) instead)
+- `dist/main.compiled.css` (Edit [`src/main.css`](../src/main.css) instead)
 
 ## Colors
 
