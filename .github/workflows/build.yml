@@ -16,7 +16,9 @@ jobs:
       - run: npm run build
       - name: Commit artifacts
         run: |
-          git config --global user.name '${{ github.actor }}'
-          git config --global user.email '${{ github.actor }}@users.noreply.github.com'
-          git commit -am "Automated artifact build"
-          git push
+          if ! git diff-index --quiet HEAD; then
+            git config --global user.name '${{ github.actor }}'
+            git config --global user.email '${{ github.actor }}@users.noreply.github.com'
+            git commit -am "Automated artifact build by Github Actions"
+            git push
+          fi
