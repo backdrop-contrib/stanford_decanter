@@ -39,3 +39,5 @@ Learn more about:
 - [Developing the Theme](./development.md)
 - [Additional Styles](./styles.md)
 - [Creating and Managing Content](./content.md)
+
+[Edit this page on Github](https://github.com/backdrop-contrib/stanford_decanter/edit/main/docs/intro.md)
