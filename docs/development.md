@@ -33,3 +33,5 @@ There is currently no automated build step for creating the compiled css require
 Please submit any suggested changes as a [github pull request.](https://github.com/backdrop-contrib/stanford_decanter/compare)
 
 You can also use github to file [bug reports and support requests.](https://github.com/backdrop-contrib/stanford_decanter/issues)
+
+[Edit this page on Github](https://github.com/backdrop-contrib/stanford_decanter/edit/main/docs/development.md)

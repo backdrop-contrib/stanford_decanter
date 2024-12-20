@@ -76,3 +76,5 @@ Some other useful utility styles include:
 - `.ext-link`: Add an animated external link arrow.
 - `.gridded-region`: Turn a layout region into a responsive 12 column grid. NB: The 'Page Bottom' and 'Local Footer' regions already have this style applied.
 - `.hero`: Turn any block or content into a Hero block. You can also create hero blocks by using the default 'Hero' content type.
+
+[Edit this page on Github](https://github.com/backdrop-contrib/stanford_decanter/edit/main/docs/styles.md)
