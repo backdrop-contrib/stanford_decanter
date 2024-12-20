@@ -42,3 +42,5 @@ License
 -------
 This project is GPL v2 software.
 See the LICENSE.txt file in this directory for complete text.
+
+[Edit this page on Github](https://github.com/backdrop-contrib/stanford_decanter/edit/main/README.md)
