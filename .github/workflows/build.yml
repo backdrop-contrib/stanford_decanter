@@ -1,0 +1,24 @@
+name: Build Theme Artifacts
+run-name: Decanter artifact build 🛠️
+on: [push]
+permissions:
+  contents: write
+jobs:
+  Build-Artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install npm
+        uses: actions/setup-node@v4
+      - run: npm install
+      - run: npm run build
+      - name: Commit artifacts
+        run: |
+          if ! git diff-index --quiet HEAD; then
+            git config --global user.name '${{ github.actor }}'
+            git config --global user.email '${{ github.actor }}@users.noreply.github.com'
+            git commit -am "Automated artifact build by Github Actions"
+            git push
+          fi
