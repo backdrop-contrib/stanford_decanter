@@ -1,0 +1,8 @@
+{
+    "_config_name": "taxonomy.vocabulary.stanford_affiliation",
+    "name": "Affiliation",
+    "machine_name": "stanford_affiliation",
+    "description": "Types of people on this website",
+    "hierarchy": "0",
+    "weight": "0"
+}

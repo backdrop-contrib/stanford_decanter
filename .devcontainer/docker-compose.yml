@@ -12,6 +12,8 @@ services:
       - db
     volumes:
       - ../:/workspace
+      - ../profiles:/var/www/html/profiles:ro
+      - ../:/var/www/html/themes/stanford_decanter:ro
     ports:
       - 8000:80
 

@@ -1,0 +1,150 @@
+<?php
+/**
+ * @file
+ * Install/uninstall and update functions for the decanter installation profile.
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+function decanter_profile_install() {
+
+  // Enable Decanter theme and set it as default theme instead of Stark.
+  // @see system_install()
+  $default_theme = 'stanford_decanter';
+  config_set('system.core', 'theme_default', $default_theme);
+  theme_enable(array($default_theme));
+  theme_disable(array('stark'));
+
+  // Set home page to "home".
+  config_set('system.core', 'site_frontpage', 'home');
+  backdrop_flush_all_caches();
+
+  foreach (
+    [
+      [
+        'name' => st('News Category'),
+        'description' => st('Tags to highlight and separate news items for landing page display.'),
+        'machine_name' => 'news_categories',
+      ],
+      [
+        'name' => st('Event Category'),
+        'description' => st('Category names as used on events.stanford.edu.'),
+        'machine_name' => 'stanford_event_categories',
+      ],
+    ] as $config
+  ) {
+    $vocabulary = new TaxonomyVocabulary($config);
+    taxonomy_vocabulary_save($vocabulary);
+  }
+
+  // Enable default permissions for system roles.
+  $anonymous_permissions = array(
+    'access content',
+    'access comments',
+  );
+  $authenticated_permissions = array(
+    'access content',
+    'access comments',
+    'post comments',
+  );
+  user_role_grant_permissions(BACKDROP_ANONYMOUS_ROLE, $anonymous_permissions);
+  user_role_grant_permissions(BACKDROP_AUTHENTICATED_ROLE, $authenticated_permissions);
+
+  // Create a default editor role, for users who need to be able to edit
+  // content, but do not need to access advanced admin features.
+  $editor_role = new stdClass();
+  $editor_role->name = 'editor';
+  $editor_role->label = 'Editor';
+  $editor_role->description = 'Can edit most content on the site, but cannot modify site configuration settings.';
+  $editor_role->weight = 2;
+  user_role_save($editor_role);
+
+  $editor_permissions = array(
+    'view own unpublished content',
+    'view any unpublished content',
+    'view revisions',
+    'revert revisions',
+    'delete revisions',
+    'create page content',
+    'edit own page content',
+    'edit any page content',
+    'delete own page content',
+    'create post content',
+    'edit own post content',
+    'edit any post content',
+    'delete own post content',
+    'create card content',
+    'edit own card content',
+    'edit any card content',
+    'delete own card content',
+    'view hidden paths',
+    'access dashboard',
+    'view the administration theme',
+    'access administration bar',
+    'access content overview',
+    'access administration pages',
+    'access site in maintenance mode',
+    'flush caches',
+    'edit terms in tags',
+    'delete terms in tags',
+    'administer taxonomy',
+    'administer nodes',
+    'search content',
+    'use advanced search',
+    'access file overview',
+    'create files',
+    'view own private files',
+    'view own files',
+    'view files',
+  );
+  user_role_grant_permissions('editor', $editor_permissions);
+
+
+  // Create a Home link in the main menu.
+  $item = array(
+    'link_title' => st('Home'),
+    'link_path' => '<front>',
+    'menu_name' => 'main-menu',
+    'weight' => -1,
+  );
+  menu_link_save($item);
+
+  // Create a login link in the account menu.
+  $item = array(
+    'link_title' => st('Login'),
+    'link_path' => 'user/login',
+    'menu_name' => 'user-menu',
+    'weight' => -1,
+  );
+  menu_link_save($item);
+
+  // Update the menu router information.
+  menu_rebuild();
+
+  // Enable the admin theme.
+  db_update('system')
+    ->fields(array('status' => 1))
+    ->condition('type', 'theme')
+    ->condition('name', 'seven')
+    ->execute();
+  config_set('system.core', 'admin_theme', 'seven');
+  config_set('system.core', 'node_admin_theme', '1');
+
+  $account = user_load(1);
+  $account->init = $account->mail = 'admin@example.com';
+  $account->roles = !empty($account->roles) ? $account->roles : array();
+  $account->status = 1;
+  $account->pass = "pass";
+  $account->name = "admin";
+  $account->save();
+
+  // Load global $user and perform final login tasks.
+  // $user = user_load(1);
+  // user_login_finalize();
+
+}

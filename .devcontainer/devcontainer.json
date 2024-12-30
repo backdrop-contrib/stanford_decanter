@@ -9,15 +9,8 @@
 		"COMPOSE_PROJECT_NAME": "${localWorkspaceFolderBasename}",
 	},
 	"remoteUser": "root",
-	"mounts": [
-		// "source=source=${localWorkspaceFolder},target=/var/www/html/themes/stanford_decanter,type=bind,consistency=cached",
-		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/root/.ssh,type=bind,consistency=cached",
-		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.terminus,target=/root/.terminus,type=bind,consistency=cached",
-	],
 	"features": {
-		"ghcr.io/devcontainers/features/python:1": {},
 		"ghcr.io/devcontainers/features/git:1": {},
-		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
 		"ghcr.io/devcontainers/features/node:1": {},
 		"ghcr.io/devcontainers-extra/features/vscode-cli:1": {},
 		"ghcr.io/stuartleeks/dev-container-features/shell-history:0": {}

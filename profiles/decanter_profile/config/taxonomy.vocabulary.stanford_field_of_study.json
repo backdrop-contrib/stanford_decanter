@@ -1,0 +1,8 @@
+{
+    "_config_name": "taxonomy.vocabulary.stanford_field_of_study",
+    "name": "Field of Study (for Students)",
+    "machine_name": "stanford_field_of_study",
+    "description": "List of areas of study for students including research",
+    "hierarchy": "0",
+    "weight": "0"
+}
