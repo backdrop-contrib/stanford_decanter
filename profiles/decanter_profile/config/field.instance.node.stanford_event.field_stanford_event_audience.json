@@ -1,0 +1,40 @@
+{
+    "_config_name": "field.instance.node.stanford_event.field_stanford_event_audience",
+    "field_name": "field_stanford_event_audience",
+    "entity_type": "node",
+    "bundle": "stanford_event",
+    "deleted": "0",
+    "default_value": null,
+    "description": "This content is imported from events.stanford.edu.",
+    "display": {
+        "default": {
+            "label": "above",
+            "type": "hidden",
+            "weight": "5",
+            "settings": []
+        },
+        "teaser": {
+            "label": "above",
+            "type": "hidden",
+            "weight": "18",
+            "settings": []
+        }
+    },
+    "label": "Audience",
+    "required": 0,
+    "settings": {
+        "user_register_form": false
+    },
+    "widget": {
+        "active": 0,
+        "module": "taxonomy",
+        "settings": {
+            "autocomplete_path": "taxonomy/autocomplete",
+            "size": 60,
+            "follow_content_language": true
+        },
+        "type": "taxonomy_autocomplete",
+        "weight": "16"
+    },
+    "default_value_function": null
+}

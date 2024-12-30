@@ -1,0 +1,27 @@
+services:
+  devcontainer:
+    build:
+      context: ./
+      dockerfile: devcontainer.containerfile
+    links:
+      - db
+    depends_on:
+      - db
+    volumes:
+      - ../:/workspace
+      - ../profiles:/var/www/html/profiles:ro
+      - ../:/var/www/html/themes/stanford_decanter:ro
+    ports:
+      - 8000:80
+    environment:
+      - MYSQL_HOST=db
+      - USER=root
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+
+  db:
+    image: mariadb:11
+    volumes:
+      - ../:/workspace
+    environment:
+      - MYSQL_ROOT_PASSWORD=root

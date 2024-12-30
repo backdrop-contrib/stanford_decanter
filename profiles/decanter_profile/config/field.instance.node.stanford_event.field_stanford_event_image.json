@@ -1,0 +1,69 @@
+{
+    "_config_name": "field.instance.node.stanford_event.field_stanford_event_image",
+    "field_name": "field_stanford_event_image",
+    "entity_type": "node",
+    "bundle": "stanford_event",
+    "deleted": "0",
+    "description": "",
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "image",
+            "weight": "8",
+            "settings": {
+                "image_style": "medium",
+                "image_link": "",
+                "image_float": "",
+                "image_load": "lazy"
+            },
+            "module": "image"
+        },
+        "teaser": {
+            "label": "above",
+            "type": "hidden",
+            "weight": "14",
+            "settings": []
+        }
+    },
+    "label": "Image",
+    "required": 0,
+    "settings": {
+        "alt_field": 1,
+        "default_image": 0,
+        "file_directory": "",
+        "file_extensions": "png gif jpg jpeg",
+        "max_filesize": "",
+        "title_field": 0,
+        "user_register_form": false,
+        "max_dimensions": "",
+        "min_dimensions": "",
+        "alt_field_required": 0,
+        "orientate": 0
+    },
+    "widget": {
+        "active": 1,
+        "module": "image",
+        "settings": {
+            "insert": 0,
+            "insert_absolute": false,
+            "insert_class": "",
+            "insert_default": "auto",
+            "insert_styles": {
+                "auto": "auto",
+                "image": 0,
+                "image_large": 0,
+                "image_medium": 0,
+                "image_thumbnail": 0,
+                "link": 0
+            },
+            "insert_width": "",
+            "preview_image_style": "thumbnail",
+            "progress_indicator": "throbber",
+            "browser_view": "image_library"
+        },
+        "type": "image_image",
+        "weight": "6"
+    },
+    "default_value": null,
+    "default_value_function": null
+}
