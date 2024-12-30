@@ -1,3 +1,0 @@
-#!/bin/sh
-
-bee --root=/var/www/html --base-url=http://localhost:8000/ $@

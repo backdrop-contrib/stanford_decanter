@@ -8,6 +8,7 @@
 		"PROJECT": "${localWorkspaceFolderBasename}",
 		"COMPOSE_PROJECT_NAME": "${localWorkspaceFolderBasename}",
 	},
+	"postStartCommand": "/workspace/.devcontainer/bin/install.sh",
 	"remoteUser": "root",
 	"features": {
 		"ghcr.io/devcontainers/features/git:1": {},
