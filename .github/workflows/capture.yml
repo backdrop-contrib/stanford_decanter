@@ -1,24 +1,21 @@
-name: Build Theme Artifacts
-run-name: Decanter artifact build 🛠️
+name: Capture Theme Changes
+run-name: Capturing visual reference 👓
 on: [push]
 permissions:
   contents: write
 jobs:
-  Build-Artifacts:
+  Capture-Reference:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Install npm
-        uses: actions/setup-node@v4
-      - run: npm install
-      - run: npm run build
-      - name: Commit artifacts
+      - name: Execute backstop reference
+        run: |
+          docker compose run backstop reference --config=/config.js
+      - name: Commit results
         run: |
           if [[ `git status --porcelain` ]]; then
             git config --global user.name '${{ github.actor }}'
             git config --global user.email '${{ github.actor }}@users.noreply.github.com'
-            git commit -am "Automated artifact build by Github Actions"
+            git commit -am "Automated reference image capture by Github Actions"
             git push
           fi
