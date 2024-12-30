@@ -45,5 +45,3 @@ RUN bee dl-core /var/www/html \
 	&& bee dl --root=/var/www/html \
   					theme_hooks \
 	&& chown -R www-data:www-data /var/www/html
-
-EXPOSE 80

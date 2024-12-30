@@ -10,6 +10,7 @@
 	},
 	"postStartCommand": "/workspace/.devcontainer/bin/install.sh",
 	"remoteUser": "root",
+	"forwardPorts": ["devcontainer:80"],
 	"features": {
 		"ghcr.io/devcontainers/features/git:1": {},
 		"ghcr.io/devcontainers/features/node:1": {},
