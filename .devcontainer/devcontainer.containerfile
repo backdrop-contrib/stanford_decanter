@@ -32,6 +32,7 @@ RUN git clone https://github.com/backdrop-contrib/bee.git /bee && \
 
 RUN { \
     echo 'xdebug.mode=off'; \
+    echo 'xdebug.log_level=0'; \
     echo 'xdebug.start_with_request=no'; \
 		echo 'xdebug.client_port = 9000'; \
 } >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini

@@ -1,8 +1,5 @@
-
 services:
   devcontainer:
-    env_file:
-      - ./.env
     build:
       context: ./
       dockerfile: devcontainer.containerfile
@@ -16,11 +13,15 @@ services:
       - ../:/var/www/html/themes/stanford_decanter:ro
     ports:
       - 8000:80
+    environment:
+      - MYSQL_HOST=db
+      - USER=root
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
 
   db:
-    env_file:
-      - ./.env
     image: mariadb:11
     volumes:
       - ../:/workspace
-      - ./my.cnf:/etc/mysql/conf.d/my.cnf:ro
+    environment:
+      - MYSQL_ROOT_PASSWORD=root

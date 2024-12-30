@@ -1,6 +1,6 @@
 // See: https://www.drupal.org/docs/develop/development-tools/editors-and-ides/configuring-visual-studio-code
 {
-	"name": "${localWorkspaceFolderBasename} - DropDev",
+	"name": "${localWorkspaceFolderBasename} - Dev Container",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "devcontainer",
 	"workspaceFolder": "/workspace",
