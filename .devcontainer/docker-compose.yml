@@ -1,0 +1,24 @@
+
+services:
+  devcontainer:
+    env_file:
+      - ./.env
+    build:
+      context: ./
+      dockerfile: devcontainer.containerfile
+    links:
+      - db
+    depends_on:
+      - db
+    volumes:
+      - ../:/workspace
+    ports:
+      - 8000:80
+
+  db:
+    env_file:
+      - ./.env
+    image: mariadb:11
+    volumes:
+      - ../:/workspace
+      - ./my.cnf:/etc/mysql/conf.d/my.cnf:ro
