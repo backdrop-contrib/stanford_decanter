@@ -1,7 +1,7 @@
 {
-    "_config_name": "taxonomy.vocabulary.stanford_interests",
+    "_config_name": "taxonomy.vocabulary.interests",
     "name": "Fields of Interest (for Faculty)",
-    "machine_name": "stanford_interests",
+    "machine_name": "interests",
     "description": "List of faculty interests including research interests. This is a list curated by site owners.",
     "hierarchy": "0",
     "weight": "0"

@@ -9,4 +9,15 @@ bee site-install \
       --db-name=app --db-user=root --db-pass=root --db-host=db --db-prefix=''\
       --auto\
       --profile=decanter_profile \
-      --root=/var/www/html \
+      --root=/var/www/html
+
+
+bee uli \
+      --base-url=http://localhost:8000/ \
+      --root=/var/www/html
+
+bee en devel devel_generate \
+      --root=/var/www/html
+
+
+chown --quiet -R www-data:www-data /var/www/html

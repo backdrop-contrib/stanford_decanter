@@ -1,0 +1,22 @@
+{
+    "_config_name": "field.field.field_event_image",
+    "field_name": "field_event_image",
+    "type": "image",
+    "module": "image",
+    "active": 1,
+    "locked": "0",
+    "cardinality": "1",
+    "translatable": "0",
+    "deleted": "0",
+    "entity_types": [],
+    "settings": {
+        "default_image": 0,
+        "uri_scheme": "public"
+    },
+    "storage": {
+        "type": "field_sql_storage",
+        "module": "field_sql_storage",
+        "active": 1,
+        "settings": []
+    }
+}

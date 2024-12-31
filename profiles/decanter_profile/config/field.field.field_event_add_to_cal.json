@@ -1,0 +1,33 @@
+{
+    "_config_name": "field.field.field_event_add_to_cal",
+    "field_name": "field_event_add_to_cal",
+    "type": "link_field",
+    "module": "link",
+    "active": 1,
+    "locked": "0",
+    "cardinality": "1",
+    "translatable": "0",
+    "deleted": "0",
+    "entity_types": [],
+    "settings": {
+        "attributes": {
+            "class": "",
+            "rel": "",
+            "target": "default"
+        },
+        "display": {
+            "url_cutoff": 80
+        },
+        "enable_tokens": 1,
+        "title": "optional",
+        "title_maxlength": 128,
+        "title_value": "",
+        "url": 0
+    },
+    "storage": {
+        "type": "field_sql_storage",
+        "module": "field_sql_storage",
+        "active": 1,
+        "settings": []
+    }
+}

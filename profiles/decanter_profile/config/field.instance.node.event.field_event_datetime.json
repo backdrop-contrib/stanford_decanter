@@ -1,8 +1,8 @@
 {
-    "_config_name": "field.instance.node.stanford_event.field_stanford_event_datetime",
-    "field_name": "field_stanford_event_datetime",
+    "_config_name": "field.instance.node.event.field_event_datetime",
+    "field_name": "field_event_datetime",
     "entity_type": "node",
-    "bundle": "stanford_event",
+    "bundle": "event",
     "deleted": "0",
     "description": "",
     "display": {
@@ -11,7 +11,7 @@
             "type": "date_default",
             "weight": "9",
             "settings": {
-                "format_type": "stanford_date_year_time",
+                "format_type": "date_year_time",
                 "fromto": "both",
                 "multiple_from": "",
                 "multiple_number": "",
@@ -21,11 +21,11 @@
             "module": "date"
         },
         "teaser": {
-            "label": "hidden",
+            "label": "inline",
             "type": "date_default",
-            "weight": "0",
+            "weight": "4",
             "settings": {
-                "format_type": "stanford_short_month_day_time",
+                "format_type": "long",
                 "fromto": "both",
                 "multiple_number": "",
                 "multiple_from": "",

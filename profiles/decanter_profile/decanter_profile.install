@@ -24,23 +24,23 @@ function decanter_profile_install() {
   config_set('system.core', 'site_frontpage', 'home');
   backdrop_flush_all_caches();
 
-  foreach (
-    [
-      [
-        'name' => st('News Category'),
-        'description' => st('Tags to highlight and separate news items for landing page display.'),
-        'machine_name' => 'news_categories',
-      ],
-      [
-        'name' => st('Event Category'),
-        'description' => st('Category names as used on events.stanford.edu.'),
-        'machine_name' => 'stanford_event_categories',
-      ],
-    ] as $config
-  ) {
-    $vocabulary = new TaxonomyVocabulary($config);
-    taxonomy_vocabulary_save($vocabulary);
-  }
+  // foreach (
+  //   [
+  //     [
+  //       'name' => st('News Category'),
+  //       'description' => st('Tags to highlight and separate news items for landing page display.'),
+  //       'machine_name' => 'news_categories',
+  //     ],
+  //     [
+  //       'name' => st('Event Category'),
+  //       'description' => st('Category names as used on events.stanford.edu.'),
+  //       'machine_name' => 'stanford_event_categories',
+  //     ],
+  //   ] as $config
+  // ) {
+  //   $vocabulary = new TaxonomyVocabulary($config);
+  //   taxonomy_vocabulary_save($vocabulary);
+  // }
 
   // Enable default permissions for system roles.
   $anonymous_permissions = array(

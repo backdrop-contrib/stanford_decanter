@@ -1,27 +1,27 @@
 {
-    "_config_name": "field.instance.node.stanford_event.field_stanford_event_sponsor",
-    "field_name": "field_stanford_event_sponsor",
+    "_config_name": "field.instance.node.event.body",
+    "field_name": "body",
     "entity_type": "node",
-    "bundle": "stanford_event",
+    "bundle": "event",
     "deleted": "0",
     "default_value": null,
-    "description": "This text field is for the event sponsor (e.g., University Communications).",
+    "description": "This filtered text field is event description (e.g., this event is etc. etc.).",
     "display": {
         "default": {
-            "label": "above",
+            "label": "hidden",
             "type": "text_default",
-            "weight": "15",
+            "weight": "9",
             "settings": [],
             "module": "text"
         },
         "teaser": {
-            "label": "above",
+            "label": "hidden",
             "type": "hidden",
-            "weight": "11",
+            "weight": "9",
             "settings": []
         }
     },
-    "label": "Event Sponsor",
+    "label": "Body",
     "required": 0,
     "settings": {
         "better_formats": {
@@ -50,7 +50,8 @@
                 }
             }
         },
-        "text_processing": 0,
+        "display_summary": 1,
+        "text_processing": 1,
         "user_register_form": false,
         "allowed_formats": []
     },
@@ -58,10 +59,11 @@
         "active": 1,
         "module": "text",
         "settings": {
-            "rows": 2
+            "rows": 20,
+            "summary_rows": 5
         },
-        "type": "text_textarea",
-        "weight": "11"
+        "type": "text_textarea_with_summary",
+        "weight": "3"
     },
     "default_value_function": null
 }

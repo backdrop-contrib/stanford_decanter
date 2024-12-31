@@ -1,8 +1,8 @@
 {
-    "_config_name": "field.instance.node.stanford_event.field_stanford_event_image",
-    "field_name": "field_stanford_event_image",
+    "_config_name": "field.instance.node.event.field_event_image",
+    "field_name": "field_event_image",
     "entity_type": "node",
-    "bundle": "stanford_event",
+    "bundle": "event",
     "deleted": "0",
     "description": "",
     "display": {
@@ -19,9 +19,9 @@
             "module": "image"
         },
         "teaser": {
-            "label": "above",
+            "label": "hidden",
             "type": "hidden",
-            "weight": "14",
+            "weight": "0",
             "settings": []
         }
     },

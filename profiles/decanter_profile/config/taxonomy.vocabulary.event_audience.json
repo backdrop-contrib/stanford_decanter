@@ -1,7 +1,7 @@
 {
-    "_config_name": "taxonomy.vocabulary.stanford_event_audience",
+    "_config_name": "taxonomy.vocabulary.event_audience",
     "name": "Stanford Event Audience",
-    "machine_name": "stanford_event_audience",
+    "machine_name": "event_audience",
     "description": "Audience as used on events.stanford.edu (e.g., \"Faculty/Staff\", \"Students\", etc.)",
     "hierarchy": "0",
     "weight": "0"

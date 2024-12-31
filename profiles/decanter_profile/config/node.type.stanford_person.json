@@ -1,6 +1,6 @@
 {
-    "_config_name": "node.type.stanford_person",
-    "type": "stanford_person",
+    "_config_name": "node.type.person",
+    "type": "person",
     "name": "Person",
     "base": "node_content",
     "module": "node",
@@ -10,7 +10,7 @@
     "title_label": "Display Name",
     "modified": true,
     "disabled": false,
-    "orig_type": "stanford_person",
+    "orig_type": "person",
     "settings": {
         "status_default": 1,
         "sticky_enabled": true,

@@ -21,11 +21,11 @@
 /* Text icons/arrows */
 
 .mask-icon {
-  @apply m-0 mr-10 w-15 h-20 relative inline-block bg-black align-middle;
+  @apply m-0 mr-10 w-20 h-20 relative inline-block bg-black align-middle;
   content: '';
 
   mask-size: contain;
-  mask-position: bottom center;
+  mask-position: center center;
   mask-repeat: no-repeat;
 }
 .mask-icon-after {
@@ -86,6 +86,7 @@
   background-position: left center;
   background-size: 12px;
 }
+
 .mail {
   @apply mask-icon;
   background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTQ4IDY0QzIxLjUgNjQgMCA4NS41IDAgMTEyYzAgMTUuMSA3LjEgMjkuMyAxOS4yIDM4LjRMMjM2LjggMzEzLjZjMTEuNCA4LjUgMjcgOC41IDM4LjQgMEw0OTIuOCAxNTAuNGMxMi4xLTkuMSAxOS4yLTIzLjMgMTkuMi0zOC40YzAtMjYuNS0yMS41LTQ4LTQ4LTQ4TDQ4IDY0ek0wIDE3NkwwIDM4NGMwIDM1LjMgMjguNyA2NCA2NCA2NGwzODQgMGMzNS4zIDAgNjQtMjguNyA2NC02NGwwLTIwOEwyOTQuNCAzMzkuMmMtMjIuOCAxNy4xLTU0IDE3LjEtNzYuOCAwTDAgMTc2eiIvPjwvc3ZnPg==');
@@ -923,7 +924,7 @@ fieldset {
 /* Grids and cards */
 
 .view-content {
-  .views-row {
+  .views-row-x {
     @apply border-t rs-mt-2 rs-pt-2 clear-both;
     &:first-child {
       @apply border-t-0;
@@ -1271,6 +1272,7 @@ fieldset {
 .node-event,
 .node-stanford-event {
   .field-name-field-stanford-event-admission,
+  .field-name-field-event-admission,
   .field-name-field-event-location,
   .field-name-field-stanford-event-location,
   .field-name-field-event-datetime,
@@ -1279,11 +1281,10 @@ fieldset {
   }
 }
 
-.node-stanford-event.view-mode-teaser,
-.su-event,
-.su-event-compact {
+.node-event.view-mode-teaser,
+.node-stanford-event.view-mode-teaser {
   &>div {
-    @apply flex flex-row leading-tight mb-20;
+    @apply flex flex-row flex-wrap leading-tight mb-20;
   }
   .field-name-field-stanford-event-datetime,
   .stacked-date {
@@ -1292,13 +1293,33 @@ fieldset {
       @apply text-20;
     }
   }
-  & h2, & h3 {
-    @apply basis-full font-normal text-30 mb-0;
+  h2, h3 {
+    @apply basis-full grow font-normal text-30 mb-0;
     .l-sidebar & {
       @apply text-22
     }
     & a {
       @apply no-underline hocus:text-black hocus:underline;
+    }
+  }
+  .field-type-taxonomy-term-reference {
+    &, div {
+      @apply inline;
+    }
+    .field-item {
+      @apply mr-10 text-14 uppercase;
+    }
+  }
+
+  .field-name-field-event-datetime,
+  .field-name-field-event-location,
+  .field-name-field-event-admission {
+    @apply text-19 w-full;
+    .field-item {
+      @apply truncate text-ellipsis max-h-1em;
+    }
+    .field-label {
+      @apply hidden;
     }
   }
   .event-type {
@@ -1308,8 +1329,13 @@ fieldset {
   .field-type-text-long {
     @apply basis-full mb-10;
   }
+
   .descriptor, .edit-link {
     @apply flex-grow text-14 uppercase mb-5;
+  }
+
+  .field-name-field-event-image {
+    @apply float-end;
   }
 }
 
@@ -1321,8 +1347,13 @@ fieldset {
 .event-link,
 .event-date-long,
 .field-name-field-stanford-event-datetime,
+.field-name-field-event-datetime,
 .field-name-field-stanford-event-date,
+.field-name-field-event-date,
 .field-name-field-stanford-event-location,
+.field-name-field-event-location,
+.field-name-field-event-admission,
+.field-name-field-event-link,
 .field-name-field-stanford-event-link
 {
   @apply text-18 leading-10;
@@ -1334,29 +1365,31 @@ fieldset {
   }
 }
 
-.icon-pin,
-.event-location,
-.field-name-field-stanford-event-location
- {
-  &::before {
-    @apply location-pin;
-  }
+.icon-pin::before,
+.event-location::before,
+.field-name-field-stanford-event-location::before,
+.field-name-field-event-location::before
+{
+  @apply location-pin;
 }
 
 .icon-calendar,
 .event-date-long:before,
-.field-name-field-stanford-event-datetime::before 
+.field-name-field-stanford-event-datetime::before,
+.field-name-field-event-datetime::before 
 {
   @apply calendar;
 }
 
 .icon-mail,
+.field-name-field-event-admission::before,
 .field-name-field-stanford-event-admission::before
 {
   @apply mail;
 }
 
 .icon-link,
+.field-name-field-event-link::before,
 .field-name-field-stanford-event-link::before
 {
   @apply link;
@@ -1392,6 +1425,9 @@ fieldset {
 
 .field-label-inline * {
   @apply leading-tight;
+}
+.field-label-inline .field-label, .field-label-inline .field-items {
+  float: none;
 }
 
 .field-name-body {

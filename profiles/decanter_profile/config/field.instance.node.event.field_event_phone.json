@@ -1,8 +1,8 @@
 {
-    "_config_name": "field.instance.node.stanford_event.field_stanford_event_phone",
-    "field_name": "field_stanford_event_phone",
+    "_config_name": "field.instance.node.event.field_event_phone",
+    "field_name": "field_event_phone",
     "entity_type": "node",
-    "bundle": "stanford_event",
+    "bundle": "event",
     "deleted": "0",
     "default_value": null,
     "description": "This text field is for the phone number of the contact person for the event (e.g., 650-725-1234).",
@@ -17,7 +17,7 @@
         "teaser": {
             "label": "above",
             "type": "hidden",
-            "weight": "10",
+            "weight": "6",
             "settings": []
         }
     },

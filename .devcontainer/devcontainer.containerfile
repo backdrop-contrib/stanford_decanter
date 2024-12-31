@@ -1,7 +1,7 @@
 # https://github.com/devcontainers/images/blob/main/src/php/.devcontainer/Dockerfile
 FROM mcr.microsoft.com/devcontainers/php:0-8.1-bullseye
 
-RUN a2enmod rewrite
+RUN a2enmod rewrite && a2enmod headers
 
 RUN apt-get update && \
 		apt-get install -y \
@@ -38,10 +38,14 @@ RUN { \
 } >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 
 RUN echo "alias backdrop='bee --root=/var/www/html --base-url=http://localhost:8000/'" >> /root/.zshrc
+RUN echo "alias uli='backdrop uli" >> /root/.zshrc
+RUN echo "alias cr='backdrop cc all" >> /root/.zshrc
+RUN echo "alias reinstall='/workspace/.devcontainer/bin/install.sh" >> /root/.zshrc
 
 WORKDIR /var/www/html
 
 RUN bee dl-core /var/www/html \
 	&& bee dl --root=/var/www/html \
   					theme_hooks \
+						devel \
 	&& chown -R www-data:www-data /var/www/html

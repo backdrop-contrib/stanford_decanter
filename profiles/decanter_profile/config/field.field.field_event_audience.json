@@ -1,0 +1,26 @@
+{
+    "_config_name": "field.field.field_event_audience",
+    "field_name": "field_event_audience",
+    "type": "taxonomy_term_reference",
+    "module": "taxonomy",
+    "active": 1,
+    "locked": "0",
+    "cardinality": "-1",
+    "translatable": "0",
+    "deleted": "0",
+    "entity_types": [],
+    "settings": {
+        "allowed_values": [
+            {
+                "vocabulary": "event_audience",
+                "parent": 0
+            }
+        ]
+    },
+    "storage": {
+        "type": "field_sql_storage",
+        "module": "field_sql_storage",
+        "active": 1,
+        "settings": []
+    }
+}

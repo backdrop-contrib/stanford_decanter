@@ -2843,15 +2843,15 @@ table thead + tbody{
   margin-right: 1rem;
   display: inline-block;
   height: 2rem;
-  width: 1.5rem;
+  width: 2rem;
   --tw-bg-opacity: 1;
   background-color: rgb(46 45 41 / var(--tw-bg-opacity, 1));
   vertical-align: middle;
   content: '';
   -webkit-mask-size: contain;
           mask-size: contain;
-  -webkit-mask-position: bottom center;
-          mask-position: bottom center;
+  -webkit-mask-position: center center;
+          mask-position: center center;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
 }
@@ -2861,15 +2861,15 @@ table thead + tbody{
   margin: 0;
   display: inline-block;
   height: 2rem;
-  width: 1.5rem;
+  width: 2rem;
   --tw-bg-opacity: 1;
   background-color: rgb(46 45 41 / var(--tw-bg-opacity, 1));
   vertical-align: middle;
   content: '';
   -webkit-mask-size: contain;
           mask-size: contain;
-  -webkit-mask-position: bottom center;
-          mask-position: bottom center;
+  -webkit-mask-position: center center;
+          mask-position: center center;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
   margin-left: 0.5rem;
@@ -2882,15 +2882,15 @@ table thead + tbody{
   margin-right: 1rem;
   display: inline-block;
   height: 2rem;
-  width: 1.5rem;
+  width: 2rem;
   --tw-bg-opacity: 1;
   background-color: rgb(46 45 41 / var(--tw-bg-opacity, 1));
   vertical-align: middle;
   content: '';
   -webkit-mask-size: contain;
           mask-size: contain;
-  -webkit-mask-position: bottom center;
-          mask-position: bottom center;
+  -webkit-mask-position: center center;
+          mask-position: center center;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3C!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath d='M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z'/%3E%3C/svg%3E");
@@ -2903,15 +2903,15 @@ table thead + tbody{
   margin-right: 1rem;
   display: inline-block;
   height: 2rem;
-  width: 1.5rem;
+  width: 2rem;
   --tw-bg-opacity: 1;
   background-color: rgb(46 45 41 / var(--tw-bg-opacity, 1));
   vertical-align: middle;
   content: '';
   -webkit-mask-size: contain;
           mask-size: contain;
-  -webkit-mask-position: bottom center;
-          mask-position: bottom center;
+  -webkit-mask-position: center center;
+          mask-position: center center;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M128 0c17.7 0 32 14.3 32 32l0 32 128 0 0-32c0-17.7 14.3-32 32-32s32 14.3 32 32l0 32 48 0c26.5 0 48 21.5 48 48l0 48L0 160l0-48C0 85.5 21.5 64 48 64l48 0 0-32c0-17.7 14.3-32 32-32zM0 192l448 0 0 272c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 192zm64 80l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm128 0l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM64 400l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zm112 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16z'/%3E%3C/svg%3E");
@@ -2924,15 +2924,15 @@ table thead + tbody{
   margin-right: 1rem;
   display: inline-block;
   height: 2rem;
-  width: 1.5rem;
+  width: 2rem;
   --tw-bg-opacity: 1;
   background-color: rgb(46 45 41 / var(--tw-bg-opacity, 1));
   vertical-align: middle;
   content: '';
   -webkit-mask-size: contain;
           mask-size: contain;
-  -webkit-mask-position: bottom center;
-          mask-position: bottom center;
+  -webkit-mask-position: center center;
+          mask-position: center center;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
   -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTU3OS44IDI2Ny43YzU2LjUtNTYuNSA1Ni41LTE0OCAwLTIwNC41Yy01MC01MC0xMjguOC01Ni41LTE4Ni4zLTE1LjRsLTEuNiAxLjFjLTE0LjQgMTAuMy0xNy43IDMwLjMtNy40IDQ0LjZzMzAuMyAxNy43IDQ0LjYgNy40bDEuNi0xLjFjMzIuMS0yMi45IDc2LTE5LjMgMTAzLjggOC42YzMxLjUgMzEuNSAzMS41IDgyLjUgMCAxMTRMNDIyLjMgMzM0LjhjLTMxLjUgMzEuNS04Mi41IDMxLjUtMTE0IDBjLTI3LjktMjcuOS0zMS41LTcxLjgtOC42LTEwMy44bDEuMS0xLjZjMTAuMy0xNC40IDYuOS0zNC40LTcuNC00NC42cy0zNC40LTYuOS00NC42IDcuNGwtMS4xIDEuNkMyMDYuNSAyNTEuMiAyMTMgMzMwIDI2MyAzODBjNTYuNSA1Ni41IDE0OCA1Ni41IDIwNC41IDBMNTc5LjggMjY3Ljd6TTYwLjIgMjQ0LjNjLTU2LjUgNTYuNS01Ni41IDE0OCAwIDIwNC41YzUwIDUwIDEyOC44IDU2LjUgMTg2LjMgMTUuNGwxLjYtMS4xYzE0LjQtMTAuMyAxNy43LTMwLjMgNy40LTQ0LjZzLTMwLjMtMTcuNy00NC42LTcuNGwtMS42IDEuMWMtMzIuMSAyMi45LTc2IDE5LjMtMTAzLjgtOC42Qzc0IDM3MiA3NCAzMjEgMTA1LjUgMjg5LjVMMjE3LjcgMTc3LjJjMzEuNS0zMS41IDgyLjUtMzEuNSAxMTQgMGMyNy45IDI3LjkgMzEuNSA3MS44IDguNiAxMDMuOWwtMS4xIDEuNmMtMTAuMyAxNC40LTYuOSAzNC40IDcuNCA0NC42czM0LjQgNi45IDQ0LjYtNy40bDEuMS0xLjZDNDMzLjUgMjYwLjggNDI3IDE4MiAzNzcgMTMyYy01Ni41LTU2LjUtMTQ4LTU2LjUtMjA0LjUgMEw2MC4yIDI0NC4zeiIvPjwvc3ZnPg==');
@@ -2945,15 +2945,15 @@ table thead + tbody{
   margin-right: 1rem;
   display: inline-block;
   height: 2rem;
-  width: 1.5rem;
+  width: 2rem;
   --tw-bg-opacity: 1;
   background-color: rgb(46 45 41 / var(--tw-bg-opacity, 1));
   vertical-align: middle;
   content: '';
   -webkit-mask-size: contain;
           mask-size: contain;
-  -webkit-mask-position: bottom center;
-          mask-position: bottom center;
+  -webkit-mask-position: center center;
+          mask-position: center center;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
   -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTE2NC45IDI0LjZjLTcuNy0xOC42LTI4LTI4LjUtNDcuNC0yMy4ybC04OCAyNEMxMi4xIDMwLjIgMCA0NiAwIDY0QzAgMzExLjQgMjAwLjYgNTEyIDQ0OCA1MTJjMTggMCAzMy44LTEyLjEgMzguNi0yOS41bDI0LTg4YzUuMy0xOS40LTQuNi0zOS43LTIzLjItNDcuNGwtOTYtNDBjLTE2LjMtNi44LTM1LjItMi4xLTQ2LjMgMTEuNkwzMDQuNyAzNjhDMjM0LjMgMzM0LjcgMTc3LjMgMjc3LjcgMTQ0IDIwNy4zTDE5My4zIDE2N2MxMy43LTExLjIgMTguNC0zMCAxMS42LTQ2LjNsLTQwLTk2eiIvPjwvc3ZnPg==');
@@ -2966,15 +2966,15 @@ table thead + tbody{
   margin-right: 1rem;
   display: inline-block;
   height: 2rem;
-  width: 1.5rem;
+  width: 2rem;
   --tw-bg-opacity: 1;
   background-color: rgb(46 45 41 / var(--tw-bg-opacity, 1));
   vertical-align: middle;
   content: '';
   -webkit-mask-size: contain;
           mask-size: contain;
-  -webkit-mask-position: bottom center;
-          mask-position: bottom center;
+  -webkit-mask-position: center center;
+          mask-position: center center;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
   -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzODQgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTQ4IDBDMjEuNSAwIDAgMjEuNSAwIDQ4TDAgNDY0YzAgMjYuNSAyMS41IDQ4IDQ4IDQ4bDk2IDAgMC04MGMwLTI2LjUgMjEuNS00OCA0OC00OHM0OCAyMS41IDQ4IDQ4bDAgODAgOTYgMGMyNi41IDAgNDgtMjEuNSA0OC00OGwwLTQxNmMwLTI2LjUtMjEuNS00OC00OC00OEw0OCAwek02NCAyNDBjMC04LjggNy4yLTE2IDE2LTE2bDMyIDBjOC44IDAgMTYgNy4yIDE2IDE2bDAgMzJjMCA4LjgtNy4yIDE2LTE2IDE2bC0zMiAwYy04LjggMC0xNi03LjItMTYtMTZsMC0zMnptMTEyLTE2bDMyIDBjOC44IDAgMTYgNy4yIDE2IDE2bDAgMzJjMCA4LjgtNy4yIDE2LTE2IDE2bC0zMiAwYy04LjggMC0xNi03LjItMTYtMTZsMC0zMmMwLTguOCA3LjItMTYgMTYtMTZ6bTgwIDE2YzAtOC44IDcuMi0xNiAxNi0xNmwzMiAwYzguOCAwIDE2IDcuMiAxNiAxNmwwIDMyYzAgOC44LTcuMiAxNi0xNiAxNmwtMzIgMGMtOC44IDAtMTYtNy4yLTE2LTE2bDAtMzJ6TTgwIDk2bDMyIDBjOC44IDAgMTYgNy4yIDE2IDE2bDAgMzJjMCA4LjgtNy4yIDE2LTE2IDE2bC0zMiAwYy04LjggMC0xNi03LjItMTYtMTZsMC0zMmMwLTguOCA3LjItMTYgMTYtMTZ6bTgwIDE2YzAtOC44IDcuMi0xNiAxNi0xNmwzMiAwYzguOCAwIDE2IDcuMiAxNiAxNmwwIDMyYzAgOC44LTcuMiAxNi0xNiAxNmwtMzIgMGMtOC44IDAtMTYtNy4yLTE2LTE2bDAtMzJ6TTI3MiA5NmwzMiAwYzguOCAwIDE2IDcuMiAxNiAxNmwwIDMyYzAgOC44LTcuMiAxNi0xNiAxNmwtMzIgMGMtOC44IDAtMTYtNy4yLTE2LTE2bDAtMzJjMC04LjggNy4yLTE2IDE2LTE2eiIvPjwvc3ZnPg==');
@@ -3036,15 +3036,15 @@ table thead + tbody{
   margin-right: 1rem;
   display: inline-block;
   height: 2rem;
-  width: 1.5rem;
+  width: 2rem;
   --tw-bg-opacity: 1;
   background-color: rgb(46 45 41 / var(--tw-bg-opacity, 1));
   vertical-align: middle;
   content: '';
   -webkit-mask-size: contain;
           mask-size: contain;
-  -webkit-mask-position: bottom center;
-          mask-position: bottom center;
+  -webkit-mask-position: center center;
+          mask-position: center center;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
   background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTQ4IDY0QzIxLjUgNjQgMCA4NS41IDAgMTEyYzAgMTUuMSA3LjEgMjkuMyAxOS4yIDM4LjRMMjM2LjggMzEzLjZjMTEuNCA4LjUgMjcgOC41IDM4LjQgMEw0OTIuOCAxNTAuNGMxMi4xLTkuMSAxOS4yLTIzLjMgMTkuMi0zOC40YzAtMjYuNS0yMS41LTQ4LTQ4LTQ4TDQ4IDY0ek0wIDE3NkwwIDM4NGMwIDM1LjMgMjguNyA2NCA2NCA2NGwzODQgMGMzNS4zIDAgNjQtMjguNyA2NC02NGwwLTIwOEwyOTQuNCAzMzkuMmMtMjIuOCAxNy4xLTU0IDE3LjEtNzYuOCAwTDAgMTc2eiIvPjwvc3ZnPg==');
@@ -3056,15 +3056,15 @@ table thead + tbody{
   margin-right: 1rem;
   display: inline-block;
   height: 2rem;
-  width: 1.5rem;
+  width: 2rem;
   --tw-bg-opacity: 1;
   background-color: rgb(46 45 41 / var(--tw-bg-opacity, 1));
   vertical-align: middle;
   content: '';
   -webkit-mask-size: contain;
           mask-size: contain;
-  -webkit-mask-position: bottom center;
-          mask-position: bottom center;
+  -webkit-mask-position: center center;
+          mask-position: center center;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
   -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTkiIHZpZXdCb3g9IjAgMCAxOCAxOSIgZmlsbD0ibm9uZSIKICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNOS4yNjM2MSAxNC42MzY0QzguOTEyMTQgMTQuMjg0OSA4LjkxMjE0IDEzLjcxNTEgOS4yNjM2MSAxMy4zNjM2TDEzLjEyNzIgOS41MDAwMUw5LjI2MzYxIDUuNjM2NEM4LjkxMjE0IDUuMjg0OTMgOC45MTIxNCA0LjcxNTA4IDkuMjYzNjEgNC4zNjM2MUM5LjYxNTA4IDQuMDEyMTQgMTAuMTg0OSA0LjAxMjE0IDEwLjUzNjQgNC4zNjM2MUwxNS4wMzY0IDguODYzNjFDMTUuMzg3OSA5LjIxNTA4IDE1LjM4NzkgOS43ODQ5MyAxNS4wMzY0IDEwLjEzNjRMMTAuNTM2NCAxNC42MzY0QzEwLjE4NDkgMTQuOTg3OSA5LjYxNTA4IDE0Ljk4NzkgOS4yNjM2MSAxNC42MzY0WiIgZmlsbD0iY3VycmVudENvbG9yIi8+CiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0zLjg2MzYxIDE0LjYzNjRDMy41MTIxNCAxNC4yODQ5IDMuNTEyMTQgMTMuNzE1MSAzLjg2MzYxIDEzLjM2MzZMNy43MjcyMSA5LjUwMDAxTDMuODYzNjEgNS42MzY0QzMuNTEyMTQgNS4yODQ5MyAzLjUxMjE0IDQuNzE1MDggMy44NjM2MSA0LjM2MzYxQzQuMjE1MDggNC4wMTIxNCA0Ljc4NDkzIDQuMDEyMTQgNS4xMzY0IDQuMzYzNjFMOS42MzY0IDguODYzNjFDOS45ODc4NyA5LjIxNTA4IDkuOTg3ODcgOS43ODQ5MyA5LjYzNjQgMTAuMTM2NEw1LjEzNjQgMTQuNjM2NEM0Ljc4NDkzIDE0Ljk4NzkgNC4yMTUwOCAxNC45ODc5IDMuODYzNjEgMTQuNjM2NFoiIGZpbGw9ImN1cnJlbnRDb2xvciIvPgo8L3N2Zz4K");
@@ -3077,13 +3077,13 @@ span.ext,
   margin: 0;
   display: inline-block;
   height: 2rem;
-  width: 1.5rem;
+  width: 2rem;
   --tw-bg-opacity: 1;
   background-color: rgb(46 45 41 / var(--tw-bg-opacity, 1));
   vertical-align: middle;
   content: '';
-  -webkit-mask-position: bottom center;
-          mask-position: bottom center;
+  -webkit-mask-position: center center;
+          mask-position: center center;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
   margin-left: 0.5rem;
@@ -3176,15 +3176,15 @@ a.back:hover::before{
   margin-right: 1rem;
   display: inline-block;
   height: 2rem;
-  width: 1.5rem;
+  width: 2rem;
   --tw-bg-opacity: 1;
   background-color: rgb(46 45 41 / var(--tw-bg-opacity, 1));
   vertical-align: middle;
   content: '';
   -webkit-mask-size: contain;
           mask-size: contain;
-  -webkit-mask-position: bottom center;
-          mask-position: bottom center;
+  -webkit-mask-position: center center;
+          mask-position: center center;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
   -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNi4wIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0-PHBhdGggZD0iTTAgOTZDMCA3OC4zIDE0LjMgNjQgMzIgNjRsMzg0IDBjMTcuNyAwIDMyIDE0LjMgMzIgMzJzLTE0LjMgMzItMzIgMzJMMzIgMTI4QzE0LjMgMTI4IDAgMTEzLjcgMCA5NnpNMCAyNTZjMC0xNy43IDE0LjMtMzIgMzItMzJsMzg0IDBjMTcuNyAwIDMyIDE0LjMgMzIgMzJzLTE0LjMgMzItMzIgMzJMMzIgMjg4Yy0xNy43IDAtMzItMTQuMy0zMi0zMnpNNDQ4IDQxNmMwIDE3LjctMTQuMyAzMi0zMiAzMkwzMiA0NDhjLTE3LjcgMC0zMi0xNC4zLTMyLTMyczE0LjMtMzIgMzItMzJsMzg0IDBjMTcuNyAwIDMyIDE0LjMgMzIgMzJ6Ii8-PC9zdmc-");
@@ -4023,8 +4023,6 @@ html .layout .l-sidebar + .l-content{
   background-color: rgb(46 45 41 / var(--tw-bg-opacity, 1));
   vertical-align: middle;
   content: '';
-  -webkit-mask-position: bottom center;
-          mask-position: bottom center;
   -webkit-mask-size: contain;
           mask-size: contain;
   -webkit-mask-position: center center;
@@ -4119,13 +4117,11 @@ html .layout .l-sidebar + .l-content{
   margin-right: 1rem;
   display: inline-block;
   height: 2rem;
-  width: 1.5rem;
+  width: 2rem;
   --tw-bg-opacity: 1;
   background-color: rgb(46 45 41 / var(--tw-bg-opacity, 1));
   vertical-align: middle;
   content: '';
-  -webkit-mask-position: bottom center;
-          mask-position: bottom center;
   -webkit-mask-size: contain;
           mask-size: contain;
   -webkit-mask-position: center center;
@@ -5370,48 +5366,48 @@ fieldset .summary{
 
 /* Grids and cards */
 
-.view-content .views-row{
+.view-content .views-row-x{
   margin-top: 3rem;
 }
 
 @media (min-width: 768px){
-  .view-content .views-row{
+  .view-content .views-row-x{
     margin-top: 3.6rem;
   }
 }
 
 @media (min-width: 1500px){
-  .view-content .views-row{
+  .view-content .views-row-x{
     margin-top: 3.8rem;
   }
 }
 
-.view-content .views-row{
+.view-content .views-row-x{
   padding-top: 3rem;
 }
 
 @media (min-width: 768px){
-  .view-content .views-row{
+  .view-content .views-row-x{
     padding-top: 3.6rem;
   }
 }
 
 @media (min-width: 1500px){
-  .view-content .views-row{
+  .view-content .views-row-x{
     padding-top: 3.8rem;
   }
 }
 
-.view-content .views-row{
+.view-content .views-row-x{
   clear: both;
   border-top-width: 1px;
 }
 
-.view-content .views-row:first-child{
+.view-content .views-row-x:first-child{
   border-top-width: 0px;
 }
 
-.view-content .views-row h3, .view-content .views-row h2{
+.view-content .views-row-x h3, .view-content .views-row-x h2{
   font-family: "Source Serif 4", "Source Serif Pro", Georgia, Times, "Times New Roman", serif;
   font-size: 2.7rem;
   font-weight: 700;
@@ -5419,85 +5415,85 @@ fieldset .summary{
 }
 
 @media (min-width: 768px){
-  .view-content .views-row h3, .view-content .views-row h2{
+  .view-content .views-row-x h3, .view-content .views-row-x h2{
     margin-bottom: 2.6rem;
   }
 }
 
 @media (min-width: 1500px){
-  .view-content .views-row h3, .view-content .views-row h2{
+  .view-content .views-row-x h3, .view-content .views-row-x h2{
     margin-bottom: 2.7rem;
   }
 }
 
-.view-content .views-row h3 a, .view-content .views-row h2 a{
+.view-content .views-row-x h3 a, .view-content .views-row-x h2 a{
   text-decoration-line: none;
   text-decoration-thickness: 0.12em;
   text-underline-offset: 3px;
 }
 
-.view-content .views-row h3 a:focus, .view-content .views-row h2 a:focus{
+.view-content .views-row-x h3 a:focus, .view-content .views-row-x h2 a:focus{
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
 
-.view-content .views-row h3 a:hover, .view-content .views-row h2 a:hover{
+.view-content .views-row-x h3 a:hover, .view-content .views-row-x h2 a:hover{
   text-decoration-line: underline;
 }
 
-.view-content .views-row h3 a:focus, .view-content .views-row h2 a:focus{
+.view-content .views-row-x h3 a:focus, .view-content .views-row-x h2 a:focus{
   text-decoration-line: underline;
 }
 
-.view-content .views-row h3 a:hover, .view-content .views-row h2 a:hover{
+.view-content .views-row-x h3 a:hover, .view-content .views-row-x h2 a:hover{
   --tw-text-opacity: 1;
   color: rgb(46 45 41 / var(--tw-text-opacity, 1));
 }
 
-.view-content .views-row .view-mode-teaser{
+.view-content .views-row-x .view-mode-teaser{
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
 
 @media (min-width: 576px){
-  .view-content .views-row .view-mode-teaser{
+  .view-content .views-row-x .view-mode-teaser{
     flex-direction: row;
   }
 }
 
-.view-content .views-row .view-mode-teaser .lead-image{
+.view-content .views-row-x .view-mode-teaser .lead-image{
   width: 100%;
 }
 
 @media (min-width: 576px){
-  .view-content .views-row .view-mode-teaser .lead-image{
+  .view-content .views-row-x .view-mode-teaser .lead-image{
     width: 50%;
   }
 }
 
 @media (min-width: 992px){
-  .view-content .views-row .view-mode-teaser .lead-image{
+  .view-content .views-row-x .view-mode-teaser .lead-image{
     width: 25%;
   }
 }
 
-.view-content .views-row .view-mode-teaser .lead-image {
+.view-content .views-row-x .view-mode-teaser .lead-image {
   @apply: float-start;
 }
 
-.view-content .views-row .view-mode-teaser .content{
+.view-content .views-row-x .view-mode-teaser .content{
   width: 100%;
 }
 
 @media (min-width: 576px){
-  .view-content .views-row .view-mode-teaser .content{
+  .view-content .views-row-x .view-mode-teaser .content{
     width: 50%;
   }
 }
 
 @media (min-width: 992px){
-  .view-content .views-row .view-mode-teaser .content{
+  .view-content .views-row-x .view-mode-teaser .content{
     width: 75%;
   }
 }
@@ -7381,11 +7377,13 @@ html .layout .l-bottom div.plain > article .views-field-body, html .layout .l-mi
 /* Events */
 
 .node-event .field-name-field-stanford-event-admission,
+  .node-event .field-name-field-event-admission,
   .node-event .field-name-field-event-location,
   .node-event .field-name-field-stanford-event-location,
   .node-event .field-name-field-event-datetime,
   .node-event .field-name-field-stanford-event-datetime,
   .node-stanford-event .field-name-field-stanford-event-admission,
+  .node-stanford-event .field-name-field-event-admission,
   .node-stanford-event .field-name-field-event-location,
   .node-stanford-event .field-name-field-stanford-event-location,
   .node-stanford-event .field-name-field-event-datetime,
@@ -7394,19 +7392,18 @@ html .layout .l-bottom div.plain > article .views-field-body, html .layout .l-mi
   margin-bottom: 1rem;
 }
 
-.node-stanford-event.view-mode-teaser>div, .su-event>div, .su-event-compact>div{
+.node-event.view-mode-teaser>div, .node-stanford-event.view-mode-teaser>div{
   margin-bottom: 2rem;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   line-height: 1.1;
 }
 
-.node-stanford-event.view-mode-teaser .field-name-field-stanford-event-datetime,
-  .node-stanford-event.view-mode-teaser .stacked-date,
-  .su-event .field-name-field-stanford-event-datetime,
-  .su-event .stacked-date,
-  .su-event-compact .field-name-field-stanford-event-datetime,
-  .su-event-compact .stacked-date{
+.node-event.view-mode-teaser .field-name-field-stanford-event-datetime,
+  .node-event.view-mode-teaser .stacked-date,
+  .node-stanford-event.view-mode-teaser .field-name-field-stanford-event-datetime,
+  .node-stanford-event.view-mode-teaser .stacked-date{
   margin-right: 1rem;
   height: 4.8rem;
   min-width: 4rem;
@@ -7416,56 +7413,90 @@ html .layout .l-bottom div.plain > article .views-field-body, html .layout .l-mi
   font-weight: 700;
 }
 
-.node-stanford-event.view-mode-teaser .field-name-field-stanford-event-datetime:first-line, .node-stanford-event.view-mode-teaser .stacked-date:first-line, .su-event .field-name-field-stanford-event-datetime:first-line, .su-event .stacked-date:first-line, .su-event-compact .field-name-field-stanford-event-datetime:first-line, .su-event-compact .stacked-date:first-line{
+.node-event.view-mode-teaser .field-name-field-stanford-event-datetime:first-line, .node-event.view-mode-teaser .stacked-date:first-line, .node-stanford-event.view-mode-teaser .field-name-field-stanford-event-datetime:first-line, .node-stanford-event.view-mode-teaser .stacked-date:first-line{
   font-size: 2rem;
 }
 
-.node-stanford-event.view-mode-teaser h2, .node-stanford-event.view-mode-teaser h3, .su-event h2, .su-event h3, .su-event-compact h2, .su-event-compact h3{
+.node-event.view-mode-teaser h2, .node-event.view-mode-teaser h3, .node-stanford-event.view-mode-teaser h2, .node-stanford-event.view-mode-teaser h3{
   margin-bottom: 0;
+  flex-grow: 1;
   flex-basis: 100%;
   font-size: 3rem;
   font-weight: 400;
 }
 
-.l-sidebar .node-stanford-event.view-mode-teaser h2, .l-sidebar .node-stanford-event.view-mode-teaser h3, .l-sidebar .su-event h2, .l-sidebar .su-event h3, .l-sidebar .su-event-compact h2, .l-sidebar .su-event-compact h3{
+.l-sidebar .node-event.view-mode-teaser h2, .l-sidebar .node-event.view-mode-teaser h3, .l-sidebar .node-stanford-event.view-mode-teaser h2, .l-sidebar .node-stanford-event.view-mode-teaser h3{
   font-size: 2.2rem;
 }
 
-.node-stanford-event.view-mode-teaser h2 a, .node-stanford-event.view-mode-teaser h3 a, .su-event h2 a, .su-event h3 a, .su-event-compact h2 a, .su-event-compact h3 a{
+.node-event.view-mode-teaser h2 a, .node-event.view-mode-teaser h3 a, .node-stanford-event.view-mode-teaser h2 a, .node-stanford-event.view-mode-teaser h3 a{
   text-decoration-line: none;
 }
 
-.node-stanford-event.view-mode-teaser h2 a:hover, .node-stanford-event.view-mode-teaser h3 a:hover, .su-event h2 a:hover, .su-event h3 a:hover, .su-event-compact h2 a:hover, .su-event-compact h3 a:hover{
+.node-event.view-mode-teaser h2 a:hover, .node-event.view-mode-teaser h3 a:hover, .node-stanford-event.view-mode-teaser h2 a:hover, .node-stanford-event.view-mode-teaser h3 a:hover{
   --tw-text-opacity: 1;
   color: rgb(46 45 41 / var(--tw-text-opacity, 1));
   text-decoration-line: underline;
 }
 
-.node-stanford-event.view-mode-teaser h2 a:focus, .node-stanford-event.view-mode-teaser h3 a:focus, .su-event h2 a:focus, .su-event h3 a:focus, .su-event-compact h2 a:focus, .su-event-compact h3 a:focus{
+.node-event.view-mode-teaser h2 a:focus, .node-event.view-mode-teaser h3 a:focus, .node-stanford-event.view-mode-teaser h2 a:focus, .node-stanford-event.view-mode-teaser h3 a:focus{
   --tw-text-opacity: 1;
   color: rgb(46 45 41 / var(--tw-text-opacity, 1));
   text-decoration-line: underline;
 }
 
-.node-stanford-event.view-mode-teaser .event-type, .su-event .event-type, .su-event-compact .event-type{
+.node-event.view-mode-teaser .field-type-taxonomy-term-reference, .node-event.view-mode-teaser .field-type-taxonomy-term-reference div, .node-stanford-event.view-mode-teaser .field-type-taxonomy-term-reference, .node-stanford-event.view-mode-teaser .field-type-taxonomy-term-reference div{
+  display: inline;
+}
+
+.node-event.view-mode-teaser .field-type-taxonomy-term-reference .field-item, .node-stanford-event.view-mode-teaser .field-type-taxonomy-term-reference .field-item{
+  margin-right: 1rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.node-event.view-mode-teaser .field-name-field-event-datetime,
+  .node-event.view-mode-teaser .field-name-field-event-location,
+  .node-event.view-mode-teaser .field-name-field-event-admission,
+  .node-stanford-event.view-mode-teaser .field-name-field-event-datetime,
+  .node-stanford-event.view-mode-teaser .field-name-field-event-location,
+  .node-stanford-event.view-mode-teaser .field-name-field-event-admission{
+  width: 100%;
+  font-size: 1.9rem;
+}
+
+.node-event.view-mode-teaser .field-name-field-event-datetime .field-item, .node-event.view-mode-teaser .field-name-field-event-location .field-item, .node-event.view-mode-teaser .field-name-field-event-admission .field-item, .node-stanford-event.view-mode-teaser .field-name-field-event-datetime .field-item, .node-stanford-event.view-mode-teaser .field-name-field-event-location .field-item, .node-stanford-event.view-mode-teaser .field-name-field-event-admission .field-item{
+  max-height: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.node-event.view-mode-teaser .field-name-field-event-datetime .field-label, .node-event.view-mode-teaser .field-name-field-event-location .field-label, .node-event.view-mode-teaser .field-name-field-event-admission .field-label, .node-stanford-event.view-mode-teaser .field-name-field-event-datetime .field-label, .node-stanford-event.view-mode-teaser .field-name-field-event-location .field-label, .node-stanford-event.view-mode-teaser .field-name-field-event-admission .field-label{
+  display: none;
+}
+
+.node-event.view-mode-teaser .event-type, .node-stanford-event.view-mode-teaser .event-type{
   font-weight: 700;
 }
 
-.node-stanford-event.view-mode-teaser .field-type-text-with-summary,
-  .node-stanford-event.view-mode-teaser .field-type-text-long,
-  .su-event .field-type-text-with-summary,
-  .su-event .field-type-text-long,
-  .su-event-compact .field-type-text-with-summary,
-  .su-event-compact .field-type-text-long{
+.node-event.view-mode-teaser .field-type-text-with-summary,
+  .node-event.view-mode-teaser .field-type-text-long,
+  .node-stanford-event.view-mode-teaser .field-type-text-with-summary,
+  .node-stanford-event.view-mode-teaser .field-type-text-long{
   margin-bottom: 1rem;
   flex-basis: 100%;
 }
 
-.node-stanford-event.view-mode-teaser .descriptor, .node-stanford-event.view-mode-teaser .edit-link, .su-event .descriptor, .su-event .edit-link, .su-event-compact .descriptor, .su-event-compact .edit-link{
+.node-event.view-mode-teaser .descriptor, .node-event.view-mode-teaser .edit-link, .node-stanford-event.view-mode-teaser .descriptor, .node-stanford-event.view-mode-teaser .edit-link{
   margin-bottom: 0.5rem;
   flex-grow: 1;
   font-size: 1.4rem;
   text-transform: uppercase;
+}
+
+.node-event.view-mode-teaser .field-name-field-event-image, .node-stanford-event.view-mode-teaser .field-name-field-event-image{
+  float: inline-end;
 }
 
 .icon-pin,
@@ -7476,36 +7507,44 @@ html .layout .l-bottom div.plain > article .views-field-body, html .layout .l-mi
 .event-link,
 .event-date-long,
 .field-name-field-stanford-event-datetime,
+.field-name-field-event-datetime,
 .field-name-field-stanford-event-date,
+.field-name-field-event-date,
 .field-name-field-stanford-event-location,
+.field-name-field-event-location,
+.field-name-field-event-admission,
+.field-name-field-event-link,
 .field-name-field-stanford-event-link{
   font-size: 1.8rem;
   line-height: 2.5rem;
 }
 
-.icon-pin:empty, .icon-calendar:empty, .icon-mail:empty, .event-location:empty, .event-admission:empty, .event-link:empty, .event-date-long:empty, .field-name-field-stanford-event-datetime:empty, .field-name-field-stanford-event-date:empty, .field-name-field-stanford-event-location:empty, .field-name-field-stanford-event-link:empty {
+.icon-pin:empty, .icon-calendar:empty, .icon-mail:empty, .event-location:empty, .event-admission:empty, .event-link:empty, .event-date-long:empty, .field-name-field-stanford-event-datetime:empty, .field-name-field-event-datetime:empty, .field-name-field-stanford-event-date:empty, .field-name-field-event-date:empty, .field-name-field-stanford-event-location:empty, .field-name-field-event-location:empty, .field-name-field-event-admission:empty, .field-name-field-event-link:empty, .field-name-field-stanford-event-link:empty {
   display: none;
 }
 
-.icon-pin::before, .icon-calendar::before, .icon-mail::before, .event-location::before, .event-admission::before, .event-link::before, .event-date-long::before, .field-name-field-stanford-event-datetime::before, .field-name-field-stanford-event-date::before, .field-name-field-stanford-event-location::before, .field-name-field-stanford-event-link::before{
+.icon-pin::before, .icon-calendar::before, .icon-mail::before, .event-location::before, .event-admission::before, .event-link::before, .event-date-long::before, .field-name-field-stanford-event-datetime::before, .field-name-field-event-datetime::before, .field-name-field-stanford-event-date::before, .field-name-field-event-date::before, .field-name-field-stanford-event-location::before, .field-name-field-event-location::before, .field-name-field-event-admission::before, .field-name-field-event-link::before, .field-name-field-stanford-event-link::before{
   float: inline-start;
 }
 
-.icon-pin::before, .event-location::before, .field-name-field-stanford-event-location::before{
+.icon-pin::before,
+.event-location::before,
+.field-name-field-stanford-event-location::before,
+.field-name-field-event-location::before{
   position: relative;
   margin: 0;
   margin-right: 1rem;
   display: inline-block;
   height: 2rem;
-  width: 1.5rem;
+  width: 2rem;
   --tw-bg-opacity: 1;
   background-color: rgb(46 45 41 / var(--tw-bg-opacity, 1));
   vertical-align: middle;
   content: '';
   -webkit-mask-size: contain;
           mask-size: contain;
-  -webkit-mask-position: bottom center;
-          mask-position: bottom center;
+  -webkit-mask-position: center center;
+          mask-position: center center;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3C!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath d='M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z'/%3E%3C/svg%3E");
@@ -7514,21 +7553,22 @@ html .layout .l-bottom div.plain > article .views-field-body, html .layout .l-mi
 
 .icon-calendar,
 .event-date-long:before,
-.field-name-field-stanford-event-datetime::before{
+.field-name-field-stanford-event-datetime::before,
+.field-name-field-event-datetime::before{
   position: relative;
   margin: 0;
   margin-right: 1rem;
   display: inline-block;
   height: 2rem;
-  width: 1.5rem;
+  width: 2rem;
   --tw-bg-opacity: 1;
   background-color: rgb(46 45 41 / var(--tw-bg-opacity, 1));
   vertical-align: middle;
   content: '';
   -webkit-mask-size: contain;
           mask-size: contain;
-  -webkit-mask-position: bottom center;
-          mask-position: bottom center;
+  -webkit-mask-position: center center;
+          mask-position: center center;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M128 0c17.7 0 32 14.3 32 32l0 32 128 0 0-32c0-17.7 14.3-32 32-32s32 14.3 32 32l0 32 48 0c26.5 0 48 21.5 48 48l0 48L0 160l0-48C0 85.5 21.5 64 48 64l48 0 0-32c0-17.7 14.3-32 32-32zM0 192l448 0 0 272c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 192zm64 80l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm128 0l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM64 400l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zm112 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16z'/%3E%3C/svg%3E");
@@ -7536,42 +7576,44 @@ html .layout .l-bottom div.plain > article .views-field-body, html .layout .l-mi
 }
 
 .icon-mail,
+.field-name-field-event-admission::before,
 .field-name-field-stanford-event-admission::before{
   position: relative;
   margin: 0;
   margin-right: 1rem;
   display: inline-block;
   height: 2rem;
-  width: 1.5rem;
+  width: 2rem;
   --tw-bg-opacity: 1;
   background-color: rgb(46 45 41 / var(--tw-bg-opacity, 1));
   vertical-align: middle;
   content: '';
   -webkit-mask-size: contain;
           mask-size: contain;
-  -webkit-mask-position: bottom center;
-          mask-position: bottom center;
+  -webkit-mask-position: center center;
+          mask-position: center center;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
   background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTQ4IDY0QzIxLjUgNjQgMCA4NS41IDAgMTEyYzAgMTUuMSA3LjEgMjkuMyAxOS4yIDM4LjRMMjM2LjggMzEzLjZjMTEuNCA4LjUgMjcgOC41IDM4LjQgMEw0OTIuOCAxNTAuNGMxMi4xLTkuMSAxOS4yLTIzLjMgMTkuMi0zOC40YzAtMjYuNS0yMS41LTQ4LTQ4LTQ4TDQ4IDY0ek0wIDE3NkwwIDM4NGMwIDM1LjMgMjguNyA2NCA2NCA2NGwzODQgMGMzNS4zIDAgNjQtMjguNyA2NC02NGwwLTIwOEwyOTQuNCAzMzkuMmMtMjIuOCAxNy4xLTU0IDE3LjEtNzYuOCAwTDAgMTc2eiIvPjwvc3ZnPg==');
 }
 
 .icon-link,
+.field-name-field-event-link::before,
 .field-name-field-stanford-event-link::before{
   position: relative;
   margin: 0;
   margin-right: 1rem;
   display: inline-block;
   height: 2rem;
-  width: 1.5rem;
+  width: 2rem;
   --tw-bg-opacity: 1;
   background-color: rgb(46 45 41 / var(--tw-bg-opacity, 1));
   vertical-align: middle;
   content: '';
   -webkit-mask-size: contain;
           mask-size: contain;
-  -webkit-mask-position: bottom center;
-          mask-position: bottom center;
+  -webkit-mask-position: center center;
+          mask-position: center center;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
   -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTU3OS44IDI2Ny43YzU2LjUtNTYuNSA1Ni41LTE0OCAwLTIwNC41Yy01MC01MC0xMjguOC01Ni41LTE4Ni4zLTE1LjRsLTEuNiAxLjFjLTE0LjQgMTAuMy0xNy43IDMwLjMtNy40IDQ0LjZzMzAuMyAxNy43IDQ0LjYgNy40bDEuNi0xLjFjMzIuMS0yMi45IDc2LTE5LjMgMTAzLjggOC42YzMxLjUgMzEuNSAzMS41IDgyLjUgMCAxMTRMNDIyLjMgMzM0LjhjLTMxLjUgMzEuNS04Mi41IDMxLjUtMTE0IDBjLTI3LjktMjcuOS0zMS41LTcxLjgtOC42LTEwMy44bDEuMS0xLjZjMTAuMy0xNC40IDYuOS0zNC40LTcuNC00NC42cy0zNC40LTYuOS00NC42IDcuNGwtMS4xIDEuNkMyMDYuNSAyNTEuMiAyMTMgMzMwIDI2MyAzODBjNTYuNSA1Ni41IDE0OCA1Ni41IDIwNC41IDBMNTc5LjggMjY3Ljd6TTYwLjIgMjQ0LjNjLTU2LjUgNTYuNS01Ni41IDE0OCAwIDIwNC41YzUwIDUwIDEyOC44IDU2LjUgMTg2LjMgMTUuNGwxLjYtMS4xYzE0LjQtMTAuMyAxNy43LTMwLjMgNy40LTQ0LjZzLTMwLjMtMTcuNy00NC42LTcuNGwtMS42IDEuMWMtMzIuMSAyMi45LTc2IDE5LjMtMTAzLjgtOC42Qzc0IDM3MiA3NCAzMjEgMTA1LjUgMjg5LjVMMjE3LjcgMTc3LjJjMzEuNS0zMS41IDgyLjUtMzEuNSAxMTQgMGMyNy45IDI3LjkgMzEuNSA3MS44IDguNiAxMDMuOWwtMS4xIDEuNmMtMTAuMyAxNC40LTYuOSAzNC40IDcuNCA0NC42czM0LjQgNi45IDQ0LjYtNy40bDEuMS0xLjZDNDMzLjUgMjYwLjggNDI3IDE4MiAzNzcgMTMyYy01Ni41LTU2LjUtMTQ4LTU2LjUtMjA0LjUgMEw2MC4yIDI0NC4zeiIvPjwvc3ZnPg==');
@@ -7683,6 +7725,10 @@ html .layout .l-bottom div.plain > article .views-field-body, html .layout .l-mi
   line-height: 1.1;
 }
 
+.field-label-inline .field-label, .field-label-inline .field-items {
+  float: none;
+}
+
 .field-name-body h3, .field-name-body h4, .field-name-body h5, .field-name-body h6{
   margin-top: 3rem;
 }
@@ -7760,15 +7806,15 @@ a.cta::after, a.primary::after, .link--cta-primary::after, .cta-link::after, a.b
   margin-right: 1rem;
   display: inline-block;
   height: 2rem;
-  width: 1.5rem;
+  width: 2rem;
   --tw-bg-opacity: 1;
   background-color: rgb(46 45 41 / var(--tw-bg-opacity, 1));
   vertical-align: middle;
   content: '';
   -webkit-mask-size: contain;
           mask-size: contain;
-  -webkit-mask-position: bottom center;
-          mask-position: bottom center;
+  -webkit-mask-position: center center;
+          mask-position: center center;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
   -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTkiIHZpZXdCb3g9IjAgMCAxOCAxOSIgZmlsbD0ibm9uZSIKICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNOS4yNjM2MSAxNC42MzY0QzguOTEyMTQgMTQuMjg0OSA4LjkxMjE0IDEzLjcxNTEgOS4yNjM2MSAxMy4zNjM2TDEzLjEyNzIgOS41MDAwMUw5LjI2MzYxIDUuNjM2NEM4LjkxMjE0IDUuMjg0OTMgOC45MTIxNCA0LjcxNTA4IDkuMjYzNjEgNC4zNjM2MUM5LjYxNTA4IDQuMDEyMTQgMTAuMTg0OSA0LjAxMjE0IDEwLjUzNjQgNC4zNjM2MUwxNS4wMzY0IDguODYzNjFDMTUuMzg3OSA5LjIxNTA4IDE1LjM4NzkgOS43ODQ5MyAxNS4wMzY0IDEwLjEzNjRMMTAuNTM2NCAxNC42MzY0QzEwLjE4NDkgMTQuOTg3OSA5LjYxNTA4IDE0Ljk4NzkgOS4yNjM2MSAxNC42MzY0WiIgZmlsbD0iY3VycmVudENvbG9yIi8+CiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0zLjg2MzYxIDE0LjYzNjRDMy41MTIxNCAxNC4yODQ5IDMuNTEyMTQgMTMuNzE1MSAzLjg2MzYxIDEzLjM2MzZMNy43MjcyMSA5LjUwMDAxTDMuODYzNjEgNS42MzY0QzMuNTEyMTQgNS4yODQ5MyAzLjUxMjE0IDQuNzE1MDggMy44NjM2MSA0LjM2MzYxQzQuMjE1MDggNC4wMTIxNCA0Ljc4NDkzIDQuMDEyMTQgNS4xMzY0IDQuMzYzNjFMOS42MzY0IDguODYzNjFDOS45ODc4NyA5LjIxNTA4IDkuOTg3ODcgOS43ODQ5MyA5LjYzNjQgMTAuMTM2NEw1LjEzNjQgMTQuNjM2NEM0Ljc4NDkzIDE0Ljk4NzkgNC4yMTUwOCAxNC45ODc5IDMuODYzNjEgMTQuNjM2NFoiIGZpbGw9ImN1cnJlbnRDb2xvciIvPgo8L3N2Zz4K");
