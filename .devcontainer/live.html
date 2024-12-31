@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Live Preview</title>
+        <style type="text/css">
+            body, html
+            {
+                margin: 0; padding: 0; height: 100%; overflow: hidden;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div style="position:absolute; left: 0; right: 0; bottom: 0; top: 0px">
+            <iframe width="100%" height="100%" frameborder="0" src="/"></iframe>
+        </div>
+    </body>
+    <script>
+      countdown = 0;
+      window.setInterval(function() {
+        document.title = "Live Preview: " + countdown;
+        if (countdown-- <= 0) {
+          countdown = 5;
+          document.title = "Live Preview: ↺ "
+          reloadIFrame();
+        }
+      }, 1000);
+
+      function reloadIFrame() {
+          document.getElementById('iframe').contentWindow.location.reload();
+      }
+  </script>
+</html>

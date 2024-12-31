@@ -1,7 +1,7 @@
 # https://github.com/devcontainers/images/blob/main/src/php/.devcontainer/Dockerfile
 FROM mcr.microsoft.com/devcontainers/php:0-8.1-bullseye
 
-RUN a2enmod rewrite && a2enmod headers
+RUN a2enmod rewrite
 
 RUN apt-get update && \
 		apt-get install -y \

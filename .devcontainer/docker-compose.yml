@@ -11,6 +11,7 @@ services:
       - ../:/workspace
       - ../profiles:/var/www/html/profiles:ro
       - ../:/var/www/html/themes/stanford_decanter:ro
+      - ./live.html:/var/www/html/live/index.html:ro
     ports:
       - 8000:80
     environment:
