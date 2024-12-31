@@ -1,0 +1,28 @@
+services:
+  app:
+    build:
+      context: ../../
+      dockerfile: Containerfile
+    links:
+      - db
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - 8888:80
+    environment:
+      - MYSQL_HOST=db
+      - USER=root
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+
+  db:
+    image: mariadb:11
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      start_period: 10s
+      interval: 10s
+      timeout: 5s
+      retries: 3

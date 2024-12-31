@@ -1,0 +1,14 @@
+#!/bin/bash
+
+rm -rf /var/www/html/files/config*
+
+mariadb -h db --user=root --password=root -e 'DROP DATABASE IF EXISTS app; CREATE DATABASE app'
+
+bd site-install --auto --db-name=app --db-user=root --db-pass=root --db-host=db \
+      --profile=decanter_profile
+
+bd en devel devel_generate
+
+chown --quiet -R www-data:www-data /var/www/html
+
+apache2-foreground
