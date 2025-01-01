@@ -1,4 +1,15 @@
 services:
+  db:
+    image: mariadb:11
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      start_period: 10s
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
   app:
     build:
       context: ../../
@@ -15,14 +26,21 @@ services:
       - USER=root
       - MYSQL_USER=root
       - MYSQL_PASSWORD=root
-
-  db:
-    image: mariadb:11
-    environment:
-      - MYSQL_ROOT_PASSWORD=root
     healthcheck:
-      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      test: ["CMD", "curl", "-f", "http://localhost"]
       start_period: 10s
       interval: 10s
       timeout: 5s
       retries: 3
+
+  backstop:
+    image: backstopjs/backstopjs
+    command: --config=/backstop.js reference
+    depends_on:
+      app:
+        condition: service_healthy
+    volumes:
+      - ./backstop.js:/backstop.js
+      - ../../output/vrt:/output
+      - ../urls.txt:/urls.txt
+      - ./scripts:/scripts
