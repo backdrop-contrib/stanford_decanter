@@ -35,3 +35,5 @@ dependencies[] = update
 dependencies[] = views
 dependencies[] = views_ui
 dependencies[] = theme_hooks
+
+dependencies[] = devel

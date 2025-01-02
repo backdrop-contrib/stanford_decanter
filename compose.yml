@@ -5,15 +5,12 @@ services:
       - MYSQL_ROOT_PASSWORD=root
     healthcheck:
       test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
-      start_period: 10s
       interval: 10s
-      timeout: 5s
-      retries: 3
 
-  app:
+  php:
     build:
-      context: ../../
-      dockerfile: Containerfile
+      dockerfile: ./containerfile
+      context: ./
     links:
       - db
     depends_on:
@@ -21,26 +18,22 @@ services:
         condition: service_healthy
     ports:
       - 8888:80
-    environment:
-      - MYSQL_HOST=db
-      - USER=root
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=root
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost"]
-      start_period: 10s
       interval: 10s
-      timeout: 5s
-      retries: 3
+    volumes:
+      - ./:/workspace
 
   backstop:
     image: backstopjs/backstopjs
-    command: --config=/backstop.js reference
+    command: --config=/config.js remote
+    links:
+      - php:app
     depends_on:
-      app:
+      php:
         condition: service_healthy
     volumes:
-      - ./backstop.js:/backstop.js
-      - ../../output/vrt:/output
-      - ../urls.txt:/urls.txt
-      - ./scripts:/scripts
+      - ./output/vrt:/output
+      - .ops/backstop.js:/config.js
+      - .ops/vrt-scripts:/scripts
+      - .ops/urls.txt:/urls.txt

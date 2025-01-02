@@ -14,9 +14,9 @@ module.exports = {
   "scenarios": [],
   "paths": {
     "engine_scripts":     "/scripts",
-    "html_report":        "/output",
-    "bitmaps_reference":  "/output/bitmaps_approved",
-    "bitmaps_test":       "/output/bitmaps_test",
+    "html_report":        "/output/report",
+    "bitmaps_reference":  "/output/approved",
+    "bitmaps_test":       "/output/test",
   },
   "report": ["browser","json"],
   "engine": "playwright",
@@ -34,7 +34,7 @@ module.exports = {
   "debug": false,
   "debugWindow": false,
   "scenarioLogsInReports": true,
-  "fileNameTemplate": '{scenarioLabel}-{viewportLabel}',
+  "fileNameTemplate": '{scenarioLabel}--{viewportLabel}',
 }
 
 try {
@@ -44,7 +44,7 @@ try {
     .forEach((url) => {
                 module.exports.scenarios.push(
                   {
-                    "label":  url == '/' ? 'home' : url.replace('/', ''),
+                    "label":  url.split("\t").pop(),
                     "url":    `http://app${url}`,
                   }
                 );

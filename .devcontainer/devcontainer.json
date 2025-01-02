@@ -1,26 +1,36 @@
 // See: https://www.drupal.org/docs/develop/development-tools/editors-and-ides/configuring-visual-studio-code
 {
 	"name": "${localWorkspaceFolderBasename} - Dev Container",
-	"dockerComposeFile": "docker-compose.yml",
-	"service": "devcontainer",
+	"dockerComposeFile": "../compose.yml",
+	"service": "php",
 	"workspaceFolder": "/workspace",
 	"containerEnv": {
 		"PROJECT": "${localWorkspaceFolderBasename}",
 		"COMPOSE_PROJECT_NAME": "${localWorkspaceFolderBasename}",
 	},
-	"postStartCommand": "/workspace/.devcontainer/bin/install.sh",
-	"remoteUser": "root",
-	"forwardPorts": ["devcontainer:80"],
+	"postStartCommand": "install-app",
+	"forwardPorts": [8888],
 	"features": {
-		"ghcr.io/devcontainers/features/git:1": {},
-		"ghcr.io/devcontainers/features/node:1": {},
-		"ghcr.io/devcontainers-extra/features/vscode-cli:1": {},
-		"ghcr.io/stuartleeks/dev-container-features/shell-history:0": {}
+		"ghcr.io/devcontainers/features/common-utils:2": {
+				"installZsh": "true",
+				"username": "vscode",
+				"userUid": "1000",
+				"userGid": "1000",
+				"upgradePackages": "true"
+		},
+		"ghcr.io/devcontainers/features/node:1": "none"
+		// "ghcr.io/devcontainers/features/git:1": {
+		// 		"version": "latest",
+		// 		"ppa": "false"
+		// }
 	},
+	"overrideFeatureInstallOrder": [
+		"ghcr.io/devcontainers/features/common-utils"
+	],
 	"customizations": {
 		"vscode": {
 			"settings": {
-				"peacock.remoteColor": "#f9e64f",
+				"php.validate.executablePath": "/usr/local/bin/php",
 				"workbench.colorCustomizations": {
 					"activityBar.activeBackground": "#fbed80",
 					"activityBar.background": "#fbed80",
@@ -41,7 +51,7 @@
 					"titleBar.inactiveForeground": "#15202b99"
 				},
 				"files.exclude": {
-					// ".*": true, // Hide all hidden files for a focused view of just the source
+					".*": true,
 					"**/.git": true,
 					"**/.DS_Store": true,
 					"**/Thumbs.db": true
@@ -49,17 +59,15 @@
 				"cSpell.enabled": true,
 				"cSpell.words": [
 						"devcontainer",
-						"baskstop",
+						"backstop",
 						"devcontainer",
-						"dropdev",
 						"preprocess",
 						"proot",
 						"reqs",
-						"savethebw",
-						"todid",
 						"viewports",
 						"yamls",
-						"zcat"
+						"zcat",
+						"devel"
 					],
 					"files.associations": {
 						"*.inc": "php",
@@ -77,20 +85,17 @@
 					"editor.tabSize": 2
     },
     "extensions": [
-					"philfontaine.autolaunch",
 					"xdebug.php-debug",
 					"bmewburn.vscode-intelephense-client",
+					"mrmlnc.vscode-apache",
 					"streetsidesoftware.code-spell-checker",
 					"EditorConfig.EditorConfig",
 					"ms-azuretools.vscode-docker",
-					"mrmlnc.vscode-apache",
 					"DavidAnson.vscode-markdownlint",
 					"yzhang.markdown-all-in-one",
 					"donjayamanne.githistory",
-					"ritwickdey.LiveServer",
-					"johnpapa.vscode-peacock",
 					"bradlc.vscode-tailwindcss",
-					"task.vscode-task"
+					"github.vscode-github-actions"
 				]
 			}
 		}

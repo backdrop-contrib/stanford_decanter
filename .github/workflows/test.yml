@@ -1,0 +1,27 @@
+name: Test theme
+run-name: Visual testing 👓
+on: [push]
+permissions:
+  contents: write
+jobs:
+  Capture-Reference:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Run docker-compose
+        uses: hoverkraft-tech/compose-action@v2.0.1
+        with:
+          compose-file: "../.ops/vrt/docker-compose.yml"
+      - name: Execute backstop reference
+        run: |
+          docker-compose exec backstop reference --config=/config.js
+      - name: Commit results
+        run: |
+          if ! git diff-index --quiet HEAD; then
+            git config --global user.name '${{ github.actor }}'
+            git config --global user.email '${{ github.actor }}@users.noreply.github.com'
+            git commit -am "Automated artifact build by Github Actions"
+            git push
+          fi
