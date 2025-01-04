@@ -1,6 +1,5 @@
 ARG VARIANT=8.1-apache-bullseye
 FROM php:${VARIANT}
-# FROM mcr.microsoft.com/devcontainers/php:0-8.1-bullseye
 
 RUN a2enmod rewrite
 
@@ -48,6 +47,7 @@ RUN  git clone https://github.com/backdrop-contrib/bee.git /bee \
           devel \
   && chown -R www-data:www-data /var/www/html
 
+# Add the theme code to the bd install.
 COPY ./ /workspace
 
 RUN  cd /var/www/html \
