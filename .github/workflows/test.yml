@@ -14,7 +14,7 @@ jobs:
       #     compose-file: "./compose.yml"
       - name: Execute backstop reference
         run: |
-          docker compose exec backstop backstop reference --config=/config.js
+          docker compose run backstop reference --config=/config.js
       - name: Commit results
         run: |
           if ! git diff-index --quiet HEAD; then
