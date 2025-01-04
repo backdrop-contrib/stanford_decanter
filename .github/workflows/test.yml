@@ -1,5 +1,5 @@
-name: Test theme
-run-name: Visual testing 👓
+name: Test Theme
+run-name: Running visual tests 👓
 on: [push]
 permissions:
   contents: write
@@ -16,7 +16,7 @@ jobs:
           compose-file: "./compose.yml"
       - name: Execute backstop reference
         run: |
-          docker-compose exec backstop reference --config=/config.js
+          docker-compose exec backstop backstop reference --config=/config.js
       - name: Commit results
         run: |
           if ! git diff-index --quiet HEAD; then

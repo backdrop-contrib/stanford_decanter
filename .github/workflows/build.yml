@@ -1,5 +1,5 @@
 name: Build Theme Artifacts
-run-name: Decanter artifact build 🛠️
+run-name: Building artifacts 🛠️
 on: [push]
 permissions:
   contents: write
