@@ -1,0 +1,4 @@
+/							Home
+/menus						Menus
+/events						Events
+/events/past-events			Past Events
