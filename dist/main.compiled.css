@@ -4536,29 +4536,13 @@ html .layout .l-sidebar + .l-content{
   width: 0.6rem;
 }
 
-@media (min-width: 768px){
-  .l-sidebar .block-menu{
-    min-width: 20rem;
-  }
-}
-
-@media (min-width: 992px){
-  .l-sidebar .block-menu{
-    min-width: 25rem;
-  }
-}
-
-@media (min-width: 1200px){
-  .l-sidebar .block-menu{
-    min-width: 30rem;
-  }
-}
-
 .l-sidebar .block-menu .menu-tree li.expanded a, .l-sidebar .block-menu .menu-tree li.collapsed a, .l-sidebar .block-menu .menu-tree li.leaf a{
   margin-bottom: 0;
   display: inline-block;
   width: 100%;
   padding-left: 1.6rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (min-width: 768px){

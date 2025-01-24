@@ -1,0 +1,301 @@
+{
+    "_config_name": "layout.layout.long_menu",
+    "path": "menus",
+    "name": "long_menu",
+    "title": "Long Menu",
+    "description": null,
+    "renderer_name": "standard",
+    "module": null,
+    "weight": 0,
+    "storage": 1,
+    "layout_template": "decanter",
+    "disabled": false,
+    "settings": {
+        "title": "",
+        "title_display": "default",
+        "title_block": null
+    },
+    "positions": {
+        "identitybar": [
+            "1de34c84-a2ea-4906-af3a-580bc0aa1baf"
+        ],
+        "header": [
+            "0473e454-a49e-4278-8a3a-587bf7c64375",
+            "73a032ba-47e8-448a-9d08-8f7e72d71ba8"
+        ],
+        "hero": [],
+        "top": [
+            "ef74ab52-5257-4f5f-922d-45a3008fec85",
+            "18c6fa63-57f4-453c-8000-a0a5a1439d93"
+        ],
+        "content": [
+            "fa91464a-bba7-4d17-bc46-702de95e758e"
+        ],
+        "sidebar": [
+            "e0455630-74cc-4b50-b700-d302c61f3738"
+        ],
+        "sidebar2": [],
+        "bottom": [],
+        "footer": [
+            "333a1bef-37b5-4f28-bf2b-43b7e2fdc47e"
+        ],
+        "stanfordfooter": [
+            "61eb912b-ebcd-43d2-8800-bd0bd6e4aade"
+        ],
+        "title": []
+    },
+    "contexts": [],
+    "relationships": [],
+    "content": {
+        "1de34c84-a2ea-4906-af3a-580bc0aa1baf": {
+            "plugin": "theme_hooks:stanford_decanter_identity_bar",
+            "data": {
+                "status": 1,
+                "module": "theme_hooks",
+                "delta": "stanford_decanter_identity_bar",
+                "settings": {
+                    "title_display": "default",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": [],
+                    "contexts": [],
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "1de34c84-a2ea-4906-af3a-580bc0aa1baf",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        },
+        "0473e454-a49e-4278-8a3a-587bf7c64375": {
+            "plugin": "system:header",
+            "data": {
+                "status": 1,
+                "module": "system",
+                "delta": "header",
+                "settings": {
+                    "title_display": "default",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": {
+                        "menu": "user-menu",
+                        "logo": 1,
+                        "site_name": 1,
+                        "site_slogan": 1
+                    },
+                    "contexts": []
+                },
+                "uuid": "0473e454-a49e-4278-8a3a-587bf7c64375",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        },
+        "73a032ba-47e8-448a-9d08-8f7e72d71ba8": {
+            "plugin": "system:main-menu",
+            "data": {
+                "status": 1,
+                "module": "system",
+                "delta": "main-menu",
+                "settings": {
+                    "title_display": "none",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": {
+                        "style": "dropdown",
+                        "level": 1,
+                        "depth": 0
+                    },
+                    "contexts": []
+                },
+                "uuid": "73a032ba-47e8-448a-9d08-8f7e72d71ba8",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        },
+        "ef74ab52-5257-4f5f-922d-45a3008fec85": {
+            "plugin": "system:breadcrumb",
+            "data": {
+                "status": 1,
+                "module": "system",
+                "delta": "breadcrumb",
+                "settings": {
+                    "title_display": "default",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": [],
+                    "contexts": []
+                },
+                "uuid": "ef74ab52-5257-4f5f-922d-45a3008fec85",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        },
+        "18c6fa63-57f4-453c-8000-a0a5a1439d93": {
+            "plugin": "system:page_components:title_combo",
+            "data": {
+                "status": 1,
+                "module": "system",
+                "delta": "page_components",
+                "settings": {
+                    "title_display": "default",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": [],
+                    "contexts": [],
+                    "title_tag": "h1",
+                    "title_classes": "page-title",
+                    "tab-type": "both",
+                    "tab_type": "both"
+                },
+                "uuid": "18c6fa63-57f4-453c-8000-a0a5a1439d93",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        },
+        "fa91464a-bba7-4d17-bc46-702de95e758e": {
+            "plugin": "layout:custom_block",
+            "data": {
+                "status": 1,
+                "module": "layout",
+                "delta": "custom_block",
+                "settings": {
+                    "title_display": "default",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": [],
+                    "contexts": [],
+                    "content": "<p>\r\n    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim metus pellentesque semper faucibus. Quisque ut porttitor diam. Donec mattis nulla ligula, in eleifend ex pulvinar in. Nam ultrices sed metus sed mattis. Fusce interdum ante non convallis placerat. Mauris auctor, sem a molestie dignissim, sapien metus auctor dolor, vitae fermentum quam quam in leo. Sed at magna volutpat, aliquet odio quis, suscipit ipsum. Nulla sit amet risus pellentesque enim rutrum scelerisque. Vivamus in nulla eget nisi dignissim laoreet nec ut urna. Duis tincidunt odio metus, in rhoncus ante tristique vel. In hac habitasse platea dictumst. Integer ullamcorper dui sit amet nibh scelerisque lobortis. Cras mattis eu diam sit amet imperdiet. Nunc ligula urna, venenatis sed dui ut, auctor euismod arcu.&nbsp;\r\n</p>\r\n<p>\r\n    Praesent bibendum massa ac arcu rutrum, id lacinia metus scelerisque. Suspendisse lorem ipsum, dapibus commodo faucibus id, euismod id turpis. Suspendisse varius, dolor vel sagittis finibus, felis sapien congue felis, id sollicitudin ante turpis non quam. Aliquam ligula risus, tincidunt eu libero et, porta aliquam justo. Etiam sollicitudin lectus hendrerit, porttitor libero et, consequat eros. Nullam nibh lorem, varius sit amet feugiat congue, aliquet ac nunc. Vestibulum vitae enim purus. Nunc vitae eleifend sapien, a semper nisi. Curabitur ligula lorem, blandit nec ultricies a, aliquam eu odio. Sed accumsan elit vitae erat dictum ultrices.&nbsp;\r\n</p>\r\n<p>\r\n    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sit amet mauris dictum nisl pharetra accumsan. Nunc et tincidunt nibh. Nullam quis suscipit magna, vitae gravida tortor. Nullam at ornare mi.\r\n</p>",
+                    "format": "content_editor_text_format",
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "fa91464a-bba7-4d17-bc46-702de95e758e",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        },
+        "e0455630-74cc-4b50-b700-d302c61f3738": {
+            "plugin": "system:main-menu",
+            "data": {
+                "status": 1,
+                "module": "system",
+                "delta": "main-menu",
+                "settings": {
+                    "title_display": "default",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": {
+                        "menu_name": "main-menu",
+                        "style": "tree",
+                        "level": "2",
+                        "depth": "1",
+                        "expand_all": 0,
+                        "clickdown": 0,
+                        "toggle": 1,
+                        "toggle_text": "Menu",
+                        "collapse": "default",
+                        "accordion": 0
+                    },
+                    "contexts": [],
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "e0455630-74cc-4b50-b700-d302c61f3738",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        },
+        "333a1bef-37b5-4f28-bf2b-43b7e2fdc47e": {
+            "plugin": "system:powered-by",
+            "data": {
+                "status": 1,
+                "module": "system",
+                "delta": "powered-by",
+                "settings": {
+                    "title_display": "default",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": [],
+                    "contexts": []
+                },
+                "uuid": "333a1bef-37b5-4f28-bf2b-43b7e2fdc47e",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        },
+        "61eb912b-ebcd-43d2-8800-bd0bd6e4aade": {
+            "plugin": "theme_hooks:stanford_decanter_global_footer",
+            "data": {
+                "status": 1,
+                "module": "theme_hooks",
+                "delta": "stanford_decanter_global_footer",
+                "settings": {
+                    "title_display": "default",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": [],
+                    "contexts": [],
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "61eb912b-ebcd-43d2-8800-bd0bd6e4aade",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
