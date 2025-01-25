@@ -4,8 +4,8 @@
     "repository": "https://github.com/backdrop-contrib/stanford_decanter",
     "config": {},
     "scripts": {
-        "build": "yarn tailwindcss -i src/main.css -o css/main.css --postcss",
-        "watch": "yarn tailwindcss -i src/main.css -o css/main.css --postcss --watch"
+        "build": "yarn tailwindcss -i src/main.css -o dist/main.compiled.css --postcss",
+        "watch": "yarn tailwindcss -i src/main.css -o dist/main.compiled.css --postcss --watch"
     },
     "devDependencies": {
         "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",

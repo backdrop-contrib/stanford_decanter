@@ -38,6 +38,48 @@ Credits
 https://decanter.stanford.edu/
 
 
+Releases
+--------
+
+The 1.x branch is End-of-life. If possible move to the latest active branch.
+
+The current active branch is `1.x-2.x`.
+
+The theme is currently in active development. New features will be added and some minor backwards incompatibility is to expected but will be kept to a minimum. Do not upgrade unless you need to or have the time to fix what breaks.
+
+Latest:
+
+  - 1.x-2.x-alpha4
+
+Future
+
+  - 1.x-2.x-bravo
+  - 1.x-2.x-charlie
+  - 1.x-2.x-delta
+  - 1.x-2.x-echo
+  - 1.x-2.x-foxtrot
+  - 1.x-2.x-golf
+  - 1.x-2.x-hotel
+  - 1.x-2.x-india
+  - 1.x-2.x-juliett
+  - 1.x-2.x-kilo
+  - 1.x-2.x-lima
+  - 1.x-2.x-mike
+  - 1.x-2.x-november
+  - 1.x-2.x-oscar
+  - 1.x-2.x-papa
+  - 1.x-2.x-quebec
+  - 1.x-2.x-romeo
+  - 1.x-2.x-sierra
+  - 1.x-2.x-tango
+  - 1.x-2.x-uniform
+  - 1.x-2.x-victor
+  - 1.x-2.x-whiskey
+  - 1.x-2.x-xray
+  - 1.x-2.x-yankee
+  - 1.x-2.x-zulu
+
+
 License
 -------
 This project is GPL v2 software.

@@ -1,59 +1,50 @@
 <?php
 /**
  * @file
- * Theme settings for MyTheme.
+ * Theme settings for Stanford Decanter.
  */
 
-if (module_exists('color')) {
-  $form['header'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Header Settings'),
-    '#collapsible' => TRUE,
-  );
+ $form['global'] = array(
+  '#type' => 'fieldset',
+  '#title' => t('Global Settings'),
+  '#collapsible' => TRUE,
+);
+$fields = array(
+  'identity',
+  'identity_text',
+  'bg',
+  'text',
+  'link',
+  'title',
+);
+foreach ($fields as $field) {
+  $form['global'][$field] = color_get_color_element($form['theme']['#value'], $field, $form);
+}
 
+$form['forms'] = array(
+  '#type' => 'fieldset',
+  '#title' => t('Form Settings'),
+  '#collapsible' => TRUE,
+);
+$fields = array(
+  'form_borders',
+  'form_focus', 
+  'form_error',
+  'form_ok'
+);
+foreach ($fields as $field) {
+  $form['forms'][$field] = color_get_color_element($form['theme']['#value'], $field, $form);
+}
 
-  $fields = array(
-    'header',
-    'titleslogan',
-    'stanfordwordmark',
-
-    'menubg',
-    'menutext',
-    'menuhover'
-  );
-  foreach ($fields as $field) {
-    $form['header'][$field] = color_get_color_element($form['theme']['#value'], $field, $form);
-  }
-
-  $form['general'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('General Settings'),
-    '#collapsible' => TRUE,
-  );
-
-  $fields = array(
-    'bg',
-    'text',
-    'link',
-    'title',
-    'identitybg',
-    'identitytext',
-  );
-  foreach ($fields as $field) {
-    $form['general'][$field] = color_get_color_element($form['theme']['#value'], $field, $form);
-  }
-
-  $form['footer'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Footer Settings'),
-    '#collapsible' => TRUE,
-  );
-  $fields = array(
-    'footerborder',
-    'footer',
-    'footertext',
-  );
-  foreach ($fields as $field) {
-    $form['footer'][$field] = color_get_color_element($form['theme']['#value'], $field, $form);
-  }
+$form['footer'] = array(
+  '#type' => 'fieldset',
+  '#title' => t('Local Footer Settings'),
+  '#collapsible' => TRUE,
+);
+$fields = array(
+  'footer',
+  'footer_text', 
+);
+foreach ($fields as $field) {
+  $form['footer'][$field] = color_get_color_element($form['theme']['#value'], $field, $form);
 }

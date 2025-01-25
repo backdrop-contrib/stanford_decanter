@@ -1,0 +1,39 @@
+services:
+  db:
+    image: mariadb:11
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+
+  php:
+    build:
+      dockerfile: ./containerfile
+      context: ./
+    links:
+      - db
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - 8888:80
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost"]
+      interval: 10s
+    volumes:
+      - ./:/workspace
+
+  backstop:
+    image: backstopjs/backstopjs
+    command: --config=/config.js remote
+    links:
+      - php:app
+    depends_on:
+      php:
+        condition: service_healthy
+    volumes:
+      - .ops/output/vrt:/output
+      - .ops/backstop.js:/config.js
+      - .ops/vrt-scripts:/scripts
+      - .ops/urls.txt:/urls.txt

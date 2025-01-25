@@ -1,0 +1,219 @@
+html body,
+.l-header 
+{
+  background-color: #FFFFFE;
+  color: #2E2D28;
+}
+
+.header-identity-wrapper a,
+.l-header .header-identity-wrapper .header-site-name-link {
+  color: #2E2D28;
+}
+
+.l-header .l-header-inner .block-search-form .form-actions .form-submit,
+.menu-toggle-button-icon, .menu-toggle-button-icon:before, .menu-toggle-button-icon:after
+{
+  background-color: #2E2D28;
+}
+
+
+/* Body links */
+
+a
+{
+  color: #006CB8;
+  text-decoration-color: #006CB8;
+}
+
+a.cta::after,
+a.primary::after,
+.field-type-text-long .link--cta-primary::after,
+.field-type-text-long span.ext,
+.field-type-text-long .cta-link::after,
+.field-type-text-with-summary .cta-link::after,
+.field-type-text-with-summary span.ext
+{
+   background-color: #006CB8;
+}
+
+/* Title links */
+h3 a, 
+h4 a, 
+h5 a, 
+h6 a, 
+.l-content h3 a,
+.l-content h4 a, 
+.l-content h5 a, 
+.l-content h6 a, 
+body .node-readmore a,
+.node-title a:hover,
+html body .l-footer a,
+a.forward,
+a.back
+{
+  color: #B1040D;
+  text-decoration-color: #B1040D;
+}
+.header-menu ul li a:hover {
+  text-decoration-color: #B1040D;
+}
+
+.node-stanford-person .field-name-field-s-person-profile-picture {
+  border-color: #B1040D;
+}
+.field-type-text-long h3 span.ext,
+.field-type-text-long h4 span.ext,
+.field-type-text-long h5 span.ext,
+.field-type-text-long h6 span.ext
+{
+  background-color: #B1040D;
+}
+
+.view-mode-card {
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: #2E2D28;
+  }
+}
+
+span.ext,
+.ext-link {
+  background-color: #B1040D;
+}
+
+.block-theme-hooks-stanford-decanter-identity-bar .block-content,
+.block-theme-hooks-stanford-decanter-identity-bar .block-content a,
+.block-theme-hooks-stanford-decanter-identity-bar .block-content a:hover,
+.block-theme-hooks-stanford-decanter-global-footer,
+.block-theme-hooks-stanford-decanter-global-footer a,
+.block-theme-hooks-stanford-decanter-global-footer a:hover
+{
+  background-color: #8C1517;
+  color: #FFFFFC;
+}
+
+.header-menu .links a,
+.l-header .block-menu ul.menu li a,
+.l-sidebar .block-menu ul.menu li a
+{
+  color: #2E2D28;
+}
+body .header-menu .links a:after {
+  background-color: #2E2D28;
+}
+
+.l-sidebar .block-menu ul.menu li a:hover,
+.l-header .block-menu ul.menu li a:hover {
+  color: #B1040D;
+}
+.l-header .l-header-inner .block-system-main-menu .block-content ul.menu > li > a::before {
+  background-color: #B1040D;
+}
+
+.l-header .l-header-inner .block-system-main-menu ul,
+.menu-dropdown ul a:hover, 
+.menu-dropdown ul a:focus, 
+.menu-dropdown ul a:active, 
+.menu-dropdown ul a.highlighted,
+.menu-dropdown ul a
+{
+  background-color: #FFFFFE;
+}
+
+.hero .card-paragraph {
+  color: #2E2D28;
+}
+
+.breadcrumb li a {
+  color: #2E2D28;
+}
+.breadcrumb li a:hover {
+  color: #000;
+}
+
+.l-footer, .l-stanfordfooter {
+  background-color: #F4F4F4;
+  border-top: 1px solid #F4F4F3;
+  color: #2E2D25;
+}
+
+
+/* Logo */
+
+html body .header-identity-wrapper .logo a {
+  color: #8C1517;
+}
+
+
+/* Form items */
+
+.btn,
+.l-content .btn,
+.l-footer .btn,
+.button,
+.cta-btn,
+.btn-cta,
+.cta-button,
+.button-primary,
+button, 
+input:where([type='button']), 
+input:where([type='reset']), 
+input:where([type='submit'])
+{
+  border-color: #B1040D;
+  background-color: #B1040D;
+  text-decoration-color: #B1040D;
+  color: #fff
+}
+.btn span.ext,
+a.btn-cta::after {
+  background-color: #fff;
+}
+
+#edit-reset,
+.btn-secondary
+{
+  background-color: #fff;
+  color: #B1040D;
+}
+
+.btn-green {
+  background-color: #008566;
+  border-color: #008566;
+  color: #fff;
+}
+.btn-green-lt {
+  background-color: #1AECBA;
+  border-color: #1AECBA;
+  color: #000;
+}
+.btn-green-dk {
+  background-color: #006F54;
+  border-color: #006F54;
+  color: #000;
+}
+
+.btn-blue {
+  background-color: #006CB8;
+  border-color: #006CB8;
+  color: #fff;
+}
+.btn-blue-lt {
+  background-color: #6FC3FF;
+  border-color: #6FC3FF;
+  color: #000;
+}
+.btn-blue-dk {
+  background-color: #00548f;
+  border-color: #00548f;
+  color: #000;
+}
+
+[type='text'],input:where(:not([type])),[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select
+{
+  outline:none;
+  border-color: #53565A;
+}
+[type='text']:focus, input:where(:not([type])):focus, [type='email']:focus, [type='url']:focus, [type='password']:focus, [type='number']:focus, [type='date']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='week']:focus, [multiple]:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #006CB7;
+}

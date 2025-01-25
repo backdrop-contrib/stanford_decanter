@@ -1,0 +1,69 @@
+// See: https://www.drupal.org/docs/develop/development-tools/editors-and-ides/configuring-visual-studio-code
+{
+	"name": "${localWorkspaceFolderBasename} - Dev Container",
+	"dockerComposeFile": "../compose.yml",
+	"service": "php",
+	"workspaceFolder": "/workspace",
+	"postStartCommand": "install-app",
+	"forwardPorts": [8888],
+	"features": {
+	  "ghcr.io/devcontainers/features/common-utils:2": {},
+	  "ghcr.io/devcontainers/features/node:1": {}
+	},
+	"overrideFeatureInstallOrder": [
+	  "ghcr.io/devcontainers/features/common-utils"
+	],
+	"customizations": {
+	  "vscode": {
+		"settings": {
+		  "php.validate.executablePath": "/usr/local/bin/php",
+		  "workbench.colorCustomizations": {
+			"titleBar.activeBackground": "#8C1515",
+			"titleBar.activeForeground": "#ffffff",
+			"titleBar.inactiveBackground": "#B83A4B",
+			"titleBar.inactiveForeground": "#82828299"
+		  },
+		  "files.exclude": {
+			".*": true,
+			"**/.git": true,
+			"**/.DS_Store": true,
+			"**/Thumbs.db": true
+		  },
+		  "cSpell.enabled": true,
+		  "cSpell.words": [
+			  "devcontainer",
+			  "backstop",
+			  "devcontainer",
+			  "preprocess",
+			  "proot",
+			  "reqs",
+			  "viewports",
+			  "yamls",
+			  "zcat",
+			  "devel"
+			],
+			"files.associations": {
+			  "*.inc": "php",
+			  "*.module": "php",
+			  "*.theme": "php",
+			  "*.install": "php"
+			},
+			"[php]": {},
+			"workbench.startupEditor": "none",
+			"terminal.integrated.defaultProfile.linux": "zsh",
+			"editor.tabSize": 2
+	  },
+	  "extensions": [
+			"xdebug.php-debug",
+			"bmewburn.vscode-intelephense-client",
+			"mrmlnc.vscode-apache",
+			"streetsidesoftware.code-spell-checker",
+			"EditorConfig.EditorConfig",
+			"ms-azuretools.vscode-docker",
+			"yzhang.markdown-all-in-one",
+			"bradlc.vscode-tailwindcss",
+			"github.vscode-github-actions"
+		  ]
+		}
+	  }
+}

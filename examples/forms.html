@@ -3,6 +3,40 @@
   ...
 </fieldset>
 
+<label for="input__text" class="sr-only">Text Input</label>
+<input class="input" id="input__text" type="text" />
+
+<label for="input__password" class="sr-only">Password</label>
+<input class="input" id="input__password" type="password" />
+
+<label for="input__search" class="sr-only">Search</label>
+<input class="input" id="input__search" type="search" />
+
+<label for="select" class="sr-only">Select</label>
+<select class="select" id="select">
+  <optgroup label="Option Group">
+    <option>Option One</option>
+    <option>Option Two</option>
+    <option>Option Three</option>
+  </optgroup>
+</select>
+
+<ul>
+  <li>
+    <input class="radio" id="radio1" name="radio" type="radio" checked="true" />
+    <label class="label" for="radio1">Option 1</label>
+  </li>
+  <li>
+    <input class="radio" id="radio2" name="radio" type="radio" />
+    <label class="label" for="radio2">Option 2</label>
+  </li>
+  <li>
+    <input class="radio" id="radio3" name="radio" type="radio" />
+    <label class="label" for="radio3">Option 3</label>
+  </li>
+</ul>
+
+
 <ul>
   <li>
     <input className="checkbox" id="checkbox1" name="checkbox" type="checkbox" checked="checked" />
@@ -21,3 +55,8 @@
     <label className="label" for="checkbox3">Choice D</label>
   </li>
 </ul>
+
+
+<textarea id="textarea" rows="8" cols="48" placeholder="Enter your message here" class="textarea"></textarea>
+
+<button class="button" type="submit">Button</button>

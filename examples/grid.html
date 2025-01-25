@@ -1,224 +1,121 @@
-<h1>Tailwind Grid</h1>
-<div class="flex flex-col md:flex-row gap-xs lg:gap-lg xl:gap-xl 2xl:gap-2xl text-white rs-mb-2">
-  <div class="w-full md:w-1/2 bg-palo-verde-light rs-p-2">
-    <h3>6 of 12 columns</h3>
-    <p class="card-paragraph">This column stacks vertically for XS-SM breakpoints and spans 6 of 12
-      columns for MD and up; responsive grid gaps.</p>
-  </div>
-  <div class="w-full md:w-1/2 bg-palo-verde-dark rs-p-2">
-    <h3>6 of 12 columns</h3>
-    <p class="card-paragraph">This column stacks vertically for XS-SM breakpoints and spans 6 of 12
-      columns for MD and up; responsive grid gaps.</p>
-  </div>
-</div>
-<div class="flex flex-col sm:flex-row grid-gap rs-mb-2 text-white">
-  <div class="w-full sm:w-1/2 lg:w-3/4 bg-spirited rs-p-2">
-    <h3>8 of 12 columns</h3>
-    <p class="card-paragraph">This column stacks vertically for XS breakpoint; spans 6 of 12 columns for
-      SM-MD; spans 8 of 12 columns for LG and up; responsive column gaps using .grid-gap class.</p>
-  </div>
-  <div class="w-full sm:w-1/2 lg:w-1/4 bg-spirited-dark rs-p-2">
-    <h3>4 of 12 columns</h3>
-    <p class="card-paragraph">This column stacks vertically for XS breakpoint; spans 6 of 12 columns for
-      SM-MD; spans 4 of 12 columns for LG and up; responsive column gaps using .grid-gap class.</p>
-  </div>
-</div>
-
-<div class="overflow-hidden">
-  <div class="grid grid-cols-3 grid-gap">
-    <div class="bg-sky-light flex justify-center items-center rs-p-3 type-3 font-bold">
-      1
-    </div>
-    <div class="bg-sky-light flex justify-center items-center rs-p-3 type-3 font-bold">
-      2
-    </div>
-    <div class="bg-sky-light flex justify-center items-center rs-p-3 type-3 font-bold">
-      3
-    </div>
-    <div class="col-span-2 bg-sky-dark text-white flex justify-center items-center rs-p-3 type-3 font-bold">
-      4
-    </div>
-    <div class="bg-sky-light flex justify-center items-center rs-p-3 type-3 font-bold">
-      5
-    </div>
-    <div class="bg-sky-light flex justify-center items-center rs-p-3 type-3 font-bold">
-      6
-    </div>
-    <div class="col-span-2 bg-sky-dark text-white flex justify-center items-center rs-p-3 type-3 font-bold">
-      7
-    </div>
-    <div class="col-span-3 bg-sky text-white flex justify-center items-center rs-p-3 type-3 font-bold">
-      8
-    </div>
-  </div>
-</div>
-
-<div class="hero basefont-23 relative h-full max-h-500">
-  <div class="h-full w-full overflow-hidden absolute">
-    <img class="h-full w-full object-cover object-center" src="https://placekitten.com/1000/750" alt="" />
-  </div>
-  <div class="absolute block w-full h-full top-0" aria-hidden="true"
-    style="background: 'linear-gradient(rgba(0, 0, 0, 0), rgb(24, 29, 28))">
-  </div>
-  <div class="cc relative w-full rs-pt-9 rs-pb-4 top-0">
-    <div class="flex flex-col">
-      <div class="text-center text-white">
-        <p class="max-w-prose font-semibold leading-display text-m1 text-shadow-md md:text-4 mx-auto mb-01em">
-          Superheading</p>
-        <h2
-          class="leading-display font-serif font-bold leading-tight tracking-normal text-shadow-lg mb-02em sm:text-m6">
-          Headline</h2>
-        <p class="max-w-prose text-20 leading-display text-shadow mx-auto mb-0">Subheadline Donec sodales sagittis
-          magna. Cras non dolor. Vestibulum suscipit nulla quis orci. Fusce vulputate eleifend sapien. Nulla porta
-          dolor.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div className="grid md:grid-cols-4 grid-gap">
-  <header className="md:col-span-4">Header</header>
-  <aside>Sidebar</aside>
-  <main className="md:col-span-3">Main Content</main>
-  <footer className="md:col-span-4">Footer</footer>
-</div>
-
 <h1>Decanter Grid</h1>
 
-<h2>12 Grid</h2>
-<div class="gridded grid-12">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-  <div>6</div>
-  <div>7</div>
-  <div>8</div>
-  <div>9</div>
-  <div>10</div>
-  <div>11</div>
-  <div>12</div>
-</div>
 
 <h2>12 Grid</h2>
-<div class="gridded grid-12">
-  <div class="col-span-2">1</div>
-  <div class="col-span-3">2</div>
-  <div class="col-span-4">3</div>
-  <div class="col-span-5">4</div>
-  <div class="col-span-6">5</div>
-  <div class="col-span-7">6</div>
-  <div class="col-span-8">7</div>
-  <div class="col-span-9">8</div>
-  <div class="col-span-10">9</div>
-  <div class="col-span-11">10</div>
-  <div class="col-span-12">11</div>
-  <div class="col-span-1">12</div>
+
+The Decanter theme provides a responsive 12 column grid which is compatible with tailwind .col-* classes.
+
+<div class="rs-grid grid-demo">
+  <div class="">1</div>
+  <div class="">2</div>
+  <div class="">3</div>
+  <div class="">4</div>
+  <div class="">5</div>
+  <div class="">6</div>
+  <div class="">7</div>
+  <div class="">8</div>
+  <div class="">9</div>
+  <div class="">10</div>
+  <div class="">11</div>
+  <div class="">11</div>
+  
+  <div class="col-span-6">.col-span-6</div>
+  <div class="col-span-6">.col-span-6</div>
+
+  <div class="col-half">.col-half</div>
+  <div class="col-quarter">.col-quarter</div>
+  <div class="col-quarter">.col-quarter</div>
+
+  <div class="col-third">.col-third</div>
+  <div class="col-twothird">.col-twothird</div>
+
+  <div class="col-threequarter">.col-threequarter</div>
+  <div class="col-quarter">.col-quarter</div>
+  
+  <div class="col-span-4">.col-span-4</div>
+  <div class="col-span-4">.col-span-4</div>
+  <div class="col-span-4">.col-span-4</div>
+
+  <div class="col-span-3">.col-span-3</div>
+  <div class="col-span-3">.col-span-3</div>
+  <div class="col-span-3">.col-span-3</div>
+  <div class="col-span-3">.col-span-3</div>
+  
+  <div class="col-span-2">.col-span-2</div>
+  <div class="col-span-2">.col-span-2</div>
+  <div class="col-span-2">.col-span-2</div>
+  <div class="col-span-2">.col-span-2</div>
+  <div class="col-span-2">.col-span-2</div>
+  <div class="col-span-2">.col-span-2</div>  
 </div>
 
 
-<h2>6 Grid</h2>
-<div class="gridded grid-6">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-  <div>6</div>
-  <div>7</div>
-  <div>8</div>
-  <div>9</div>
-  <div>10</div>
-  <div>11</div>
-  <div>12</div>
-</div>
+<h3>.grid-* Helper Classes</h3>
 
-<h2>4 Grid</h2>
-<div class="gridded grid-4">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-  <div>6</div>
-  <div>7</div>
-  <div>8</div>
-  <div>9</div>
-  <div>10</div>
-  <div>11</div>
-  <div>12</div>
-</div>
+<p>
+  The .grid-2, .grid-3, .grid-4 and .grid-6 helper classes can be used with the .rs-grid class to alter the default
+  width of columns within the grid.
+</p>
+<p>  
+  For example: if you add .grid-4 to a grid, then each child will span 3 columns by default laying out into a 4 column grid.
+</p>
+<p>
+  <strong>Note:</strong> The helper classes do not change the underlying structure of the 12 column grid. Tailwind column span classes should still work and will still be based on a 12 column grid. 
+  For example: to span half of a .grid-4 grid you would use .col-span-6 not .col-span-2.
+</p>
+<p>
+  There are some helper aliases to make this less confusing: .col-half, .col-quarter, .col-third, .col-twothird, .col-threequarter, .col-full.
+</p>
 
-<h2>3 Grid</h2>
-<div class="gridded grid-3">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-  <div>6</div>
-  <div>7</div>
-  <div>8</div>
-  <div>9</div>
-  <div>10</div>
-  <div>11</div>
-  <div>12</div>
-</div>
+<h3>.grid-2</h3>
+<div class="rs-grid grid-2 grid-demo">
+    <div class="">1</div>
+    <div class="">2</div>
 
-<h2>2 Grid</h2>
-<div class="gridded grid-2">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-  <div>6</div>
-  <div>7</div>
-  <div>8</div>
-  <div>9</div>
-  <div>10</div>
-  <div>11</div>
-  <div>12</div>
-</div>
-
-<h2>Multi Grid</h2>
-<div class="gridded">
-  <div class="span6">1 .span6</div>
-  <div class="span6">2 .span6</div>
-  <div class="span4">3 .span4</div>
-  <div class="span4">4 .span4</div>
-  <div class="span4">5 .span4</div>
-  <div class="span3">6 .span3</div>
-  <div class="span3">7 .span3</div>
-  <div class="span3">8 .span3</div>
-  <div class="span3">9 .span3</div>
-  <div class="span2">10 .span2</div>
-  <div class="span2">11 .span2</div>
-  <div class="span2">12 .span2</div>
-  <div class="span2">13 .span2</div>
-  <div class="span2">14 .span2</div>
-  <div class="span2">15 .span2</div>
+    <div class="col-span-4">col-span-4</div>
+    <div class="col-span-4">col-span-4</div>
+    <div class="col-span-4">col-span-4</div>
 </div>
 
 
-<h2>Custom Grid</h2>
-<div class="gridded">
-  <div class="span2">1 .span2</div>
-  <div class="span2">2 .span2</div>
-  <div class="span4">3 .span4</div>
-  <div class="span4">4 .span4</div>
+<h3>.grid-3</h3>
+<div class="rs-grid grid-3 grid-demo">
+    <div class="">1</div>
+    <div class="">2</div>
+    <div class="">3</div>
 
-  <div class="span6">5 .span6</div>
-  <div class="span6">6 .span6</div>
+    <div class="col-span-2">col-span-2</div>
+    <div class="col-span-2">col-span-2</div>
+    <div class="col-span-2">col-span-2</div>
+    <div class="col-span-2">col-span-2</div>
+    <div class="col-span-2">col-span-2</div>
+    <div class="col-span-2">col-span-2</div>
+</div>
 
-  <div class="span12">7 .span5</div>
+<h3>.grid-4</h3>
+<div class="rs-grid grid-4 grid-demo">
+    <div class="">1</div>
+    <div class="">2</div>
+    <div class="">3</div>
+    <div class="">4</div>
 
-  <div class="span4">8 .span4</div>
-  <div class="span4">9 .span4</div>
-  <div class="span4">10 .span4</div>
+    <div class="col-span-1">col-span-1</div>
+    <div class="col-span-2">col-span-2</div>
+    <div class="col-half">col-half</div>
+    <div class="col-quarter">col-quarter</div>
+</div>
 
-  <div class="span6">11 .span6</div>
-  <div class="span6">12 .span6</div>
+<h3>.grid-6</h3>
+<div class="rs-grid grid-6 grid-demo">
+    <div class="">1</div>
+    <div class="">2</div>
+    <div class="">3</div>
+    <div class="">4</div>
+    <div class="">5</div>
+    <div class="">6</div>
+
+    <div class="col-span-1">col-span-1</div>
+    <div class="col-span-2">col-span-2</div>
+    <div class="col-half">col-half</div>
+    <div class="col-quarter">col-quarter</div>
 </div>

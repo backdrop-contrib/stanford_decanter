@@ -1,0 +1,111 @@
+{
+    "_config_name": "filter.format.filtered_html",
+    "format": "filtered_html",
+    "name": "Filtered HTML",
+    "cache": true,
+    "status": "1",
+    "weight": "0",
+    "roles": {
+        "anonymous": "anonymous",
+        "authenticated": "authenticated",
+        "editor": "editor"
+    },
+    "filters": {
+        "filter_image_caption": {
+            "status": 0,
+            "weight": 4,
+            "module": "filter",
+            "settings": []
+        },
+        "filter_autop": {
+            "status": 1,
+            "weight": 2,
+            "module": "filter",
+            "settings": []
+        },
+        "filter_url": {
+            "status": 1,
+            "weight": 0,
+            "module": "filter",
+            "settings": []
+        },
+        "filter_htmlcorrector": {
+            "status": 1,
+            "weight": 10,
+            "module": "filter",
+            "settings": []
+        },
+        "pathologic": {
+            "status": 0,
+            "weight": 50,
+            "module": "pathologic",
+            "settings": []
+        },
+        "filter_html_escape": {
+            "status": 0,
+            "weight": -10,
+            "module": "filter",
+            "settings": []
+        },
+        "filter_image_align": {
+            "status": 0,
+            "weight": 5,
+            "module": "filter",
+            "settings": []
+        },
+        "filter_html": {
+            "status": 1,
+            "weight": 1,
+            "settings": {
+                "allowed_html": "<a> <address> <blockquote> <br> <cite> <code> <em> <h2> <h3> <h4> <h5> <h6> <li> <ol> <p> <pre> <strong> <ul>"
+            },
+            "module": "filter"
+        }
+    },
+    "editor": "ckeditor5",
+    "editor_settings": {
+        "toolbar": [
+            "bold",
+            "italic",
+            "blockQuote",
+            "heading",
+            "|",
+            "bulletedList",
+            "numberedList",
+            "|",
+            "alignment:left",
+            "alignment:center",
+            "alignment:right",
+            "|",
+            "backdropLink",
+            "|",
+            "sourceEditing",
+            "removeFormat"
+        ],
+        "image_upload": {
+            "status": 0,
+            "orientate": 0,
+            "scheme": "public",
+            "alt_required": 0,
+            "directory": "inline-images",
+            "max_size": "",
+            "max_dimensions": {
+                "width": "",
+                "height": ""
+            }
+        },
+        "file_upload": {
+            "status": 0,
+            "scheme": "public",
+            "directory": "inline-files",
+            "max_size": "",
+            "file_extensions": "txt pdf"
+        },
+        "style_list": [],
+        "heading_list": {
+            "h3": "h3",
+            "h4": "h4",
+            "h5": "h5"
+        }
+    }
+}

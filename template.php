@@ -4,6 +4,8 @@
  * stanford_decanter preprocess functions and theme function overrides.
  */
 
+define('STYLEGUIDE_PATH', 'decanter_help/styleguide');
+
 /**
  * Prepares variables for block templates.
  *
@@ -16,6 +18,9 @@ function stanford_decanter_preprocess_block(&$variables)
   }
 
   if ($variables['theme_hook_original'] == 'block__search__form') {
+    if (empty($variables['title'])) {
+      $variables['title'] = t('Search');
+    }
     backdrop_add_js(backdrop_get_path('theme', 'stanford_decanter') . '/js/search-toggle.js');
   }
 }
@@ -154,9 +159,7 @@ function stanford_decanter_layout_info() {
     'path' => 'layouts/decanter',
     'regions' => array(
       'identitybar'        => t('Identity bar'),
-      'header_l'           => t('Header Logo/Lockup'),
-      'header_r'           => t('Header Search/Links'),
-      'header'             => t('Header Nav'),
+      'header'             => t('Header'),
       'hero'               => t('Hero'),
       'top'                => t('Top'),
       'content'            => t('Content'),
@@ -268,4 +271,113 @@ function stanford_decanter_breadcrumb($variables) {
     $output .= '</nav>';
   }
   return $output;
+}
+
+
+/**
+ * Implements hook_menu().
+ */
+function stanford_decanter_menu() {
+  $items = array();
+
+  $items[STYLEGUIDE_PATH] = array(
+    'title' => 'Backdrop Decanter Style Guide',
+    'description' => 'Decanter 7 Style guide.',
+    'page callback' => 'backdrop_get_form',
+    'page arguments' => array('stanford_decanter_style_guide'),
+    'access arguments' => array('access content overview'),
+    'weight' => 4,
+    'type' => MENU_NORMAL_ITEM,
+    'file path' => backdrop_get_path('theme', 'stanford_decanter'),
+    'file' => 'template.php',
+  );
+
+  $dir = backdrop_get_path('theme', 'stanford_decanter') . '/examples/';
+  foreach(scandir($dir) as $snippet) {
+    if (substr($snippet, 0, 1) !== '.') {
+      $name = substr($snippet, 0, strlen($snippet) - strlen('.html'));
+      $items[STYLEGUIDE_PATH . '/' . $name] = array(
+        'title' => ucwords(strtr($name, ['.html' => '', '-' => ' — '])),
+        'page callback' => 'backdrop_get_form',
+        'page arguments' => array('stanford_decanter_style_guide_section', $dir . $snippet),
+        'access arguments' => array('access content overview'),
+        'type' => MENU_NORMAL_ITEM,
+        'file path' => backdrop_get_path('theme', 'stanford_decanter'),
+        'file' => 'template.php',
+      );
+      }
+    }
+
+  return $items;
+}
+
+/**
+ * Implements hook_admin_paths_alter().
+ */
+function stanford_decanter_admin_paths_alter(&$paths) {
+  $paths[STYLEGUIDE_PATH] = FALSE;
+  $paths[STYLEGUIDE_PATH . '/*'] = FALSE;
+}
+
+
+/*
+ * Style guide form callback. Reads html snippets from files to display.
+ */
+function stanford_decanter_style_guide() {
+  $form = [];
+
+  $dir = backdrop_get_path('theme', 'stanford_decanter') . '/examples/';
+  $snippets = scandir($dir);
+  foreach($snippets as $snippet) {
+    if (substr($snippet, 0, 1) !== '.') {
+      $name = substr($snippet, 0, strlen($snippet) - strlen('.html'));
+
+      $form[$name] = [
+        "#type" => 'link',
+        '#title' => ucwords(strtr($name, ['.html' => '', '-' => ' — '])),
+        '#href' => STYLEGUIDE_PATH . '/' . $name,
+        '#options' => array(
+          'attributes' => array('class' => 'forward block pb-20'),
+        ),    
+      ];
+    }
+  }
+  return $form;
+}
+
+/*
+ * Style guide form callback. Reads html snippets from files to display.
+ */
+function stanford_decanter_style_guide_section($form, &$form_state, $snippet = '') {
+
+  $form = [];
+
+  if (stripos($snippet, 'alert') !== false) {
+    backdrop_set_message(t('This is a Backdrop status message'), 'status');
+    backdrop_set_message(t('This is a Backdrop info message'), 'info');
+    backdrop_set_message(t('This is a Backdrop warning'), 'warning');
+    backdrop_set_message(t('This is a Backdrop error'), 'error');  
+  }
+
+  $html = file_get_contents($snippet);
+  $form['back'] = [
+    "#type" => 'link',
+    '#title' => 'Back to Styleguide',
+    '#href' => STYLEGUIDE_PATH,
+    '#options' => array(
+      'attributes' => array('class' => 'back block pb-20'),
+    ),    
+  ];
+
+
+  $form['preview'] = [
+    '#type' => 'markup',
+    '#markup' => $html,
+  ];
+  $form['src'] = [
+    '#type' => 'textarea',
+    '#default_value' => $html,
+    '#rows' => 30,
+  ];
+  return $form;
 }

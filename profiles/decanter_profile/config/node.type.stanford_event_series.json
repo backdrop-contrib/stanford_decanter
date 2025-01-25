@@ -1,0 +1,38 @@
+{
+    "_config_name": "node.type.stanford_event_series",
+    "type": "stanford_event_series",
+    "name": "Event Series",
+    "base": "node_content",
+    "module": "node",
+    "description": "The Stanford Event Series displays a collection of related events.",
+    "help": "",
+    "has_title": true,
+    "title_label": "Title",
+    "modified": true,
+    "disabled": false,
+    "orig_type": "stanford_event_series",
+    "settings": {
+        "status_default": 1,
+        "sticky_enabled": true,
+        "sticky_default": false,
+        "promote_enabled": true,
+        "promote_default": false,
+        "revision_enabled": true,
+        "revision_default": false,
+        "node_preview": "1",
+        "node_submitted": 0,
+        "node_user_picture": true,
+        "language": null,
+        "menu_default": false,
+        "menu_options": [
+            "main-menu"
+        ],
+        "menu_parent": "main-menu:0",
+        "scheduling_enabled": true,
+        "node_submitted_format": "[node:created:medium] by [node:author]",
+        "hidden_path": "0",
+        "node_permissions": true,
+        "comment_default": 2
+    },
+    "node_preview": 1
+}

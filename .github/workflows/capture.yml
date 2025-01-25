@@ -1,0 +1,22 @@
+name: Capture Theme Changes
+run-name: Capturing visual reference 👓
+on: [push]
+permissions:
+  contents: write
+jobs:
+  Capture-Reference:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Execute backstop reference
+        run: |
+          docker compose run backstop reference --config=/config.js
+      - name: Commit results
+        run: |
+          if [[ `git status --porcelain` ]]; then
+            git config --global user.name '${{ github.actor }}'
+            git config --global user.email '${{ github.actor }}@users.noreply.github.com'
+            git add --all .ops/output/vrt/*
+            git commit -am "Automated reference image capture by Github Actions"
+            git push
+          fi
