@@ -3701,6 +3701,16 @@ html .layout .l-sidebar + .l-content{
     position: static;
     padding-bottom: 0;
   }
+}
+
+.l-header .block-system-main-menu .block-content .menu-dropdown{
+  min-height: 100rem;
+}
+
+@media (min-width: 768px){
+  .l-header .block-system-main-menu .block-content .menu-dropdown{
+    min-height: 0;
+  }
 
   .l-header .block-system-main-menu .block-content ul.menu,
       .l-header .block-system-main-menu .block-content ul.menu-dropdown{
@@ -4443,18 +4453,7 @@ html .layout .l-sidebar + .l-content{
   font-weight: 600;
 }
 
-.l-header .block-menu ul.menu > li, .l-header .block-menu ul.menu-dropdown > li, .l-sidebar .block-menu ul.menu > li, .l-sidebar .block-menu ul.menu-dropdown > li{
-  text-wrap: nowrap;
-}
-
-.l-header .block-menu ul.menu > li a.active-trail::before,
-      .l-header .block-menu ul.menu > li.active-trail>a::before,
-      .l-header .block-menu ul.menu-dropdown > li a.active-trail::before,
-      .l-header .block-menu ul.menu-dropdown > li.active-trail>a::before,
-      .l-sidebar .block-menu ul.menu > li a.active-trail::before,
-      .l-sidebar .block-menu ul.menu > li.active-trail>a::before,
-      .l-sidebar .block-menu ul.menu-dropdown > li a.active-trail::before,
-      .l-sidebar .block-menu ul.menu-dropdown > li.active-trail>a::before{
+.l-header .block-menu ul.menu > li.active-trail>a::before, .l-header .block-menu ul.menu-dropdown > li.active-trail>a::before, .l-sidebar .block-menu ul.menu > li.active-trail>a::before, .l-sidebar .block-menu ul.menu-dropdown > li.active-trail>a::before{
   --tw-scale-x: 1;
   --tw-scale-y: 1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -4463,12 +4462,10 @@ html .layout .l-sidebar + .l-content{
 }
 
 .l-header .block-menu ul.menu > li > a, .l-header .block-menu ul.menu-dropdown > li > a, .l-sidebar .block-menu ul.menu > li > a, .l-sidebar .block-menu ul.menu-dropdown > li > a{
-  flex-wrap: nowrap;
-  border-bottom-width: 0px;
+  position: relative;
   padding: 0.8rem;
   padding-left: 1.6rem;
   padding-right: 1.6rem;
-  line-height: 1.5;
 }
 
 @media (min-width: 768px){
@@ -4480,6 +4477,9 @@ html .layout .l-sidebar + .l-content{
 }
 
 .l-header .block-menu ul.menu > li > a, .l-header .block-menu ul.menu-dropdown > li > a, .l-sidebar .block-menu ul.menu > li > a, .l-sidebar .block-menu ul.menu-dropdown > li > a{
+  flex-wrap: nowrap;
+  border-bottom-width: 0px;
+  line-height: 1.5;
   font-size: 2rem;
   font-weight: 600;
   text-decoration-line: none;

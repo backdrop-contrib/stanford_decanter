@@ -321,6 +321,7 @@ html .layout {
 
       .menu-dropdown {
         @apply pb-200 md:pb-0 absolute md:static left-0 right-0 mt-10;
+        @apply min-h-1000 md:min-h-0;
       }
       ul.menu,
       ul.menu-dropdown {
@@ -550,15 +551,14 @@ html .layout {
   ul.menu,
   ul.menu-dropdown {
     > li {
-      @apply text-nowrap;
-
-      a.active-trail::before,
       &.active-trail>a::before {
         @apply scale-100 bg-fog;
       }
 
       > a {
-        @apply p-8 px-16 md:p-16 md:pl-0 md:pr-0 border-b-0 leading-normal flex-nowrap;
+        @apply relative;
+        @apply p-8 px-16 md:p-16 md:pl-0 md:pr-0;
+        @apply border-b-0 leading-normal flex-nowrap;
         @apply text-20 font-semibold;
         @apply no-underline;
       }
@@ -676,7 +676,6 @@ ul.tabs {
     @apply no-underline font-black text-black;
   }
 }
-
 
 .breadcrumb {
   @apply hidden md:block py-40;

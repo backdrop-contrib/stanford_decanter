@@ -19,7 +19,6 @@ module.exports = {
     },
     "report": ["browser","json"],
     "engine": "playwright",
-    "onReadyScript": "onReady.js",
     "engineOptions": {
       "browser": "chromium"
     },
@@ -34,39 +33,36 @@ module.exports = {
     "debugWindow": false,
     "scenarioLogsInReports": true,
     "fileNameTemplate": '{scenarioLabel}--{viewportLabel}',
-    "scenarios": [
-      {
-        "label": "Mobile Menu",
-        "url":  "http://app/",
-        "viewports": [
-          {
-            "label": "mobile",
-            "width": 360,
-            "height": 800
-          }
-        ],
-        // "clickSelector": ".menu-toggle-button",
-        "postInteractionWait": 1000,
-        "clickSelectors": [
-            ".l-header .menu-toggle-button",
-            ".l-header .has-children"
-        ]
-      }
-    ],
+    "onReadyScript": "",
+    "scenarios": [],
+    readyTimeout: 3,
   }
   
   try {
     require('fs')
       .readFileSync('/urls.txt', 'utf-8')
       .split(/\n/)
-      .forEach((url) => {
-                  module.exports.scenarios.push(
-                    {
-                      "label":  url.split(/\s+/).pop().trim(),
-                      "url":    `http://app${url.split(/\s+/)[0]}`,
-                    }
-                  );
-                });
+      .forEach((line) => {
+          parts = line.split(',').map(str => str.trim());
+          if (!parts || parts[0]?.startsWith('#') || !parts?.[1])
+            return;
+
+          scenario = {
+                "label":          parts[0],
+                "url":           `http://app${parts[1]}`,
+                "onReadyScript":  parts[2] || "onReady.js"
+              };
+          module.exports.scenarios.push(scenario);
+        });
   } catch (err) {
     console.log(err);
   }
+
+//          // module.exports.scenarios.push(scenario);
+
+  // module.exports.scenarios.push(
+  //   {
+  //     "label":          parts[0].trim(),
+  //     "url":           `http://app${parts[1]}`,
+  //   }
+  // );
