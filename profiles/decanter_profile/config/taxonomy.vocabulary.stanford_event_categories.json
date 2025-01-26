@@ -1,8 +1,9 @@
 {
     "_config_name": "taxonomy.vocabulary.stanford_event_categories",
-    "name": "Stanford Event Categories",
+    "name": "Event Category",
     "machine_name": "stanford_event_categories",
-    "description": "Category names as used on events.stanford.edu",
-    "hierarchy": "0",
-    "weight": "0"
+    "description": "Category names as used on events.stanford.edu.",
+    "hierarchy": 0,
+    "weight": 0,
+    "language": 0
 }

@@ -1,5 +1,6 @@
 html body,
-.l-header 
+.l-header,
+.menu-dropdown
 {
   background-color: #FFFFFE;
   color: #2E2D28;
@@ -127,7 +128,8 @@ body .header-menu .links a:after {
   color: #2E2D28;
 }
 .breadcrumb li a:hover {
-  color: #000;
+  color: #B1040D;
+  text-decoration-color: #B1040D;
 }
 
 .l-footer, .l-stanfordfooter {
