@@ -24,6 +24,7 @@
 			"titleBar.inactiveForeground": "#82828299"
 		  },
 		  "files.exclude": {
+			// ".*": true,
 			"**/.git": true,
 			"**/.DS_Store": true,
 			"**/Thumbs.db": true

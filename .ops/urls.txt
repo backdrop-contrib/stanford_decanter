@@ -1,7 +1,5 @@
-/											Home
-/menus								Menus
-/menus/long/b					SideMenus
-/blocks								Blocks
-/menus/b							Breadcrumbs
-/events								Events
-/events/past-events		PastEvents
+/							Home
+/menus						Menus
+/events						Events
+/events/past-events			Past Events
+/menus/b					Secondary Page with Breadcrumb

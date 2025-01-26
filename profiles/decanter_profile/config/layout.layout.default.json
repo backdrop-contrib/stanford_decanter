@@ -15,6 +15,9 @@
         "title_block": null
     },
     "positions": {
+        "identitybar": [
+            "105a3ec3-a994-41aa-8f04-4f6a7127f4ed"
+        ],
         "header": [
             "84c43df4-1165-4faf-8700-c362a7153c0b",
             "13b2f325-af26-40bb-8c61-97fe1d93f19f"
@@ -22,16 +25,46 @@
         "content": [
             "default"
         ],
+        "sidebar": [
+            "924a4d39-080c-4b53-bf00-bffb5bf96a22"
+        ],
+        "sidebar2": [],
+        "bottom": [],
         "footer": [
             "cd4d033d-3f67-4191-8655-85ee758877c0"
         ],
-        "sidebar": [],
-        "top": [
-            "09f11b4e-877e-45ab-9000-a4c6254faa04",
-            "a549d0bc-51f7-46b0-9b41-653788410dd4"
-        ]
+        "stanfordfooter": [
+            "e74d40af-a5c9-4333-950a-10c72fd613c0"
+        ],
+        "title": []
     },
     "content": {
+        "105a3ec3-a994-41aa-8f04-4f6a7127f4ed": {
+            "plugin": "theme_hooks:stanford_decanter_identity_bar",
+            "data": {
+                "status": 1,
+                "module": "theme_hooks",
+                "delta": "stanford_decanter_identity_bar",
+                "settings": {
+                    "title_display": "default",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": [],
+                    "contexts": [],
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "105a3ec3-a994-41aa-8f04-4f6a7127f4ed",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        },
         "84c43df4-1165-4faf-8700-c362a7153c0b": {
             "plugin": "system:header",
             "data": {
@@ -133,6 +166,43 @@
                 }
             }
         },
+        "924a4d39-080c-4b53-bf00-bffb5bf96a22": {
+            "plugin": "system:main-menu",
+            "data": {
+                "status": 1,
+                "module": "system",
+                "delta": "main-menu",
+                "settings": {
+                    "title_display": "default",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": {
+                        "menu_name": "main-menu",
+                        "style": "tree",
+                        "level": "2",
+                        "depth": "1",
+                        "expand_all": 0,
+                        "clickdown": 0,
+                        "toggle": 1,
+                        "toggle_text": "Menu",
+                        "collapse": "default",
+                        "accordion": 0
+                    },
+                    "contexts": [],
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "924a4d39-080c-4b53-bf00-bffb5bf96a22",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        },
         "cd4d033d-3f67-4191-8655-85ee758877c0": {
             "plugin": "system:powered-by",
             "data": {
@@ -156,8 +226,8 @@
                 }
             }
         },
-        "a549d0bc-51f7-46b0-9b41-653788410dd4": {
-            "plugin": "system:page_components:title_combo",
+        "e74d40af-a5c9-4333-950a-10c72fd613c0": {
+            "plugin": "theme_hooks:stanford_decanter_global_footer",
             "data": {
                 "module": "system",
                 "delta": "page_components",
@@ -171,7 +241,7 @@
                     "title_classes": "page-title",
                     "tab-type": "both"
                 },
-                "uuid": "a549d0bc-51f7-46b0-9b41-653788410dd4",
+                "uuid": "e74d40af-a5c9-4333-950a-10c72fd613c0",
                 "style": {
                     "plugin": "default",
                     "data": {

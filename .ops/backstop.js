@@ -11,7 +11,6 @@ module.exports = {
         "height": 800
       }
     ],
-    "scenarios": [],
     "paths": {
       "engine_scripts":     "/scripts",
       "html_report":        "/output/report",
@@ -35,6 +34,25 @@ module.exports = {
     "debugWindow": false,
     "scenarioLogsInReports": true,
     "fileNameTemplate": '{scenarioLabel}--{viewportLabel}',
+    "scenarios": [
+      {
+        "label": "Mobile Menu",
+        "url":  "http://app/",
+        "viewports": [
+          {
+            "label": "mobile",
+            "width": 360,
+            "height": 800
+          }
+        ],
+        // "clickSelector": ".menu-toggle-button",
+        "postInteractionWait": 1000,
+        "clickSelectors": [
+            ".l-header .menu-toggle-button",
+            ".l-header .has-children"
+        ]
+      }
+    ],
   }
   
   try {
