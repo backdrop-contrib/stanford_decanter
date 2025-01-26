@@ -13,9 +13,9 @@ module.exports = async (page, scenario) => {
   // Mobile: Menu toggle is visible
   const toggle = await page.waitForSelector('.menu-toggle-button', {state: 'attached', timeout: 3000});
   if (toggle && await toggle.isVisible()) {
-    await page.click('.menu-toggle-button');
-    await page.click('.l-header .block-system-main-menu .has-submenu');
-    await page.click('a[href*="menus/long"]');
+    await toggle.click();
+    await page.click('a[href="/menus"]');
+    await page.click('a[href="/menus/long"]');
     await page.waitForTimeout(1000);
   }
 };
