@@ -3,5 +3,3 @@ Header Menus,        /,                    clickMenu.js
 Home,               /                     
 Menus,              /menus                
 Long Menus,         /menus/long           
-Events,             /events           
-Past Events,        /events/past-events
