@@ -301,7 +301,7 @@ html .layout {
   .block-system-main-menu {
     @apply md:w-full flex-nowrap self-end static;
     .menu-toggle-button {
-      @apply md:hidden mb-0;
+      @apply md:hidden mb-0 mr-0;
 
       .menu-toggle-button-text {
         @apply text-11 flex indent-0 p-0 m-0 order-3 mt-35;
@@ -313,15 +313,68 @@ html .layout {
       }
     }
 
+    .block-title {
+      @apply: hidden;
+    }
     .block-content {
       @apply px-10 md:p-0 md:ml-0 md:mr-0 md:mt-0 z-10 w-full;
+
       .menu-dropdown {
-        @apply pb-20 md:pb-0 absolute md:static left-0 right-0;
+        @apply pb-200 md:pb-0 absolute md:static left-0 right-0 mt-10;
+      }
+      ul.menu,
+      ul.menu-dropdown {
+        @apply md:flex-row;
+        > li {
+          @apply mx-0 md:mx-5 lg:mr-10 xl:mr-20 border-0;
+    
+          ul {
+            @apply md:pl-0 md:shadow-md md:absolute pl-20 border-0;
+          }
+    
+          &.first {
+            @apply md:ml-0;
+          }
+    
+          &.last {
+            @apply md:mr-0;
+          }
+    
+          > a {
+            @apply p-8 px-16 md:p-16 md:pl-0 md:pr-0 md:mr-8 md:border-b-0 leading-normal flex-nowrap;
+            @apply text-20 md:text-17 xl:text-20 font-semibold hocus:font-semibold no-underline;
+            @apply py-20 md:my-0;
+            @apply border-b;
+          }
+          a.has-submenu {
+            @apply pr-20;
+          }
+    
+          span.sub-arrow {
+            @apply caret border-none right-0 inline-block align-baseline;
+            @apply mr-20 md:mr-0 -mt-6;
+            .has-submenu.highlighted & {
+              @apply rotate-180;
+            }
+          }
+    
+          li {
+            a {
+              @apply font-medium text-20 md:text-17 py-15 text-wrap;
+              span.sub-arrow {
+                @apply right-10 -rotate-90;
+              }
+            }
+            a::before {
+              @apply md:h-full w-0 md:w-6;
+            }
+          }
+        }
       }
     }
 
     .menu-tree li {
-      @apply inline text-12 md:text-16 mx-10;
+      @apply inline text-20 md:text-16 mx-10;
       a {
         @apply no-underline md:font-normal hocus:underline;
       }
@@ -474,7 +527,7 @@ html .layout {
   ul.menu,
   ul.menu-dropdown {
     @apply font-bold;
-    @apply md:flex md:flex-col z-30 text-13 md:text-21;
+    @apply md:flex md:flex-col z-30;
 
     ul {
       @apply border-t-black-10 m-0;
@@ -485,7 +538,6 @@ html .layout {
         @apply border-b-0;
       }
       a {
-        @apply p-10 lg:p-16 pl-16 md:pl-16;
         @apply text-17 font-semibold hocus:font-semibold no-underline;
       }
     }
@@ -506,8 +558,8 @@ html .layout {
       }
 
       > a {
-        @apply p-8 px-16 md:p-16 md:pl-0 md:pr-0 mr-8 border-b-0 leading-normal flex-nowrap;
-        @apply text-14 md:text-18 font-semibold;
+        @apply p-8 px-16 md:p-16 md:pl-0 md:pr-0 border-b-0 leading-normal flex-nowrap;
+        @apply text-20 font-semibold;
         @apply no-underline;
       }
       a.has-submenu {
@@ -515,7 +567,7 @@ html .layout {
       }
       a::before {
         content: '';
-        @apply absolute h-full w-2 md:w-6 scale-y-0 bg-black bottom-0 left-0 visible;
+        @apply absolute h-full w-0 md:w-6 scale-y-0 bg-black bottom-0 left-0 visible;
         transition: transform .3s ease-in, background-color .3s ease-in;
       }
       a::before {
@@ -528,65 +580,9 @@ html .layout {
       }
 
       span.sub-arrow {
-        @apply border-none caret right-0 inline-block align-baseline;
-        margin-top: -6px;
+        @apply caret;
         .has-submenu.highlighted & {
           @apply rotate-180;
-        }
-      }
-    }
-  }
-}
-
-.l-header .block-menu
-{
-  .block-title {
-    @apply: hidden;
-  }
-  ul.menu,
-  ul.menu-dropdown {
-    @apply md:flex-row shadow-inner md:shadow-none;
-    > li {
-      @apply mx-0 md:mx-5 lg:mr-10 xl:mr-20 border-0;
-
-      ul {
-        @apply md:pl-0 md:shadow-md md:absolute pl-20 border-0;
-      }
-
-      &.first {
-        @apply md:ml-0;
-      }
-
-      &.last {
-        @apply md:mr-0;
-      }
-
-      > a {
-        @apply p-8 px-16 md:p-16 md:pl-0 md:pr-0 mr-8 border-b-0 leading-normal flex-nowrap;
-        @apply text-14 md:text-18 xl:text-21 font-semibold;
-        @apply no-underline;
-      }
-      a.has-submenu {
-        @apply pr-20;
-      }
-
-      span.sub-arrow {
-        @apply border-none caret right-0 inline-block align-baseline;
-        margin-top: -6px;
-        .has-submenu.highlighted & {
-          @apply rotate-180;
-        }
-      }
-
-      li {
-        a {
-          @apply text-15 md:text-17;
-          span.sub-arrow {
-            @apply right-10 -rotate-90;
-          }
-        }
-        a::before {
-          @apply h-full w-6;
         }
       }
     }

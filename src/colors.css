@@ -1,5 +1,6 @@
 html body,
-.l-header 
+.l-header,
+.menu-dropdown
 {
   background-color: #FFFFFE;
   color: #2E2D28;
