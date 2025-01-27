@@ -23,6 +23,7 @@ services:
       interval: 10s
     volumes:
       - ./:/workspace
+      - ./.ops/settings.local.php:/var/www/html/settings.local.php
 
   backstop:
     image: backstopjs/backstopjs
