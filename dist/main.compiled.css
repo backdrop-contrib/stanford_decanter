@@ -3490,6 +3490,12 @@ html .layout .l-sidebar + .l-content{
   grid-column: span 1 / span 1;
 }
 
+@media (min-width: 576px){
+  .col-full{
+    grid-column: span 4 / span 4;
+  }
+}
+
 @media (min-width: 768px){
   .col-full{
     grid-column: span 6 / span 6;
@@ -4771,6 +4777,14 @@ ul.primary li.active a,
     .l-footer .l-footer-inner .block-theme-hooks-stanford-decanter-global-footer,
     .l-footer .l-footer-inner .block-system-header{
   grid-column: span 1 / span 1;
+}
+
+@media (min-width: 576px){
+  .l-footer .l-footer-inner .full,
+    .l-footer .l-footer-inner .block-theme-hooks-stanford-decanter-global-footer,
+    .l-footer .l-footer-inner .block-system-header{
+    grid-column: span 4 / span 4;
+  }
 }
 
 @media (min-width: 768px){

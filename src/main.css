@@ -214,7 +214,7 @@ html .layout {
 
 .col-full
 {
-  @apply col-span-1 md:col-span-6 lg:col-span-12;
+  @apply col-span-1 sm:col-span-4 md:col-span-6 lg:col-span-12
 }
 
 .col-twothird
