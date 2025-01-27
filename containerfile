@@ -48,15 +48,10 @@ RUN  git clone https://github.com/backdrop-contrib/bee.git /bee \
           devel \
   && chown -R www-data:www-data /var/www/html
 
-RUN echo \
-    "<?php "\
-    "\$config_directories['staging'] = '/workspace/profiles/decanter_profile/config/';"\
-    "\$config['system.core']['config_sync_clear_staging'] = 0;"\
-    > /var/www/html/settings.local.php
-
 # Add the theme code to the bd install.
 COPY ./ /workspace
 
 RUN  cd /var/www/html \
   && ln -s /workspace themes/stanford_decanter \
-  && ln -s /workspace/profiles profiles;
+  && ln -s /workspace/profiles profiles \
+  && ln -s /workspace/.ops/settings.local.php settings.local.php;
