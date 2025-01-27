@@ -124,6 +124,17 @@ body .header-menu .links a:after {
   background-color: #FFFFFE;
 }
 
+.menu li, 
+.menu li.leaf, 
+.menu li.collapsed, 
+.menu li.expanded, 
+.menu-tree li, 
+.menu-tree li.leaf, 
+.menu-tree li.collapsed,
+.menu-tree li.expanded {
+  border-color: #F4F4F3;
+}
+
 .hero .card-paragraph {
   color: #2E2D28;
 }
