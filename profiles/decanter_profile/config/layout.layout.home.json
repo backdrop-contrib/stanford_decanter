@@ -30,7 +30,7 @@
             "fe8c7715-c7e9-46d0-8b09-09afb78b2891"
         ],
         "content": [
-            "578243cf-a4c8-46ad-9504-04aaf4ec9ccc"
+            "9fe1b296-5138-4b95-b000-d781ac220b9b"
         ],
         "sidebar": [],
         "sidebar2": [],
@@ -223,30 +223,24 @@
                 }
             }
         },
-        "578243cf-a4c8-46ad-9504-04aaf4ec9ccc": {
-            "plugin": "views:promoted-block",
+        "9fe1b296-5138-4b95-b000-d781ac220b9b": {
+            "plugin": "layout:custom_block",
             "data": {
                 "status": 1,
-                "module": "views",
-                "delta": "promoted-block",
+                "module": "layout",
+                "delta": "custom_block",
                 "settings": {
-                    "link_to_view": null,
-                    "more_link": false,
-                    "use_pager": true,
-                    "pager_id": 0,
-                    "items_per_page": 10,
-                    "offset": 0,
-                    "path": "rss.xml",
-                    "fields_override": null,
                     "title_display": "default",
                     "title": "",
                     "style": "default",
                     "block_settings": [],
                     "contexts": [],
-                    "allowed": [],
-                    "path_override": false
+                    "content": "<p class=\"text-align-justify\" style=\"-webkit-text-stroke-width:0px;caret-color:rgb(0, 0, 0);color:rgb(0, 0, 0);font-family:&quot;Open Sans&quot;, Arial, sans-serif;font-size:14px;font-style:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;margin:0px 0px 15px;orphans:auto;padding:0px;text-decoration:none;text-indent:0px;text-transform:none;white-space:normal;widows:auto;word-spacing:0px;\">\r\n    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut metus arcu. Aliquam commodo augue in porttitor malesuada. Ut felis urna, tincidunt in maximus vel, molestie non orci. Donec quis interdum velit. Nullam fermentum lectus orci, ac convallis turpis congue non. Fusce ut ullamcorper leo. Etiam vitae lacinia leo. Etiam non sagittis nunc. Aenean at maximus libero.\r\n</p>",
+                    "format": "content_editor_text_format",
+                    "admin_label": "",
+                    "admin_description": ""
                 },
-                "uuid": "578243cf-a4c8-46ad-9504-04aaf4ec9ccc",
+                "uuid": "9fe1b296-5138-4b95-b000-d781ac220b9b",
                 "style": {
                     "plugin": "default",
                     "data": {
