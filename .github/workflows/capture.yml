@@ -1,6 +1,6 @@
 name: Capture Theme Changes
 run-name: Capturing visual reference 👓
-on: [push]
+on: []
 permissions:
   contents: write
 jobs:

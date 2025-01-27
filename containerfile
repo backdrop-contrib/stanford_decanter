@@ -30,14 +30,14 @@ RUN  apt-get update \
 # Create some helper utilities
 RUN\
   util() { echo "#!/bin/sh\n\n$2" > "/usr/local/bin/$1" && chmod a+x "/usr/local/bin/$1"; }\
-  && util "bd"                "php /bee/bee.php --root=/var/www/html --base-url=http://localhost:8888/ \$@" \
-  && util "cr"                "bd cc all;" \
-  && util "uli"               "bd uli;" \
-  && util "si"                "bd si --auto --db-name=app --db-user=root --db-pass=root --db-host=db --profile=decanter_profile" \
-  && util "reset-db"          "mariadb -h db --user=root --password=root -e 'DROP DATABASE IF EXISTS app; CREATE DATABASE app'" \
-  && util "reset-app"         "rm -rf /var/www/html/files/config*;" \
-  && util "fix-perms"         "chown --quiet -R www-data:www-data /var/www/html;" \
-  && util "install-app"       "reset-db && reset-app && si && fix-perms && uli;"
+  && util "bd"          "php /bee/bee.php --root=/var/www/html --base-url=http://localhost:8888/ \$@" \
+  && util "cr"          "bd cc all;" \
+  && util "uli"         "bd uli;" \
+  && util "si"          "bd si --auto --db-name=app --db-user=root --db-pass=root --db-host=db --profile=decanter_profile" \
+  && util "reset-db"    "mariadb -h db --user=root --password=root -e 'DROP DATABASE IF EXISTS app; CREATE DATABASE app'" \
+  && util "reset-app"   "rm -rf /var/www/html/files/config*;" \
+  && util "fix-perms"   "chown --quiet -R www-data:www-data /var/www/html;" \
+  && util "install-app" "reset-db && reset-app && si && bd -y cim && fix-perms && uli;"
 
 
 # Download backdrop and bee

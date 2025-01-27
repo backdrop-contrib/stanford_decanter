@@ -106,6 +106,7 @@ body .header-menu .links a:after {
 .l-header .block-menu ul.menu li a:hover {
   color: #B1040D;
 }
+.block-system-main-menu ul li.active-trail>a.active::before,
 .l-header .l-header-inner .block-system-main-menu .block-content ul.menu > li > a::before {
   background-color: #B1040D;
 }
@@ -118,6 +119,17 @@ body .header-menu .links a:after {
 .menu-dropdown ul a
 {
   background-color: #FFFFFE;
+}
+
+.menu li, 
+.menu li.leaf, 
+.menu li.collapsed, 
+.menu li.expanded, 
+.menu-tree li, 
+.menu-tree li.leaf, 
+.menu-tree li.collapsed,
+.menu-tree li.expanded {
+  border-color: #F4F4F3;
 }
 
 .hero .card-paragraph {
