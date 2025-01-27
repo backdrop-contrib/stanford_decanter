@@ -3490,6 +3490,12 @@ html .layout .l-sidebar + .l-content{
   grid-column: span 1 / span 1;
 }
 
+@media (min-width: 576px){
+  .col-full{
+    grid-column: span 4 / span 4;
+  }
+}
+
 @media (min-width: 768px){
   .col-full{
     grid-column: span 6 / span 6;
@@ -3653,6 +3659,7 @@ html .layout .l-sidebar + .l-content{
   vertical-align: baseline;
   font-size: 3rem;
   line-height: 1;
+  line-height: .75rem;
 }
 
 @media (min-width: 992px){
@@ -3663,7 +3670,7 @@ html .layout .l-sidebar + .l-content{
 }
 
 .header-identity-wrapper .logo {
-  line-height: 0.6;
+  line-height: 0.8;
 }
 
 .header-identity-wrapper .header-site-name-wrapper{
@@ -3817,6 +3824,7 @@ html .layout .l-sidebar + .l-content{
   vertical-align: baseline;
   font-size: 3rem;
   line-height: 1;
+  line-height: .75rem;
 }
 
 @media (min-width: 992px){
@@ -3827,7 +3835,7 @@ html .layout .l-sidebar + .l-content{
 }
 
 .header-identity-wrapper .block-theme-hooks-stanford-decanter-identity-bar .block-content a {
-  line-height: 0.6;
+  line-height: 0.8;
 }
 
 .global-footer a.block-theme-hooks-stanford-decanter-identity-bar .block-content a{
@@ -4368,8 +4376,8 @@ html .layout .l-sidebar + .l-content{
 .l-header .block-system-main-menu .block-content{
   z-index: 10;
   width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 @media (min-width: 768px){
@@ -4769,6 +4777,14 @@ ul.primary li.active a,
     .l-footer .l-footer-inner .block-theme-hooks-stanford-decanter-global-footer,
     .l-footer .l-footer-inner .block-system-header{
   grid-column: span 1 / span 1;
+}
+
+@media (min-width: 576px){
+  .l-footer .l-footer-inner .full,
+    .l-footer .l-footer-inner .block-theme-hooks-stanford-decanter-global-footer,
+    .l-footer .l-footer-inner .block-system-header{
+    grid-column: span 4 / span 4;
+  }
 }
 
 @media (min-width: 768px){

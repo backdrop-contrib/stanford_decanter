@@ -214,7 +214,7 @@ html .layout {
 
 .col-full
 {
-  @apply col-span-1 md:col-span-6 lg:col-span-12;
+  @apply col-span-1 sm:col-span-4 md:col-span-6 lg:col-span-12
 }
 
 .col-twothird
@@ -303,8 +303,8 @@ html .layout {
   }
 
   .logo {
-    @apply text-5xl lg:text-7xl flex max-w-160 max-h-100 mt-auto align-baseline;
-    line-height: 0.6;
+    @apply text-5xl lg:text-7xl flex max-w-160 max-h-100 mt-auto align-baseline leading-3;
+    line-height: 0.8;
   }
 
   .header-site-name-wrapper {
@@ -554,7 +554,7 @@ html .layout {
       }
     }
     .block-content {
-      @apply px-10 md:p-0 md:ml-0 md:mr-0 md:mt-0 z-10 w-full;
+      @apply px-5 md:p-0 md:ml-0 md:mr-0 md:mt-0 z-10 w-full;
       
       .menu-dropdown {
         @apply absolute md:static left-0 right-0 mt-10;
