@@ -1,8 +1,8 @@
 {
     "_config_name": "layout.layout.long_menu",
-    "path": "menus",
+    "path": "menus/*",
     "name": "long_menu",
-    "title": "Long Menu",
+    "title": "Menus",
     "description": null,
     "renderer_name": "standard",
     "module": null,

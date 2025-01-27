@@ -2,7 +2,7 @@
     "_config_name": "layout.menu_item.long_menu",
     "name": "long_menu",
     "title": "",
-    "path": "long-menu",
+    "path": "menus/*",
     "menu": {
         "title": null,
         "weight": 0,
