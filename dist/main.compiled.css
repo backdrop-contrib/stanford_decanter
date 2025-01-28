@@ -3279,10 +3279,6 @@ html .layout .l-top{
   padding-right: 0;
 }
 
-html .layout .l-top{
-  margin-top: 2rem;
-}
-
 html .layout .l-bottom,
   html .layout .l-middle{
   padding-left: 20px;
@@ -6407,6 +6403,7 @@ fieldset .summary{
   padding: 0;
 }
 
+.bordered-block,
 .bordered > article,
 .bordered.views-grid-box,
 .aplenty-card-border .aplenty-card > .content{
@@ -6420,6 +6417,7 @@ fieldset .summary{
   backface-visibility: hidden;
 }
 
+.bordered-block:hover,
 .bordered > article:hover,
 .bordered.views-grid-box:hover,
 .aplenty-card-border .aplenty-card > .content:hover{
@@ -6428,31 +6426,137 @@ fieldset .summary{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.bordered > article h3, .bordered > article h2, .bordered.views-grid-box h3, .bordered.views-grid-box h2, .aplenty-card-border .aplenty-card > .content h3, .aplenty-card-border .aplenty-card > .content h2{
+.bordered-block,
+.bordered > article,
+.bordered.views-grid-box,
+.aplenty-card-border .aplenty-card > .content{
+  padding-top: 3rem;
+}
+
+@media (min-width: 768px){
+  .bordered-block,
+.bordered > article,
+.bordered.views-grid-box,
+.aplenty-card-border .aplenty-card > .content{
+    padding-top: 3.6rem;
+  }
+}
+
+@media (min-width: 1500px){
+  .bordered-block,
+.bordered > article,
+.bordered.views-grid-box,
+.aplenty-card-border .aplenty-card > .content{
+    padding-top: 3.8rem;
+  }
+}
+
+.bordered-block,
+.bordered > article,
+.bordered.views-grid-box,
+.aplenty-card-border .aplenty-card > .content{
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px){
+  .bordered-block,
+.bordered > article,
+.bordered.views-grid-box,
+.aplenty-card-border .aplenty-card > .content{
+    margin-bottom: 3.6rem;
+  }
+}
+
+@media (min-width: 1500px){
+  .bordered-block,
+.bordered > article,
+.bordered.views-grid-box,
+.aplenty-card-border .aplenty-card > .content{
+    margin-bottom: 3.8rem;
+  }
+}
+
+.bordered-block,
+.bordered > article,
+.bordered.views-grid-box,
+.aplenty-card-border .aplenty-card > .content{
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+@media (min-width: 768px){
+  .bordered-block,
+.bordered > article,
+.bordered.views-grid-box,
+.aplenty-card-border .aplenty-card > .content{
+    padding-left: 3.6rem;
+    padding-right: 3.6rem;
+  }
+}
+
+@media (min-width: 1500px){
+  .bordered-block,
+.bordered > article,
+.bordered.views-grid-box,
+.aplenty-card-border .aplenty-card > .content{
+    padding-left: 3.8rem;
+    padding-right: 3.8rem;
+  }
+}
+
+.bordered-block,
+.bordered > article,
+.bordered.views-grid-box,
+.aplenty-card-border .aplenty-card > .content{
+  padding-bottom: 3.4rem;
+}
+
+@media (min-width: 768px){
+  .bordered-block,
+.bordered > article,
+.bordered.views-grid-box,
+.aplenty-card-border .aplenty-card > .content{
+    padding-bottom: 5.8rem;
+  }
+}
+
+@media (min-width: 1500px){
+  .bordered-block,
+.bordered > article,
+.bordered.views-grid-box,
+.aplenty-card-border .aplenty-card > .content{
+    padding-bottom: 6.1rem;
+  }
+}
+
+.bordered-block h3, .bordered-block h2, .bordered > article h3, .bordered > article h2, .bordered.views-grid-box h3, .bordered.views-grid-box h2, .aplenty-card-border .aplenty-card > .content h3, .aplenty-card-border .aplenty-card > .content h2{
   font-size: 1.32em;
   letter-spacing: -0.012em;
 }
 
 @media (min-width: 768px){
-  .bordered > article h3, .bordered > article h2, .bordered.views-grid-box h3, .bordered.views-grid-box h2, .aplenty-card-border .aplenty-card > .content h3, .aplenty-card-border .aplenty-card > .content h2{
+  .bordered-block h3, .bordered-block h2, .bordered > article h3, .bordered > article h2, .bordered.views-grid-box h3, .bordered.views-grid-box h2, .aplenty-card-border .aplenty-card > .content h3, .aplenty-card-border .aplenty-card > .content h2{
     font-size: 1.44em;
   }
 }
 
 @media (min-width: 992px){
-  .bordered > article h3, .bordered > article h2, .bordered.views-grid-box h3, .bordered.views-grid-box h2, .aplenty-card-border .aplenty-card > .content h3, .aplenty-card-border .aplenty-card > .content h2{
+  .bordered-block h3, .bordered-block h2, .bordered > article h3, .bordered > article h2, .bordered.views-grid-box h3, .bordered.views-grid-box h2, .aplenty-card-border .aplenty-card > .content h3, .aplenty-card-border .aplenty-card > .content h2{
     font-size: 1.56em;
   }
 }
 
-.bordered > article h3, .bordered > article h2, .bordered.views-grid-box h3, .bordered.views-grid-box h2, .aplenty-card-border .aplenty-card > .content h3, .aplenty-card-border .aplenty-card > .content h2{
+.bordered-block h3, .bordered-block h2, .bordered > article h3, .bordered > article h2, .bordered.views-grid-box h3, .bordered.views-grid-box h2, .aplenty-card-border .aplenty-card > .content h3, .aplenty-card-border .aplenty-card > .content h2{
   z-index: 20;
   margin-bottom: 0.8em;
   font-family: "Source Serif 4", "Source Serif Pro", Georgia, Times, "Times New Roman", serif;
   font-size: 3rem;
 }
 
-.bordered > article .field-name-field-aplenty-title,
+.bordered-block .field-name-field-aplenty-title,
+  .bordered-block .field-type-link-field,
+  .bordered-block .field-type-text-long,
+  .bordered > article .field-name-field-aplenty-title,
   .bordered > article .field-type-link-field,
   .bordered > article .field-type-text-long,
   .bordered.views-grid-box .field-name-field-aplenty-title,
@@ -6465,6 +6569,9 @@ fieldset .summary{
 }
 
 @media (min-width: 768px){
+  .bordered-block .field-name-field-aplenty-title,
+  .bordered-block .field-type-link-field,
+  .bordered-block .field-type-text-long,
   .bordered > article .field-name-field-aplenty-title,
   .bordered > article .field-type-link-field,
   .bordered > article .field-type-text-long,
@@ -6479,6 +6586,9 @@ fieldset .summary{
 }
 
 @media (min-width: 1500px){
+  .bordered-block .field-name-field-aplenty-title,
+  .bordered-block .field-type-link-field,
+  .bordered-block .field-type-text-long,
   .bordered > article .field-name-field-aplenty-title,
   .bordered > article .field-type-link-field,
   .bordered > article .field-type-text-long,
@@ -6492,7 +6602,9 @@ fieldset .summary{
   }
 }
 
-.bordered > article:hover .postcard-image img,
+.bordered-block:hover .postcard-image img,
+    .bordered-block:hover .lead-image img,
+    .bordered > article:hover .postcard-image img,
     .bordered > article:hover .lead-image img,
     .bordered.views-grid-box:hover .postcard-image img,
     .bordered.views-grid-box:hover .lead-image img,
@@ -6503,7 +6615,7 @@ fieldset .summary{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.bordered > article:hover .node-readmore a:after, .bordered.views-grid-box:hover .node-readmore a:after, .aplenty-card-border .aplenty-card > .content:hover .node-readmore a:after{
+.bordered-block:hover .node-readmore a:after, .bordered > article:hover .node-readmore a:after, .bordered.views-grid-box:hover .node-readmore a:after, .aplenty-card-border .aplenty-card > .content:hover .node-readmore a:after{
   --tw-translate-x: 0.2em;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -7183,7 +7295,7 @@ fieldset .summary{
 }
 
 .block-hero{
-  margin-bottom: 0;
+  margin-bottom: 2rem;
   width: 100%;
   text-align: center;
   --tw-text-opacity: 1;

@@ -167,7 +167,7 @@ html .layout {
   }
 
   .l-top {
-    @apply cc mt-20;
+    @apply cc;
   }
   .l-bottom,
   .l-middle {
@@ -1079,10 +1079,13 @@ fieldset {
   }
 }
 
+.bordered-block,
 .bordered > article,
 .bordered.views-grid-box,
 .aplenty-card-border .aplenty-card > .content {
   @apply border border-solid border-black-20 shadow-sm hover:shadow-md backface-hidden;
+  @apply rs-px-2 rs-pt-2 rs-pb-4 rs-mb-2;
+
   & h3, & h2 {
     @apply font-serif text-30 z-20 mb-08em type-2;
   }
@@ -1173,7 +1176,6 @@ fieldset {
   p {
     @apply rs-mb-0;
   }
-
   .hero-image {
     & img {
       @apply h-full w-full object-cover object-center;
@@ -1210,7 +1212,7 @@ fieldset {
 }
 
 .block-hero {
-  @apply text-center text-white w-full mb-0;
+  @apply text-center text-white w-full mb-20;
   .block-title {
     @apply font-serif font-bold leading-tight tracking-normal text-shadow-lg mb-02em sm:text-m6;
   }
