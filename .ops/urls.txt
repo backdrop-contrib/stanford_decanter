@@ -1,5 +1,6 @@
 # Title            Path                   
-Header Menus,        /,                    clickMenu.js
-Home,               /                     
-Menus,              /menus                
-Long Menus,         /menus/long           
+Header Menus,      /,                    clickMenu.js
+Grids,             /grids                
+Home,              /                     
+Menus,             /menus                
+Long Menus,        /menus/long           
