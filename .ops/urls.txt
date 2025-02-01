@@ -1,5 +1,6 @@
 # Title            Path                   
-Header Menus,        /,                    clickMenu.js
-Home,               /                     
-Menus,              /menus                
-Long Menus,         /menus/long           
+Colors,            /decanter_help/styleguide/colors
+Header Menus,      /,                    clickMenu.js
+Home,              /                     
+Menus,             /menus                
+Long Menus,        /menus/long           
