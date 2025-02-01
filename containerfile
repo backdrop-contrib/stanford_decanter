@@ -37,7 +37,7 @@ RUN\
   && util "reset-db"    "mariadb -h db --user=root --password=root -e 'DROP DATABASE IF EXISTS app; CREATE DATABASE app'" \
   && util "reset-app"   "rm -rf /var/www/html/files/config*;" \
   && util "fix-perms"   "chown --quiet -R www-data:www-data /var/www/html;" \
-  && util "install-app" "reset-db && reset-app && si && bd -y cim && fix-perms && uli;"
+  && util "install-app" "reset-db && reset-app && si && bd -y cim && fix-perms && cr && uli;"
 
 
 # Download backdrop and bee

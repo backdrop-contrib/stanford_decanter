@@ -2208,6 +2208,191 @@ table thead + tbody{
   border-color: rgb(0 154 180 / var(--tw-border-opacity, 1));
 }
 
+.border-archway{
+  --tw-border-opacity: 1;
+  border-color: rgb(93 75 60 / var(--tw-border-opacity, 1));
+}
+
+.border-bay{
+  --tw-border-opacity: 1;
+  border-color: rgb(111 162 135 / var(--tw-border-opacity, 1));
+}
+
+.border-black-30{
+  --tw-border-opacity: 1;
+  border-color: rgb(192 192 191 / var(--tw-border-opacity, 1));
+}
+
+.border-black-40{
+  --tw-border-opacity: 1;
+  border-color: rgb(171 171 169 / var(--tw-border-opacity, 1));
+}
+
+.border-black-50{
+  --tw-border-opacity: 1;
+  border-color: rgb(151 150 148 / var(--tw-border-opacity, 1));
+}
+
+.border-black-60{
+  --tw-border-opacity: 1;
+  border-color: rgb(118 118 116 / var(--tw-border-opacity, 1));
+}
+
+.border-black-70{
+  --tw-border-opacity: 1;
+  border-color: rgb(109 108 105 / var(--tw-border-opacity, 1));
+}
+
+.border-black-80{
+  --tw-border-opacity: 1;
+  border-color: rgb(88 87 84 / var(--tw-border-opacity, 1));
+}
+
+.border-black-90{
+  --tw-border-opacity: 1;
+  border-color: rgb(67 66 62 / var(--tw-border-opacity, 1));
+}
+
+.border-black-true{
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
+}
+
+.border-brick{
+  --tw-border-opacity: 1;
+  border-color: rgb(101 28 50 / var(--tw-border-opacity, 1));
+}
+
+.border-cardinal-red{
+  --tw-border-opacity: 1;
+  border-color: rgb(140 21 21 / var(--tw-border-opacity, 1));
+}
+
+.border-cardinal-red-dark{
+  --tw-border-opacity: 1;
+  border-color: rgb(130 0 0 / var(--tw-border-opacity, 1));
+}
+
+.border-cardinal-red-light{
+  --tw-border-opacity: 1;
+  border-color: rgb(184 58 75 / var(--tw-border-opacity, 1));
+}
+
+.border-cool-grey{
+  --tw-border-opacity: 1;
+  border-color: rgb(83 86 90 / var(--tw-border-opacity, 1));
+}
+
+.border-digital-blue{
+  --tw-border-opacity: 1;
+  border-color: rgb(0 108 184 / var(--tw-border-opacity, 1));
+}
+
+.border-digital-blue-dark{
+  --tw-border-opacity: 1;
+  border-color: rgb(0 84 143 / var(--tw-border-opacity, 1));
+}
+
+.border-digital-blue-light{
+  --tw-border-opacity: 1;
+  border-color: rgb(133 204 255 / var(--tw-border-opacity, 1));
+}
+
+.border-digital-green{
+  --tw-border-opacity: 1;
+  border-color: rgb(0 133 102 / var(--tw-border-opacity, 1));
+}
+
+.border-digital-green-bright{
+  --tw-border-opacity: 1;
+  border-color: rgb(0 155 118 / var(--tw-border-opacity, 1));
+}
+
+.border-digital-green-dark{
+  --tw-border-opacity: 1;
+  border-color: rgb(0 111 84 / var(--tw-border-opacity, 1));
+}
+
+.border-digital-green-light{
+  --tw-border-opacity: 1;
+  border-color: rgb(26 236 186 / var(--tw-border-opacity, 1));
+}
+
+.border-fog{
+  --tw-border-opacity: 1;
+  border-color: rgb(218 215 203 / var(--tw-border-opacity, 1));
+}
+
+.border-fog-dark{
+  --tw-border-opacity: 1;
+  border-color: rgb(182 177 169 / var(--tw-border-opacity, 1));
+}
+
+.border-fog-light{
+  --tw-border-opacity: 1;
+  border-color: rgb(244 244 244 / var(--tw-border-opacity, 1));
+}
+
+.border-lagunita{
+  --tw-border-opacity: 1;
+  border-color: rgb(0 124 146 / var(--tw-border-opacity, 1));
+}
+
+.border-olive{
+  --tw-border-opacity: 1;
+  border-color: rgb(143 153 62 / var(--tw-border-opacity, 1));
+}
+
+.border-palo-alto{
+  --tw-border-opacity: 1;
+  border-color: rgb(23 94 84 / var(--tw-border-opacity, 1));
+}
+
+.border-palo-verde{
+  --tw-border-opacity: 1;
+  border-color: rgb(39 153 137 / var(--tw-border-opacity, 1));
+}
+
+.border-plum{
+  --tw-border-opacity: 1;
+  border-color: rgb(98 0 89 / var(--tw-border-opacity, 1));
+}
+
+.border-poppy{
+  --tw-border-opacity: 1;
+  border-color: rgb(233 131 0 / var(--tw-border-opacity, 1));
+}
+
+.border-sky{
+  --tw-border-opacity: 1;
+  border-color: rgb(66 152 181 / var(--tw-border-opacity, 1));
+}
+
+.border-spirited{
+  --tw-border-opacity: 1;
+  border-color: rgb(224 79 57 / var(--tw-border-opacity, 1));
+}
+
+.border-stone{
+  --tw-border-opacity: 1;
+  border-color: rgb(127 119 118 / var(--tw-border-opacity, 1));
+}
+
+.border-stone-dark{
+  --tw-border-opacity: 1;
+  border-color: rgb(84 73 72 / var(--tw-border-opacity, 1));
+}
+
+.border-stone-light{
+  --tw-border-opacity: 1;
+  border-color: rgb(212 209 209 / var(--tw-border-opacity, 1));
+}
+
+.border-white{
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
+}
+
 .bg-archway{
   --tw-bg-opacity: 1;
   background-color: rgb(93 75 60 / var(--tw-bg-opacity, 1));
@@ -2537,6 +2722,26 @@ table thead + tbody{
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
+.bg-cardinal-red{
+  --tw-bg-opacity: 1;
+  background-color: rgb(140 21 21 / var(--tw-bg-opacity, 1));
+}
+
+.bg-cardinal-red-dark{
+  --tw-bg-opacity: 1;
+  background-color: rgb(130 0 0 / var(--tw-bg-opacity, 1));
+}
+
+.bg-cardinal-red-light{
+  --tw-bg-opacity: 1;
+  background-color: rgb(184 58 75 / var(--tw-bg-opacity, 1));
+}
+
+.bg-cool-grey{
+  --tw-bg-opacity: 1;
+  background-color: rgb(83 86 90 / var(--tw-bg-opacity, 1));
+}
+
 .bg-gradient-to-tr{
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
 }
@@ -2725,6 +2930,186 @@ table thead + tbody{
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-archway{
+  --tw-text-opacity: 1;
+  color: rgb(93 75 60 / var(--tw-text-opacity, 1));
+}
+
+.text-bay{
+  --tw-text-opacity: 1;
+  color: rgb(111 162 135 / var(--tw-text-opacity, 1));
+}
+
+.text-black-10{
+  --tw-text-opacity: 1;
+  color: rgb(234 234 234 / var(--tw-text-opacity, 1));
+}
+
+.text-black-30{
+  --tw-text-opacity: 1;
+  color: rgb(192 192 191 / var(--tw-text-opacity, 1));
+}
+
+.text-black-40{
+  --tw-text-opacity: 1;
+  color: rgb(171 171 169 / var(--tw-text-opacity, 1));
+}
+
+.text-black-50{
+  --tw-text-opacity: 1;
+  color: rgb(151 150 148 / var(--tw-text-opacity, 1));
+}
+
+.text-black-60{
+  --tw-text-opacity: 1;
+  color: rgb(118 118 116 / var(--tw-text-opacity, 1));
+}
+
+.text-black-70{
+  --tw-text-opacity: 1;
+  color: rgb(109 108 105 / var(--tw-text-opacity, 1));
+}
+
+.text-black-80{
+  --tw-text-opacity: 1;
+  color: rgb(88 87 84 / var(--tw-text-opacity, 1));
+}
+
+.text-black-90{
+  --tw-text-opacity: 1;
+  color: rgb(67 66 62 / var(--tw-text-opacity, 1));
+}
+
+.text-black-true{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+}
+
+.text-brick{
+  --tw-text-opacity: 1;
+  color: rgb(101 28 50 / var(--tw-text-opacity, 1));
+}
+
+.text-cardinal-red{
+  --tw-text-opacity: 1;
+  color: rgb(140 21 21 / var(--tw-text-opacity, 1));
+}
+
+.text-cardinal-red-dark{
+  --tw-text-opacity: 1;
+  color: rgb(130 0 0 / var(--tw-text-opacity, 1));
+}
+
+.text-cardinal-red-light{
+  --tw-text-opacity: 1;
+  color: rgb(184 58 75 / var(--tw-text-opacity, 1));
+}
+
+.text-cool-grey{
+  --tw-text-opacity: 1;
+  color: rgb(83 86 90 / var(--tw-text-opacity, 1));
+}
+
+.text-digital-blue{
+  --tw-text-opacity: 1;
+  color: rgb(0 108 184 / var(--tw-text-opacity, 1));
+}
+
+.text-digital-blue-dark{
+  --tw-text-opacity: 1;
+  color: rgb(0 84 143 / var(--tw-text-opacity, 1));
+}
+
+.text-digital-blue-light{
+  --tw-text-opacity: 1;
+  color: rgb(133 204 255 / var(--tw-text-opacity, 1));
+}
+
+.text-digital-green{
+  --tw-text-opacity: 1;
+  color: rgb(0 133 102 / var(--tw-text-opacity, 1));
+}
+
+.text-digital-green-bright{
+  --tw-text-opacity: 1;
+  color: rgb(0 155 118 / var(--tw-text-opacity, 1));
+}
+
+.text-digital-green-dark{
+  --tw-text-opacity: 1;
+  color: rgb(0 111 84 / var(--tw-text-opacity, 1));
+}
+
+.text-digital-green-light{
+  --tw-text-opacity: 1;
+  color: rgb(26 236 186 / var(--tw-text-opacity, 1));
+}
+
+.text-fog{
+  --tw-text-opacity: 1;
+  color: rgb(218 215 203 / var(--tw-text-opacity, 1));
+}
+
+.text-fog-dark{
+  --tw-text-opacity: 1;
+  color: rgb(182 177 169 / var(--tw-text-opacity, 1));
+}
+
+.text-fog-light{
+  --tw-text-opacity: 1;
+  color: rgb(244 244 244 / var(--tw-text-opacity, 1));
+}
+
+.text-lagunita{
+  --tw-text-opacity: 1;
+  color: rgb(0 124 146 / var(--tw-text-opacity, 1));
+}
+
+.text-olive{
+  --tw-text-opacity: 1;
+  color: rgb(143 153 62 / var(--tw-text-opacity, 1));
+}
+
+.text-palo-alto{
+  --tw-text-opacity: 1;
+  color: rgb(23 94 84 / var(--tw-text-opacity, 1));
+}
+
+.text-palo-verde{
+  --tw-text-opacity: 1;
+  color: rgb(39 153 137 / var(--tw-text-opacity, 1));
+}
+
+.text-poppy{
+  --tw-text-opacity: 1;
+  color: rgb(233 131 0 / var(--tw-text-opacity, 1));
+}
+
+.text-sky{
+  --tw-text-opacity: 1;
+  color: rgb(66 152 181 / var(--tw-text-opacity, 1));
+}
+
+.text-spirited{
+  --tw-text-opacity: 1;
+  color: rgb(224 79 57 / var(--tw-text-opacity, 1));
+}
+
+.text-stone{
+  --tw-text-opacity: 1;
+  color: rgb(127 119 118 / var(--tw-text-opacity, 1));
+}
+
+.text-stone-dark{
+  --tw-text-opacity: 1;
+  color: rgb(84 73 72 / var(--tw-text-opacity, 1));
+}
+
+.text-stone-light{
+  --tw-text-opacity: 1;
+  color: rgb(212 209 209 / var(--tw-text-opacity, 1));
 }
 
 .no-underline{

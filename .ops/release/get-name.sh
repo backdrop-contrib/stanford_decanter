@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# A script to make a memorable name from a 2 byte hex string.
+# usage: get-name.sh ${git git rev-parse --short=2 HEAD}
+
 readarray -t adjectives <<< '\
 abecedarian
 adorable
@@ -521,5 +524,4 @@ num=${1:-$(openssl rand -hex 2)}
 adj=$((16#${num:0:2}));
 nou=$((16#${num:2:4}));
 
-echo $num;
 echo "${adjectives[$adj]}-${nouns[$nou]}";
