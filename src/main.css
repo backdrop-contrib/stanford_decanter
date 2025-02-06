@@ -427,10 +427,10 @@ html .layout {
 /* Menus */
 
 .js .menu-dropdown > li > a,
-.js .menu-dropdown > li > a:hover,
-.js .menu-dropdown > li > a:focus,
-.js .menu-dropdown > li > a:active {
-  @apply p-0;
+.js .menu-tree > li > a {
+  &, &:hover, &:focus, &:active {
+    @apply p-0 text-wrap;
+  }
 }
 
 .menu,
@@ -503,7 +503,7 @@ html .layout {
       @apply scale-100 bg-fog;
     }
     a.has-submenu, a:hover.has-submenu {
-      @apply pr-0;
+      @apply pr-30;
     }
     a::before {
       content: '';
@@ -516,11 +516,11 @@ html .layout {
       @apply scale-100;
     }
     span.sub-arrow {
-      @apply border-none caret top-20 md:top-1/2 md:right-0 md:relative md:inline-block;
-      @apply right-20 md:right-0;
+      @apply border-none caret top-25;
+      @apply absolute right-10 md:right-0 -rotate-90;
     }
-    li .sub-arrow {
-      @apply absolute right-20 md:right-10 top-25 -rotate-90;
+    li span.sub-arrow {
+      @apply md:right-20;
     }
     a.highlighted span.sub-arrow {
       @apply rotate-0;
@@ -567,7 +567,7 @@ html .layout {
           @apply m-0;
         }
         > li {
-          @apply md:float-left md:mx-5 lg:mr-10 xl:mr-20 md:border-0;
+          @apply md:float-left md:mx-5 lg:mr-10 xl:mr-20 md:border-0  md:content-end;
           ul {
             @apply pl-20 border-0;
             @apply md:pl-0 md:shadow-md md:absolute;
@@ -580,8 +580,13 @@ html .layout {
             @apply md:mr-0;
           }
           > a {
-            @apply text-20;
-            @apply md:px-0 md:py-20 border-0;
+            @apply text-20 border-0;
+            @apply md:px-0 md:py-20 md:mt-auto md:bottom-0;
+            @apply whitespace-normal;
+
+            &.has-submenu, &:hover.has-submenu {
+              @apply pr-30;
+            }
 
             &::before {
               @apply hidden md:block h-6 w-full scale-x-0 scale-y-100;

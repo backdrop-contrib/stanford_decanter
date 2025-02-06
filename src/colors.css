@@ -1,6 +1,8 @@
 html body,
 .l-header,
-.menu-dropdown
+.menu-dropdown,
+.l-header .menu,
+.l-header .menu ul
 {
   background-color: #FFFFFE;
   color: #2E2D28;
@@ -112,11 +114,11 @@ body .header-menu .links a:after {
 }
 
 .l-header .l-header-inner .block-system-main-menu ul,
-.menu-dropdown ul a:hover, 
-.menu-dropdown ul a:focus, 
-.menu-dropdown ul a:active, 
-.menu-dropdown ul a.highlighted,
-.menu-dropdown ul a
+.l-header .menu ul a:hover, 
+.menu ul a:focus, 
+.l-header .menu  ul a:active, 
+.l-header .menu  ul a.highlighted,
+.l-header .menu  ul a
 {
   background-color: #FFFFFE;
 }
