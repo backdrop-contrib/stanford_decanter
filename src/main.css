@@ -493,6 +493,11 @@ html .layout {
       @apply text-17 font-semibold no-underline;
       @apply block m-0 p-20;
     }
+    a.highlighted,
+    a:hover
+    {
+      @apply pl-13;
+    }
     > a,
     > a.highlighted,
     > a:hover {
@@ -517,7 +522,7 @@ html .layout {
     }
     span.sub-arrow {
       @apply border-none caret;
-      @apply absolute top-auto bottom-22 right-10 md:right-0 -rotate-90;
+      @apply absolute top-auto bottom-25 right-10 md:right-0 -rotate-90;
     }
     li span.sub-arrow {
       @apply md:right-20;
@@ -581,7 +586,7 @@ html .layout {
             @apply md:mr-0;
           }
           > a {
-            @apply text-20 border-0;
+            @apply text-19 leading-snug border-0;
             @apply md:px-0 md:py-20 md:mt-auto md:bottom-0;
             @apply whitespace-normal;
 
