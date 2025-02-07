@@ -516,8 +516,8 @@ html .layout {
       @apply scale-100;
     }
     span.sub-arrow {
-      @apply border-none caret top-25;
-      @apply absolute right-10 md:right-0 -rotate-90;
+      @apply border-none caret;
+      @apply absolute top-auto bottom-22 right-10 md:right-0 -rotate-90;
     }
     li span.sub-arrow {
       @apply md:right-20;
@@ -568,6 +568,7 @@ html .layout {
         }
         > li {
           @apply md:float-left md:mx-5 lg:mr-10 xl:mr-20 md:border-0  md:content-end;
+
           ul {
             @apply pl-20 border-0;
             @apply md:pl-0 md:shadow-md md:absolute;
@@ -585,7 +586,7 @@ html .layout {
             @apply whitespace-normal;
 
             &.has-submenu, &:hover.has-submenu {
-              @apply pr-30;
+              @apply pr-15;
             }
 
             &::before {

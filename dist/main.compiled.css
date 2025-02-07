@@ -4266,7 +4266,6 @@ html .layout .l-sidebar + .l-content{
 }
 
 .block-system-main-menu .block-content > ul > li span.sub-arrow{
-  top: 2.5rem;
   border-style: none;
   margin: 0;
   height: 1.2rem;
@@ -4278,6 +4277,8 @@ html .layout .l-sidebar + .l-content{
   background-position: center center;
   transition: transform 0.25s ease-out;
   position: absolute;
+  top: auto;
+  bottom: 2.2rem;
   right: 1rem;
   --tw-rotate: -90deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -4466,7 +4467,7 @@ html .layout .l-sidebar + .l-content{
 }
 
 .l-header .block-system-main-menu .block-content > ul > li > a.has-submenu, .l-header .block-system-main-menu .block-content > ul > li > a:hover.has-submenu{
-  padding-right: 3rem;
+  padding-right: 1.5rem;
 }
 
 .l-header .block-system-main-menu .block-content > ul > li > a::before{
