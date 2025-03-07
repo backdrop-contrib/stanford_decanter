@@ -179,47 +179,49 @@ html .layout {
 .paragraphs-item-aplenty-cards,
 .rs-grid
 {
-  @apply grid grid-cols-1 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12;
+  @apply grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12;
   @apply gap-4 md:gap-6 lg:gap-10 xl:gap-16;
 }
 
+.col-twelfth,
 .rs-grid.grid-12 > *:not([class*="col-"]) {
   @apply col-span-1;
 }
 
+.col-sixth,
 .rs-grid.grid-6 > *:not([class*="col-"]) {
-  @apply col-span-1 md:col-span-2;
+  @apply col-span-1 lg:col-span-2;
 }
 
 .col-quarter,
 .rs-grid.grid-4 > *:not([class*="col-"]) {
-  @apply col-span-1 md:col-span-3;
+  @apply col-span-1 lg:col-span-3;
 }
 
 .col-third,
 .rs-grid.grid-3 > *:not([class*="col-"]) {
   @apply col-span-1 md:col-span-2 lg:col-span-4;
 }
-  
+
 .col-half,
 .rs-grid.grid-2 > *:not([class*="col-"])
 {
-  @apply col-span-1 md:col-span-2 lg:col-span-4 xl:col-span-6;
+  @apply col-span-1 md:col-span-2 lg:col-span-6;
 }
 
 .col-full
 {
-  @apply col-span-1 md:col-span-6 lg:col-span-12;
+  @apply col-span-1 sm:grid-cols-4 md:col-span-6 lg:col-span-12;
 }
 
 .col-twothird
 {
-  @apply col-span-8;
+  @apply col-span-1 lg:col-span-8;
 }
 
 .col-threequarter
 {
-  @apply col-span-9;
+  @apply col-span-1 md:col-span-3 lg:col-span-9;
 }
 
 .g-col-md-1 {
@@ -261,9 +263,11 @@ html .layout {
 }
 
 .grid-demo {
-  @apply bg-black-10 p-10 rounded-xl text-12;
+  @apply bg-black-10 p-10 rounded-xl text-12 my-20;
   div {
-    @apply  bg-black-20 border-black-50 border-2 rounded-lg p-10;
+    @apply min-h-50 bg-black-20 border-black-50 border-dotted border-2 rounded-lg p-10;
+    @apply text-center content-center;
+    @apply hover:text-black hover:border-black;
   }
 }
 

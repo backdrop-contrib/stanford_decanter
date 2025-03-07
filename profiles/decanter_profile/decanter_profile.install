@@ -104,13 +104,21 @@ function decanter_profile_install() {
   );
   user_role_grant_permissions('editor', $editor_permissions);
 
-
   // Create a Home link in the main menu.
   $item = array(
     'link_title' => st('Home'),
     'link_path' => '<front>',
     'menu_name' => 'main-menu',
     'weight' => -1,
+  );
+  menu_link_save($item);
+
+  // Create a Home link in the main menu.
+  $item = array(
+    'link_title' => st('Decanter Styles'),
+    'link_path' => 'decanter_help/styleguide',
+    'menu_name' => 'main-menu',
+    'weight' => 2,
   );
   menu_link_save($item);
 
