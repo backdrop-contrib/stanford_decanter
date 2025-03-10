@@ -115,8 +115,8 @@ function decanter_profile_install() {
 
   // Create a Home link in the main menu.
   $item = array(
-    'link_title' => st('Decanter Styles'),
-    'link_path' => 'decanter_help/styleguide',
+    'link_title' => st('Block Layout'),
+    'link_path' => 'blocks',
     'menu_name' => 'main-menu',
     'weight' => 2,
   );

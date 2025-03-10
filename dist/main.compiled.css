@@ -3562,7 +3562,7 @@ html .layout .l-sidebar + .l-content{
   font-size: 1.2rem;
 }
 
-.grid-demo div{
+.grid-demo > div{
   min-height: 5rem;
   border-radius: 0.5rem;
   border-width: 2px;
@@ -3576,7 +3576,7 @@ html .layout .l-sidebar + .l-content{
   text-align: center;
 }
 
-.grid-demo div:hover{
+.grid-demo > div:hover{
   --tw-border-opacity: 1;
   border-color: rgb(46 45 41 / var(--tw-border-opacity, 1));
   --tw-text-opacity: 1;

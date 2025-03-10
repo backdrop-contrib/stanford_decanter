@@ -1,0 +1,9 @@
+{
+    "_config_name": "taxonomy.vocabulary.news_categories",
+    "name": "News Category",
+    "machine_name": "news_categories",
+    "description": "Tags to highlight and separate news items for landing page display.",
+    "hierarchy": 0,
+    "language": 0,
+    "weight": 0
+}
