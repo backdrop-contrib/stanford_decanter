@@ -1,4 +1,5 @@
 /							Home
 /menus						Menus
+/blocks						Blocks
 /events						Events
 /events/past-events			Past Events

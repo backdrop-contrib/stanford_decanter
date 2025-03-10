@@ -264,7 +264,7 @@ html .layout {
 
 .grid-demo {
   @apply bg-black-10 p-10 rounded-xl text-12 my-20;
-  div {
+  & > div {
     @apply min-h-50 bg-black-20 border-black-50 border-dotted border-2 rounded-lg p-10;
     @apply text-center content-center;
     @apply hover:text-black hover:border-black;
