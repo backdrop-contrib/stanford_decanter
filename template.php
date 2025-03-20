@@ -368,7 +368,15 @@ function stanford_decanter_style_guide_section($form, &$form_state, $snippet = '
       'attributes' => array('class' => 'back block pb-20'),
     ),    
   ];
-
+  $filename = basename($snippet);
+  $form['edit'] = [
+    "#type" => 'link',
+    '#title' => 'Edit this page on Github',
+    '#href' => "https://github.com/backdrop-contrib/stanford_decanter/edit/main/examples/$filename",
+    '#options' => array(
+      'attributes' => array('class' => 'block pb-20'),
+    ),
+  ];
 
   $form['preview'] = [
     '#type' => 'markup',
@@ -380,4 +388,29 @@ function stanford_decanter_style_guide_section($form, &$form_state, $snippet = '
     '#rows' => 30,
   ];
   return $form;
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function stanford_decanter_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'layout_block_configure_form') {
+    $form['style']['style_settings']['classes']['#description'] = t(
+      'Separate class names with spaces. Example: <code>!classes</code>',
+      ['!classes' => implode(' ',
+          array_map(
+            fn($c) => "<a onclick=\"this.closest('.form-type-textfield').closest('.form-item').querySelector('input').value += ' $c';\">$c</a>",
+            [
+              'col-full',
+              'col-half',
+              'col-third',
+              'col-quarter',
+              'col-sixth',
+              'col-twelfth',
+              'col-twothird',
+              'col-threequarter'
+            ]))
+        ]
+      );
+  }
 }

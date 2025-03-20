@@ -1,0 +1,12 @@
+{
+    "_config_name": "block.custom.fpo_block",
+    "delta": "fpo_block",
+    "info": "FPO Block",
+    "title": "",
+    "description": "",
+    "body": {
+        "value": "<div class=\"min-h-50 bg-black-20 border-black-50 border-dotted border-2 rounded-lg p-10 text-center text-black-30 content-center hover:text-black hover:border-black\">\r\n    <br>\r\n    <br>\r\n    FPO<br>\r\n    <br>\r\n    &nbsp;\r\n</div>",
+        "format": "content_editor_text_format"
+    },
+    "default_langcode": "und"
+}
