@@ -35,3 +35,9 @@ Please submit any suggested changes as a [github pull request.](https://github.c
 You can also use github to file [bug reports and support requests.](https://github.com/backdrop-contrib/stanford_decanter/issues)
 
 [Edit this page on Github](https://github.com/backdrop-contrib/stanford_decanter/edit/main/docs/development.md)
+
+## Running Visual Regression Tests
+
+To take a reference capture of the test site run:
+
+    docker compose exec backstop backstop reference --config=/config.js
