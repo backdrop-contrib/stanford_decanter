@@ -70,7 +70,7 @@ By default, blocks will span 3 of 12 columns. To change this, open on the "Confi
 
 Click one of the `col-*` links to add that class to the block.
 
-For a visual reference of the `col-*` classes see [this image](../.ops/output/vrt/approved/Blocks--desktop.png)
+For a visual reference of the `col-*` classes see [this example file](../examples/grid.html)
 
 ## Utility Styles
 
