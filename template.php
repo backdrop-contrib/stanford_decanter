@@ -368,7 +368,15 @@ function stanford_decanter_style_guide_section($form, &$form_state, $snippet = '
       'attributes' => array('class' => 'back block pb-20'),
     ),    
   ];
-
+  $filename = basename($snippet);
+  $form['edit'] = [
+    "#type" => 'link',
+    '#title' => 'Edit this page on Github',
+    '#href' => "https://github.com/backdrop-contrib/stanford_decanter/edit/main/examples/$filename",
+    '#options' => array(
+      'attributes' => array('class' => 'block pb-20'),
+    ),
+  ];
 
   $form['preview'] = [
     '#type' => 'markup',
