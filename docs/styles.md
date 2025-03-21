@@ -49,22 +49,28 @@ The built in `Grid` views formatter works with the Decanter theme.
 
 ### Spanning Columns in a Grid.
 
-Adding the following classes to a grid item will cause it to span across columns. This can be used to create complex layouts:
+Adding the following classes to a grid item or layout block will cause it to span across columns. This can be used to create complex layouts:
 
-- `.col-md-1`, `.col-span-1`
-- `.col-md-2`, `.col-span-2`
-- `.col-md-3`, `.col-span-3`, `.quarter-width`
-- `.col-md-4`, `.col-span-4`, `.third-width`
-- `.col-md-5`, `.col-span-5`
-- `.col-md-6`, `.col-span-6`, `.third-width`
-- `.col-md-7`, `.col-span-7`
-- `.col-md-8`, `.col-span-8`, `.twothird-width`
-- `.col-md-9`, `.col-span-9`, `.threequarter-width`
-- `.col-md-10`, `.col-span-10`
-- `.col-md-11`, `.col-span-11`
-- `.col-md-12`, `.col-span-12`, `.full-width`
+- `col-full`
+- `col-half`
+- `col-third`
+- `col-quarter`
+- `col-sixth`
+- `col-twelfth`
+- `col-twothird`
+- `col-threequarter`
 
-NB: The `col-md-*` have been kept for compatibility with older Bootstrap code. If possible, use the `.col-span-*` version for future compatibility.
+#### Spanning columns in the Decanter layout
+
+If you are using the Decanter layout you can set the width of blocks in the Bottom and Footer regions.
+
+By default, blocks will span 3 of 12 columns. To change this, open on the "Configure" dialog for the block and go to the `Style settings`:
+
+![Editing a block style](img/block-config.png)
+
+Click one of the `col-*` links to add that class to the block.
+
+For a visual reference of the `col-*` classes see [this example file](../examples/grid.html)
 
 ## Utility Styles
 
@@ -74,7 +80,7 @@ Some other useful utility styles include:
 - `.btn`: Turn a link into a square submit button
 - `.link-arrow`: Add an animated internal link arrow to a link
 - `.ext-link`: Add an animated external link arrow.
-- `.gridded-region`: Turn a layout region into a responsive 12 column grid. NB: The 'Page Bottom' and 'Local Footer' regions already have this style applied.
+- `.rs-grid`: Turn a layout region into a responsive 12 column grid. NB: The 'Page Bottom' and 'Local Footer' regions already have this style applied.
 - `.hero`: Turn any block or content into a Hero block. You can also create hero blocks by using the default 'Hero' content type.
 
 [Edit this page on Github](https://github.com/backdrop-contrib/stanford_decanter/edit/main/docs/styles.md)

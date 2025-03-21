@@ -395,22 +395,38 @@ function stanford_decanter_style_guide_section($form, &$form_state, $snippet = '
  */
 function stanford_decanter_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'layout_block_configure_form') {
-    $form['style']['style_settings']['classes']['#description'] = t(
-      'Separate class names with spaces. Example: <code>!classes</code>',
-      ['!classes' => implode(' ',
-          array_map(
-            fn($c) => "<a onclick=\"this.closest('.form-type-textfield').closest('.form-item').querySelector('input').value += ' $c';\">$c</a>",
-            [
-              'col-full',
-              'col-half',
-              'col-third',
-              'col-quarter',
-              'col-sixth',
-              'col-twelfth',
-              'col-twothird',
-              'col-threequarter'
-            ]))
-        ]
-      );
+    $form['style']['style_settings']['classes']['#description'] = _stanford_decanter_get_classes_for_textfield([
+      'col-full',
+      'col-half',
+      'col-third',
+      'col-quarter',
+      'col-sixth',
+      'col-twelfth',
+      'col-twothird',
+      'col-threequarter',
+      'hero'
+    ]);
   }
+  if ($form_id == 'layout_configure_region_page') {
+    $form['classes']['#description'] = _stanford_decanter_get_classes_for_textfield([
+      'rs-grid',
+      'grid-2',
+      'grid-3',
+      'grid-4',
+      'grid-6'
+    ]);
+  }
+}
+
+function _stanford_decanter_get_classes_for_textfield($classes) {
+  return t(
+    'Separate class names with spaces. Example: <code>!classes</code>',
+    [
+      '!classes' => implode(' ',
+        array_map(
+          fn($c) => "<a onclick=\"this.closest('.form-type-textfield').closest('.form-item').querySelector('input').value += ' $c';\">$c</a>",
+          $classes
+      ))
+    ]
+  );
 }
