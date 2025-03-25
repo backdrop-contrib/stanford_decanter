@@ -1921,9 +1921,50 @@ table thead + tbody{
   grid-column: span 6 / span 6;
 }
 
+.m-0{
+  margin: 0;
+}
+
+.m-1{
+  margin: 0.1rem;
+}
+
+.m-2{
+  margin: 0.2rem;
+}
+
+.m-3{
+  margin: 0.3rem;
+}
+
+.m-4{
+  margin: 0.4rem;
+}
+
+.m-5{
+  margin: 0.5rem;
+}
+
+.m-6{
+  margin: 0.6rem;
+}
+
+.m-7{
+  margin: 0.7rem;
+}
+
+.m-8{
+  margin: 0.8rem;
+}
+
 .mx-10{
   margin-left: 1rem;
   margin-right: 1rem;
+}
+
+.mx-5{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .mx-auto{
@@ -2569,8 +2610,36 @@ table thead + tbody{
   padding: 0;
 }
 
+.p-1{
+  padding: 0.1rem;
+}
+
+.p-2{
+  padding: 0.2rem;
+}
+
+.p-3{
+  padding: 0.3rem;
+}
+
+.p-4{
+  padding: 0.4rem;
+}
+
+.p-5{
+  padding: 0.5rem;
+}
+
 .p-6{
   padding: 0.6rem;
+}
+
+.p-7{
+  padding: 0.7rem;
+}
+
+.p-8{
+  padding: 0.8rem;
 }
 
 .px-03em{
