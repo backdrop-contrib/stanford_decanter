@@ -924,11 +924,20 @@ fieldset {
   font-size: 2.5rem;
 }
 
+/* Listings */
+
+.l-content .view-mode-teaser {
+  @apply mb-20;
+}
+
 /* Grids and cards */
 
 .view-content {
   .views-row {
-    @apply border-t rs-mt-2 rs-pt-2 clear-both;
+    @apply clear-both;
+    &:not(:first-child) {
+      @apply border-t rs-mt-2 rs-pt-2;
+    }
     &:first-child {
       @apply border-t-0;
     }

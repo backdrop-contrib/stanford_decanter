@@ -154,5 +154,4 @@ function decanter_profile_install() {
   // Load global $user and perform final login tasks.
   // $user = user_load(1);
   // user_login_finalize();
-
 }

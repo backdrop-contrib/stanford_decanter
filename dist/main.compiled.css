@@ -5386,42 +5386,51 @@ fieldset .summary{
   font-size: 2.5rem;
 }
 
+/* Listings */
+
+.l-content .view-mode-teaser{
+  margin-bottom: 2rem;
+}
+
 /* Grids and cards */
 
 .view-content .views-row{
+  clear: both;
+}
+
+.view-content .views-row:not(:first-child){
   margin-top: 3rem;
 }
 
 @media (min-width: 768px){
-  .view-content .views-row{
+  .view-content .views-row:not(:first-child){
     margin-top: 3.6rem;
   }
 }
 
 @media (min-width: 1500px){
-  .view-content .views-row{
+  .view-content .views-row:not(:first-child){
     margin-top: 3.8rem;
   }
 }
 
-.view-content .views-row{
+.view-content .views-row:not(:first-child){
   padding-top: 3rem;
 }
 
 @media (min-width: 768px){
-  .view-content .views-row{
+  .view-content .views-row:not(:first-child){
     padding-top: 3.6rem;
   }
 }
 
 @media (min-width: 1500px){
-  .view-content .views-row{
+  .view-content .views-row:not(:first-child){
     padding-top: 3.8rem;
   }
 }
 
-.view-content .views-row{
-  clear: both;
+.view-content .views-row:not(:first-child){
   border-top-width: 1px;
 }
 
