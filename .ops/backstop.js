@@ -44,6 +44,7 @@ module.exports = {
       .split(/\n/)
       .forEach((line) => {
           parts = line.split(',').map(str => str.trim());
+          console.log(line);
           if (!parts || parts[0]?.startsWith('#') || !parts?.[1])
             return;
 

@@ -285,7 +285,7 @@ function stanford_decanter_menu() {
     'description' => 'Decanter 7 Style guide.',
     'page callback' => 'backdrop_get_form',
     'page arguments' => array('stanford_decanter_style_guide'),
-    'access arguments' => array('access content overview'),
+    'access arguments' => array('access content'),
     'weight' => 4,
     'type' => MENU_NORMAL_ITEM,
     'file path' => backdrop_get_path('theme', 'stanford_decanter'),
@@ -300,13 +300,23 @@ function stanford_decanter_menu() {
         'title' => ucwords(strtr($name, ['.html' => '', '-' => ' — '])),
         'page callback' => 'backdrop_get_form',
         'page arguments' => array('stanford_decanter_style_guide_section', $dir . $snippet),
-        'access arguments' => array('access content overview'),
+        'access arguments' => array('access content'),
         'type' => MENU_NORMAL_ITEM,
         'file path' => backdrop_get_path('theme', 'stanford_decanter'),
         'file' => 'template.php',
       );
       }
     }
+  
+  $items[STYLEGUIDE_PATH . '/colors'] = [
+    "title" => t('Colors'),
+    'page callback' => '_stanford_decanter_generate_colorsheet',
+    'page arguments' => array('stanford_decanter_style_guide_section', $dir . $snippet),
+    'access arguments' => array('access content'),
+    'type' => MENU_NORMAL_ITEM,
+    'file path' => backdrop_get_path('theme', 'stanford_decanter'),
+    'file' => 'template.php',
+];
 
   return $items;
 }
@@ -380,4 +390,72 @@ function stanford_decanter_style_guide_section($form, &$form_state, $snippet = '
     '#rows' => 30,
   ];
   return $form;
+}
+
+function _stanford_decanter_generate_colorsheet() {
+
+$out = '';
+
+foreach (
+  [
+    'white',
+    'black-true',
+    'cool-grey',
+
+    'cardinal-red',
+    'cardinal-red-light',
+    'cardinal-red-dark',
+
+    'digital-red',
+    'digital-red-light',
+    'digital-red-dark',
+    
+    'digital-blue',
+    'digital-blue-light',
+    'digital-blue-dark',
+
+    'digital-green',
+    'digital-green-light',
+    'digital-green-dark',
+    'digital-green-bright',
+
+    'palo-alto',
+    'palo-verde',
+    'olive',
+
+    'bay',
+    'sky',
+    'lagunita',
+
+    'poppy',
+    'spirited',
+    'plum',
+    'brick',
+    'archway',
+
+    'stone',
+    'stone-light',
+    'stone-dark',
+
+    'fog',
+    'fog-light',
+    'fog-dark',
+
+    'black-true',
+    'black-90',
+    'black-80',
+    'black-70',
+    'black-60',
+    'black-50',
+    'black-40',
+    'black-30',
+    'black-20',
+    'black-10',
+  ] as $color) {
+    $out .= "<div class=\"rs-py-2 rs-px-1 flex justify-center content-center col-third bg-$color\"><pre>.bg-$color</pre></div>";
+    $out .= "<div class=\"rs-py-2 rs-px-1 flex justify-center content-center col-third text-$color\"><pre>.text-$color</pre></div>";
+    $out .= "<div class=\"rs-py-2 rs-px-1 flex justify-center content-center col-third border border-$color\"><pre>.border-$color</pre></div>";
+
+  }
+  return "<div class=\"rs-grid\">$out</div>";
 }

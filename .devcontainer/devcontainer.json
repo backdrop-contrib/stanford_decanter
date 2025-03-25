@@ -54,16 +54,17 @@
 			"editor.tabSize": 2
 	  },
 	  "extensions": [
-			"xdebug.php-debug",
-			"bmewburn.vscode-intelephense-client",
-			"mrmlnc.vscode-apache",
-			"streetsidesoftware.code-spell-checker",
-			"EditorConfig.EditorConfig",
-			"ms-azuretools.vscode-docker",
-			"yzhang.markdown-all-in-one",
-			"bradlc.vscode-tailwindcss",
-			"github.vscode-github-actions"
-		  ]
+		"xdebug.php-debug",
+		"bmewburn.vscode-intelephense-client",
+		"mrmlnc.vscode-apache",
+		"streetsidesoftware.code-spell-checker",
+		"EditorConfig.EditorConfig",
+		"ms-azuretools.vscode-docker",
+		"yzhang.markdown-all-in-one",
+		"bradlc.vscode-tailwindcss",
+		"github.vscode-github-actions",
+		"GitHub.vscode-pull-request-github"
+	]
 		}
 	  }
 }
