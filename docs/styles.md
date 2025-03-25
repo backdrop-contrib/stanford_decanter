@@ -84,3 +84,12 @@ Some other useful utility styles include:
 - `.hero`: Turn any block or content into a Hero block. You can also create hero blocks by using the default 'Hero' content type.
 
 [Edit this page on Github](https://github.com/backdrop-contrib/stanford_decanter/edit/main/docs/styles.md)
+
+## Responsive Breakpoints
+
+- `xs`: 0 - 575px
+- `sm`: 576 - 767px
+- `md`: 768 - 991px
+- `lg`: 992 - 1199px
+- `xl`: 1200 - 1499px
+- `2xl`: 1500px and up

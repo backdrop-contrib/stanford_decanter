@@ -15,6 +15,12 @@
         "title_block": null
     },
     "positions": {
+<<<<<<< HEAD
+=======
+        "identitybar": [
+            "78eb1ae3-786e-4d2b-8f23-35daa10b3a34"
+        ],
+>>>>>>> menu-wrap
         "header": [
             "84c43df4-1165-4faf-8700-c362a7153c0b",
             "13b2f325-af26-40bb-8c61-97fe1d93f19f"
@@ -22,6 +28,7 @@
         "content": [
             "default"
         ],
+<<<<<<< HEAD
         "footer": [
             "cd4d033d-3f67-4191-8655-85ee758877c0"
         ],
@@ -30,8 +37,51 @@
             "09f11b4e-877e-45ab-9000-a4c6254faa04",
             "a549d0bc-51f7-46b0-9b41-653788410dd4"
         ]
+=======
+        "sidebar": [
+            "6cfe704d-083e-4c55-9000-0e4766872403"
+        ],
+        "sidebar2": [],
+        "bottom": [],
+        "footer": [
+            "cd4d033d-3f67-4191-8655-85ee758877c0"
+        ],
+        "stanfordfooter": [
+            "319859c6-4cd1-451f-b100-c5701f767f30"
+        ],
+        "title": []
+>>>>>>> menu-wrap
     },
     "content": {
+<<<<<<< HEAD
+=======
+        "78eb1ae3-786e-4d2b-8f23-35daa10b3a34": {
+            "plugin": "theme_hooks:stanford_decanter_identity_bar",
+            "data": {
+                "status": 1,
+                "module": "theme_hooks",
+                "delta": "stanford_decanter_identity_bar",
+                "settings": {
+                    "title_display": "default",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": [],
+                    "contexts": [],
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "78eb1ae3-786e-4d2b-8f23-35daa10b3a34",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        },
+>>>>>>> menu-wrap
         "84c43df4-1165-4faf-8700-c362a7153c0b": {
             "plugin": "system:header",
             "data": {
@@ -133,6 +183,43 @@
                 }
             }
         },
+        "6cfe704d-083e-4c55-9000-0e4766872403": {
+            "plugin": "system:main-menu",
+            "data": {
+                "status": 1,
+                "module": "system",
+                "delta": "main-menu",
+                "settings": {
+                    "title_display": "default",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": {
+                        "menu_name": "main-menu",
+                        "style": "tree",
+                        "level": "2",
+                        "depth": "2",
+                        "expand_all": 0,
+                        "clickdown": 0,
+                        "toggle": 1,
+                        "toggle_text": "Menu",
+                        "collapse": "default",
+                        "accordion": 0
+                    },
+                    "contexts": [],
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "6cfe704d-083e-4c55-9000-0e4766872403",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        },
         "cd4d033d-3f67-4191-8655-85ee758877c0": {
             "plugin": "system:powered-by",
             "data": {
@@ -156,8 +243,13 @@
                 }
             }
         },
+<<<<<<< HEAD
         "a549d0bc-51f7-46b0-9b41-653788410dd4": {
             "plugin": "system:page_components:title_combo",
+=======
+        "319859c6-4cd1-451f-b100-c5701f767f30": {
+            "plugin": "theme_hooks:stanford_decanter_global_footer",
+>>>>>>> menu-wrap
             "data": {
                 "module": "system",
                 "delta": "page_components",
@@ -171,7 +263,11 @@
                     "title_classes": "page-title",
                     "tab-type": "both"
                 },
+<<<<<<< HEAD
                 "uuid": "a549d0bc-51f7-46b0-9b41-653788410dd4",
+=======
+                "uuid": "319859c6-4cd1-451f-b100-c5701f767f30",
+>>>>>>> menu-wrap
                 "style": {
                     "plugin": "default",
                     "data": {

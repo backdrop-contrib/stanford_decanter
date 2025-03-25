@@ -11,7 +11,6 @@ module.exports = {
         "height": 800
       }
     ],
-    "scenarios": [],
     "paths": {
       "engine_scripts":     "/scripts",
       "html_report":        "/output/report",
@@ -20,7 +19,6 @@ module.exports = {
     },
     "report": ["browser","json"],
     "engine": "playwright",
-    "onReadyScript": "onReady.js",
     "engineOptions": {
       "browser": "chromium"
     },
@@ -35,20 +33,36 @@ module.exports = {
     "debugWindow": false,
     "scenarioLogsInReports": true,
     "fileNameTemplate": '{scenarioLabel}--{viewportLabel}',
+    "onReadyScript": "",
+    "scenarios": [],
+    readyTimeout: 3,
   }
   
   try {
     require('fs')
       .readFileSync('/urls.txt', 'utf-8')
       .split(/\n/)
-      .forEach((url) => {
-                  module.exports.scenarios.push(
-                    {
-                      "label":  url.split(/\s+/).pop().trim(),
-                      "url":    `http://app${url.split(/\s+/)[0]}`,
-                    }
-                  );
-                });
+      .forEach((line) => {
+          parts = line.split(',').map(str => str.trim());
+          if (!parts || parts[0]?.startsWith('#') || !parts?.[1])
+            return;
+
+          scenario = {
+                "label":          parts[0],
+                "url":           `http://app${parts[1]}`,
+                "onReadyScript":  parts[2] || "onReady.js"
+              };
+          module.exports.scenarios.push(scenario);
+        });
   } catch (err) {
     console.log(err);
   }
+
+//          // module.exports.scenarios.push(scenario);
+
+  // module.exports.scenarios.push(
+  //   {
+  //     "label":          parts[0].trim(),
+  //     "url":           `http://app${parts[1]}`,
+  //   }
+  // );
