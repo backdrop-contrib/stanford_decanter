@@ -350,7 +350,7 @@ function stanford_decanter_style_guide() {
  */
 function stanford_decanter_style_guide_section($form, &$form_state, $snippet = '') {
 
-  $form = [];
+  // $form = [];
 
   if (stripos($snippet, 'alert') !== false) {
     backdrop_set_message(t('This is a Backdrop status message'), 'status');
