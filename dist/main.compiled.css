@@ -3481,7 +3481,7 @@ html .layout .l-sidebar + .l-content{
 
 @media (min-width: 576px){
   .col-full{
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-column: span 4 / span 4;
   }
 }
 
@@ -4800,7 +4800,7 @@ ul.primary li.active a,
   .l-footer .l-footer-inner .full,
     .l-footer .l-footer-inner .block-theme-hooks-stanford-decanter-global-footer,
     .l-footer .l-footer-inner .block-system-header{
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-column: span 4 / span 4;
   }
 }
 
