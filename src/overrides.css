@@ -104,3 +104,9 @@
  .links.inline .node-readmore:after {
    content: '';
  }
+
+ @media (min-width: 48em) {
+  .block-content .menu-dropdown a {
+    white-space: wrap;
+  }
+ }
