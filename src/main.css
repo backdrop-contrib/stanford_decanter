@@ -184,47 +184,49 @@ html .layout {
 .paragraphs-item-aplenty-cards,
 .rs-grid
 {
-  @apply grid grid-cols-1 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12;
+  @apply grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12;
   @apply gap-4 md:gap-6 lg:gap-10 xl:gap-16;
 }
 
+.col-twelfth,
 .rs-grid.grid-12 > *:not([class*="col-"]) {
   @apply col-span-1;
 }
 
+.col-sixth,
 .rs-grid.grid-6 > *:not([class*="col-"]) {
-  @apply col-span-1 md:col-span-2;
+  @apply col-span-1 lg:col-span-2;
 }
 
 .col-quarter,
 .rs-grid.grid-4 > *:not([class*="col-"]) {
-  @apply col-span-1 md:col-span-3;
+  @apply col-span-1 lg:col-span-3;
 }
 
 .col-third,
 .rs-grid.grid-3 > *:not([class*="col-"]) {
   @apply col-span-1 md:col-span-2 lg:col-span-4;
 }
-  
+
 .col-half,
 .rs-grid.grid-2 > *:not([class*="col-"])
 {
-  @apply col-span-1 md:col-span-2 lg:col-span-4 xl:col-span-6;
+  @apply col-span-1 md:col-span-2 lg:col-span-6;
 }
 
 .col-full
 {
-  @apply col-span-1 sm:col-span-4 md:col-span-6 lg:col-span-12
+  @apply col-span-1 sm:grid-cols-4 md:col-span-6 lg:col-span-12;
 }
 
 .col-twothird
 {
-  @apply col-span-8;
+  @apply col-span-1 lg:col-span-8;
 }
 
 .col-threequarter
 {
-  @apply col-span-9;
+  @apply col-span-1 md:col-span-3 lg:col-span-9;
 }
 
 .g-col-md-1 {
@@ -266,9 +268,11 @@ html .layout {
 }
 
 .grid-demo {
-  @apply bg-black-10 p-10 rounded-xl text-12;
-  div {
-    @apply  bg-black-20 border-black-50 border-2 rounded-lg p-10;
+  @apply bg-black-10 p-10 rounded-xl text-12 my-20;
+  & > div {
+    @apply min-h-50 bg-black-20 border-black-50 border-dotted border-2 rounded-lg p-10;
+    @apply text-center content-center;
+    @apply hover:text-black hover:border-black;
   }
 }
 
@@ -453,12 +457,153 @@ html .layout {
       &:last-child {
         @apply border-b-0;
       }
+      a {
+        @apply p-10 lg:p-16 pl-16 md:pl-16;
+        @apply text-17 font-semibold hocus:font-semibold no-underline;
+      }
     }
   }
 }
 
+.l-header .block-menu,
+.l-sidebar .block-menu 
+{
+  ul.menu,
+  ul.menu-dropdown {
+    > li {
+      @apply text-nowrap;
+
+      a.active-trail::before,
+      &.active-trail>a::before {
+        @apply scale-100 bg-fog;
+      }
+
+      > a {
+        @apply p-8 px-16 md:p-16 md:pl-0 md:pr-0 mr-8 border-b-0 leading-normal flex-nowrap;
+        @apply text-14 md:text-18 font-semibold;
+        @apply no-underline;
+      }
+      a.has-submenu {
+        @apply pr-20;
+      }
+      a::before {
+        content: '';
+        @apply absolute h-full w-2 md:w-6 scale-y-0 bg-black bottom-0 left-0 visible;
+        transition: transform .3s ease-in, background-color .3s ease-in;
+      }
+      a::before {
+        content: ' ';
+        @apply md:w-full md:h-6 md:scale-x-0;
+      }
+      a:hover::before,
+      a.active::before {
+        @apply md:scale-100;
+      }
+
+      span.sub-arrow {
+        @apply border-none caret right-0 inline-block align-baseline;
+        margin-top: -6px;
+        .has-submenu.highlighted & {
+          @apply rotate-180;
+        }
+      }
+    }
+  }
+}
+
+.l-header .block-menu
+{
+  .block-title {
+    @apply: hidden;
+  }
+  ul.menu,
+  ul.menu-dropdown {
+    @apply md:flex-row shadow-inner md:shadow-none;
+    > li {
+      @apply mx-0 md:mx-5 lg:mr-10 xl:mr-20 border-0;
+
+      ul {
+        @apply md:pl-0 md:shadow-md md:absolute pl-20 border-0;
+      }
+
+      &.first {
+        @apply md:ml-0;
+      }
+
+      &.last {
+        @apply md:mr-0;
+      }
+
+      > a {
+        @apply p-8 px-16 md:p-16 md:pl-0 md:pr-0 mr-8 border-b-0 leading-normal flex-nowrap;
+        @apply text-14 md:text-18 xl:text-21 font-semibold;
+        @apply no-underline;
+      }
+      a.has-submenu {
+        @apply pr-20;
+      }
+
+      span.sub-arrow {
+        @apply border-none caret right-0 inline-block align-baseline;
+        margin-top: -6px;
+        .has-submenu.highlighted & {
+          @apply rotate-180;
+        }
+      }
+
+      li {
+        a {
+          @apply text-15 md:text-17;
+          span.sub-arrow {
+            @apply right-10 -rotate-90;
+          }
+        }
+        a::before {
+          @apply h-full w-6;
+        }
+      }
+    }
+  }
+}
+
+
+.l-sidebar .block-menu 
+{
+  .menu-tree li.expanded, 
+  .menu-tree li.collapsed, 
+  .menu-tree li.leaf 
+  {
+    a {
+      @apply inline-block pl-16 mb-0 w-full text-wrap;
+      /* @apply overflow-hidden text-ellipsis; */
+    }
+    a.active:before,
+    a:hover::before {
+      @apply md:scale-y-100;
+    }
+  
+    .sub-arrow {
+      @apply border-none caret absolute right-10 top-20;
+      @apply -rotate-90;
+    }
+    a:hover .sub-arrow {
+      @apply translate-x-5;
+    }
+    a::before {
+      @apply absolute h-full w-6 scale-y-0 bg-black;
+      content: '';
+      bottom: 0;
+      left: 0;
+      transition: transform .3s ease-in, background-color .3s ease-in;
+      visibility: visible;
+    }
+  }
+}
+
+
 .header-menu {
   @apply hidden md:block mr-20 my-auto;
+
   ul.links {
     @apply flex flex-col xl:flex-row;
 
@@ -471,136 +616,11 @@ html .layout {
       @apply hocus:underline hocus:underline-offset-2 hocus:decoration-2;
     }
   }
-} 
+}
 
 .l-footer .block-menu {
   a {
     @apply font-normal underline;
-  }
-}
-
-.block-system-main-menu
-{
-  .block-content > ul > li {
-    li {
-      @apply relative;
-    }
-
-    a,
-    a.highlighted,
-    a:hover
-    {
-      @apply text-17 font-semibold no-underline;
-      @apply block m-0 p-20;
-    }
-    > a,
-    > a.highlighted,
-    > a:hover {
-      @apply relative flex-nowrap;
-      @apply text-18 font-semibold no-underline;
-    }
-    &.active-trail>a::before {
-      @apply scale-100 bg-fog;
-    }
-    a.has-submenu, a:hover.has-submenu {
-      @apply pr-0;
-    }
-    a::before {
-      content: '';
-      @apply absolute bg-black bottom-0 left-0 visible;
-      @apply w-6 h-full scale-x-100 scale-y-0;
-      transition: transform .1s ease-in, background-color .1s ease-in;
-    }
-    a:hover::before,
-    a.active::before {
-      @apply scale-100;
-    }
-    span.sub-arrow {
-      @apply border-none caret top-20 md:top-1/2 md:right-0 md:relative md:inline-block;
-      @apply right-20 md:right-0;
-    }
-    li .sub-arrow {
-      @apply absolute right-20 md:right-10 top-25 -rotate-90;
-    }
-    a.highlighted span.sub-arrow {
-      @apply rotate-0;
-    }
-
-    .l-sidebar & li {
-      a,
-      a:hover,
-      a.highlighted
-      {
-        @apply text-17 p-10 pl-20;
-      }
-      a .sub-arrow {
-        @apply rotate-0;
-      }
-    }
-  }
-
-  .l-header & {
-    @apply md:w-full md:flex-nowrap self-end static;
-    .block-title {
-      @apply: hidden;
-    }
-    .menu-toggle-button {
-      @apply md:hidden mb-0 mr-0;
-      .menu-toggle-button-text {
-        @apply text-11 flex indent-0 p-0 m-0 order-3 mt-35;
-      }
-      .menu-toggle-button-icon {
-        @apply top-20;
-      }
-    }
-    .block-content {
-      @apply px-5 md:p-0 md:ml-0 md:mr-0 md:mt-0 z-10 w-full;
-      
-      .menu-dropdown {
-        @apply absolute md:static left-0 right-0 mt-10;
-        @apply min-h-1000 md:min-h-0;
-      }
-  
-      > ul {
-        @apply md:flex md:flex-row;
-        li {
-          @apply m-0;
-        }
-        > li {
-          @apply md:float-left md:mx-5 lg:mr-10 xl:mr-20 md:border-0;
-          ul {
-            @apply pl-20 border-0;
-            @apply md:pl-0 md:shadow-md md:absolute;
-          }
-  
-          &.first {
-            @apply md:ml-0;
-          }
-          &.last {
-            @apply md:mr-0;
-          }
-          > a {
-            @apply text-20;
-            @apply md:px-0 md:py-20 border-0;
-
-            &::before {
-              @apply hidden md:block h-6 w-full scale-x-0 scale-y-100;
-            }
-
-            &.active-trail:before,
-            &:hover::before {
-              @apply w-full scale-x-100;
-            }
-            span.sub-arrow {
-              @apply ml-10 -rotate-90 md:rotate-0;
-            }
-            &.highlighted span.sub-arrow {
-              @apply rotate-0 md:-rotate-180;
-            }
-          }
-        }
-      }
-    }
   }
 }
 
@@ -879,11 +899,20 @@ fieldset {
   font-size: 2.5rem;
 }
 
+/* Listings */
+
+.l-content .view-mode-teaser {
+  @apply mb-20;
+}
+
 /* Grids and cards */
 
 .view-content {
   .views-row {
-    @apply border-t rs-mt-2 rs-pt-2 clear-both;
+    @apply clear-both;
+    &:not(:first-child) {
+      @apply border-t rs-mt-2 rs-pt-2;
+    }
     &:first-child {
       @apply border-t-0;
     }

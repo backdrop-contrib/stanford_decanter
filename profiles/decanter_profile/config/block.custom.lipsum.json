@@ -1,0 +1,12 @@
+{
+    "_config_name": "block.custom.lipsum",
+    "delta": "lipsum",
+    "info": "Lipsum",
+    "title": "Lorum Ipsum",
+    "description": "Lorum ipsem 2 paragraphs",
+    "body": {
+        "value": "<p>\r\n    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum ipsum ac tortor bibendum consequat. Sed ullamcorper vulputate laoreet. Maecenas quam felis, dignissim eget ligula nec, molestie commodo odio. Praesent gravida erat magna, mollis sagittis nisi iaculis eget. Cras et odio facilisis, venenatis nulla eget, interdum mauris. Nullam fermentum porta ultricies. Nam tincidunt nisl at pretium aliquam. Vivamus id finibus eros. Quisque a consectetur orci. Suspendisse sem nulla, dapibus quis diam ut, ornare pharetra sem. Proin ipsum velit, scelerisque id condimentum non, elementum non mi. Nulla mollis, sem eu feugiat facilisis, dolor dui tincidunt lacus, at imperdiet ante nibh vel lacus. Donec felis quam, molestie id interdum ac, porta vitae mauris.\r\n</p>\r\n<p>\r\n    Duis vestibulum feugiat tortor, ac tincidunt leo. Sed pellentesque sapien diam, ac gravida lacus congue sit amet. Cras quis ultricies turpis, id vestibulum dui. Maecenas volutpat erat consectetur urna porta commodo. Ut convallis sapien in imperdiet ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae lectus at lorem malesuada tincidunt a venenatis nisi. Cras euismod velit risus, sit amet auctor risus posuere ac. Nunc eget dui placerat, vestibulum nibh vitae, scelerisque eros. Curabitur ornare arcu libero, rutrum consectetur nisl varius sit amet. Mauris nibh metus, tincidunt fermentum leo eget, aliquet iaculis magna. Aenean vel urna maximus, faucibus nulla non, luctus est. Sed convallis velit ac mi gravida fringilla. Aenean nisi lacus, interdum vel sapien vel, fermentum blandit quam.\r\n</p>",
+        "format": "content_editor_text_format"
+    },
+    "default_langcode": "und"
+}
