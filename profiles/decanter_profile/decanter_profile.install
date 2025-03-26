@@ -131,6 +131,34 @@ function decanter_profile_install() {
   );
   menu_link_save($item);
 
+
+  $weight = 1;
+  foreach ([
+    'Long Menu Title',
+    'Something & Another',
+    'Title that Must Wrap',
+    'Another Title that Must Wrap',
+    'Shorter',
+    'Long Menu Item',
+    'Wrapping Again',
+  ] as $title) {
+    $menu = [
+      'link_title' => $title,
+      'link_path' => 'https://fluidity.digital',
+      'menu_name' => 'main-menu',
+      'weight' => $weight++,
+    ];
+    $plid = menu_link_save($menu);
+    $menu = [
+      'link_title' => "Child 1",
+      'link_path' => 'https://fluidity.digital',
+      'menu_name' => 'main-menu',
+      'plid' => $plid
+    ];
+    menu_link_save($menu);
+  }
+
+
   // Update the menu router information.
   menu_rebuild();
 
