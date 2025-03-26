@@ -465,13 +465,12 @@ html .layout {
   }
 }
 
-.l-header .block-menu,
-.l-sidebar .block-menu 
+.l-header .block-menu, .l-sidebar .block-menu 
 {
   ul.menu,
   ul.menu-dropdown {
     > li {
-      @apply text-nowrap;
+      @apply text-wrap;
 
       a.active-trail::before,
       &.active-trail>a::before {
@@ -501,8 +500,8 @@ html .layout {
       }
 
       span.sub-arrow {
-        @apply border-none caret right-0 inline-block align-baseline;
-        margin-top: -6px;
+        @apply border-none caret inline-block;
+        @apply absolute right-0 bottom-25;
         .has-submenu.highlighted & {
           @apply rotate-180;
         }
@@ -518,9 +517,10 @@ html .layout {
   }
   ul.menu,
   ul.menu-dropdown {
-    @apply md:flex-row shadow-inner md:shadow-none;
+    @apply md:flex md:flex-row md:flex-nowrap;
+    @apply shadow-inner md:shadow-none;
     > li {
-      @apply mx-0 md:mx-5 lg:mr-10 xl:mr-20 border-0;
+      @apply md:mx-5 lg:mr-10 xl:mr-20 md:border-0 md:content-end;
 
       ul {
         @apply md:pl-0 md:shadow-md md:absolute pl-20 border-0;
@@ -535,20 +535,12 @@ html .layout {
       }
 
       > a {
-        @apply p-8 px-16 md:p-16 md:pl-0 md:pr-0 mr-8 border-b-0 leading-normal flex-nowrap;
-        @apply text-14 md:text-18 xl:text-21 font-semibold;
-        @apply no-underline;
+        @apply text-19 leading-snug border-0;
+        @apply md:px-0 md:py-20 md:mt-auto md:bottom-0;
+        @apply whitespace-normal;
       }
       a.has-submenu {
         @apply pr-20;
-      }
-
-      span.sub-arrow {
-        @apply border-none caret right-0 inline-block align-baseline;
-        margin-top: -6px;
-        .has-submenu.highlighted & {
-          @apply rotate-180;
-        }
       }
 
       li {
@@ -612,7 +604,7 @@ html .layout {
     }
 
     a {
-      @apply pr-15 ml-20 md:ml-40 text-nowrap;
+      @apply pr-15 ml-20 md:ml-40 text-wrap;
       @apply hocus:underline hocus:underline-offset-2 hocus:decoration-2;
     }
   }

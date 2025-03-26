@@ -7,4 +7,10 @@ stylesheets[all][] = dist/main.compiled.css
 stylesheets[all][] = src/colors.css
 stylesheets[all][] = src/overrides.css
 
+; Remove unwanted core CSS
+stylesheets[all][] = menu-dropdown.theme.css
+stylesheets[all][] = menu-dropdown.theme.breakpoint.css
+stylesheets[all][] = menu-dropdown.theme.breakpoint-queries.css
+
 settings[color] = true
+
