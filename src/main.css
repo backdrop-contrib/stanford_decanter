@@ -487,8 +487,7 @@ html .layout {
   }
 }
 
-.l-header .block-menu,
-.l-sidebar .block-menu 
+.l-header .block-menu, .l-sidebar .block-menu 
 {
   ul.menu,
   ul.menu-dropdown {
@@ -523,8 +522,8 @@ html .layout {
       }
 
       span.sub-arrow {
-        @apply border-none caret right-0 inline-block align-baseline;
-        margin-top: -6px;
+        @apply border-none caret inline-block;
+        @apply absolute right-0 bottom-25;
         .has-submenu.highlighted & {
           @apply rotate-180;
         }
@@ -560,18 +559,10 @@ html .layout {
       > a {
         @apply text-19 leading-snug border-0;
         @apply md:px-0 md:py-20 md:mt-auto md:bottom-0;
-        @apply whitespace-normal
+        @apply whitespace-normal;
       }
       a.has-submenu {
         @apply pr-20;
-      }
-
-      span.sub-arrow {
-        @apply border-none caret right-0 inline-block align-baseline;
-        margin-top: -6px;
-        .has-submenu.highlighted & {
-          @apply rotate-180;
-        }
       }
 
       li {
