@@ -2121,12 +2121,32 @@ table thead + tbody{
   margin: 0.1rem;
 }
 
+.m-10{
+  margin: 1rem;
+}
+
+.m-15{
+  margin: 1.5rem;
+}
+
 .m-2{
   margin: 0.2rem;
 }
 
+.m-20{
+  margin: 2rem;
+}
+
+.m-25{
+  margin: 2.5rem;
+}
+
 .m-3{
   margin: 0.3rem;
+}
+
+.m-30{
+  margin: 3rem;
 }
 
 .m-4{
@@ -2147,26 +2167,6 @@ table thead + tbody{
 
 .m-8{
   margin: 0.8rem;
-}
-
-.m-10{
-  margin: 1rem;
-}
-
-.m-15{
-  margin: 1.5rem;
-}
-
-.m-20{
-  margin: 2rem;
-}
-
-.m-25{
-  margin: 2.5rem;
-}
-
-.m-30{
-  margin: 3rem;
 }
 
 .m-9{
@@ -2830,12 +2830,32 @@ table thead + tbody{
   padding: 0.1rem;
 }
 
+.p-10{
+  padding: 1rem;
+}
+
+.p-15{
+  padding: 1.5rem;
+}
+
 .p-2{
   padding: 0.2rem;
 }
 
+.p-20{
+  padding: 2rem;
+}
+
+.p-25{
+  padding: 2.5rem;
+}
+
 .p-3{
   padding: 0.3rem;
+}
+
+.p-30{
+  padding: 3rem;
 }
 
 .p-4{
@@ -2856,26 +2876,6 @@ table thead + tbody{
 
 .p-8{
   padding: 0.8rem;
-}
-
-.p-10{
-  padding: 1rem;
-}
-
-.p-15{
-  padding: 1.5rem;
-}
-
-.p-20{
-  padding: 2rem;
-}
-
-.p-25{
-  padding: 2.5rem;
-}
-
-.p-30{
-  padding: 3rem;
 }
 
 .p-9{
