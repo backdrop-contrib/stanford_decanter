@@ -1,0 +1,12 @@
+{
+    "_config_name": "block.custom.half_width",
+    "delta": "half_width",
+    "info": "Half Width",
+    "title": "Half Width (.col-half)",
+    "description": "",
+    "body": {
+        "value": "<p>\r\n    This block will always take up half the total width (6 columns at desktop sizes). It collapses down to a single column for mobile.\r\n</p>",
+        "format": "content_editor_text_format"
+    },
+    "default_langcode": "und"
+}

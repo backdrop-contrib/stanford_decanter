@@ -1,0 +1,12 @@
+{
+    "_config_name": "block.custom.default_width",
+    "delta": "default_width",
+    "info": "Default Width",
+    "title": "Default Width",
+    "description": "",
+    "body": {
+        "value": "<p>\r\n    This block takes up the default width for the region. For footer regions this is 1/4 width. For some regions that is full width. This can be changed by adding a class to the block using the \"Style settings\"\r\n</p>",
+        "format": "content_editor_text_format"
+    },
+    "default_langcode": "und"
+}

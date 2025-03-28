@@ -1,0 +1,12 @@
+{
+    "_config_name": "block.custom.quarter_width",
+    "delta": "quarter_width",
+    "info": "Quarter Width",
+    "title": "Quarter Width",
+    "description": "",
+    "body": {
+        "value": "<p>\r\n    This block will always take up a quarter the total width (3 columns at desktop sizes). It collapses down to a single column for mobile.\r\n</p>",
+        "format": "content_editor_text_format"
+    },
+    "default_langcode": "und"
+}

@@ -23,6 +23,7 @@ function stanford_decanter_preprocess_block(&$variables)
     }
     backdrop_add_js(backdrop_get_path('theme', 'stanford_decanter') . '/js/search-toggle.js');
   }
+  $variables['classes'][] = "layout-block";
 }
 
 function stanford_decanter_preprocess_node__stanford_event__compact(&$variables) {
@@ -239,6 +240,14 @@ function stanford_decanter_preprocess_layout(&$variables) {
 }
 
 
+/**
+ * Prepares variables for layout templates.
+ *
+ * @see layout.tpl.php
+ */
+function stanford_decanter_preprocess_views_view(&$variables) {
+  $variables['classes'] = array_diff($variables['classes'], ['container']);
+}
 
 /**
  * Prepares variables for header templates.
