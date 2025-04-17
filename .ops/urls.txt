@@ -1,5 +1,6 @@
-/							Home
-/menus						Menus
-/blocks						Blocks
-/events						Events
-/events/past-events			Past Events
+/											Home
+/menus								Menus
+/menus/long/b					SideMenus
+/blocks								Blocks
+/events								Events
+/events/past-events		PastEvents
