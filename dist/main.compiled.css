@@ -5659,17 +5659,17 @@ html .layout .l-sidebar + .l-content{
   border-bottom-width: 0px;
 }
 
-.block-system-main-menu ul.menu li a, .block-system-main-menu ul.menu-dropdown li a{
+.menu li li a, .menu li.leaf li a, .menu li.collapsed li a, .menu li.expanded li a, .menu-tree li li a, .menu-tree li.leaf li a, .menu-tree li.collapsed li a, .menu-tree li.expanded li a{
   font-size: 1.7rem;
   font-weight: 600;
   text-decoration-line: none;
 }
 
-.block-system-main-menu ul.menu li a:hover, .block-system-main-menu ul.menu-dropdown li a:hover{
+.menu li li a:hover, .menu li.leaf li a:hover, .menu li.collapsed li a:hover, .menu li.expanded li a:hover, .menu-tree li li a:hover, .menu-tree li.leaf li a:hover, .menu-tree li.collapsed li a:hover, .menu-tree li.expanded li a:hover{
   font-weight: 600;
 }
 
-.block-system-main-menu ul.menu li a:focus, .block-system-main-menu ul.menu-dropdown li a:focus{
+.menu li li a:focus, .menu li.leaf li a:focus, .menu li.collapsed li a:focus, .menu li.expanded li a:focus, .menu-tree li li a:focus, .menu-tree li.leaf li a:focus, .menu-tree li.collapsed li a:focus, .menu-tree li.expanded li a:focus{
   font-weight: 600;
 }
 
