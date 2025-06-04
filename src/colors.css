@@ -19,7 +19,8 @@ html body,
 
 /* Body links */
 
-a
+a,
+html body .l-footer a
 {
   color: #006CB8;
   text-decoration-color: #006CB8;
@@ -47,7 +48,6 @@ h6 a,
 .l-content h6 a, 
 body .node-readmore a,
 .node-title a:hover,
-html body .l-footer a,
 a.forward,
 a.back
 {
