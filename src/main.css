@@ -689,7 +689,7 @@ ul.tabs {
     a {
       @apply no-underline hocus:underline;
     }
-    &:after {
+    &:not(:last-child):after {
       @apply breadcrumb-divider;
       @apply align-top ml-10;
     }

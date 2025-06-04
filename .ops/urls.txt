@@ -2,5 +2,6 @@
 /menus								Menus
 /menus/long/b					SideMenus
 /blocks								Blocks
+/menus/b							Breadcrumbs
 /events								Events
 /events/past-events		PastEvents
