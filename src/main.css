@@ -784,6 +784,7 @@ ul.primary li.active a,
 /* Form elements */
 
 button,
+html body .button,
 .btn,
 .button-primary,
 .btn-primary,
@@ -791,23 +792,17 @@ button,
 .btn-secondary,
 .btn-cta,
 .cta-button,
-.btn-green,
-.btn-green-lt,
-.btn-green-dk,
-.btn-blue,
-.btn-blue-lt,
-.btn-blue-dk,
 a.btn,
 .l-footer a.btn, 
 .field-name-body a.btn,
-input:where([type='button']), 
-input:where([type='reset']), 
+input:where([type='button']),
+input:where([type='reset']),
 input:where([type='submit'])
 {
-  @apply px-20 py-10;
+  @apply px-20 py-10 border;
   @apply text-center inline-block w-fit;
-  @apply text-16 py-10 leading-10 border;
-  @apply font-semibold leading-display no-underline hocus:underline cursor-pointer transition-all;
+  @apply text-18 font-semibold;
+  @apply leading-display no-underline hocus:underline cursor-pointer transition-all;
 
   & svg {
     @apply transition h-09em w-09em ml-5 -mt-2 inline-block;

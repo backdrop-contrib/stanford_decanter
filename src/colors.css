@@ -146,17 +146,28 @@ html body .header-identity-wrapper .logo a {
 
 /* Form items */
 
-.btn,
-.l-content .btn,
-.l-footer .btn,
+button,
 .button,
-.cta-btn,
-.btn-cta,
-.cta-button,
+.button:hover,
+.button:focus,
+.btn,
+a.btn,
 .button-primary,
-button, 
-input:where([type='button']), 
-input:where([type='reset']), 
+a.button-primary:hover,
+a.button-primary:focus,
+.btn-primary,
+.button-secondary,
+.btn-secondary,
+.cta-button,
+.cta-button:hover,
+.cta-button:focus,
+.btn-cta,
+.btn-cta:hover,
+.btn-cta:focus,
+.l-footer a.btn, 
+.field-name-body a.btn,
+input:where([type='button']),
+input:where([type='reset']),
 input:where([type='submit'])
 {
   border-color: #B1040D;
@@ -170,7 +181,8 @@ a.btn-cta::after {
 }
 
 #edit-reset,
-.btn-secondary
+.btn-secondary,
+.button-secondary
 {
   background-color: #fff;
   color: #B1040D;
@@ -191,7 +203,6 @@ a.btn-cta::after {
   border-color: #006F54;
   color: #000;
 }
-
 .btn-blue {
   background-color: #006CB8;
   border-color: #006CB8;

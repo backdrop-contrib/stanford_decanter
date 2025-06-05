@@ -5741,6 +5741,7 @@ ul.primary li.active a,
 /* Form elements */
 
 button,
+html body .button,
 .btn,
 .button-primary,
 .btn-primary,
@@ -5748,31 +5749,24 @@ button,
 .btn-secondary,
 .btn-cta,
 .cta-button,
-.btn-green,
-.btn-green-lt,
-.btn-green-dk,
-.btn-blue,
-.btn-blue-lt,
-.btn-blue-dk,
 a.btn,
 .l-footer a.btn, 
 .field-name-body a.btn,
-input:where([type='button']), 
-input:where([type='reset']), 
+input:where([type='button']),
+input:where([type='reset']),
 input:where([type='submit']){
+  border-width: 1px;
   padding-left: 2rem;
   padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   display: inline-block;
   width: -moz-fit-content;
   width: fit-content;
   text-align: center;
-  border-width: 1px;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  font-size: 1.6rem;
-  line-height: 2.5rem;
-  cursor: pointer;
+  font-size: 1.8rem;
   font-weight: 600;
+  cursor: pointer;
   line-height: 1.2;
   text-decoration-line: none;
   transition-property: all;
@@ -5781,6 +5775,7 @@ input:where([type='submit']){
 }
 
 button:hover,
+html body .button:hover,
 .btn:hover,
 .button-primary:hover,
 .btn-primary:hover,
@@ -5788,22 +5783,17 @@ button:hover,
 .btn-secondary:hover,
 .btn-cta:hover,
 .cta-button:hover,
-.btn-green:hover,
-.btn-green-lt:hover,
-.btn-green-dk:hover,
-.btn-blue:hover,
-.btn-blue-lt:hover,
-.btn-blue-dk:hover,
 a.btn:hover,
 .l-footer a.btn:hover, 
 .field-name-body a.btn:hover,
-input:where([type='button']):hover, 
-input:where([type='reset']):hover, 
+input:where([type='button']):hover,
+input:where([type='reset']):hover,
 input:where([type='submit']):hover{
   text-decoration-line: underline;
 }
 
 button:focus,
+html body .button:focus,
 .btn:focus,
 .button-primary:focus,
 .btn-primary:focus,
@@ -5811,22 +5801,16 @@ button:focus,
 .btn-secondary:focus,
 .btn-cta:focus,
 .cta-button:focus,
-.btn-green:focus,
-.btn-green-lt:focus,
-.btn-green-dk:focus,
-.btn-blue:focus,
-.btn-blue-lt:focus,
-.btn-blue-dk:focus,
 a.btn:focus,
 .l-footer a.btn:focus, 
 .field-name-body a.btn:focus,
-input:where([type='button']):focus, 
-input:where([type='reset']):focus, 
+input:where([type='button']):focus,
+input:where([type='reset']):focus,
 input:where([type='submit']):focus{
   text-decoration-line: underline;
 }
 
-button svg, .btn svg, .button-primary svg, .btn-primary svg, .button-secondary svg, .btn-secondary svg, .btn-cta svg, .cta-button svg, .btn-green svg, .btn-green-lt svg, .btn-green-dk svg, .btn-blue svg, .btn-blue-lt svg, .btn-blue-dk svg, a.btn svg, .l-footer a.btn svg, .field-name-body a.btn svg, input:where([type='button']) svg, input:where([type='reset']) svg, input:where([type='submit']) svg{
+button svg, html body .button svg, .btn svg, .button-primary svg, .btn-primary svg, .button-secondary svg, .btn-secondary svg, .btn-cta svg, .cta-button svg, a.btn svg, .l-footer a.btn svg, .field-name-body a.btn svg, input:where([type='button']) svg, input:where([type='reset']) svg, input:where([type='submit']) svg{
   margin-left: 0.5rem;
   margin-top: -0.2rem;
   display: inline-block;
@@ -5839,7 +5823,7 @@ button svg, .btn svg, .button-primary svg, .btn-primary svg, .button-secondary s
   transition-duration: 250ms;
 }
 
-button:hover, .btn:hover, .button-primary:hover, .btn-primary:hover, .button-secondary:hover, .btn-secondary:hover, .btn-cta:hover, .cta-button:hover, .btn-green:hover, .btn-green-lt:hover, .btn-green-dk:hover, .btn-blue:hover, .btn-blue-lt:hover, .btn-blue-dk:hover, a.btn:hover, .l-footer a.btn:hover, .field-name-body a.btn:hover, input:where([type='button']):hover, input:where([type='reset']):hover, input:where([type='submit']):hover{
+button:hover, html body .button:hover, .btn:hover, .button-primary:hover, .btn-primary:hover, .button-secondary:hover, .btn-secondary:hover, .btn-cta:hover, .cta-button:hover, a.btn:hover, .l-footer a.btn:hover, .field-name-body a.btn:hover, input:where([type='button']):hover, input:where([type='reset']):hover, input:where([type='submit']):hover{
   --tw-brightness: brightness(.5);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
@@ -5886,19 +5870,18 @@ body [type='submit'],
 abody [type='submit'],
 .l-footer abody [type='submit'], 
 .field-name-body abody [type='submit']{
+  border-width: 1px;
   padding-left: 2rem;
   padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   display: inline-block;
   width: -moz-fit-content;
   width: fit-content;
   text-align: center;
-  border-width: 1px;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  font-size: 1.6rem;
-  line-height: 2.5rem;
-  cursor: pointer;
+  font-size: 1.8rem;
   font-weight: 600;
+  cursor: pointer;
   line-height: 1.2;
   text-decoration-line: none;
   transition-property: all;
@@ -5925,7 +5908,6 @@ abody [type='submit'],
 .l-footer abody [type='submit'], 
 .field-name-body abody [type='submit']{
   cursor: pointer;
-  font-weight: 600;
   line-height: 1.2;
   text-decoration-line: none;
   transition-property: all;
@@ -5952,7 +5934,6 @@ abody [type='submit'],
 .l-footer abody [type='submit'], 
 .field-name-body abody [type='submit']{
   cursor: pointer;
-  font-weight: 600;
   line-height: 1.2;
   text-decoration-line: none;
   transition-property: all;
@@ -5979,7 +5960,6 @@ abody [type='submit'],
 .l-footer abody [type='submit'], 
 .field-name-body abody [type='submit']{
   cursor: pointer;
-  font-weight: 600;
   line-height: 1.2;
   text-decoration-line: none;
   transition-property: all;
