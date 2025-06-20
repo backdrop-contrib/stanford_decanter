@@ -18,6 +18,21 @@
   @apply p-0 m-0 max-w-1500 w-full mx-auto relative px-10;
 }
 
+
+ul {
+  @apply pb-10;
+  li {
+    @apply mb-10;
+  }
+  ul {
+    li {
+      list-style: circle;
+    }
+  }
+}
+
+
+
 /* Text icons/arrows */
 
 .mask-icon {
@@ -29,7 +44,7 @@
   mask-repeat: no-repeat;
 }
 .mask-icon-after {
-  @apply mask-icon; 
+  @apply mask-icon;
   @apply mx-5;
 }
 
@@ -100,6 +115,7 @@
 
 .breadcrumb-divider {
   @apply mask-icon -rotate-90;
+  @apply w-25 h-25;
   mask-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMy40ODkgNS40MTZjLjY0Ny41ODQuNjg1IDEuNTY4LjA4NCAyLjE5OGwtMTAuNCAxMC44ODlBMS42MjIgMS42MjIgMCAwIDEgMTIgMTljLS40NDUgMC0uODctLjE4LTEuMTcyLS40OTdMLjQyOCA3LjYxNEExLjUyNSAxLjUyNSAwIDAgMSAuNTEgNS40MTZhMS42MzIgMS42MzIgMCAwIDEgMi4yNjEuMDgxTDEyIDE1LjE1OGw5LjIyNy05LjY2YTEuNjMyIDEuNjMyIDAgMCAxIDIuMjYyLS4wODJaIiBmaWxsPSIjMmUyZDI5Ii8+PC9zdmc+);
 }
 
@@ -108,7 +124,7 @@
 span.ext,
 .ext-link {
   @apply mask-icon-after;
-  
+
   background: none;
   content: '↗';
   mask: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMy41OTcgMS40NTNjLjI4OS4zMDUuNDM0LjcyLjM5NyAxLjE0TDIyLjU0IDE5LjQ2YTEuNDU4IDEuNDU4IDAgMCAxLTEuNTc1IDEuMzM0IDEuNDYzIDEuNDYzIDAgMCAxLTEuMzIzLTEuNTg4bDEuMTM2LTEzLjE3MS0xOC4zNTIgMTYuNTljLS41OTkuNTQxLTEuNTE4LjQ5LTIuMDU0LS4xMTNhMS40NzUgMS40NzUgMCAwIDEgLjExMi0yLjA3bDE4LjA3My0xNi4zNC0xMy40MDYuNTYzYTEuNDYgMS40NiAwIDAgMS0xLjUxMy0xLjQwNEExLjQ2MiAxLjQ2MiAwIDAgMSA1LjAzIDEuNzM1TDIyLjQ4NSAxYy40MTgtLjAxNy44MjMuMTQ3IDEuMTEyLjQ1MloiIGZpbGw9IiMyRTJEMjkiLz48L3N2Zz4=) no-repeat 0 0;
@@ -125,7 +141,7 @@ a:hover span.ext,
 
 a.forward::after,
 .arrow-after,
-.int-link 
+.int-link
 {
   @apply transition transform-gpu relative inline-block align-text-bottom;
   @apply w-20 h-20 mb-5 mx-5 bg-digital-red;
@@ -134,12 +150,12 @@ a.forward::after,
   mask-size: contain;
 }
 a.forward:hover::after,
-.int-link:hover 
+.int-link:hover
 {
   @apply translate-x-02em;
 }
 
-a.back::before 
+a.back::before
 {
   @apply arrow-after rotate-180;
 }
@@ -359,7 +375,7 @@ html .layout {
   .header-site-slogan {
     @apply flex;
   }
-  
+
 }
 
 .block-theme-hooks-stanford-decanter-identity-bar {
@@ -463,11 +479,14 @@ html .layout {
 /* Menus */
 
 .menu-tree {
-  @apply list-none list-image-none p-0;
+  @apply pl-0;
   li.leaf,
   li.collapsed,
   li.expanded {
-    @apply list-none list-image-none;
+    @apply list-image-none p-0 list-disc;
+    .l-header &, .l-sidebar-first &, .l-footer & {
+      @apply list-none;
+    }
   }
 }
 
@@ -494,7 +513,7 @@ html .layout {
   }
 }
 
-.l-header .block-menu, .l-sidebar .block-menu 
+.l-header .block-menu, .l-sidebar .block-menu
 {
   ul.menu,
   ul.menu-dropdown {
@@ -514,8 +533,8 @@ html .layout {
 
       a::before {
         content: '';
-        @apply absolute h-full w-2 md:w-6 scale-y-0 bg-black bottom-0 left-0 visible;
-        transition: transform .3s ease-in, background-color .3s ease-in;
+        @apply absolute h-full w-2 md:w-6 scale-y-0 bg-cardinal-red border-0 bottom-0 left-0 visible;
+        transition: transform .3s ease-in;
       }
       a:hover::before,
       a.active::before {
@@ -523,9 +542,6 @@ html .layout {
       }
       a.active-trail::before {
         @apply scale-100 bg-fog;
-      }
-      a.active::before {
-        @apply bg-cardinal-red;
       }
 
 
@@ -553,7 +569,7 @@ html .layout {
       @apply md:mx-5 lg:mr-10 xl:mr-20 md:border-0 md:content-end;
 
       ul {
-        @apply md:pl-0 md:shadow-md md:absolute pl-20 border-0;
+        @apply md:pl-0 md:shadow-md md:absolute pl-20 border-0 lg:max-w-30;
       }
 
       &.first {
@@ -594,11 +610,11 @@ html .layout {
 }
 
 
-.l-sidebar .block-menu 
+.l-sidebar .block-menu
 {
-  .menu-tree li.expanded, 
-  .menu-tree li.collapsed, 
-  .menu-tree li.leaf 
+  .menu-tree li.expanded,
+  .menu-tree li.collapsed,
+  .menu-tree li.leaf
   {
     a {
       @apply inline-block pl-16 mb-0 w-full text-wrap;
@@ -608,7 +624,7 @@ html .layout {
     a:hover::before {
       @apply md:scale-y-100;
     }
-  
+
     .sub-arrow {
       @apply border-none caret absolute right-10 top-20;
       @apply -rotate-90;
@@ -660,6 +676,10 @@ html .layout {
 
 h1.page-title {
   @apply flex-grow rs-mb-1 sm:text-m5 font-black;
+
+  .front & {
+    @apply hidden;
+  }
 }
 
 .l-top h1.page-title,
@@ -691,7 +711,7 @@ ul.tabs {
     }
     &:not(:last-child):after {
       @apply breadcrumb-divider;
-      @apply align-top ml-10;
+      @apply align-middle ml-3 mr-5;
     }
   }
 }
@@ -751,8 +771,8 @@ ul.primary li.active a,
     position: static;
 
     .full,
-    .block-theme-hooks-stanford-decanter-global-footer, 
-    .block-system-header 
+    .block-theme-hooks-stanford-decanter-global-footer,
+    .block-system-header
     {
       @apply col-full;
     }
@@ -767,7 +787,7 @@ ul.primary li.active a,
     }
 
     .block-title {
-      @apply text-black font-serif text-20;
+      @apply text-black font-sans text-20;
     }
   }
 }
@@ -782,18 +802,23 @@ ul.primary li.active a,
 }
 
 /* Form elements */
-
 button,
 html body .button,
 .btn,
+a.btn,
+.btn-green,
+.btn-green-lt,
+.btn-green-dk,
+.btn-blue,
+.btn-blue-lt,
+.btn-blue-dk,
 .button-primary,
 .btn-primary,
 .button-secondary,
 .btn-secondary,
 .btn-cta,
 .cta-button,
-a.btn,
-.l-footer a.btn, 
+.l-footer a.btn,
 .field-name-body a.btn,
 input:where([type='button']),
 input:where([type='reset']),
@@ -815,32 +840,32 @@ input:where([type='submit'])
 .btn-cta,
 .button-cta,
 .cta-btn,
-a.cta-btn, 
+a.cta-btn,
 .field-name-body a.cta-btn,
 .field-name-body a.btn-cta,
-.cta-button, 
-a.cta-button, 
+.cta-button,
+a.cta-button,
 .field-name-body a.cta-button
 {
   @apply rounded-full;
 }
 
 body {
-  input:where(:not([type])), 
-  [type='text'], 
-  [type='email'], 
-  [type='url'], 
-  [type='password'], 
-  [type='number'], 
-  [type='date'], 
-  [type='datetime-local'], 
-  [type='month'], 
-  [type='search'], 
-  [type='tel'], 
-  [type='time'], 
-  [type='week'], 
-  [multiple], 
-  textarea, 
+  input:where(:not([type])),
+  [type='text'],
+  [type='email'],
+  [type='url'],
+  [type='password'],
+  [type='number'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='search'],
+  [type='tel'],
+  [type='time'],
+  [type='week'],
+  [multiple],
+  textarea,
   select
   {
     @apply text-16 py-10 leading-10 border;
@@ -851,10 +876,10 @@ body {
   }
 
   .views-exposed-form {
-    @apply rs-my-1 
+    @apply rs-my-1
   }
-  .views-exposed-form .views-exposed-widget, 
-  .views-bulk-form .form-item, 
+  .views-exposed-form .views-exposed-widget,
+  .views-bulk-form .form-item,
   .views-bulk-form .form-actions {
     @apply p-0 m-0 mr-10;
   }
@@ -875,11 +900,14 @@ body {
 /* Accordions */
 
 .paragraphs-item-aplenty-accordion-item {
-  & summary {
+  summary {
     @apply text-black-true underline;
     &:hover {
       @apply text-digital-red;
     }
+  }
+  .aplenty-accordion-content {
+    @apply mt-10;
   }
 }
 
@@ -949,7 +977,7 @@ fieldset {
       @apply border-t-0;
     }
     & h3, & h2 {
-      @apply font-serif font-bold text-27;
+      @apply font-sans font-bold text-27;
       @apply rs-mb-1;
       a {
         @apply no-underline hocus:underline underline-offset-[3px] decoration-[0.12em] focus:outline-none;
@@ -999,8 +1027,7 @@ fieldset {
 }
 
 .paragraphs-item-aplenty-card .content,
-.view-mode-card,
-.postcard-left {
+.view-mode-card {
   @apply flex flex-col relative overflow-hidden w-full mb-10 p-0 h-full;
   @apply border border-solid border-black-10 shadow-md;
 
@@ -1023,7 +1050,6 @@ fieldset {
   }
 
   .field-name-field-aplenty-image,
-  .postcard-image,
   .lead-image {
     @apply relative aspect-w-3 aspect-h-2 overflow-hidden group-hover:border;
     img {
@@ -1055,8 +1081,7 @@ fieldset {
   {
     @apply p-10 md:rs-px-2 md:rs-mb-2 md:pb-0 md:mb-0;
   }
-  .content,
-  .postcard-content {
+  .content {
     @apply flex-1 bg-white rs-pt-2 rs-px-2 rs-pb-3;
     .descriptor {
       @apply font-serif leading-display;
@@ -1111,7 +1136,7 @@ fieldset {
       .field-name-field-aplenty-title,
       .field-type-link-field,
       .field-type-text-long {
-        @apply pt-0 text-09em;
+        @apply flex-none pt-0 text-09em;
       }
     }
   }
@@ -1153,7 +1178,6 @@ fieldset {
     @apply rs-mt-1;
   }
   &:hover {
-    .postcard-image img,
     .lead-image img {
       @apply scale-[1.03];
     }
@@ -1365,7 +1389,7 @@ fieldset {
 
 .icon-calendar,
 .event-date-long:before,
-.field-name-field-stanford-event-datetime::before 
+.field-name-field-stanford-event-datetime::before
 {
   @apply calendar;
 }
@@ -1418,12 +1442,8 @@ fieldset {
   & h3, & h4, & h5, & h6 {
     @apply mt-30;
   }
-  & ul {
-    @apply mb-30;
-  }
 }
 
-.field-name-body ul,
 .l-sidebar ul.menu-tree {
   @apply mb-30;
   & ul {
@@ -1457,8 +1477,8 @@ fieldset {
 }
 
 a.cta,
-a.primary, 
-.link--cta-primary, 
+a.primary,
+.link--cta-primary,
 .cta-link,
 .btn-cta,
 a.button-cta
@@ -1480,7 +1500,7 @@ tr.odd {
 }
 
 hr {
-  @apply my-20;
+  @apply my-20 border;
 }
 
 a.forward,
