@@ -1,5 +1,6 @@
 html body,
-.l-header 
+.l-header,
+.l-header .block-system-main-menu .block-content .menu-dropdown
 {
   background-color: #FFFFFE;
   color: #2E2D28;
@@ -16,11 +17,13 @@ html body,
   background-color: #2E2D28;
 }
 
+hr {
+  border: 1px solid #2E2D28;
+}
 
 /* Body links */
 
-a,
-html body .l-footer a
+a
 {
   color: #006CB8;
   text-decoration-color: #006CB8;
@@ -32,20 +35,21 @@ a.primary::after,
 .field-type-text-long span.ext,
 .field-type-text-long .cta-link::after,
 .field-type-text-with-summary .cta-link::after,
-.field-type-text-with-summary span.ext
+.field-type-text-with-summary span.ext,
+span.ext
 {
    background-color: #006CB8;
 }
 
 /* Title links */
-h3 a, 
-h4 a, 
-h5 a, 
-h6 a, 
+h3 a,
+h4 a,
+h5 a,
+h6 a,
 .l-content h3 a,
-.l-content h4 a, 
-.l-content h5 a, 
-.l-content h6 a, 
+.l-content h4 a,
+.l-content h5 a,
+.l-content h6 a,
 body .node-readmore a,
 .node-title a:hover,
 a.forward,
@@ -75,11 +79,6 @@ a.back
   }
 }
 
-span.ext,
-.ext-link {
-  background-color: #B1040D;
-}
-
 .block-theme-hooks-stanford-decanter-identity-bar .block-content,
 .block-theme-hooks-stanford-decanter-identity-bar .block-content a,
 .block-theme-hooks-stanford-decanter-identity-bar .block-content a:hover,
@@ -105,14 +104,19 @@ body .header-menu .links a:after {
 .l-header .block-menu ul.menu li a:hover {
   color: #B1040D;
 }
-.l-header .l-header-inner .block-system-main-menu .block-content ul.menu > li > a::before {
-  background-color: #B1040D;
+.l-header .l-header-inner .block-system-main-menu .block-content ul.menu > li > a::before ,
+.l-header .block-menu ul.menu > li a.active::before,
+.l-header .block-menu ul.menu-dropdown > li a.active::before,
+.l-sidebar .block-menu ul.menu > li a.active::before,
+.l-sidebar .block-menu ul.menu-dropdown > li a.active::before
+{
+  background-color: #8C1517;
 }
 
 .l-header .l-header-inner .block-system-main-menu ul,
-.menu-dropdown ul a:hover, 
-.menu-dropdown ul a:focus, 
-.menu-dropdown ul a:active, 
+.menu-dropdown ul a:hover,
+.menu-dropdown ul a:focus,
+.menu-dropdown ul a:active,
 .menu-dropdown ul a.highlighted,
 .menu-dropdown ul a
 {
@@ -146,26 +150,14 @@ html body .header-identity-wrapper .logo a {
 
 /* Form items */
 
-button,
-.button,
-.button:hover,
-.button:focus,
 .btn,
-a.btn,
-.button-primary,
-a.button-primary:hover,
-a.button-primary:focus,
-.btn-primary,
-.button-secondary,
-.btn-secondary,
-.cta-button,
-.cta-button:hover,
-.cta-button:focus,
+.button,
+.cta-btn,
 .btn-cta,
-.btn-cta:hover,
-.btn-cta:focus,
-.l-footer a.btn, 
-.field-name-body a.btn,
+.cta-button,
+.button-primary,
+.btn-primary,
+button,
 input:where([type='button']),
 input:where([type='reset']),
 input:where([type='submit'])
@@ -173,7 +165,7 @@ input:where([type='submit'])
   border-color: #B1040D;
   background-color: #B1040D;
   text-decoration-color: #B1040D;
-  color: #fff
+  color: #fff;
 }
 .btn span.ext,
 a.btn-cta::after {
@@ -182,27 +174,34 @@ a.btn-cta::after {
 
 #edit-reset,
 .btn-secondary,
-.button-secondary
+.button-secondary,
+.btn-secondary
 {
   background-color: #fff;
   color: #B1040D;
+  border-color: #B1040D;
+  text-decoration-color: #B1040D;
 }
 
+a.btn-green,
 .btn-green {
   background-color: #008566;
   border-color: #008566;
   color: #fff;
 }
+a.btn-green-lt,
 .btn-green-lt {
   background-color: #1AECBA;
   border-color: #1AECBA;
   color: #000;
 }
+a.btn-green-dk,
 .btn-green-dk {
   background-color: #006F54;
   border-color: #006F54;
-  color: #000;
+  color: #fff;
 }
+
 .btn-blue {
   background-color: #006CB8;
   border-color: #006CB8;
@@ -216,7 +215,7 @@ a.btn-cta::after {
 .btn-blue-dk {
   background-color: #00548f;
   border-color: #00548f;
-  color: #000;
+  color: #fff;
 }
 
 [type='text'],input:where(:not([type])),[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select
