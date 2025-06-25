@@ -1113,6 +1113,18 @@ table thead + tbody{
   }
 }
 
+@media (min-width: 1700px){
+  .container{
+    max-width: 1700px;
+  }
+}
+
+@media (min-width: 2000px){
+  .container{
+    max-width: 2000px;
+  }
+}
+
 .aspect-h-2{
   --tw-aspect-h: 2;
 }
@@ -1255,7 +1267,10 @@ table thead + tbody{
   }
 }
 
-@media print{
+@media (min-width: 1700px){
+}
+
+@media (min-width: 2000px){
 }
 
 @media only screen and (min-width: 1700px){
