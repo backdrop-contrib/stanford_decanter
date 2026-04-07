@@ -7035,6 +7035,11 @@ body .form-input,
   padding-bottom: 0.5rem;
 }
 
+/* .views-exposed-form .views-exposed-widget, .views-bulk-form .form-item, .views-bulk-form .form-actions {
+    display: inline-block !important;
+    vertical-align: top;
+} */
+
 body .views-exposed-form{
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -7078,6 +7083,7 @@ body .views-exposed-form .views-exposed-widget,
   margin: 0;
   margin-right: 1rem;
   padding: 0;
+  vertical-align: top;
 }
 
 body .views-exposed-form .views-submit-button::before, body .views-exposed-form .views-reset-button::before {
@@ -7147,9 +7153,21 @@ table tfoot{
 }
 
 table caption{
-  margin: 1rem;
+  margin: 0;
+  border-top-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(118 118 116 / var(--tw-border-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(192 192 191 / var(--tw-bg-opacity, 1));
+  padding: 1.6rem;
   text-align: left;
   font-size: 1.2rem;
+}
+
+.views-table{
+  margin-bottom: 0.5rem;
+  width: 100%;
+  overflow-x: auto;
 }
 
 /* Accordions */

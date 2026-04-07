@@ -1,4 +1,5 @@
 module.exports = {
+    "dynamicTestId": 'latest',
     "viewports": [
       {
         "label": "desktop",
@@ -34,8 +35,7 @@ module.exports = {
     "scenarioLogsInReports": true,
     "fileNameTemplate": '{scenarioLabel}--{viewportLabel}',
     "onReadyScript": "",
-    "scenarios": [],
-    readyTimeout: 3,
+    "scenarios": []
   }
   
   try {

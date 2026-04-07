@@ -113,10 +113,18 @@ function decanter_profile_install() {
   );
   menu_link_save($item);
 
-  // Create a Home link in the main menu.
+  // Create a layout link in the main menu.
   $item = array(
     'link_title' => st('Block Layout'),
     'link_path' => 'blocks',
+    'menu_name' => 'main-menu',
+    'weight' => 2,
+  );
+  menu_link_save($item);
+
+  $item = array(
+    'link_title' => st('Styleguide'),
+    'link_path' => 'styleguide',
     'menu_name' => 'main-menu',
     'weight' => 2,
   );

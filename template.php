@@ -5,6 +5,7 @@
  */
 
 define('STYLEGUIDE_PATH', 'admin/appearance/settings/stanford_decanter/styleguide');
+define('STYLEGUIDE_PATH_PUBLIC', 'styleguide');
 
 /**
  * Prepares variables for block templates.
@@ -291,6 +292,10 @@ function stanford_decanter_menu() {
     'file path' => backdrop_get_path('theme', 'stanford_decanter'),
     'file' => 'template.php',
   );
+  if (theme_get_setting('styleguide_public', 'stanford_decanter')) {
+    $items[STYLEGUIDE_PATH_PUBLIC] = ['access arguments' => array('access content')] + $items[STYLEGUIDE_PATH];
+  }
+
 
   $dir = backdrop_get_path('theme', 'stanford_decanter') . '/examples/';
   foreach(scandir($dir) as $snippet) {

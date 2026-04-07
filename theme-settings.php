@@ -18,6 +18,12 @@ $form['styleguide']['link'] = array(
     'class' => array('button btn-cta'),
   ),
 );
+$form['styleguide']['styleguide_public'] = array(
+  '#type' => 'checkbox',
+  '#title' => t('Make Styleguide Public'),
+  '#default_value' => theme_get_setting('styleguide_public', 'stanford_decanter'),
+  '#description' => t('Check this box to make the styleguide publicly accessible.'),
+);
 
  $form['global'] = array(
   '#type' => 'fieldset',

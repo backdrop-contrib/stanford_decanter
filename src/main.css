@@ -882,6 +882,11 @@ body {
     @apply py-5;
   }
 
+/* .views-exposed-form .views-exposed-widget, .views-bulk-form .form-item, .views-bulk-form .form-actions {
+    display: inline-block !important;
+    vertical-align: top;
+} */
+
 
   .views-exposed-form {
     @apply rs-my-1;
@@ -900,7 +905,7 @@ body {
   .views-exposed-form .views-exposed-widget,
   .views-bulk-form .form-item,
   .views-bulk-form .form-actions {
-    @apply p-0 m-0 mr-10;
+    @apply align-top p-0 m-0 mr-10;
   }
   .views-exposed-form .views-submit-button,
   .views-exposed-form .views-reset-button {
@@ -943,8 +948,11 @@ table {
     @apply border-t-2 italic text-14;
   }
   caption {
-    @apply text-12 m-10 text-left;
+    @apply text-12 p-16 m-0 text-left border-t-2 border-black-60 bg-black-30;
   }
+}
+.views-table {
+  @apply w-full overflow-x-auto mb-5;
 }
 
 
