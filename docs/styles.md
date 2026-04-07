@@ -83,13 +83,12 @@ Some other useful utility styles include:
 - `.rs-grid`: Turn a layout region into a responsive 12 column grid. NB: The 'Page Bottom' and 'Local Footer' regions already have this style applied.
 - `.hero`: Turn any block or content into a Hero block. You can also create hero blocks by using the default 'Hero' content type.
 
+## Styleguide
+
+There is a style guide available when the theme is installed at:
+
+    /admin/appearance/settings/stanford_decanter/styleguide
+
+    ![An admin menu showing the location of the style guide](img/styleguide-menu.png.png)
+
 [Edit this page on Github](https://github.com/backdrop-contrib/stanford_decanter/edit/main/docs/styles.md)
-
-## Responsive Breakpoints
-
-- `xs`: 0 - 575px
-- `sm`: 576 - 767px
-- `md`: 768 - 991px
-- `lg`: 992 - 1199px
-- `xl`: 1200 - 1499px
-- `2xl`: 1500px and up

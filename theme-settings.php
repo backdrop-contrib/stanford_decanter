@@ -4,6 +4,21 @@
  * Theme settings for Stanford Decanter.
  */
 
+$form['styleguide'] = array(
+  '#type' => 'fieldset',
+  '#title' => t('Styleguide'),
+  '#collapsible' => TRUE,
+);
+$form['styleguide']['link'] = array(
+  '#type' => 'link',
+  '#title' => t('View the styleguide'),
+  '#href' => STYLEGUIDE_PATH,
+  '#attributes' => array(
+    'target' => '_blank',
+    'class' => array('button btn-cta'),
+  ),
+);
+
  $form['global'] = array(
   '#type' => 'fieldset',
   '#title' => t('Global Settings'),

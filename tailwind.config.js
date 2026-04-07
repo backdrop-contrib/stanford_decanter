@@ -6,7 +6,13 @@ module.exports = {
   content: ["template.php", "./templates/*", "./examples/*"],
   safelist: [
     "type-*",
-    "basefont-*"
+    "text-*",
+    "basefont-*",
+    "indent-*",
+    "-indent-*",
+    "m-*",
+    "p-0",
+    "p-*",
   ],
   theme: {
     extend: {},
