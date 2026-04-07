@@ -3,14 +3,14 @@
 	"name": "${localWorkspaceFolderBasename} - Dev Container",
 	"dockerComposeFile": "../compose.yml",
 	"service": "php",
-	"postStartCommand": "install-app",
 	"forwardPorts": [8888],
 	"containerEnv": { "CODESPACE_NAME": "${localEnv:CODESPACE_NAME}" },
 	"workspaceFolder": "/workspace",
+	"remoteUser": "vscode",
 	"features": {
 	  "ghcr.io/devcontainers/features/common-utils:2": {},
-	  "ghcr.io/devcontainers/features/node:1": {},
-		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+	  "ghcr.io/devcontainers/features/node:1": {}
+		// "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
 	},
 	"overrideFeatureInstallOrder": [
 	  "ghcr.io/devcontainers/features/common-utils"

@@ -48,8 +48,8 @@ module.exports = {
             return;
 
           scenario = {
-                "label":          parts[0],
-                "url":           `http://app${parts[1]}`,
+                "label":          parts[1],
+                "url":           `http://app${parts[0]}`,
                 "onReadyScript":  parts[2] || "onReady.js"
               };
           module.exports.scenarios.push(scenario);
