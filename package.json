@@ -4,12 +4,14 @@
     "repository": "https://github.com/backdrop-contrib/stanford_decanter",
     "config": {},
     "scripts": {
-        "build": "yarn tailwindcss -i src/main.css -o dist/main.compiled.css --postcss",
-        "watch": "yarn tailwindcss -i src/main.css -o dist/main.compiled.css --postcss --watch"
+        "build": "npx tailwindcss -i src/main.css -o dist/main.compiled.css --postcss",
+        "watch": "npx tailwindcss -i src/main.css -o dist/main.compiled.css --postcss --watch"
     },
     "devDependencies": {
         "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
-        "decanter": "^7"
+        "backstopjs": "^6.3.25",
+        "decanter": "^7",
+        "tailwindcss": "3.4"
     },
     "description": "Stanford Decaner v7 Backdrop Base Theme",
     "author": "Fibonnaci Studios and fluidity.digital for Stanford Web Services",
@@ -19,8 +21,5 @@
         "scss",
         "Backdrop",
         "Stanford"
-    ],
-    "dependencies": {
-        "tailwind": "^4.0.0"
-    }
+    ]
 }

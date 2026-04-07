@@ -11,6 +11,8 @@ services:
     build:
       dockerfile: ./containerfile
       context: ./
+    post_start:
+      - command: install-app
     links:
       - db
     depends_on:
