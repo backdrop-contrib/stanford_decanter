@@ -6759,6 +6759,7 @@ body .views-exposed-form .views-exposed-widget,
   margin: 0;
   margin-right: 1rem;
   padding: 0;
+  vertical-align: top;
 }
 
 body .views-exposed-form .views-submit-button::before, body .views-exposed-form .views-reset-button::before {

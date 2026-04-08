@@ -889,7 +889,7 @@ body {
   .views-exposed-form .views-exposed-widget,
   .views-bulk-form .form-item,
   .views-bulk-form .form-actions {
-    @apply p-0 m-0 mr-10;
+    @apply align-top p-0 m-0 mr-10;
   }
   .views-exposed-form .views-submit-button,
   .views-exposed-form .views-reset-button {
