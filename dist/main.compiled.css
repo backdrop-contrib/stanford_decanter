@@ -5205,7 +5205,7 @@ html .layout .l-sidebar + .l-content{
 
 @media (min-width: 992px){
   .header-identity-wrapper{
-    margin-top: auto;
+    margin-top: 0;
   }
 }
 
@@ -9557,6 +9557,31 @@ html .layout .l-bottom div.plain > article .views-field-body, html .layout .l-mi
   margin-top: 3rem;
 }
 
+.l-content ul, .l-content ol, .l-content dl{
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.l-content ul ul, .l-content ul ol, .l-content ol ul, .l-content ol ol, .l-content dl ul, .l-content dl ol{
+  margin-bottom: 0.5rem;
+}
+
+.l-content ul li, .l-content ol li, .l-content dl li{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.l-content ul ul li, .l-content ol ul li, .l-content dl ul li {
+  list-style: circle;
+}
+
+.l-content ul dd, .l-content ol dd, .l-content dl dd{
+  margin-bottom: 1.5rem;
+}
+
 .l-sidebar ul.menu-tree{
   margin-bottom: 3rem;
 }
@@ -9676,31 +9701,6 @@ a.back:hover{
 a.forward:focus,
 a.back:focus{
   text-decoration-line: underline;
-}
-
-ul, ol, dl{
-  margin-top: 0.5rem;
-  margin-left: 1rem;
-  margin-bottom: 2rem;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-ul ul, ul ol, ol ul, ol ol, dl ul, dl ol{
-  margin-bottom: 0.5rem;
-}
-
-ul li, ol li, dl li{
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-ul ul li, ol ul li, dl ul li {
-  list-style: circle;
-}
-
-ul dd, ol dd, dl dd{
-  margin-bottom: 1.5rem;
 }
 
 blockquote{

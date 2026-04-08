@@ -43,7 +43,7 @@ module.exports = {
       .readFileSync('/urls.txt', 'utf-8')
       .split(/\n/)
       .forEach((line) => {
-          parts = line.split(',').map(str => str.trim());
+          parts = line.split(/\t+/).map(str => str.trim());
           if (!parts || parts[0]?.startsWith('#') || !parts?.[1])
             return;
 

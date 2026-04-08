@@ -1,5 +1,16 @@
-/							Home
-/menus						Menus
-/events						Events
+/												Home
+/menus									Menus
+/events									Events
 /events/past-events			Past Events
-/menus/b					Secondary Page with Breadcrumb
+/menus/b								Secondary Page with Breadcrumb
+/styleguide/alert				Alerts
+/styleguide/cards				Cards
+/styleguide/colors			Colors
+/styleguide/containers	Containers
+/styleguide/forms				Forms
+/styleguide/grid				Grids
+/styleguide/heros				Heros
+/styleguide/shadows			Shadows
+/styleguide/spacing			Spacing
+/styleguide/tables			Tables
+/styleguide/typography	Typography

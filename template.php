@@ -274,6 +274,23 @@ function stanford_decanter_breadcrumb($variables) {
   return $output;
 }
 
+function stanford_decanter_style_guide_path() {
+  $path = STYLEGUIDE_PATH;
+  if (theme_get_setting('styleguide_public', 'stanford_decanter')) {
+    $path = STYLEGUIDE_PATH_PUBLIC;
+  }
+  return $path;
+}
+
+function stanford_decanter_style_guide_access() {
+  $access = ['access content overview'];
+  if (theme_get_setting('styleguide_public', 'stanford_decanter')) {
+    $access = ['access content'];
+  }
+  return $access;
+}
+
+
 
 /**
  * Implements hook_menu().
@@ -281,37 +298,37 @@ function stanford_decanter_breadcrumb($variables) {
 function stanford_decanter_menu() {
   $items = array();
 
-  $items[STYLEGUIDE_PATH] = array(
+  $path = stanford_decanter_style_guide_path();
+  $access = stanford_decanter_style_guide_access();
+
+  $items[$path] = array(
     'title' => 'Backdrop Decanter Style Guide',
     'description' => 'Decanter 7 Style guide.',
     'page callback' => 'backdrop_get_form',
     'page arguments' => array('stanford_decanter_style_guide'),
-    'access arguments' => array('access content overview'),
+    'access arguments' => $access,
     'weight' => 4,
     'type' => MENU_NORMAL_ITEM,
     'file path' => backdrop_get_path('theme', 'stanford_decanter'),
     'file' => 'template.php',
   );
-  if (theme_get_setting('styleguide_public', 'stanford_decanter')) {
-    $items[STYLEGUIDE_PATH_PUBLIC] = ['access arguments' => array('access content')] + $items[STYLEGUIDE_PATH];
-  }
-
-
+  
   $dir = backdrop_get_path('theme', 'stanford_decanter') . '/examples/';
   foreach(scandir($dir) as $snippet) {
     if (substr($snippet, 0, 1) !== '.') {
       $name = substr($snippet, 0, strlen($snippet) - strlen('.html'));
-      $items[STYLEGUIDE_PATH . '/' . $name] = array(
+      $items[$path . '/' . $name] = array(
         'title' => ucwords(strtr($name, ['.html' => '', '-' => ' — '])),
         'page callback' => 'backdrop_get_form',
         'page arguments' => array('stanford_decanter_style_guide_section', $dir . $snippet),
-        'access arguments' => array('access content overview'),
+        'access arguments' => $access,
         'type' => MENU_NORMAL_ITEM,
         'file path' => backdrop_get_path('theme', 'stanford_decanter'),
         'file' => 'template.php',
       );
-      }
     }
+  }
+
 
   return $items;
 }
@@ -331,6 +348,9 @@ function stanford_decanter_admin_paths_alter(&$paths) {
 function stanford_decanter_style_guide() {
   $form = [];
 
+  $path = stanford_decanter_style_guide_path();
+
+
   $form['before'] = [
     '#type' => 'markup',
     '#markup' => '<div class="rs-grid rs-gap-20">',
@@ -345,7 +365,7 @@ function stanford_decanter_style_guide() {
       $form[$name] = [
         "#type" => 'link',
         '#title' => ucwords(strtr($name, ['.html' => '', '-' => ' — '])),
-        '#href' => STYLEGUIDE_PATH . '/' . $name,
+        '#href' => $path . '/' . $name,
         '#options' => array(
           'attributes' => array('class' => ['forward', 'block', 'py-20', 'my-20', 'col-quarter', 'bg-foggy-light', 'hocus:bg-foggy', 'text-center']),
         ),
@@ -377,7 +397,7 @@ function stanford_decanter_style_guide_section($form, &$form_state, $snippet = '
   $form['back'] = [
     "#type" => 'link',
     '#title' => 'Back to Styleguide',
-    '#href' => STYLEGUIDE_PATH,
+    '#href' => stanford_decanter_style_guide_path(),
     '#options' => array(
       'attributes' => array('class' => 'back block pb-20'),
     ),    
