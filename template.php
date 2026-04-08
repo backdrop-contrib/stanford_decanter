@@ -4,7 +4,7 @@
  * stanford_decanter preprocess functions and theme function overrides.
  */
 
-define('STYLEGUIDE_PATH', 'decanter_help/styleguide');
+define('STYLEGUIDE_PATH', 'admin/appearance/settings/stanford_decanter/styleguide');
 
 /**
  * Prepares variables for block templates.
@@ -326,6 +326,11 @@ function stanford_decanter_admin_paths_alter(&$paths) {
 function stanford_decanter_style_guide() {
   $form = [];
 
+  $form['before'] = [
+    '#type' => 'markup',
+    '#markup' => '<div class="rs-grid rs-gap-20">',
+  ];
+
   $dir = backdrop_get_path('theme', 'stanford_decanter') . '/examples/';
   $snippets = scandir($dir);
   foreach($snippets as $snippet) {
@@ -337,11 +342,15 @@ function stanford_decanter_style_guide() {
         '#title' => ucwords(strtr($name, ['.html' => '', '-' => ' — '])),
         '#href' => STYLEGUIDE_PATH . '/' . $name,
         '#options' => array(
-          'attributes' => array('class' => 'forward block pb-20'),
-        ),    
+          'attributes' => array('class' => ['forward', 'block', 'py-20', 'my-20', 'col-quarter', 'bg-foggy-light', 'hocus:bg-foggy', 'text-center']),
+        ),
       ];
     }
   }
+  $form['after'] = [
+    '#type' => 'markup',
+    '#markup' => '</div>',
+  ];
   return $form;
 }
 
@@ -369,7 +378,23 @@ function stanford_decanter_style_guide_section($form, &$form_state, $snippet = '
     ),    
   ];
   $filename = basename($snippet);
-  $form['edit'] = [
+
+  $form['preview'] = [
+    '#type' => 'markup',
+    '#markup' => $html,
+  ];
+  $form['src_container'] = [
+    '#type' => 'fieldset',
+    '#title' => 'View source code',
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  ];
+  $form['src_container']['src'] = [
+    '#type' => 'textarea',
+    '#default_value' => $html,
+    '#rows' => 30,
+  ];
+    $form['edit'] = [
     "#type" => 'link',
     '#title' => 'Edit this page on Github',
     '#href' => "https://github.com/backdrop-contrib/stanford_decanter/edit/main/examples/$filename",
@@ -378,15 +403,6 @@ function stanford_decanter_style_guide_section($form, &$form_state, $snippet = '
     ),
   ];
 
-  $form['preview'] = [
-    '#type' => 'markup',
-    '#markup' => $html,
-  ];
-  $form['src'] = [
-    '#type' => 'textarea',
-    '#default_value' => $html,
-    '#rows' => 30,
-  ];
   return $form;
 }
 

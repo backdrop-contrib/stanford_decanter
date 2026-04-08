@@ -1,18 +1,44 @@
-<fieldset>
-  <legend className="legend">Label</legend>
-  ...
+<fieldset class="form-wrapper">
+  <legend ><span class="fieldset-legend fieldset-title">Fieldset Label</span></legend>
+   <div class="fieldset-wrapper">
+     <label for="input__text">Text Input</label>
+     <input class="input" id="input__text" type="text" />
+   
+     <label for="input__password">Password</label>
+     <input class="input" id="input__password" type="password" />
+   
+     <label for="input__search">Search</label>
+     <input class="input" id="input__search" type="search" />
+   </div>
+
 </fieldset>
 
-<label for="input__text" class="sr-only">Text Input</label>
+<fieldset class="collapsible form-wrapper">
+  <legend><span class="fieldset-legend"><a class="fieldset-title" href="#">
+    <span class="fieldset-legend-prefix element-invisible">Hide</span> Collapsible Fieldset</a>
+    <span class="summary"></span></span></legend>
+  <div class="fieldset-wrapper">Fields go here.</div>
+</fieldset>
+
+<fieldset class="collapsible form-wrapper collapsed">
+  <legend><span class="fieldset-legend"><a class="fieldset-title" href="#">
+    <span class="fieldset-legend-prefix element-invisible">Hide</span> Collapsed Fieldset</a>
+    <span class="summary">This is a collapsed fieldset.</span></span>
+  </legend>
+  <div class="fieldset-wrapper">Fields go here.</div>
+</fieldset>
+
+
+<label for="input__text">Text Input</label>
 <input class="input" id="input__text" type="text" />
 
-<label for="input__password" class="sr-only">Password</label>
+<label for="input__password">Password</label>
 <input class="input" id="input__password" type="password" />
 
-<label for="input__search" class="sr-only">Search</label>
+<label for="input__search">Search</label>
 <input class="input" id="input__search" type="search" />
 
-<label for="select" class="sr-only">Select</label>
+<label for="select">Select</label>
 <select class="select" id="select">
   <optgroup label="Option Group">
     <option>Option One</option>
@@ -21,42 +47,105 @@
   </optgroup>
 </select>
 
-<ul>
-  <li>
-    <input class="radio" id="radio1" name="radio" type="radio" checked="true" />
-    <label class="label" for="radio1">Option 1</label>
-  </li>
-  <li>
-    <input class="radio" id="radio2" name="radio" type="radio" />
-    <label class="label" for="radio2">Option 2</label>
-  </li>
-  <li>
-    <input class="radio" id="radio3" name="radio" type="radio" />
-    <label class="label" for="radio3">Option 3</label>
-  </li>
-</ul>
+<input class="radio" id="radio1" name="radio" type="radio" checked="true" />
+<label class="label" for="radio1">Option 1</label>
+<input class="radio" id="radio2" name="radio" type="radio" />
+<label class="label" for="radio2">Option 2</label>
+<input class="radio" id="radio3" name="radio" type="radio" />
+<label class="label" for="radio3">Option 3</label>
 
 
-<ul>
-  <li>
-    <input className="checkbox" id="checkbox1" name="checkbox" type="checkbox" checked="checked" />
-    <label className="label" for="checkbox1">Choice A</label>
-  </li>
-  <li>
-    <input className="checkbox" id="checkbox2" name="checkbox" type="checkbox" />
-    <label className="label" for="checkbox2">Choice B</label>
-  </li>
-  <li>
-    <input className="checkbox" id="checkbox3" name="checkbox" type="checkbox" />
-    <label className="label" for="checkbox3">Choice C</label>
-  </li>
-  <li>
-    <input className="checkbox" id="checkbox4" name="checkbox" type="checkbox" />
-    <label className="label" for="checkbox3">Choice D</label>
-  </li>
-</ul>
+<input className="checkbox" id="checkbox1" name="checkbox" type="checkbox" checked="checked" />
+<label className="label" for="checkbox1">Choice A</label>
+<input className="checkbox" id="checkbox2" name="checkbox" type="checkbox" />
+<label className="label" for="checkbox2">Choice B</label>
+<input className="checkbox" id="checkbox3" name="checkbox" type="checkbox" />
+<label className="label" for="checkbox3">Choice C</label>
+<input className="checkbox" id="checkbox4" name="checkbox" type="checkbox" />
+<label className="label" for="checkbox3">Choice D</label>
 
 
 <textarea id="textarea" rows="8" cols="48" placeholder="Enter your message here" class="textarea"></textarea>
 
-<button class="button" type="submit">Button</button>
+<h3>Anchor Link Buttons</h3>
+<p>
+  <a class="btn">a.btn</a>
+  <a class="button">a.button</a>
+  <a class="button-primary">a.button-primary</a>
+</p>
+<p>
+  <a class="button-secondary">a.button-secondary</a>
+</p>
+<p>
+  <a class="btn-cta" href="">CTA Button</a>
+</p>
+<h3>Form Elements</h3>
+<p>
+  <button>'button' element</button>
+  <input type="button" name="" value="input type=button">
+  <input type="submit"  name="" value="input type=submit">
+</p>
+
+<h3>Exposed View Filters</h3>
+
+<div class="views-exposed-form">
+  <div class="views-exposed-widgets clearfix">
+          <div id="edit-title-wrapper" class="views-exposed-widget views-widget-filter-title">
+            <label for="edit-title">Text Widget</label>
+              <div class="views-widget">
+          <div class="form-item form-type-textfield form-item-title">
+ <input type="text" id="edit-title" name="title" value="" size="30" maxlength="128" class="form-text">
+</div>
+        </div>
+              </div>
+          <div id="edit-field-single-select-value-wrapper" class="views-exposed-widget views-widget-filter-field_meeting_type_value">
+                  <label for="edit-field-single-select-value">Single Select</label>
+                        <div class="views-widget">
+          <div class="form-item form-type-select form-item-field-single-select-value">
+ <select id="edit-field-single-select-value" name="field_meeting_type_value" class="form-select">
+    <option value="All" selected="selected">&lt;Any&gt;</option>
+      <option value="1">Option 1</option><option value="2">Option 2</option></select>
+</div>
+        </div>
+              </div>
+          <div id="edit-field-multivalue-wrapper" class="views-exposed-widget views-widget-filter-multivalue">
+                  <label for="edit-field-multivalue">Multiple Select</label>
+                        <div class="views-widget">
+          <div class="form-item form-type-select form-item-field-multivalue">
+ <select multiple="multiple" name="multivalue[]" id="edit-field-multivalue" size="2" class="form-select">
+  <option value="1">Option 1</option><option value="2">Option 2</option></select>
+</div>
+        </div>
+              </div>
+          <div id="date_views_exposed_filter-date-range-wrapper" class="views-exposed-widget views-widget-filter-field_meeting_date_value">
+                  <label for="date_views_exposed_filter-date-range">Date Range</label>
+                        <div class="views-widget">
+          <div class="form-item form-type-date-popup form-item-field-meeting-date-value-min">
+ <div id="edit-field-meeting-date-value-min" class="container-inline-date"><div class="form-item form-type-textfield form-item-field-meeting-date-value-min-date">
+  <label for="edit-field-meeting-date-value-min-date">Start date </label>
+ <input data-date-popup="{&quot;changeMonth&quot;:true,&quot;changeYear&quot;:true,&quot;autoPopUp&quot;:&quot;focus&quot;,&quot;closeAtTop&quot;:false,&quot;speed&quot;:&quot;immediate&quot;,&quot;firstDay&quot;:0,&quot;dateFormat&quot;:&quot;mm\/dd\/yy&quot;,&quot;yearRange&quot;:&quot;-10:+1&quot;,&quot;defaultDate&quot;:&quot;0y&quot;}" placeholder="e.g. 12/31/2099" type="text" id="edit-field-meeting-date-value-min-date" name="field_meeting_date_value[min][date]" value="" size="20" maxlength="30" class="form-text date-popup-processed">
+</div>
+</div>
+</div>
+<div class="form-item form-type-date-popup form-item-field-meeting-date-value-max">
+ <div id="edit-field-meeting-date-value-max" class="container-inline-date"><div class="form-item form-type-textfield form-item-field-meeting-date-value-max-date">
+  <label for="edit-field-meeting-date-value-max-date">End date </label>
+ <input data-date-popup="{&quot;changeMonth&quot;:true,&quot;changeYear&quot;:true,&quot;autoPopUp&quot;:&quot;focus&quot;,&quot;closeAtTop&quot;:false,&quot;speed&quot;:&quot;immediate&quot;,&quot;firstDay&quot;:0,&quot;dateFormat&quot;:&quot;mm\/dd\/yy&quot;,&quot;yearRange&quot;:&quot;-10:+1&quot;,&quot;defaultDate&quot;:&quot;0y&quot;}" placeholder="e.g. 12/31/2099" type="text" id="edit-field-meeting-date-value-max-date" name="field_meeting_date_value[max][date]" value="" size="20" maxlength="30" class="form-text date-popup-processed">
+</div>
+</div>
+</div>
+        </div>
+              </div>
+
+                   <div class="views-exposed-widget views-widget-per-page">
+        <div class="form-item form-type-select form-item-items-per-page">
+  <label for="edit-items-per-page">Items per page </label>
+ <select id="edit-items-per-page" name="items_per_page" class="form-select"><option value="5">5</option><option value="10">10</option><option value="20">20</option><option value="40">40</option><option value="50" selected="selected">50</option><option value="100">100</option><option value="200">200</option><option value="300">300</option><option value="500">500</option></select>
+</div>
+      </div>
+            <div class="views-exposed-widget views-submit-button">
+      <input type="submit" id="edit-submit-meetings" name="" value="Search" class="form-submit">    </div>
+          <div class="views-exposed-widget views-reset-button">
+        <input type="submit" id="edit-reset" name="op" value="Clear" class="form-submit">      </div>
+      </div>
+</div>
