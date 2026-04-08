@@ -1561,22 +1561,23 @@ a.back
   @apply no-underline hocus:underline;
 }
 
-
-ul, ol, dl {
-  @apply my-5 py-0 ml-10 mb-20;
-  ul, ol {
-    @apply mb-5;
-  }
-  li {
-    @apply my-5;
-  }
-  ul {
-    li {
-      list-style: circle;
+.l-content {
+  ul, ol, dl {
+    @apply my-5 py-0 ml-10 mb-20;
+    ul, ol {
+      @apply mb-5;
     }
-  }
-  dd {
-    @apply mb-15;
+    li {
+      @apply my-5;
+    }
+    ul {
+      li {
+        list-style: circle;
+      }
+    }
+    dd {
+      @apply mb-15;
+    }
   }
 }
 
