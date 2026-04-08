@@ -6,6 +6,13 @@
 
 define('STYLEGUIDE_PATH', 'admin/appearance/settings/stanford_decanter/styleguide');
 
+function stanford_decanter_styleguide_path() {
+  return theme_get_setting('styleguide_public', 'stanford_decanter') ? 'styleguide' : STYLEGUIDE_PATH;
+}
+
+function stanford_decanter_styleguide_access_args() {
+  return theme_get_setting('styleguide_public', 'stanford_decanter') ? ['access content'] : ['access administration pages'];
+}
 /**
  * Prepares variables for block templates.
  *
@@ -280,12 +287,15 @@ function stanford_decanter_breadcrumb($variables) {
 function stanford_decanter_menu() {
   $items = array();
 
-  $items[STYLEGUIDE_PATH] = array(
+  $path = stanford_decanter_styleguide_path();
+  $access = stanford_decanter_styleguide_access_args();
+
+  $items[$path] = array(
     'title' => 'Backdrop Decanter Style Guide',
     'description' => 'Decanter 7 Style guide.',
     'page callback' => 'backdrop_get_form',
     'page arguments' => array('stanford_decanter_style_guide'),
-    'access arguments' => array('access content overview'),
+    'access arguments' => $access,
     'weight' => 4,
     'type' => MENU_NORMAL_ITEM,
     'file path' => backdrop_get_path('theme', 'stanford_decanter'),
@@ -296,11 +306,11 @@ function stanford_decanter_menu() {
   foreach(scandir($dir) as $snippet) {
     if (substr($snippet, 0, 1) !== '.') {
       $name = substr($snippet, 0, strlen($snippet) - strlen('.html'));
-      $items[STYLEGUIDE_PATH . '/' . $name] = array(
+      $items[$path . '/' . $name] = array(
         'title' => ucwords(strtr($name, ['.html' => '', '-' => ' — '])),
         'page callback' => 'backdrop_get_form',
         'page arguments' => array('stanford_decanter_style_guide_section', $dir . $snippet),
-        'access arguments' => array('access content overview'),
+        'access arguments' => $access,
         'type' => MENU_NORMAL_ITEM,
         'file path' => backdrop_get_path('theme', 'stanford_decanter'),
         'file' => 'template.php',
@@ -326,6 +336,8 @@ function stanford_decanter_admin_paths_alter(&$paths) {
 function stanford_decanter_style_guide() {
   $form = [];
 
+  $path = stanford_decanter_styleguide_path();
+
   $form['before'] = [
     '#type' => 'markup',
     '#markup' => '<div class="rs-grid rs-gap-20">',
@@ -340,7 +352,7 @@ function stanford_decanter_style_guide() {
       $form[$name] = [
         "#type" => 'link',
         '#title' => ucwords(strtr($name, ['.html' => '', '-' => ' — '])),
-        '#href' => STYLEGUIDE_PATH . '/' . $name,
+        '#href' => $path . '/' . $name,
         '#options' => array(
           'attributes' => array('class' => ['forward', 'block', 'py-20', 'my-20', 'col-quarter', 'bg-foggy-light', 'hocus:bg-foggy', 'text-center']),
         ),
