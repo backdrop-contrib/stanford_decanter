@@ -110,3 +110,12 @@
     white-space: wrap;
   }
  }
+
+ td.checkbox,
+ th.checkbox,
+ td.radio,
+ th.radio {
+  width: 1.5em;
+  text-align: center;
+  border: inherit
+ }

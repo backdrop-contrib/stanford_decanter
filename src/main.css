@@ -19,19 +19,6 @@
 }
 
 
-ul {
-  @apply pb-10;
-  li {
-    @apply mb-10;
-  }
-  ul {
-    li {
-      list-style: circle;
-    }
-  }
-}
-
-
 
 /* Text icons/arrows */
 
@@ -190,6 +177,9 @@ html .layout {
     div.block {
       @apply mb-40;
     }
+  }
+  .l-messages {
+    @apply p-40;
   }
   .l-content {
     @apply m-0 mb-30;
@@ -801,7 +791,8 @@ ul.primary li.active a,
   }
 }
 
-/* Form elements */
+/* Forms and Form elements */
+
 button,
 html body .button,
 .btn,
@@ -866,24 +857,49 @@ body {
   [type='week'],
   [multiple],
   textarea,
-  select
+  select,
+  .form-input, .form-textarea, .form-select, .form-multiselect
   {
-    @apply text-16 py-10 leading-10 border;
-    @apply border-black-60 mb-10;
+    @apply text-16 py-5 leading-10 border;
+    @apply border-black-50 mb-10;
   }
   [type='submit'] {
     @apply btn;
   }
+  .form-input, 
+  .form-textarea {
+    @apply py-5;
+  }
+
 
   .views-exposed-form {
-    @apply rs-my-1
+    @apply rs-my-1;
+
+    .form-type-date-popup .container-inline-date .form-item {
+      @apply flex flex-col;
+      label {
+        @apply flex text-14 font-normal mb-10 mt-5;
+        @apply order-2;
+      }
+      input {
+        @apply order-1;
+      }
+    }
   }
   .views-exposed-form .views-exposed-widget,
   .views-bulk-form .form-item,
   .views-bulk-form .form-actions {
     @apply p-0 m-0 mr-10;
   }
-  label {
+  .views-exposed-form .views-submit-button,
+  .views-exposed-form .views-reset-button {
+    &::before {
+      content: "\00a0"; /* nbsp */
+    @apply text-16 mb-10 mr-20;
+      display: block;
+    }
+  }
+  label, .label {
     @apply text-16 mb-10 mr-20;
   }
   .form-type-checkbox {
@@ -893,6 +909,30 @@ body {
   }
   [type='checkbox'] {
     @apply checkbox;
+  }
+}
+
+/* Tables*/
+
+.table-scroll {
+  @apply overflow-x-auto;
+  table {
+    @apply w-full;
+  }
+}
+table {
+  tbody {
+    tr {
+      th {
+        @apply font-bold text-16 border-b;
+      }
+    }
+  }
+  tfoot {
+    @apply border-t-2 italic text-14;
+  }
+  caption {
+    @apply text-12 m-10 text-left;
   }
 }
 
@@ -911,16 +951,24 @@ body {
   }
 }
 
-fieldset {
-  @apply my-20 border-2 border-black-30;
+fieldset,
+fieldset.filter-wrapper {
+  @apply p-20 my-20 border-2 border-black-30;
   .fieldset-description {
     @apply mb-10 px-10 text-09em;
   }
-  .fieldset-wrapper {
-    @apply p-20;
+  legend, .fieldset-legend {
+    @apply text-20 font-semibold px-10 ml-0;
   }
-  .summary {
-    @apply pl-10;
+  .fieldset-title {
+    @apply no-underline;
+  }
+  .fieldset-wrapper {
+    @apply px-20 py-5;
+  }
+  .summary,
+  .fieldset-legend span.summary {
+    @apply pl-10 pr-0 mr-0 no-underline font-normal text-15;
   }
 
   .js &.collapsible {
@@ -929,10 +977,10 @@ fieldset {
     .fieldset-legend {
       @apply leading-5;
       & a.fieldset-title {
-        @apply text-black-true bg-none pl-20;
+        @apply text-black-true bg-none pl-5 pr-0;
       }
       & a::before {
-        @apply caret left-02em;
+        @apply caret left-25;
         content: "";
         position: absolute;
         transition: transform 0.25s ease-out;
@@ -942,6 +990,7 @@ fieldset {
 
   .js &.collapsed {
     @apply border-b-transparent border-l-transparent border-r-transparent;
+    @apply mb-10 py-0;
     .fieldset-legend {
       & a {
         &:before {
@@ -953,6 +1002,9 @@ fieldset {
       }
     }
   }
+}
+.filter-wrapper {
+    border-top: inherit;
 }
 
 .su-intro-text, .summary {
@@ -1438,7 +1490,7 @@ fieldset {
   @apply leading-tight;
 }
 
-.field-name-body {
+.l-content {
   & h3, & h4, & h5, & h6 {
     @apply mt-30;
   }
@@ -1507,4 +1559,27 @@ a.forward,
 a.back
 {
   @apply no-underline hocus:underline;
+}
+
+
+ul, ol, dl {
+  @apply my-5 py-0 ml-10 mb-20;
+  ul, ol {
+    @apply mb-5;
+  }
+  li {
+    @apply my-5;
+  }
+  ul {
+    li {
+      list-style: circle;
+    }
+  }
+  dd {
+    @apply mb-15;
+  }
+}
+
+blockquote {
+  @apply border-l-4 border-black-30 pl-10 italic my-20;
 }

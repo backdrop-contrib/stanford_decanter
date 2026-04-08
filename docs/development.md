@@ -1,18 +1,30 @@
 # Developing the Stanford Decanter (v7) theme
 
-This theme requires [Yarn](https://yarnpkg.com) (or similar) package manager for development. Every time a css or template file changes, the main.css file in css/ must be recompiled using tailwind. If you have yarn or npm installed you can use it to trigger the compile step:
+This theme requires [npm](https://www.npmjs.com) (or similar) package manager for development. Every time a css or template file changes, the main.css file in css/ must be recompiled using tailwind. If you have yarn or npm installed you can use it to trigger the compile step:
 
-- From within the theme directory run:
+- From within the stanford_decanter theme directory run:
 
   ```sh
-  yarn install && yarn build;
+  npm install && npm run build;
   ```
 
 - You can recompile automatically while developing by running:
 
   ```sh
-  yarn watch
+  npm run watch
   ```
+
+## Compiling without installing Node/npm/Yarn
+
+If you have docker or a compatible container engine installed, you can compile the theme using the official Node docker image.
+
+- From within the stanford_decanter theme directory run:
+
+  ```sh
+  docker run -it --rm -v "$(pwd)":/usr/src/app -w /usr/src/app node:alpine npm install && \
+  docker run -it --rm -v "$(pwd)":/usr/src/app -w /usr/src/app node:alpine npm run build;
+  ```
+
 
 ## Compiled output
 
