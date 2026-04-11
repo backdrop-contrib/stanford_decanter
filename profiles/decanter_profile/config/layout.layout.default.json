@@ -16,7 +16,9 @@
         "title_block": null
     },
     "positions": {
-        "identitybar": [],
+        "identitybar": [
+            "84d43d35-78a9-4cc2-b329-411d95e739d2"
+        ],
         "header": [
             "84c43df4-1165-4faf-8700-c362a7153c0b",
             "13b2f325-af26-40bb-8c61-97fe1d93f19f"
@@ -35,12 +37,40 @@
         "footer": [
             "cd4d033d-3f67-4191-8655-85ee758877c0"
         ],
-        "stanfordfooter": [],
+        "stanfordfooter": [
+            "c2f0f1d3-7725-485a-a000-f642afa1f14c"
+        ],
         "title": []
     },
     "contexts": [],
     "relationships": [],
     "content": {
+        "84d43d35-78a9-4cc2-b329-411d95e739d2": {
+            "plugin": "theme_hooks:stanford_decanter_identity_bar",
+            "data": {
+                "status": 1,
+                "module": "theme_hooks",
+                "delta": "stanford_decanter_identity_bar",
+                "settings": {
+                    "title_display": "default",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": [],
+                    "contexts": [],
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "84d43d35-78a9-4cc2-b329-411d95e739d2",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        },
         "84c43df4-1165-4faf-8700-c362a7153c0b": {
             "plugin": "system:header",
             "data": {
@@ -188,6 +218,32 @@
                     "contexts": []
                 },
                 "uuid": "cd4d033d-3f67-4191-8655-85ee758877c0",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        },
+        "c2f0f1d3-7725-485a-a000-f642afa1f14c": {
+            "plugin": "theme_hooks:stanford_decanter_global_footer",
+            "data": {
+                "status": 1,
+                "module": "theme_hooks",
+                "delta": "stanford_decanter_global_footer",
+                "settings": {
+                    "title_display": "default",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": [],
+                    "contexts": [],
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "c2f0f1d3-7725-485a-a000-f642afa1f14c",
                 "style": {
                     "plugin": "default",
                     "data": {
