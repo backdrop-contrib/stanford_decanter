@@ -4264,8 +4264,6 @@ table thead + tbody{
   width: 100%;
   max-width: 150rem;
   padding: 0;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 /* Text icons/arrows */
@@ -5049,6 +5047,60 @@ html .layout .l-sidebar + .l-content{
 
 .l-header {
   box-shadow: 0 3px 6px rgba(0, 0, 0, .13), 0 3px 6px rgba(0, 0, 0, .1);
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 576px){
+  .l-header{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: 768px){
+  .l-header{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (min-width: 992px){
+  .l-header{
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media (min-width: 1200px){
+  .l-header{
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media (min-width: 1500px){
+  .l-header{
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media only screen and (min-width: 1700px){
+  .l-header{
+    padding-left: calc((100% - 1500px)/2);
+    padding-right: calc((100% - 1500px)/2);
+  }
+}
+
+ .centered-container .l-header,.l-header .centered-container,.l-header .cc{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.l-header{
   position: relative;
   z-index: 10;
   width: 100%;
@@ -5423,17 +5475,6 @@ html .layout .l-sidebar + .l-content{
 
 .block-theme-hooks-stanford-decanter-identity-bar .block-content a {
   line-height: 3rem;
-}
-
-.l-header .block-theme-hooks-stanford-decanter-identity-bar {
-  position: static;
-}
-
-.l-header .block-theme-hooks-stanford-decanter-identity-bar .block-content{
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
 }
 
 .block-theme-hooks-stanford-decanter-identity-bar span.ext {
@@ -6394,16 +6435,6 @@ ul.primary li.active a,
   }
 }
 
-.l-footer .l-footer-inner .block-theme-hooks-stanford-decanter-global-footer {
-  position: static;
-}
-
-.l-footer .l-footer-inner .block-theme-hooks-stanford-decanter-global-footer .block-content {
-  position: absolute;
-  right: 0;
-  left: 0;
-}
-
 .l-footer .l-footer-inner .block-title{
   font-family: "Source Sans 3", "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 2rem;
@@ -6425,6 +6456,77 @@ ul.primary li.active a,
 
 .global-footer span.ext{
   display: none;
+}
+
+/* Global header/footer inside existing header/footer region */
+
+.l-header .block-theme-hooks-stanford-decanter-identity-bar,
+.l-footer .block-theme-hooks-stanford-decanter-global-footer{
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+}
+
+.l-header .block-theme-hooks-stanford-decanter-identity-bar .block-content, .l-footer .block-theme-hooks-stanford-decanter-global-footer .block-content{
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 576px){
+  .l-header .block-theme-hooks-stanford-decanter-identity-bar .block-content, .l-footer .block-theme-hooks-stanford-decanter-global-footer .block-content{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: 768px){
+  .l-header .block-theme-hooks-stanford-decanter-identity-bar .block-content, .l-footer .block-theme-hooks-stanford-decanter-global-footer .block-content{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (min-width: 992px){
+  .l-header .block-theme-hooks-stanford-decanter-identity-bar .block-content, .l-footer .block-theme-hooks-stanford-decanter-global-footer .block-content{
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media (min-width: 1200px){
+  .l-header .block-theme-hooks-stanford-decanter-identity-bar .block-content, .l-footer .block-theme-hooks-stanford-decanter-global-footer .block-content{
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media (min-width: 1500px){
+  .l-header .block-theme-hooks-stanford-decanter-identity-bar .block-content, .l-footer .block-theme-hooks-stanford-decanter-global-footer .block-content{
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media only screen and (min-width: 1700px){
+  .l-header .block-theme-hooks-stanford-decanter-identity-bar .block-content, .l-footer .block-theme-hooks-stanford-decanter-global-footer .block-content{
+    padding-left: calc((100% - 1500px)/2);
+    padding-right: calc((100% - 1500px)/2);
+  }
+}
+
+ .centered-container .l-header .block-theme-hooks-stanford-decanter-identity-bar .block-content,.l-header .block-theme-hooks-stanford-decanter-identity-bar .block-content .centered-container,.l-header .block-theme-hooks-stanford-decanter-identity-bar .block-content .cc, .centered-container  .l-footer .block-theme-hooks-stanford-decanter-global-footer .block-content, .l-footer .block-theme-hooks-stanford-decanter-global-footer .block-content .centered-container, .l-footer .block-theme-hooks-stanford-decanter-global-footer .block-content .cc{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.l-footer .block-theme-hooks-stanford-decanter-global-footer{
+  margin-top: 4rem;
+  margin-bottom: -4rem;
 }
 
 /* Forms and Form elements */

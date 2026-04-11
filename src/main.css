@@ -15,7 +15,7 @@
 @tailwind utilities;
 
 .container-fluid {
-  @apply p-0 m-0 max-w-1500 w-full mx-auto relative px-10;
+  @apply p-0 m-0 max-w-1500 w-full mx-auto relative;
 }
 
 
@@ -290,7 +290,7 @@ html .layout {
 .l-header {
   box-shadow: 0 3px 6px rgba(0, 0, 0, .13), 0 3px 6px rgba(0, 0, 0, .1);
 
-  @apply relative z-10 w-full;
+  @apply relative z-10 w-full cc;
   @apply flex flex-row flex-wrap justify-end gap-x-20 items-end;
   @apply md:flex-row md:items-center md:justify-start;
 
@@ -377,15 +377,6 @@ html .layout {
     & a {
       @apply logo text-white hocus:text-white text-20;
       line-height: 3rem;
-    }
-  }
-  .l-header & {
-    position: static;
-    .block-content {
-      @apply absolute;
-      top: 0;
-      left: 0;
-      right: 0;
     }
   }
   & span.ext {
@@ -767,20 +758,12 @@ ul.primary li.active a,
       @apply col-full;
     }
 
-    .block-theme-hooks-stanford-decanter-global-footer {
-      position: static;
-      .block-content {
-        position: absolute;
-        right: 0;
-        left: 0;
-      }
-    }
-
     .block-title {
       @apply text-black font-sans text-20;
     }
   }
 }
+
 
 .global-footer {
   a.logo {
@@ -790,6 +773,20 @@ ul.primary li.active a,
     @apply hidden;
   }
 }
+
+/* Global header/footer inside existing header/footer region */
+.l-header .block-theme-hooks-stanford-decanter-identity-bar,
+.l-footer .block-theme-hooks-stanford-decanter-global-footer {
+  @apply w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw];
+  .block-content {
+    @apply cc;
+  }
+}
+
+.l-footer .block-theme-hooks-stanford-decanter-global-footer {
+  @apply mt-40 -mb-40
+}
+
 
 /* Forms and Form elements */
 
@@ -870,7 +867,6 @@ body {
   .form-textarea {
     @apply py-5;
   }
-
 
   .views-exposed-form {
     @apply rs-my-1;

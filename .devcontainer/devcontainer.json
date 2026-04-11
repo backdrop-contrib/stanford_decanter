@@ -16,17 +16,17 @@
 	"customizations": {
 	  "vscode": {
 		"settings": {
-		  "php.validate.executablePath": "/usr/local/bin/php",
-		  "workbench.colorCustomizations": {
-			"titleBar.activeBackground": "#8C1515",
-			"titleBar.activeForeground": "#ffffff",
-			"titleBar.inactiveBackground": "#B83A4B",
-			"titleBar.inactiveForeground": "#82828299"
+				"php.validate.executablePath": "/usr/local/bin/php",
+				"workbench.colorCustomizations": {
+				"titleBar.activeBackground": "#8C1515",
+				"titleBar.activeForeground": "#ffffff",
+				"titleBar.inactiveBackground": "#B83A4B",
+				"titleBar.inactiveForeground": "#82828299"
 		  },
 		  "files.exclude": {
-			"**/.git": true,
-			"**/.DS_Store": true,
-			"**/Thumbs.db": true
+				"**/.git": true,
+				"**/.DS_Store": true,
+				"**/Thumbs.db": true
 		  },
 		  "cSpell.enabled": true,
 		  "cSpell.words": [
@@ -39,7 +39,10 @@
 			  "viewports",
 			  "yamls",
 			  "zcat",
-			  "devel"
+			  "devel",
+				"intelephense",
+				"stanfordfooter",
+				"readmore"
 			],
 			"files.associations": {
 			  "*.inc": "php",
@@ -50,7 +53,10 @@
 			"[php]": {},
 			"workbench.startupEditor": "none",
 			"terminal.integrated.defaultProfile.linux": "zsh",
-			"editor.tabSize": 2
+			"editor.tabSize": 2,
+			"intelephense.environment.includePaths": [
+					"/var/www/html"
+			]
 	  },
 	  "extensions": [
 			"xdebug.php-debug",
