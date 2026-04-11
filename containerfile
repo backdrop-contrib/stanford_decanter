@@ -54,5 +54,4 @@ COPY ./ /workspace
 RUN  cd /var/www/html \
   && ln -s /workspace themes/stanford_decanter \
   && ln -s /workspace/profiles profiles \
-  && echo "<?php \$config['system.core']['config_sync_clear_staging'] = 0;" \
-    > settings.local.php;
+  && ln -s /workspace/.ops/settings.local.php settings.local.php;

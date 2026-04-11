@@ -19,10 +19,14 @@ services:
     ports:
       - 8888:80
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost"]
-      interval: 10s
+      test: ["CMD-SHELL", "curl -I http://localhost | grep 'X-Generator: Backdrop CMS' || exit 1"]
+      interval: 5s
+      timeout: 2s
+      retries: 10
     volumes:
       - ./:/workspace
+    post_start:
+      - command: install-app
 
   backstop:
     image: backstopjs/backstopjs

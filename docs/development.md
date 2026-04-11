@@ -52,4 +52,4 @@ You can also use github to file [bug reports and support requests.](https://gith
 
 To take a reference capture of the test site run:
 
-    docker compose exec backstop backstop reference --config=/config.js
+    docker compose run backstop reference --config=/config.js
