@@ -1,0 +1,26 @@
+{
+    "_config_name": "stanford_decanter.settings",
+    "styleguide_public": 1,
+    "color": {
+        "palette": {
+            "identity": "#8C1517",
+            "identity_text": "#FFFFFC",
+            "bg": "#FFFFFE",
+            "text": "#2E2D28",
+            "link": "#006CB8",
+            "title": "#B1040D",
+            "form_borders": "#53565A",
+            "form_focus": "#006CB8",
+            "form_error": "#B1040E",
+            "form_ok": "#008566",
+            "footer": "#F4F4F4",
+            "footer_text": "#2E2D25"
+        },
+        "stylesheets": [
+            "public://color/stanford_decanter-7dc66294/colors.css"
+        ],
+        "files": [
+            "public://color/stanford_decanter-7dc66294/colors.css"
+        ]
+    }
+}

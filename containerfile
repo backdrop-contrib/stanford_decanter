@@ -37,7 +37,7 @@ RUN\
   && util "reset-db"    "mariadb -h db --user=root --password=root -e 'DROP DATABASE IF EXISTS app; CREATE DATABASE app'" \
   && util "reset-app"   "rm -rf /var/www/html/files/config*;" \
   && util "fix-perms"   "chown --quiet -R www-data:www-data /var/www/html;" \
-  && util "install-app" "reset-db && reset-app && si && fix-perms && uli;"
+  && util "install-app" "reset-db && reset-app && si && fix-perms && cr && uli;"
 
 
 # Download backdrop and bee
@@ -54,5 +54,5 @@ COPY ./ /workspace
 RUN  cd /var/www/html \
   && ln -s /workspace themes/stanford_decanter \
   && ln -s /workspace/profiles profiles \
-  && echo "<?php \$config_directories['staging'] = '/workspace/profiles/decanter_profile/config/';\n\$config['system.core']['config_sync_clear_staging'] = 0;" \
+  && echo "<?php \$config['system.core']['config_sync_clear_staging'] = 0;" \
     > settings.local.php;
