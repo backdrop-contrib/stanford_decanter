@@ -1255,6 +1255,7 @@ table thead + tbody{
 
 .legend{
   font-weight: 700;
+  line-height: 1.2;
 }
 
 .textarea{
