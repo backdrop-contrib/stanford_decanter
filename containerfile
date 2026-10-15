@@ -1,4 +1,4 @@
-ARG VARIANT=8.1-apache-bullseye
+ARG VARIANT=8.1-apache-trixie
 FROM php:${VARIANT}
 
 RUN a2enmod rewrite
