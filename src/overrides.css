@@ -119,3 +119,31 @@
   text-align: center;
   border: inherit
  }
+
+/* Vertical tabs on editing pages. Decanter's type size and link color
+   throw off the core tab layout. */
+@media (min-width: 750px) {
+  .vertical-tabs {
+    padding: 0 !important;
+  }
+  .vertical-tabs,
+  .vertical-tabs .summary,
+  .vertical-tabs .summary p {
+    font-size: 1.6rem;
+  }
+}
+
+.vertical-tabs-pane .fieldset-wrapper {
+  padding-right: 0;
+}
+
+.vertical-tab-link,
+.vertical-tab-link:link,
+.vertical-tab-link:visited {
+  color: #2E2D28;
+}
+
+.vertical-tab-selected strong,
+.vertical-tab-selected .fieldset-legend {
+  color: #2E2D28;
+}
