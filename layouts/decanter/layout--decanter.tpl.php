@@ -115,7 +115,7 @@
       </div>
 
       <?php if (!empty($content['bottom'])): ?>
-        <div class="l-bottom rs-grid grid-4">
+        <div class="l-bottom rs-grid">
           <?php print $content['bottom']; ?>
         </div>
       <?php endif; ?>
@@ -124,7 +124,7 @@
 
     <?php if ($content['footer']): ?>
       <footer class="l-footer">
-        <div class="l-footer-inner rs-grid grid-4">
+        <div class="l-footer-inner rs-grid">
           <?php print $content['footer']; ?>
         </div>
       </footer>

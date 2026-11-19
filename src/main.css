@@ -202,6 +202,12 @@ html .layout {
   @apply gap-4 md:gap-6 lg:gap-10 xl:gap-16;
 }
 
+/* Unmarked grid children span the row. Add grid-2, grid-3, or grid-4
+   on the region, or col-half, col-third, or col-quarter on a block. */
+.rs-grid > *:not([class*="col-"]) {
+  @apply col-span-1 md:col-span-4 lg:col-span-12;
+}
+
 .col-twelfth,
 .rs-grid.grid-12 > *:not([class*="col-"]) {
   @apply col-span-1;
