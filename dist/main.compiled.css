@@ -9502,6 +9502,15 @@ blockquote{
   font-style: italic;
 }
 
+/* Wide tables scroll inside the viewport. */
+
+table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 .last\:mb-0:last-child{
   margin-bottom: 0;
 }
