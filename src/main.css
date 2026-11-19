@@ -170,7 +170,13 @@ html .layout {
   .l-top {
     @apply cc mt-20;
   }
-  .l-bottom,
+  .l-bottom {
+    @apply mt-40 cc;
+
+    div.block:not(:last-child) {
+      @apply mb-40;
+    }
+  }
   .l-middle {
     @apply my-40 cc;
 
@@ -746,7 +752,7 @@ ul.primary li.active a,
 
 .l-footer {
   @apply relative cc;
-  @apply py-40 mt-30;
+  @apply py-40;
 
   .l-footer-inner {
     position: static;
