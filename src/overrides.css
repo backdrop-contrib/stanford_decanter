@@ -170,3 +170,11 @@
 .view-content .views-row {
   display: flow-root;
 }
+
+/* Wide tables scroll inside the viewport. */
+table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
