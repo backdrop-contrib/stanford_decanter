@@ -7139,6 +7139,7 @@ fieldset .summary,
 
 .view-content .views-row{
   clear: both;
+  display: flow-root;
 }
 
 .view-content .views-row:not(:first-child){
