@@ -4901,6 +4901,25 @@ html .layout .l-sidebar + .l-content{
   }
 }
 
+/* Unmarked grid children span the row. Add grid-2, grid-3, or grid-4
+   on the region, or col-half, col-third, or col-quarter on a block. */
+
+.rs-grid > *:not([class*="col-"]){
+  grid-column: span 1 / span 1;
+}
+
+@media (min-width: 768px){
+  .rs-grid > *:not([class*="col-"]){
+    grid-column: span 4 / span 4;
+  }
+}
+
+@media (min-width: 992px){
+  .rs-grid > *:not([class*="col-"]){
+    grid-column: span 12 / span 12;
+  }
+}
+
 .col-twelfth,
 .rs-grid.grid-12 > *:not([class*="col-"]){
   grid-column: span 1 / span 1;
