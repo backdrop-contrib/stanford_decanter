@@ -165,3 +165,8 @@
     grid-column: span 12 / span 12;
   }
 }
+
+/* Keep a floated view image inside its row. */
+.view-content .views-row {
+  display: flow-root;
+}

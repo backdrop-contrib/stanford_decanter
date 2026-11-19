@@ -1030,6 +1030,7 @@ fieldset.filter-wrapper {
 .view-content {
   .views-row {
     @apply clear-both;
+    display: flow-root;
     &:not(:first-child) {
       @apply border-t rs-mt-2 rs-pt-2;
     }
