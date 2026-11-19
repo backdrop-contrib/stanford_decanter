@@ -4717,8 +4717,7 @@ html .layout .l-top{
   margin-top: 2rem;
 }
 
-html .layout .l-bottom,
-  html .layout .l-middle{
+html .layout .l-bottom{
   padding-left: 20px;
   padding-right: 20px;
   margin-left: auto;
@@ -4726,7 +4725,68 @@ html .layout .l-bottom,
 }
 
 @media (min-width: 576px){
-  html .layout .l-bottom,
+  html .layout .l-bottom{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: 768px){
+  html .layout .l-bottom{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (min-width: 992px){
+  html .layout .l-bottom{
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media (min-width: 1200px){
+  html .layout .l-bottom{
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media (min-width: 1500px){
+  html .layout .l-bottom{
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media only screen and (min-width: 1700px){
+  html .layout .l-bottom{
+    padding-left: calc((100% - 1500px)/2);
+    padding-right: calc((100% - 1500px)/2);
+  }
+}
+
+ .centered-container html .layout .l-bottom,html .layout .l-bottom .centered-container,html .layout .l-bottom .cc{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+html .layout .l-bottom{
+  margin-top: 4rem;
+}
+
+html .layout .l-bottom div.block:not(:last-child){
+  margin-bottom: 4rem;
+}
+
+html .layout .l-middle{
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 576px){
   html .layout .l-middle{
     padding-left: 30px;
     padding-right: 30px;
@@ -4734,7 +4794,6 @@ html .layout .l-bottom,
 }
 
 @media (min-width: 768px){
-  html .layout .l-bottom,
   html .layout .l-middle{
     padding-left: 50px;
     padding-right: 50px;
@@ -4742,7 +4801,6 @@ html .layout .l-bottom,
 }
 
 @media (min-width: 992px){
-  html .layout .l-bottom,
   html .layout .l-middle{
     padding-left: 80px;
     padding-right: 80px;
@@ -4750,7 +4808,6 @@ html .layout .l-bottom,
 }
 
 @media (min-width: 1200px){
-  html .layout .l-bottom,
   html .layout .l-middle{
     padding-left: 100px;
     padding-right: 100px;
@@ -4758,7 +4815,6 @@ html .layout .l-bottom,
 }
 
 @media (min-width: 1500px){
-  html .layout .l-bottom,
   html .layout .l-middle{
     padding-left: 100px;
     padding-right: 100px;
@@ -4766,28 +4822,23 @@ html .layout .l-bottom,
 }
 
 @media only screen and (min-width: 1700px){
-  html .layout .l-bottom,
   html .layout .l-middle{
     padding-left: calc((100% - 1500px)/2);
     padding-right: calc((100% - 1500px)/2);
   }
 }
 
- .centered-container html .layout .l-bottom,html .layout .l-bottom .centered-container,html .layout .l-bottom .cc, .centered-container 
-  html .layout .l-middle,
-  html .layout .l-middle .centered-container,
-  html .layout .l-middle .cc{
+ .centered-container html .layout .l-middle,html .layout .l-middle .centered-container,html .layout .l-middle .cc{
   padding-left: 0;
   padding-right: 0;
 }
 
-html .layout .l-bottom,
-  html .layout .l-middle{
+html .layout .l-middle{
   margin-top: 4rem;
   margin-bottom: 4rem;
 }
 
-html .layout .l-bottom div.block, html .layout .l-middle div.block{
+html .layout .l-middle div.block{
   margin-bottom: 4rem;
 }
 
@@ -6397,7 +6448,6 @@ ul.primary li.active a,
 
 .l-footer{
   position: relative;
-  margin-top: 3rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
@@ -8094,28 +8144,32 @@ a .view-mode-card .btn-primary,
   display: block;
 }
 
-html .layout .l-bottom div.plain > article .views-field, html .layout .l-middle div.plain > article .views-field,html .layout .l-bottom div
-  .plain > article .field-name-field-aplenty-title, html .layout .l-middle div
-  .plain > article .field-name-field-aplenty-title,html .layout .l-bottom div
-  .plain > article .field-type-link-field, html .layout .l-middle div
-  .plain > article .field-type-link-field,html .layout .l-bottom div
-  .plain > article .field-type-text-long, html .layout .l-middle div
-  .plain > article .field-type-text-long,html .layout .l-bottom div
-  .views-grid-box .views-field, html .layout .l-middle div
-  .views-grid-box .views-field,html .layout .l-bottom div
-  .views-grid-box .field-name-field-aplenty-title, html .layout .l-middle div
-  .views-grid-box .field-name-field-aplenty-title,html .layout .l-bottom div
-  .views-grid-box .field-type-link-field, html .layout .l-middle div
-  .views-grid-box .field-type-link-field,html .layout .l-bottom div
-  .views-grid-box .field-type-text-long, html .layout .l-middle div
-  .views-grid-box .field-type-text-long,html .layout .l-bottom div
-  .aplenty-card-plain .aplenty-card > .content .views-field, html .layout .l-middle div
-  .aplenty-card-plain .aplenty-card > .content .views-field,html .layout .l-bottom div
-  .aplenty-card-plain .aplenty-card > .content .field-name-field-aplenty-title, html .layout .l-middle div
-  .aplenty-card-plain .aplenty-card > .content .field-name-field-aplenty-title,html .layout .l-bottom div
-  .aplenty-card-plain .aplenty-card > .content .field-type-link-field, html .layout .l-middle div
-  .aplenty-card-plain .aplenty-card > .content .field-type-link-field,html .layout .l-bottom div
-  .aplenty-card-plain .aplenty-card > .content .field-type-text-long, html .layout .l-middle div
+html .layout .l-bottom div.plain > article .views-field:not(:last-child),html .layout .l-bottom div
+  .plain > article .field-name-field-aplenty-title:not(:last-child),html .layout .l-bottom div
+  .plain > article .field-type-link-field:not(:last-child),html .layout .l-bottom div
+  .plain > article .field-type-text-long:not(:last-child),html .layout .l-bottom div
+  .views-grid-box .views-field:not(:last-child),html .layout .l-bottom div
+  .views-grid-box .field-name-field-aplenty-title:not(:last-child),html .layout .l-bottom div
+  .views-grid-box .field-type-link-field:not(:last-child),html .layout .l-bottom div
+  .views-grid-box .field-type-text-long:not(:last-child),html .layout .l-bottom div
+  .aplenty-card-plain .aplenty-card > .content .views-field:not(:last-child),html .layout .l-bottom div
+  .aplenty-card-plain .aplenty-card > .content .field-name-field-aplenty-title:not(:last-child),html .layout .l-bottom div
+  .aplenty-card-plain .aplenty-card > .content .field-type-link-field:not(:last-child),html .layout .l-bottom div
+  .aplenty-card-plain .aplenty-card > .content .field-type-text-long:not(:last-child){
+  margin-bottom: 4rem;
+}
+
+html .layout .l-middle div.plain > article .views-field,html .layout .l-middle div
+  .plain > article .field-name-field-aplenty-title,html .layout .l-middle div
+  .plain > article .field-type-link-field,html .layout .l-middle div
+  .plain > article .field-type-text-long,html .layout .l-middle div
+  .views-grid-box .views-field,html .layout .l-middle div
+  .views-grid-box .field-name-field-aplenty-title,html .layout .l-middle div
+  .views-grid-box .field-type-link-field,html .layout .l-middle div
+  .views-grid-box .field-type-text-long,html .layout .l-middle div
+  .aplenty-card-plain .aplenty-card > .content .views-field,html .layout .l-middle div
+  .aplenty-card-plain .aplenty-card > .content .field-name-field-aplenty-title,html .layout .l-middle div
+  .aplenty-card-plain .aplenty-card > .content .field-type-link-field,html .layout .l-middle div
   .aplenty-card-plain .aplenty-card > .content .field-type-text-long{
   margin-bottom: 4rem;
 }
@@ -8131,16 +8185,20 @@ html .layout .l-bottom div.plain > article .views-field, html .layout .l-middle 
   font-size: 0.9em;
 }
 
-html .layout .l-bottom div.plain > article .views-field-body, html .layout .l-middle div.plain > article .views-field-body,html .layout .l-bottom div
-  .plain > article .field-type-text-long, html .layout .l-middle div
-  .plain > article .field-type-text-long,html .layout .l-bottom div
-  .views-grid-box .views-field-body, html .layout .l-middle div
-  .views-grid-box .views-field-body,html .layout .l-bottom div
-  .views-grid-box .field-type-text-long, html .layout .l-middle div
-  .views-grid-box .field-type-text-long,html .layout .l-bottom div
-  .aplenty-card-plain .aplenty-card > .content .views-field-body, html .layout .l-middle div
-  .aplenty-card-plain .aplenty-card > .content .views-field-body,html .layout .l-bottom div
-  .aplenty-card-plain .aplenty-card > .content .field-type-text-long, html .layout .l-middle div
+html .layout .l-bottom div.plain > article .views-field-body:not(:last-child),html .layout .l-bottom div
+  .plain > article .field-type-text-long:not(:last-child),html .layout .l-bottom div
+  .views-grid-box .views-field-body:not(:last-child),html .layout .l-bottom div
+  .views-grid-box .field-type-text-long:not(:last-child),html .layout .l-bottom div
+  .aplenty-card-plain .aplenty-card > .content .views-field-body:not(:last-child),html .layout .l-bottom div
+  .aplenty-card-plain .aplenty-card > .content .field-type-text-long:not(:last-child){
+  margin-bottom: 4rem;
+}
+
+html .layout .l-middle div.plain > article .views-field-body,html .layout .l-middle div
+  .plain > article .field-type-text-long,html .layout .l-middle div
+  .views-grid-box .views-field-body,html .layout .l-middle div
+  .views-grid-box .field-type-text-long,html .layout .l-middle div
+  .aplenty-card-plain .aplenty-card > .content .views-field-body,html .layout .l-middle div
   .aplenty-card-plain .aplenty-card > .content .field-type-text-long{
   margin-bottom: 4rem;
 }
